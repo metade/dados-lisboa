@@ -1,0 +1,22 @@
+require 'rake'
+require 'fileutils'
+$LOAD_PATH.unshift File.expand_path('../../lib', __dir__)
+require_relative '../../lib/dados/paths'
+
+namespace :parques do
+  PMTILES     = File.join(Dados::Paths.processed_dir, 'parques_infantis.pmtiles')
+
+  directory File.dirname(PMTILES)
+
+  desc "Obter dados (exemplo)"
+  task :fetch do
+    ruby File.join(__dir__, 'scripts', 'fetch.rb')
+  end
+
+  file PMTILES => [:fetch, File.dirname(PMTILES)] do
+    ruby File.join(__dir__, 'scripts', 'build_pmtiles.rb')
+  end
+
+  desc "Gerar PMTiles"
+  task :all => [PMTILES]
+end

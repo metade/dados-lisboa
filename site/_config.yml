@@ -1,0 +1,14 @@
+title: Dados Lisboa
+description: Visualizações para freguesias de Lisboa
+url: "https://dados-lisboa.metade.org"
+
+plugins: []
+
+include:
+  - assets/data/processed
+
+collections:
+  pages:
+    output: true
+
+markdown: kramdown

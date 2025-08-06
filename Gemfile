@@ -5,6 +5,7 @@ ruby ">= 3.1"
 gem "jekyll", "~> 4.3"
 gem "webrick", "~> 1.8"
 gem "listen", "~> 3.8"
+gem "logger"
 
 group :development do
   gem "foreman", "~> 0.87"

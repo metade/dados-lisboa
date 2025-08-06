@@ -63,3 +63,20 @@ Por omissão, o mapa usa **OSM raster**. Para usar um **basemap PMTiles**:
 ## Verificações
 - `bundle exec rake verify:parques` confirma que `parques_infantis.pmtiles` começa com `PMTiles`.
 - `bundle exec rake verify:basemap` valida o basemap (se existir).
+
+
+## Basemap toggle
+O ficheiro `site/_config.yml` define o modo de basemap:
+```yml
+basemap:
+  mode: carto_raster  # pmtiles | carto_raster | carto_vector
+  pmtiles_path: /assets/data/processed/basemap.pmtiles
+  carto:
+    raster_subdomains: ["a","b","c","d"]
+    raster_path: /light_all/{z}/{x}/{y}@2x.png
+    vector_style_url: https://basemaps.cartocdn.com/gl/positron-gl-style/style.json
+    attr: "© OpenStreetMap contributors © CARTO"
+```
+- **carto_vector**: usa o estilo GL Positron como base e adiciona o PMTiles temático ao `load`.
+- **carto_raster**: usa os tiles raster do CARTO (light_all) como base.
+- **pmtiles**: usa um basemap `.pmtiles` local (se existir), caso contrário verá apenas o tema.

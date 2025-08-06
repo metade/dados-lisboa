@@ -1,4 +1,4 @@
-title: Dados Lisboa
+title: Dados Lisboa?
 description: Visualizações para freguesias de Lisboa
 url: "https://dados-lisboa.metade.org"
 
@@ -12,3 +12,12 @@ collections:
     output: true
 
 markdown: kramdown
+
+basemap:
+  mode: carto_vector # pmtiles | carto_raster | carto_vector
+  pmtiles_path: /assets/data/processed/basemap.pmtiles
+  carto:
+    raster_subdomains: ["a", "b", "c", "d"]
+    raster_path: /light_all/{z}/{x}/{y}@2x.png
+    vector_style_url: https://basemaps.cartocdn.com/gl/positron-gl-style/style.json
+    attr: "© OpenStreetMap contributors © CARTO"

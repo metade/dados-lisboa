@@ -19,10 +19,45 @@ title: "Parques Infantis"
         const abs = new URL(pmtilesURL, window.location.origin);
         const thematicURL = "pmtiles://" + abs.pathname + abs.search;
 
-        // Add the PMTiles source
+        // Add the PMTiles source (contains both playgrounds and H3 data)
         map.addSource("playgrounds", {
             type: "vector",
             url: thematicURL,
+        });
+
+        // Add H3 hexagon layer with distance-based colors and children-based opacity
+        map.addLayer({
+            id: "h3-hexagons",
+            type: "fill",
+            source: "playgrounds", // Using the same source
+            "source-layer": "h3", // H3 layer within the PMTiles file
+            paint: {
+                "fill-color": [
+                    "case",
+                    ["<", ["get", "nearest_playground_distance"], 200],
+                    "#27ae60", // Green for < 200m
+                    ["<", ["get", "nearest_playground_distance"], 400],
+                    "#f1c40f", // Yellow for 200-400m
+                    ["<", ["get", "nearest_playground_distance"], 1000],
+                    "#e74c3c", // Red for 400-1000m
+                    "#9b59b6", // Purple for > 1000m
+                ],
+                "fill-opacity": [
+                    "case",
+                    ["==", ["get", "children_under_14"], 0],
+                    0, // Transparent when 0 children
+                    [
+                        "interpolate",
+                        ["linear"],
+                        ["get", "children_under_14"],
+                        1,
+                        0.1, // Minimum opacity for 1 child
+                        100,
+                        0.7, // Adjust this max value based on your actual data
+                    ],
+                ],
+                "fill-outline-color": "#ffffff",
+            },
         });
 
         // Color scheme for different 'gestao' values
@@ -37,7 +72,7 @@ title: "Parques Infantis"
             id: "playground-circles",
             type: "circle",
             source: "playgrounds",
-            "source-layer": "parques_infantis", // Make sure this matches your PMTiles layer name
+            "source-layer": "parques_infantis", // "parques_infantis" layer in pmtiles file
             paint: {
                 "circle-radius": [
                     "interpolate",
@@ -67,7 +102,7 @@ title: "Parques Infantis"
             id: "playground-coffee",
             type: "symbol",
             source: "playgrounds",
-            "source-layer": "parques",
+            "source-layer": "parques_infantis", // Changed from "parques" to "playgrounds"
             filter: ["<", ["get", "distance_from_quiosque"], 100],
             layout: {
                 "text-field": "☕",
@@ -77,7 +112,30 @@ title: "Parques Infantis"
             },
         });
 
-        // Popup functionality
+        // H3 hexagon hover and popup functionality
+        map.on("click", "h3-hexagons", (e) => {
+            const properties = e.features[0].properties;
+            const coordinates = e.lngLat;
+
+            const distanceText = properties.nearest_playground_distance
+                ? `${Math.round(properties.nearest_playground_distance)}m`
+                : "N/A";
+
+            const popupHTML = `
+                <div class="h3-popup">
+                    <h3>Área Residencial</h3>
+                    <p><strong>Crianças (< 14 anos):</strong> ${properties.children_under_14 || 0}</p>
+                    <p><strong>Distância ao parque mais próximo:</strong> ${distanceText}</p>
+                </div>
+            `;
+
+            new maplibregl.Popup()
+                .setLngLat(coordinates)
+                .setHTML(popupHTML)
+                .addTo(map);
+        });
+
+        // Popup functionality for playgrounds
         map.on("click", "playground-circles", (e) => {
             const properties = e.features[0].properties;
             const coordinates = e.features[0].geometry.coordinates.slice();
@@ -110,7 +168,16 @@ title: "Parques Infantis"
                 .addTo(map);
         });
 
-        // Change cursor on hover
+        // Change cursor on hover for hexagons
+        map.on("mouseenter", "h3-hexagons", () => {
+            map.getCanvas().style.cursor = "pointer";
+        });
+
+        map.on("mouseleave", "h3-hexagons", () => {
+            map.getCanvas().style.cursor = "";
+        });
+
+        // Change cursor on hover for playgrounds
         map.on("mouseenter", "playground-circles", () => {
             map.getCanvas().style.cursor = "pointer";
         });
@@ -119,41 +186,71 @@ title: "Parques Infantis"
             map.getCanvas().style.cursor = "";
         });
 
-        // Fit map to show all playgrounds
+        // Dynamic opacity scaling and bounds fitting
         map.on("sourcedata", (e) => {
             if (e.sourceId === "playgrounds" && e.isSourceLoaded) {
-                // Wait a bit for the source to be fully loaded
                 setTimeout(() => {
                     try {
-                        const allFeatures =
-                            map.querySourceFeatures("playgrounds");
-                        console.log(
-                            "All features in source:",
-                            allFeatures.length,
-                            allFeatures,
-                        );
-
-                        const features = map.querySourceFeatures(
+                        // Try to get H3 features to calculate dynamic opacity
+                        const h3Features = map.querySourceFeatures(
                             "playgrounds",
                             {
-                                sourceLayer: "parques",
+                                sourceLayer: "h3",
                             },
                         );
 
-                        if (features.length > 0) {
+                        if (h3Features.length > 0) {
+                            // Find the maximum children_under_14 value
+                            const maxChildren = Math.max(
+                                ...h3Features.map(
+                                    (f) => f.properties.children_under_14 || 0,
+                                ),
+                            );
+
+                            console.log("Max children under 14:", maxChildren);
+
+                            // Update the layer paint property with the actual max value
+                            if (maxChildren > 0) {
+                                map.setPaintProperty(
+                                    "h3-hexagons",
+                                    "fill-opacity",
+                                    [
+                                        "case",
+                                        ["==", ["get", "children_under_14"], 0],
+                                        0, // Transparent when 0 children
+                                        [
+                                            "interpolate",
+                                            ["linear"],
+                                            ["get", "children_under_14"],
+                                            1,
+                                            0.1, // Minimum opacity for 1 child
+                                            maxChildren,
+                                            0.7, // Maximum opacity for highest value
+                                        ],
+                                    ],
+                                );
+                            }
+                        }
+
+                        // Also handle playground bounds fitting
+                        const playgroundFeatures = map.querySourceFeatures(
+                            "playgrounds",
+                            {
+                                sourceLayer: "playgrounds", // Changed from "parques" to "playgrounds"
+                            },
+                        );
+
+                        if (playgroundFeatures.length > 0) {
                             const bounds = new maplibregl.LngLatBounds();
-                            features.forEach((feature) => {
+                            playgroundFeatures.forEach((feature) => {
                                 bounds.extend(feature.geometry.coordinates);
                             });
                             map.fitBounds(bounds, { padding: 50 });
                         } else {
-                            console.log("no features");
+                            console.log("no playground features found");
                         }
                     } catch (error) {
-                        console.warn(
-                            "Could not fit bounds to playgrounds:",
-                            error,
-                        );
+                        console.warn("Could not process features:", error);
                     }
                 }, 500);
             }
@@ -174,5 +271,19 @@ title: "Parques Infantis"
 
     .playground-popup {
         min-width: 250px;
+    }
+
+    .h3-popup h3 {
+        margin: 0 0 10px 0;
+        color: #2c3e50;
+    }
+
+    .h3-popup p {
+        margin: 5px 0;
+        font-size: 14px;
+    }
+
+    .h3-popup {
+        min-width: 200px;
     }
 </style>

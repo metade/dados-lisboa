@@ -1,0 +1,68 @@
+---
+layout: nil
+---
+
+<!doctype html>
+<html lang="pt">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>{{ page.title }} | {{ site.title }}</title>
+        <link
+            rel="stylesheet"
+            href="{{ '/assets/css/util.css' | relative_url }}"
+        />
+        <link
+            rel="stylesheet"
+            href="{{ '/assets/css/site.css' | relative_url }}"
+        />
+        <link
+            href="https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.css"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <div id="map" class="map-full"></div>
+
+        <!-- External libraries -->
+        <script src="https://unpkg.com/pmtiles@latest/dist/pmtiles.js"></script>
+        <script src="https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.js"></script>
+
+        <!-- Core scripts -->
+        <script
+            type="module"
+            src="{{ '/assets/js/core.js' | relative_url }}"
+        ></script>
+
+        <!-- Base map initialization -->
+        <script type="module">
+            import { initMap } from "{{ '/assets/js/map.js' | relative_url }}";
+
+            const basemap = {
+                mode: "{{ site.basemap.mode | default: 'carto_raster' }}",
+                pmtilesPath: "{{ site.basemap.pmtiles_path | default: '/assets/data/processed/basemap.pmtiles' | relative_url }}",
+                carto: {
+                    rasterSubdomains: {{ site.basemap.carto.raster_subdomains | jsonify }},
+                    rasterPath: "{{ site.basemap.carto.raster_path }}",
+                    vectorStyleURL: "{{ site.basemap.carto.vector_style_url }}",
+                    attribution: "{{ site.basemap.carto.attr }}"
+                }
+            };
+
+            window.map = initMap({
+                container: 'map',
+                center: [-9.1427, 38.7369],
+                zoom: 12,
+                basemap
+            });
+
+            // Dispatch event when map is ready
+            window.map.on('load', () => {
+                window.dispatchEvent(new CustomEvent('mapReady', { detail: window.map }));
+            });
+        </script>
+
+        <!-- Page-specific content and scripts -->
+        {{ content }}
+    </body>
+</html>

@@ -1,7 +1,8 @@
 # Ruby / Bundler
 .bundle/
 vendor/
-Gemfile.lock
+
+tmp
 
 # Jekyll
 _site/

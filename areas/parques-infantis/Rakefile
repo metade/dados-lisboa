@@ -1,22 +1,59 @@
-require 'rake'
-require 'fileutils'
-$LOAD_PATH.unshift File.expand_path('../../lib', __dir__)
-require_relative '../../lib/dados/paths'
+require_relative "scripts/h3_visualisation"
+require_relative "scripts/playgrounds"
+require "open3"
 
-namespace :parques do
-  PMTILES     = File.join(Dados::Paths.processed_dir, 'parques_infantis.pmtiles')
-
-  directory File.dirname(PMTILES)
-
-  desc "Obter dados (exemplo)"
-  task :fetch do
-    ruby File.join(__dir__, 'scripts', 'fetch.rb')
+namespace :parques_infantis do
+  fetch_remote_url(
+    ENV.fetch("EXTRA_PLAYGROUNDS_URL", "https://docs.google.com/spreadsheets/d/e/2PACX-1vRvEr455sf7o24TvGXp3wvOuYEHUvePC6Bi6yT5yTXARtazHvZlynhxnAELa3s0CbWAYVO2SLzhy_Fy/pub?gid=0&single=true&output=csv"),
+    "tmp/parques_infantis/extra_playgrounds.csv"
+  )
+  fetch_remote_url(
+    ENV.fetch("EXTRA_QUIOSQUES_URL", "https://docs.google.com/spreadsheets/d/e/2PACX-1vRvEr455sf7o24TvGXp3wvOuYEHUvePC6Bi6yT5yTXARtazHvZlynhxnAELa3s0CbWAYVO2SLzhy_Fy/pub?gid=2084733430&single=true&output=csv"),
+    "tmp/parques_infantis/extra_quiosques.csv"
+  )
+  file "tmp/parques_infantis/parques_infantis.geojson": [
+    "tmp/parques_infantis/extra_quiosques.csv",
+    "tmp/parques_infantis/extra_playgrounds.csv"
+  ] do |task|
+    extra_quiosques_path, extra_playgrounds_path = task.sources
+    Areas::ParquesInfantis::Scripts::Playgrounds.call(task.name, extra_quiosques_path, extra_playgrounds_path)
   end
 
-  file PMTILES => [:fetch, File.dirname(PMTILES)] do
-    ruby File.join(__dir__, 'scripts', 'build_pmtiles.rb')
+  file "tmp/parques_infantis/BGRI2021_1106.geojson" do
+    cmd = [
+      "ogr2ogr",
+      "-f", "GeoJSON",
+      "-t_srs", "EPSG:4326",
+      "-nlt", "MULTIPOLYGON",
+      "-makevalid",
+      "tmp/parques_infantis/BGRI2021_1106.geojson",
+      "data/src/BGRI2021_1106.gpkg"
+    ]
+    stdout, stderr, status = Open3.capture3(*cmd)
+    $stdout.print stdout
+    $stderr.print stderr
+  end
+  file "tmp/parques_infantis/h3.geojson": [
+    "tmp/parques_infantis/parques_infantis.geojson",
+    "tmp/parques_infantis/BGRI2021_1106.geojson"
+  ] do |task|
+    parques_path, bgri2021_path = task.sources
+    Areas::ParquesInfantis::Scripts::H3Visualisation.call(task.name, parques_path, bgri2021_path)
+  end
+  file "site/assets/data/processed/parques_infantis.pmtiles": [
+    "tmp/parques_infantis/parques_infantis.geojson",
+    "tmp/parques_infantis/h3.geojson"
+  ] do |task|
+    cmd = [
+      "tippecanoe", "-o", task.name, "-zg", "--drop-densest-as-needed"
+    ] + task.sources
+
+    stdout, stderr, status = Open3.capture3(*cmd)
+    $stdout.print stdout
+    $stderr.print stderr
   end
 
-  desc "Gerar PMTiles"
-  task :all => [PMTILES]
+  task all: [
+    "site/assets/data/processed/parques_infantis.pmtiles"
+  ]
 end

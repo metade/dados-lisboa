@@ -11,12 +11,19 @@ export function initMap({
   const protocol = new pmtiles.Protocol();
   maplibregl.addProtocol("pmtiles", protocol.tile);
 
-  function addThematic(map) {
+  function addThematicLayer(map) {
+    // Only add thematic layer if all required parameters are provided
+    if (!thematicPMTilesURL || !sourceLayer || !paint) {
+      return;
+    }
+
     const abs = new URL(thematicPMTilesURL, window.location.origin);
     const thematicURL = "pmtiles://" + abs.pathname + abs.search;
+
     if (!map.getSource("thematic")) {
       map.addSource("thematic", { type: "vector", url: thematicURL });
     }
+
     if (!map.getLayer("fill")) {
       map.addLayer({
         id: "fill",
@@ -37,7 +44,7 @@ export function initMap({
       zoom,
     });
     map.addControl(new maplibregl.NavigationControl(), "top-left");
-    map.on("load", () => addThematic(map));
+    map.on("load", () => addThematicLayer(map));
     return map;
   }
 
@@ -61,7 +68,7 @@ export function initMap({
     };
     const map = new maplibregl.Map({ container, style, center, zoom });
     map.addControl(new maplibregl.NavigationControl(), "top-left");
-    map.on("load", () => addThematic(map));
+    map.on("load", () => addThematicLayer(map));
     return map;
   }
 
@@ -71,19 +78,48 @@ export function initMap({
     const absBase = new URL(basemap.pmtilesPath, window.location.origin);
     const baseURL = "pmtiles://" + absBase.pathname + absBase.search;
     style.sources["basemap"] = { type: "vector", url: baseURL };
-    // Camada generica; ajuste "source-layer" conforme o seu basemap
+    // Generic layer; adjust "source-layer" according to your basemap
     style.layers.push({
       id: "basemap-fill",
       type: "fill",
       source: "basemap",
-      "source-layer": "land",
+      "source-layer": "land", // Make sure this matches your basemap structure
       paint: { "fill-color": "#f5f5f5" },
     });
   }
   const map = new maplibregl.Map({ container, style, center, zoom });
   map.addControl(new maplibregl.NavigationControl(), "top-left");
-  map.on("load", () => addThematic(map));
+  map.on("load", () => addThematicLayer(map));
   return map;
 }
 
+// Helper function for pages that want to add thematic layers after map initialization
+export function addThematicToMap(
+  map,
+  { pmtilesURL, sourceLayer, paint, layerId = "fill" },
+) {
+  if (!pmtilesURL || !sourceLayer || !paint) {
+    console.error("Missing required parameters for thematic layer");
+    return;
+  }
+
+  const abs = new URL(pmtilesURL, window.location.origin);
+  const thematicURL = "pmtiles://" + abs.pathname + abs.search;
+
+  if (!map.getSource("thematic")) {
+    map.addSource("thematic", { type: "vector", url: thematicURL });
+  }
+
+  if (!map.getLayer(layerId)) {
+    map.addLayer({
+      id: layerId,
+      type: "fill",
+      source: "thematic",
+      "source-layer": sourceLayer,
+      paint,
+    });
+  }
+}
+
 export const initPMTilesMap = initMap; // compat
+// export const addThematicToMap = addThematicToMap; // compat

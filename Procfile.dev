@@ -1,2 +1,0 @@
-web: bundle exec jekyll serve --source site --livereload --incremental
-data: bundle exec rake data:watch

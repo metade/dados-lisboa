@@ -97,18 +97,27 @@ title: "Parques Infantis"
             },
         });
 
-        // Coffee emoji overlay for playgrounds near quiosques (< 100m)
+        // Coffee indicator for playgrounds near quiosques (< 100m)
         map.addLayer({
             id: "playground-coffee",
             type: "symbol",
             source: "playgrounds",
             "source-layer": "parques_infantis",
-            filter: ["<", ["get", "distance_from_quiosque"], 100],
+            filter: [
+                "all",
+                ["has", "distance_from_quiosque"],
+                ["<", ["get", "distance_from_quiosque"], 100],
+            ],
             layout: {
-                "text-field": "☕",
+                "text-field": "*",
                 "text-size": 16,
-                "text-offset": [0, -1.5],
+                "text-offset": [0, 0.15],
                 "text-anchor": "center",
+            },
+            paint: {
+                "text-color": "#FFD700",
+                "text-halo-color": "#ffffff",
+                "text-halo-width": 2,
             },
         });
 

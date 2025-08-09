@@ -102,7 +102,7 @@ title: "Parques Infantis"
             id: "playground-coffee",
             type: "symbol",
             source: "playgrounds",
-            "source-layer": "parques_infantis", // Changed from "parques" to "playgrounds"
+            "source-layer": "parques_infantis",
             filter: ["<", ["get", "distance_from_quiosque"], 100],
             layout: {
                 "text-field": "☕",
@@ -112,60 +112,93 @@ title: "Parques Infantis"
             },
         });
 
-        // H3 hexagon hover and popup functionality
-        map.on("click", "h3-hexagons", (e) => {
-            const properties = e.features[0].properties;
-            const coordinates = e.lngLat;
-
-            const distanceText = properties.nearest_playground_distance
-                ? `${Math.round(properties.nearest_playground_distance)}m`
-                : "N/A";
-
-            const popupHTML = `
-                <div class="h3-popup">
-                    <h3>Área Residencial</h3>
-                    <p><strong>Crianças (< 14 anos):</strong> ${properties.children_under_14 || 0}</p>
-                    <p><strong>Distância ao parque mais próximo:</strong> ${distanceText}</p>
-                </div>
-            `;
-
-            new maplibregl.Popup()
-                .setLngLat(coordinates)
-                .setHTML(popupHTML)
-                .addTo(map);
-        });
-
-        // Popup functionality for playgrounds
-        map.on("click", "playground-circles", (e) => {
-            const properties = e.features[0].properties;
-            const coordinates = e.features[0].geometry.coordinates.slice();
-
-            // Ensure popup appears over the feature clicked
-            while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-                coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+        // Unified click handler to prioritize playground over h3
+        // Prevent popups on double-click by using a timeout
+        let clickTimeout;
+        map.on("click", (e) => {
+            // Clear any existing timeout
+            if (clickTimeout) {
+                clearTimeout(clickTimeout);
             }
 
-            const coffeeText =
-                properties.distance_from_quiosque < 100
-                    ? "<p><strong>☕ Quiosque próximo!</strong> (a " +
-                      Math.round(properties.distance_from_quiosque) +
-                      "m)</p>"
-                    : "";
+            // Set a short timeout to distinguish single clicks from double clicks
+            clickTimeout = setTimeout(() => {
+                // Query all features at click point
+                const features = map.queryRenderedFeatures(e.point);
 
-            const popupHTML = `
-                <div class="playground-popup">
-                    <h3>${properties.designacao || "Parque Infantil"}</h3>
-                    <p><strong>Morada:</strong> ${properties.morada || "N/A"}</p>
-                    <p><strong>Gestão:</strong> ${properties.gestao || "N/A"}</p>
-                    <p><strong>Serviço CML:</strong> ${properties.servico_cml || "N/A"}</p>
-                    ${coffeeText}
-                </div>
-            `;
+                // Check if we clicked on a playground first
+                const playgroundFeature = features.find(
+                    (f) => f.layer.id === "playground-circles",
+                );
+                if (playgroundFeature) {
+                    const properties = playgroundFeature.properties;
+                    const coordinates =
+                        playgroundFeature.geometry.coordinates.slice();
 
-            new maplibregl.Popup()
-                .setLngLat(coordinates)
-                .setHTML(popupHTML)
-                .addTo(map);
+                    // Ensure popup appears over the feature clicked
+                    while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                        coordinates[0] +=
+                            e.lngLat.lng > coordinates[0] ? 360 : -360;
+                    }
+
+                    const coffeeText =
+                        properties.distance_from_quiosque < 100
+                            ? "<p><strong>☕ Quiosque próximo!</strong> (a " +
+                              Math.round(properties.distance_from_quiosque) +
+                              "m)</p>"
+                            : "";
+
+                    const popupHTML = `
+                        <div class="playground-popup">
+                            <h3>${properties.designacao || "Parque Infantil"}</h3>
+                            <p><strong>Morada:</strong> ${properties.morada || "N/A"}</p>
+                            <p><strong>Gestão:</strong> ${properties.gestao || "N/A"}</p>
+                            <p><strong>Serviço CML:</strong> ${properties.servico_cml || "N/A"}</p>
+                            ${coffeeText}
+                        </div>
+                    `;
+
+                    new maplibregl.Popup()
+                        .setLngLat(coordinates)
+                        .setHTML(popupHTML)
+                        .addTo(map);
+                    return; // Exit early, don't check for h3
+                }
+
+                // If no playground clicked, check for h3 hexagon
+                const h3Feature = features.find(
+                    (f) => f.layer.id === "h3-hexagons",
+                );
+                if (h3Feature) {
+                    const properties = h3Feature.properties;
+                    const coordinates = e.lngLat;
+
+                    const distanceText = properties.nearest_playground_distance
+                        ? `${Math.round(properties.nearest_playground_distance)}m`
+                        : "N/A";
+
+                    const popupHTML = `
+                        <div class="h3-popup">
+                            <h3>Área Residencial</h3>
+                            <p><strong>Crianças (< 14 anos):</strong> ${properties.children_under_14 || 0}</p>
+                            <p><strong>Distância ao parque mais próximo:</strong> ${distanceText}</p>
+                        </div>
+                    `;
+
+                    new maplibregl.Popup()
+                        .setLngLat(coordinates)
+                        .setHTML(popupHTML)
+                        .addTo(map);
+                }
+            }, 200); // 200ms delay to detect double clicks
+        });
+
+        // Clear timeout on double click to prevent popup
+        map.on("dblclick", () => {
+            if (clickTimeout) {
+                clearTimeout(clickTimeout);
+                clickTimeout = null;
+            }
         });
 
         // Change cursor on hover for hexagons
@@ -177,7 +210,7 @@ title: "Parques Infantis"
             map.getCanvas().style.cursor = "";
         });
 
-        // Change cursor on hover for playgrounds
+        // Change cursor on hover for playgrounds (higher priority)
         map.on("mouseenter", "playground-circles", () => {
             map.getCanvas().style.cursor = "pointer";
         });
@@ -236,7 +269,7 @@ title: "Parques Infantis"
                         const playgroundFeatures = map.querySourceFeatures(
                             "playgrounds",
                             {
-                                sourceLayer: "playgrounds", // Changed from "parques" to "playgrounds"
+                                sourceLayer: "parques_infantis",
                             },
                         );
 

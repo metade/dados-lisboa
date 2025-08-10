@@ -642,11 +642,82 @@ title: "Parques Infantis"
         ]);
 
         updateChildrenLegend();
+        zoomToSelectedFreguesias();
     }
 
     function zoomToSelectedFreguesias() {
-        // Simplified version - we'll enhance this later if needed
-        console.log("Zoom to selected freguesias called");
+        const selectedFreguesias = Array.from(
+            document.querySelectorAll(
+                '#freguesias-filter input[type="checkbox"]:checked',
+            ),
+        ).map((cb) => cb.value);
+
+        if (selectedFreguesias.length === 0) return;
+
+        try {
+            // Get all H3 features
+            const allFeatures = window.map.querySourceFeatures("playgrounds", {
+                sourceLayer: "h3",
+            });
+
+            // Filter features client-side to find matching hexagons
+            const matchingFeatures = allFeatures.filter((feature) => {
+                const freguesias = feature.properties.freguesias;
+                if (!freguesias) return false;
+
+                if (Array.isArray(freguesias)) {
+                    return freguesias.some((f) =>
+                        selectedFreguesias.includes(f),
+                    );
+                } else if (typeof freguesias === "string") {
+                    try {
+                        const parsed = JSON.parse(freguesias);
+                        if (Array.isArray(parsed)) {
+                            return parsed.some((f) =>
+                                selectedFreguesias.includes(f),
+                            );
+                        } else {
+                            return selectedFreguesias.includes(freguesias);
+                        }
+                    } catch (e) {
+                        return selectedFreguesias.includes(freguesias);
+                    }
+                }
+                return false;
+            });
+
+            if (matchingFeatures.length === 0) {
+                console.log("No matching features found for zoom");
+                return;
+            }
+
+            const bounds = new maplibregl.LngLatBounds();
+            matchingFeatures.forEach((feature) => {
+                if (feature.geometry.type === "Polygon") {
+                    feature.geometry.coordinates[0].forEach((coord) => {
+                        bounds.extend(coord);
+                    });
+                } else if (feature.geometry.type === "MultiPolygon") {
+                    feature.geometry.coordinates.forEach((polygon) => {
+                        polygon[0].forEach((coord) => {
+                            bounds.extend(coord);
+                        });
+                    });
+                }
+            });
+
+            window.map.fitBounds(bounds, {
+                padding: 50,
+                duration: 1000,
+                essential: false,
+            });
+
+            console.log(
+                `Zoomed to ${matchingFeatures.length} matching hexagons`,
+            );
+        } catch (error) {
+            console.warn("Could not zoom to selected freguesias:", error);
+        }
     }
 
     function updateChildrenLegend() {
@@ -720,6 +791,11 @@ title: "Parques Infantis"
         console.log(
             `Applied URL filter for freguesias: ${urlFreguesias.join(", ")}`,
         );
+
+        // Zoom to the selected freguesias
+        setTimeout(() => {
+            zoomToSelectedFreguesias();
+        }, 200);
 
         // Update the URL to reflect current selection
         updateURLWithFreguesias();

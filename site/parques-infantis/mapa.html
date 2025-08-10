@@ -88,6 +88,39 @@ title: "Parques Infantis"
         </section>
 
         <section class="panel-section">
+            <h3>Densidade de Crianças</h3>
+            <div class="opacity-legend">
+                <div class="opacity-legend-item">
+                    <div
+                        class="legend-color opacity-sample"
+                        style="background-color: #27ae60; opacity: 0.1"
+                    ></div>
+                    <span>Poucas crianças</span>
+                </div>
+                <div class="opacity-legend-item">
+                    <div
+                        class="legend-color opacity-sample"
+                        style="background-color: #f1c40f; opacity: 0.4"
+                    ></div>
+                    <span>Algumas crianças</span>
+                </div>
+                <div class="opacity-legend-item">
+                    <div
+                        class="legend-color opacity-sample"
+                        style="background-color: #e74c3c; opacity: 0.7"
+                    ></div>
+                    <span>Muitas crianças</span>
+                </div>
+                <p>
+                    <small
+                        >A intensidade da cor indica o número de crianças (&lt;
+                        14 anos) por hexágono.</small
+                    >
+                </p>
+            </div>
+        </section>
+
+        <section class="panel-section">
             <h3>Filtros</h3>
             <p><em>Filtros serão adicionados aqui</em></p>
         </section>
@@ -368,6 +401,9 @@ title: "Parques Infantis"
                                         ],
                                     ],
                                 );
+
+                                // Update the dynamic legend
+                                updateChildrenLegend(maxChildren);
                             }
                         }
 
@@ -399,6 +435,34 @@ title: "Parques Infantis"
                 }, 1000); // Increased delay to ensure all data is loaded
             }
         });
+
+        // Function to update children density legend with actual data
+        function updateChildrenLegend(maxChildren) {
+            if (maxChildren <= 0) return;
+
+            const lowValue = Math.ceil(maxChildren * 0.2);
+            const midValue = Math.ceil(maxChildren * 0.6);
+            const highValue = maxChildren;
+
+            // Update legend text
+            const legendItems = document.querySelectorAll(
+                ".opacity-legend-item span",
+            );
+            if (legendItems[0])
+                legendItems[0].textContent = `1-${lowValue} crianças`;
+            if (legendItems[1])
+                legendItems[1].textContent = `${lowValue + 1}-${midValue} crianças`;
+            if (legendItems[2])
+                legendItems[2].textContent = `${midValue + 1}-${highValue} crianças`;
+
+            // Update the description
+            const description = document.querySelector(
+                ".opacity-legend p small",
+            );
+            if (description) {
+                description.innerHTML = `A intensidade da cor indica o número de crianças (&lt; 14 anos) por hexágono. Máximo: <strong>${highValue}</strong> crianças.`;
+            }
+        }
 
         // Menu functionality
         const burgerIcon = document.getElementById("burger-icon");
@@ -564,6 +628,39 @@ title: "Parques Infantis"
         text-align: center;
         font-weight: bold;
         color: #ffd700;
+    }
+
+    .opacity-legend {
+        margin-top: 10px;
+    }
+
+    .opacity-legend-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+        gap: 10px;
+    }
+
+    .opacity-sample {
+        position: relative;
+    }
+
+    .opacity-sample::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: white;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        z-index: -1;
+    }
+
+    .opacity-legend p {
+        margin-top: 10px;
+        font-style: italic;
     }
 
     .playground-popup h3 {

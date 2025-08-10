@@ -3,6 +3,97 @@ layout: map
 title: "Parques Infantis"
 ---
 
+<!-- Menu label and side panel -->
+<div id="menu-label" class="menu-label">
+    Parques Infantis
+    <div id="burger-icon" class="burger-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</div>
+
+<div id="side-panel" class="side-panel">
+    <div class="side-panel-header">
+        <h2>Informação e Filtros</h2>
+        <button id="close-panel" class="close-panel">&times;</button>
+    </div>
+    <div class="side-panel-content">
+        <section class="panel-section">
+            <h3>Sobre a Visualização</h3>
+            <p>
+                Este mapa mostra os parques infantis de Lisboa e a sua
+                proximidade a quiosques. As áreas residenciais estão coloridas
+                por distância ao parque mais próximo.
+            </p>
+        </section>
+
+        <section class="panel-section">
+            <h3>Legenda</h3>
+            <h4>Distancia de parques infantis</h4>
+            <div class="legend-item">
+                <div
+                    class="legend-color"
+                    style="background-color: #27ae60"
+                ></div>
+                <span>< 200m do parque</span>
+            </div>
+            <div class="legend-item">
+                <div
+                    class="legend-color"
+                    style="background-color: #f1c40f"
+                ></div>
+                <span>200-400m do parque</span>
+            </div>
+            <div class="legend-item">
+                <div
+                    class="legend-color"
+                    style="background-color: #e74c3c"
+                ></div>
+                <span>400-1000m do parque</span>
+            </div>
+            <div class="legend-item">
+                <div
+                    class="legend-color"
+                    style="background-color: #9b59b6"
+                ></div>
+                <span>> 1000m do parque</span>
+            </div>
+            <h4>Gestão dos parques infantis</h4>
+            <div class="legend-item">
+                <div
+                    class="legend-color"
+                    style="background-color: #e74c3c; border-radius: 50%"
+                ></div>
+                <span>Parques JF (Junta de Freguesia)</span>
+            </div>
+            <div class="legend-item">
+                <div
+                    class="legend-color"
+                    style="background-color: #3498db; border-radius: 50%"
+                ></div>
+                <span>Parques CML (Câmara Municipal)</span>
+            </div>
+            <div class="legend-item">
+                <div
+                    class="legend-color"
+                    style="background-color: #95a5a6; border-radius: 50%"
+                ></div>
+                <span>Parques outros</span>
+            </div>
+            <div class="legend-item">
+                <span class="legend-symbol">*</span>
+                <span>Quiosque próximo</span>
+            </div>
+        </section>
+
+        <section class="panel-section">
+            <h3>Filtros</h3>
+            <p><em>Filtros serão adicionados aqui</em></p>
+        </section>
+    </div>
+</div>
+
 <script type="module">
     window.addEventListener("mapReady", (event) => {
         const map = event.detail;
@@ -308,10 +399,173 @@ title: "Parques Infantis"
                 }, 1000); // Increased delay to ensure all data is loaded
             }
         });
+
+        // Menu functionality
+        const burgerIcon = document.getElementById("burger-icon");
+        const sidePanel = document.getElementById("side-panel");
+        const closePanel = document.getElementById("close-panel");
+
+        burgerIcon.addEventListener("click", () => {
+            sidePanel.classList.add("open");
+        });
+
+        closePanel.addEventListener("click", () => {
+            sidePanel.classList.remove("open");
+        });
+
+        // Close panel when clicking outside
+        document.addEventListener("click", (e) => {
+            if (
+                !sidePanel.contains(e.target) &&
+                !burgerIcon.contains(e.target)
+            ) {
+                sidePanel.classList.remove("open");
+            }
+        });
     });
 </script>
 
 <style>
+    /* Menu label and burger icon */
+    .menu-label {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: rgba(255, 255, 255, 0.95);
+        padding: 12px 16px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        font-weight: 600;
+        color: #2c3e50;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .menu-label:hover {
+        background: rgba(255, 255, 255, 1);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .burger-icon {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        padding: 4px;
+    }
+
+    .burger-icon span {
+        width: 20px;
+        height: 2px;
+        background-color: #2c3e50;
+        margin: 2px 0;
+        transition: 0.3s;
+        border-radius: 1px;
+    }
+
+    .burger-icon:hover span {
+        background-color: #3498db;
+    }
+
+    /* Side panel */
+    .side-panel {
+        position: fixed;
+        top: 0;
+        right: -400px;
+        width: 400px;
+        height: 100vh;
+        background: white;
+        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+        z-index: 1001;
+        transition: right 0.3s ease;
+        overflow-y: auto;
+    }
+
+    .side-panel.open {
+        right: 0;
+    }
+
+    .side-panel-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        border-bottom: 1px solid #eee;
+        background: #f8f9fa;
+    }
+
+    .side-panel-header h2 {
+        margin: 0;
+        color: #2c3e50;
+        font-size: 18px;
+    }
+
+    .close-panel {
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: #7f8c8d;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s ease;
+    }
+
+    .close-panel:hover {
+        background: #e74c3c;
+        color: white;
+    }
+
+    .side-panel-content {
+        padding: 20px;
+    }
+
+    .panel-section {
+        margin-bottom: 30px;
+    }
+
+    .panel-section h3 {
+        margin: 0 0 15px 0;
+        color: #2c3e50;
+        font-size: 16px;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 5px;
+    }
+
+    .panel-section p {
+        margin: 0 0 10px 0;
+        line-height: 1.5;
+        color: #555;
+    }
+
+    .legend-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+        gap: 10px;
+    }
+
+    .legend-color {
+        width: 20px;
+        height: 20px;
+        border-radius: 3px;
+        border: 1px solid #ddd;
+    }
+
+    .legend-symbol {
+        width: 20px;
+        text-align: center;
+        font-weight: bold;
+        color: #ffd700;
+    }
+
     .playground-popup h3 {
         margin: 0 0 10px 0;
         color: #2c3e50;

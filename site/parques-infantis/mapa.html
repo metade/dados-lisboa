@@ -246,12 +246,27 @@ title: "Parques Infantis"
             url: thematicURL,
         });
 
+        // Check if we have URL parameters to set initial filter
+        const urlFreguesias = getSelectedFreguesiasFromURL();
+        const initialFilter =
+            urlFreguesias.length > 0
+                ? [
+                      "any",
+                      ...urlFreguesias.map((freguesia) => [
+                          "in",
+                          freguesia,
+                          ["get", "freguesias"],
+                      ]),
+                  ]
+                : null;
+
         // Add H3 hexagon layer with distance-based colors and children-based opacity
         map.addLayer({
             id: "h3-hexagons",
             type: "fill",
             source: "playgrounds", // Using the same source
             "source-layer": "h3", // H3 layer within the PMTiles file
+            filter: initialFilter, // Apply initial filter if URL params exist
             paint: {
                 "fill-color": [
                     "case",
@@ -413,17 +428,24 @@ title: "Parques Infantis"
                 setTimeout(() => {
                     populateFreguesiasFilter();
 
-                    // Load freguesia filters from URL
-                    const selectedFreguesias = getSelectedFreguesiasFromURL();
-                    if (selectedFreguesias.length > 0) {
-                        // Apply URL filters after a delay to ensure DOM is ready
+                    // Check for URL parameters
+                    const urlFreguesias = getSelectedFreguesiasFromURL();
+                    if (urlFreguesias.length > 0) {
+                        // Just zoom to the already-filtered areas and update UI
                         setTimeout(() => {
-                            applyURLFreguesias(selectedFreguesias);
+                            // Set checkbox states to match URL selection
+                            const checkboxes = document.querySelectorAll(
+                                '#freguesias-filter input[type="checkbox"]',
+                            );
+                            checkboxes.forEach((cb) => {
+                                cb.checked = urlFreguesias.includes(cb.value);
+                            });
+                            updateSelectAllCheckbox();
+                            zoomToSelectedFreguesias();
+                            updateURLWithFreguesias();
                         }, 100);
-                    } else {
-                        // Show all hexagons by default
-                        window.map.setFilter("h3-hexagons", null);
                     }
+                    // If no URL params, hexagons will show all by default (no filter)
                 }, 500);
             }
         });
@@ -492,6 +514,10 @@ title: "Parques Infantis"
             const container = document.getElementById("freguesias-filter");
             container.innerHTML = "";
 
+            // Check if we have URL parameters to determine default checked state
+            const urlFreguesias = getSelectedFreguesiasFromURL();
+            const defaultChecked = urlFreguesias.length === 0;
+
             freguesias.forEach((freguesia) => {
                 const div = document.createElement("div");
                 div.className = "form-check mb-2";
@@ -501,7 +527,8 @@ title: "Parques Infantis"
                 checkbox.type = "checkbox";
                 checkbox.id = `freguesia-${freguesia.replace(/\s+/g, "-").replace(/[^a-zA-Z0-9-]/g, "")}`;
                 checkbox.value = freguesia;
-                checkbox.checked = true;
+                checkbox.checked =
+                    defaultChecked || urlFreguesias.includes(freguesia);
                 checkbox.addEventListener("change", onFreguesiasChange);
 
                 const label = document.createElement("label");
@@ -652,7 +679,13 @@ title: "Parques Infantis"
             ),
         ).map((cb) => cb.value);
 
-        if (selectedFreguesias.length === 0) return;
+        // Don't zoom if all freguesias are selected (show full map)
+        if (
+            selectedFreguesias.length === 0 ||
+            selectedFreguesias.length === getAllFreguesias().length
+        ) {
+            return;
+        }
 
         try {
             // Get all H3 features
@@ -753,52 +786,6 @@ title: "Parques Infantis"
             '#freguesias-filter input[type="checkbox"]',
         );
         return Array.from(checkboxes).map((cb) => cb.value);
-    }
-
-    function applyURLFreguesias(urlFreguesias) {
-        console.log("Applying URL freguesias:", urlFreguesias);
-
-        // First uncheck all
-        const checkboxes = document.querySelectorAll(
-            '#freguesias-filter input[type="checkbox"]',
-        );
-        checkboxes.forEach((cb) => (cb.checked = false));
-
-        // Then check only the ones from URL
-        urlFreguesias.forEach((freguesia) => {
-            const checkbox = Array.from(checkboxes).find(
-                (cb) => cb.value === freguesia,
-            );
-            if (checkbox) {
-                checkbox.checked = true;
-            }
-        });
-
-        updateSelectAllCheckbox();
-
-        // Don't call applyFreguesiasFilter() to avoid recursion
-        // Just apply the filter directly
-        const filter = [
-            "any",
-            ...urlFreguesias.map((freguesia) => [
-                "in",
-                freguesia,
-                ["get", "freguesias"],
-            ]),
-        ];
-        console.log("URL filter:", JSON.stringify(filter, null, 2));
-        window.map.setFilter("h3-hexagons", filter);
-        console.log(
-            `Applied URL filter for freguesias: ${urlFreguesias.join(", ")}`,
-        );
-
-        // Zoom to the selected freguesias
-        setTimeout(() => {
-            zoomToSelectedFreguesias();
-        }, 200);
-
-        // Update the URL to reflect current selection
-        updateURLWithFreguesias();
     }
 </script>
 

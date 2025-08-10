@@ -228,9 +228,15 @@ title: "Parques Infantis"
             map.getCanvas().style.cursor = "";
         });
 
-        // Dynamic opacity scaling and bounds fitting
+        // Dynamic opacity scaling and bounds fitting (run only once)
+        let hasInitialized = false;
         map.on("sourcedata", (e) => {
-            if (e.sourceId === "playgrounds" && e.isSourceLoaded) {
+            if (
+                e.sourceId === "playgrounds" &&
+                e.isSourceLoaded &&
+                !hasInitialized
+            ) {
+                hasInitialized = true; // Prevent multiple executions
                 setTimeout(() => {
                     try {
                         // Try to get H3 features to calculate dynamic opacity
@@ -274,7 +280,7 @@ title: "Parques Infantis"
                             }
                         }
 
-                        // Also handle playground bounds fitting
+                        // Also handle playground bounds fitting (only once)
                         const playgroundFeatures = map.querySourceFeatures(
                             "playgrounds",
                             {
@@ -287,14 +293,19 @@ title: "Parques Infantis"
                             playgroundFeatures.forEach((feature) => {
                                 bounds.extend(feature.geometry.coordinates);
                             });
-                            map.fitBounds(bounds, { padding: 50 });
+                            // Add animation options to make it smoother
+                            map.fitBounds(bounds, {
+                                padding: 50,
+                                duration: 1000,
+                                essential: false,
+                            });
                         } else {
                             console.log("no playground features found");
                         }
                     } catch (error) {
                         console.warn("Could not process features:", error);
                     }
-                }, 500);
+                }, 1000); // Increased delay to ensure all data is loaded
             }
         });
     });

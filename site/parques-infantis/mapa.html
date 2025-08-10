@@ -122,7 +122,23 @@ title: "Parques Infantis"
 
         <section class="panel-section">
             <h3>Filtros</h3>
-            <p><em>Filtros serão adicionados aqui</em></p>
+            <div class="filter-group">
+                <h4>Freguesias</h4>
+                <div class="filter-header">
+                    <label class="checkbox-container">
+                        <input
+                            type="checkbox"
+                            id="select-all-freguesias"
+                            checked
+                        />
+                        <span class="checkmark"></span>
+                        Selecionar todas
+                    </label>
+                </div>
+                <div id="freguesias-filter" class="checkbox-group">
+                    <!-- Freguesia checkboxes will be populated dynamically -->
+                </div>
+            </div>
         </section>
     </div>
 </div>
@@ -234,7 +250,7 @@ title: "Parques Infantis"
             ],
             layout: {
                 "text-field": "*",
-                "text-size": 16,
+                "text-size": 14,
                 "text-offset": [0, 0.15],
                 "text-anchor": "center",
             },
@@ -405,6 +421,27 @@ title: "Parques Infantis"
                                 // Update the dynamic legend
                                 updateChildrenLegend(maxChildren);
                             }
+
+                            // Populate freguesias filter
+                            populateFreguesiasFilter(h3Features);
+                        } else {
+                            // Fallback: try to get all features from the source
+                            setTimeout(() => {
+                                try {
+                                    const allH3Features =
+                                        map.querySourceFeatures("playgrounds", {
+                                            sourceLayer: "h3",
+                                        });
+                                    if (allH3Features.length > 0) {
+                                        populateFreguesiasFilter(allH3Features);
+                                    }
+                                } catch (error) {
+                                    console.warn(
+                                        "Could not get H3 features for freguesias:",
+                                        error,
+                                    );
+                                }
+                            }, 2000);
                         }
 
                         // Also handle playground bounds fitting (only once)
@@ -464,6 +501,245 @@ title: "Parques Infantis"
             }
         }
 
+        // URL query string management
+        function getSelectedFreguesiasFromURL() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const freguesias = urlParams.get("freguesias");
+            return freguesias ? freguesias.split(",") : [];
+        }
+
+        function updateURLWithFreguesias(selectedFreguesias) {
+            const url = new URL(window.location);
+            if (selectedFreguesias.length === 0) {
+                url.searchParams.delete("freguesias");
+            } else {
+                url.searchParams.set(
+                    "freguesias",
+                    selectedFreguesias.join(","),
+                );
+            }
+            window.history.replaceState({}, "", url);
+        }
+
+        // Freguesias filter functionality
+        let allFreguesias = [];
+        let selectedFreguesias = new Set();
+
+        function populateFreguesiasFilter(h3Features) {
+            // Extract unique freguesias from H3 features, flattening arrays
+            const freguesiasSet = new Set();
+            h3Features.forEach((feature) => {
+                if (feature.properties.freguesias) {
+                    let freguesias = feature.properties.freguesias;
+
+                    // Parse JSON string if needed
+                    if (typeof freguesias === "string") {
+                        try {
+                            freguesias = JSON.parse(freguesias);
+                        } catch (e) {
+                            // If not valid JSON, treat as single string
+                            if (freguesias.trim()) {
+                                freguesiasSet.add(freguesias.trim());
+                            }
+                            return;
+                        }
+                    }
+
+                    if (Array.isArray(freguesias)) {
+                        // Flatten the array of freguesias for this hex
+                        freguesias.forEach((freguesia) => {
+                            if (freguesia && freguesia.trim()) {
+                                freguesiasSet.add(freguesia.trim());
+                            }
+                        });
+                    } else if (typeof freguesias === "string") {
+                        // Handle case where freguesias is a single string
+                        if (freguesias.trim()) {
+                            freguesiasSet.add(freguesias.trim());
+                        }
+                    }
+                }
+            });
+
+            allFreguesias = Array.from(freguesiasSet).sort();
+
+            if (allFreguesias.length === 0) {
+                console.warn("No freguesias found in H3 features");
+                const container = document.getElementById("freguesias-filter");
+                container.innerHTML =
+                    "<p><em>Nenhuma freguesia encontrada</em></p>";
+                return;
+            }
+
+            // Get selected freguesias from URL or select all by default
+            const urlFreguesias = getSelectedFreguesiasFromURL();
+            selectedFreguesias = new Set(
+                urlFreguesias.length > 0 ? urlFreguesias : allFreguesias,
+            );
+
+            const container = document.getElementById("freguesias-filter");
+            container.innerHTML = "";
+
+            allFreguesias.forEach((freguesia) => {
+                const label = document.createElement("label");
+                label.className = "checkbox-container";
+
+                const checkbox = document.createElement("input");
+                checkbox.type = "checkbox";
+                checkbox.value = freguesia;
+                checkbox.checked = selectedFreguesias.has(freguesia);
+                checkbox.addEventListener("change", onFreguesiasChange);
+
+                const checkmark = document.createElement("span");
+                checkmark.className = "checkmark";
+
+                const text = document.createTextNode(freguesia);
+
+                label.appendChild(checkbox);
+                label.appendChild(checkmark);
+                label.appendChild(text);
+                container.appendChild(label);
+            });
+
+            // Update select all checkbox
+            updateSelectAllCheckbox();
+
+            // Apply initial filter
+            applyFreguesiasFilter();
+        }
+
+        function updateSelectAllCheckbox() {
+            const selectAllCheckbox = document.getElementById(
+                "select-all-freguesias",
+            );
+            const allSelected =
+                selectedFreguesias.size === allFreguesias.length;
+            const noneSelected = selectedFreguesias.size === 0;
+
+            selectAllCheckbox.checked = allSelected;
+            selectAllCheckbox.indeterminate = !allSelected && !noneSelected;
+        }
+
+        function onFreguesiasChange() {
+            // Update selected freguesias set
+            selectedFreguesias.clear();
+            const checkboxes = document.querySelectorAll(
+                '#freguesias-filter input[type="checkbox"]:checked',
+            );
+            checkboxes.forEach((cb) => selectedFreguesias.add(cb.value));
+
+            updateSelectAllCheckbox();
+            updateURLWithFreguesias(Array.from(selectedFreguesias));
+            applyFreguesiasFilter();
+        }
+
+        function onSelectAllChange() {
+            const selectAllCheckbox = document.getElementById(
+                "select-all-freguesias",
+            );
+            const checkboxes = document.querySelectorAll(
+                '#freguesias-filter input[type="checkbox"]',
+            );
+
+            if (selectAllCheckbox.checked) {
+                // Select all
+                selectedFreguesias = new Set(allFreguesias);
+                checkboxes.forEach((cb) => (cb.checked = true));
+            } else {
+                // Deselect all
+                selectedFreguesias.clear();
+                checkboxes.forEach((cb) => (cb.checked = false));
+            }
+
+            updateURLWithFreguesias(Array.from(selectedFreguesias));
+            applyFreguesiasFilter();
+        }
+
+        function applyFreguesiasFilter() {
+            if (selectedFreguesias.size === 0) {
+                // Hide all hexagons if none selected
+                map.setFilter("h3-hexagons", ["==", ["literal", true], false]);
+            } else if (selectedFreguesias.size === allFreguesias.length) {
+                // Show all hexagons if all selected
+                map.setFilter("h3-hexagons", null);
+            } else {
+                // Show only selected freguesias
+                const selectedArray = Array.from(selectedFreguesias);
+                const filter = [
+                    "any",
+                    ...selectedArray.map((freguesia) => [
+                        "in",
+                        freguesia,
+                        ["get", "freguesias"],
+                    ]),
+                ];
+                map.setFilter("h3-hexagons", filter);
+            }
+
+            // Zoom to selected freguesias
+            zoomToSelectedFreguesias();
+        }
+
+        function zoomToSelectedFreguesias() {
+            if (selectedFreguesias.size === 0) return;
+
+            try {
+                // Get all H3 features that match selected freguesias
+                const visibleFeatures = map.querySourceFeatures("playgrounds", {
+                    sourceLayer: "h3",
+                });
+
+                const matchingFeatures = visibleFeatures.filter((feature) => {
+                    if (!feature.properties.freguesias) return false;
+
+                    let freguesias = feature.properties.freguesias;
+
+                    // Parse JSON string if needed
+                    if (typeof freguesias === "string") {
+                        try {
+                            freguesias = JSON.parse(freguesias);
+                        } catch (e) {
+                            freguesias = [freguesias];
+                        }
+                    }
+
+                    if (!Array.isArray(freguesias)) {
+                        freguesias = [freguesias];
+                    }
+
+                    // Check if any freguesia in this feature is selected
+                    return freguesias.some((f) => selectedFreguesias.has(f));
+                });
+
+                if (matchingFeatures.length > 0) {
+                    const bounds = new maplibregl.LngLatBounds();
+
+                    matchingFeatures.forEach((feature) => {
+                        if (feature.geometry.type === "Polygon") {
+                            feature.geometry.coordinates[0].forEach((coord) => {
+                                bounds.extend(coord);
+                            });
+                        } else if (feature.geometry.type === "MultiPolygon") {
+                            feature.geometry.coordinates.forEach((polygon) => {
+                                polygon[0].forEach((coord) => {
+                                    bounds.extend(coord);
+                                });
+                            });
+                        }
+                    });
+
+                    // Fit bounds with animation
+                    map.fitBounds(bounds, {
+                        padding: 50,
+                        duration: 1000,
+                        essential: false,
+                    });
+                }
+            } catch (error) {
+                console.warn("Could not zoom to selected freguesias:", error);
+            }
+        }
+
         // Menu functionality
         const burgerIcon = document.getElementById("burger-icon");
         const sidePanel = document.getElementById("side-panel");
@@ -486,6 +762,11 @@ title: "Parques Infantis"
                 sidePanel.classList.remove("open");
             }
         });
+
+        // Setup select all checkbox listener
+        document
+            .getElementById("select-all-freguesias")
+            .addEventListener("change", onSelectAllChange);
     });
 </script>
 
@@ -661,6 +942,104 @@ title: "Parques Infantis"
     .opacity-legend p {
         margin-top: 10px;
         font-style: italic;
+    }
+
+    /* Filter styles */
+    .filter-group {
+        margin-bottom: 20px;
+    }
+
+    .filter-group h4 {
+        margin: 0 0 10px 0;
+        color: #2c3e50;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .filter-header {
+        margin-bottom: 10px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid #eee;
+    }
+
+    .checkbox-group {
+        max-height: 200px;
+        overflow-y: auto;
+        border: 1px solid #eee;
+        border-radius: 4px;
+        padding: 8px;
+    }
+
+    .checkbox-container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 6px;
+        cursor: pointer;
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .checkbox-container:last-child {
+        margin-bottom: 0;
+    }
+
+    .checkbox-container input[type="checkbox"] {
+        display: none;
+    }
+
+    .checkmark {
+        width: 16px;
+        height: 16px;
+        border: 2px solid #bdc3c7;
+        border-radius: 3px;
+        margin-right: 8px;
+        position: relative;
+        transition: all 0.2s ease;
+        flex-shrink: 0;
+    }
+
+    .checkbox-container:hover .checkmark {
+        border-color: #3498db;
+    }
+
+    .checkbox-container input[type="checkbox"]:checked + .checkmark {
+        background-color: #3498db;
+        border-color: #3498db;
+    }
+
+    .checkbox-container input[type="checkbox"]:indeterminate + .checkmark {
+        background-color: #95a5a6;
+        border-color: #95a5a6;
+    }
+
+    .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+        left: 4px;
+        top: 1px;
+        width: 4px;
+        height: 8px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+    }
+
+    .checkbox-container input[type="checkbox"]:checked + .checkmark:after {
+        display: block;
+    }
+
+    .checkbox-container
+        input[type="checkbox"]:indeterminate
+        + .checkmark:after {
+        display: block;
+        left: 3px;
+        top: 5px;
+        width: 6px;
+        height: 2px;
+        border: none;
+        background-color: white;
+        transform: none;
     }
 
     .playground-popup h3 {

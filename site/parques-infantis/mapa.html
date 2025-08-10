@@ -3,143 +3,224 @@ layout: map
 title: "Parques Infantis"
 ---
 
-<!-- Menu label and side panel -->
-<div id="menu-label" class="menu-label">
-    Parques Infantis
-    <div id="burger-icon" class="burger-icon">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-</div>
+<!-- Bootstrap Offcanvas Trigger Button -->
+<button
+    class="btn btn-primary position-fixed"
+    style="top: 20px; right: 20px; z-index: 1000"
+    type="button"
+    data-bs-toggle="offcanvas"
+    data-bs-target="#sidePanel"
+    aria-controls="sidePanel"
+>
+    <i class="bi bi-list me-2"></i>Parques Infantis
+</button>
 
-<div id="side-panel" class="side-panel">
-    <div class="side-panel-header">
-        <h2>Informação e Filtros</h2>
-        <button id="close-panel" class="close-panel">&times;</button>
+<!-- Bootstrap Offcanvas Side Panel -->
+<div
+    class="offcanvas offcanvas-end"
+    tabindex="-1"
+    id="sidePanel"
+    aria-labelledby="sidePanelLabel"
+    style="width: 400px"
+>
+    <div class="offcanvas-header bg-light">
+        <h5 class="offcanvas-title" id="sidePanelLabel">
+            Informação e Filtros
+        </h5>
+        <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+        ></button>
     </div>
-    <div class="side-panel-content">
-        <section class="panel-section">
-            <h3>Sobre a Visualização</h3>
-            <p>
+    <div class="offcanvas-body">
+        <!-- About Section -->
+        <div class="mb-4">
+            <h6 class="fw-bold mb-3">Sobre a Visualização</h6>
+            <p class="small text-muted">
                 Este mapa mostra os parques infantis de Lisboa e a sua
                 proximidade a quiosques. As áreas residenciais estão coloridas
                 por distância ao parque mais próximo.
             </p>
-        </section>
+        </div>
 
-        <section class="panel-section">
-            <h3>Legenda</h3>
-            <h4>Distancia de parques infantis</h4>
-            <div class="legend-item">
-                <div
-                    class="legend-color"
-                    style="background-color: #27ae60"
-                ></div>
-                <span>< 200m do parque</span>
-            </div>
-            <div class="legend-item">
-                <div
-                    class="legend-color"
-                    style="background-color: #f1c40f"
-                ></div>
-                <span>200-400m do parque</span>
-            </div>
-            <div class="legend-item">
-                <div
-                    class="legend-color"
-                    style="background-color: #e74c3c"
-                ></div>
-                <span>400-1000m do parque</span>
-            </div>
-            <div class="legend-item">
-                <div
-                    class="legend-color"
-                    style="background-color: #9b59b6"
-                ></div>
-                <span>> 1000m do parque</span>
-            </div>
-            <h4>Gestão dos parques infantis</h4>
-            <div class="legend-item">
-                <div
-                    class="legend-color"
-                    style="background-color: #e74c3c; border-radius: 50%"
-                ></div>
-                <span>Parques JF (Junta de Freguesia)</span>
-            </div>
-            <div class="legend-item">
-                <div
-                    class="legend-color"
-                    style="background-color: #3498db; border-radius: 50%"
-                ></div>
-                <span>Parques CML (Câmara Municipal)</span>
-            </div>
-            <div class="legend-item">
-                <div
-                    class="legend-color"
-                    style="background-color: #95a5a6; border-radius: 50%"
-                ></div>
-                <span>Parques outros</span>
-            </div>
-            <div class="legend-item">
-                <span class="legend-symbol">*</span>
-                <span>Quiosque próximo</span>
-            </div>
-        </section>
+        <!-- Legend Section -->
+        <div class="mb-4">
+            <h6 class="fw-bold mb-3">Legenda</h6>
 
-        <section class="panel-section">
-            <h3>Densidade de Crianças</h3>
-            <div class="opacity-legend">
-                <div class="opacity-legend-item">
+            <div class="mb-3">
+                <h6 class="fs-6 fw-semibold mb-2">
+                    Distancia de parques infantis
+                </h6>
+                <div class="d-flex align-items-center mb-2">
                     <div
-                        class="legend-color opacity-sample"
-                        style="background-color: #27ae60; opacity: 0.1"
+                        class="me-2"
+                        style="
+                            width: 20px;
+                            height: 15px;
+                            background-color: #27ae60;
+                        "
                     ></div>
-                    <span>Poucas crianças</span>
+                    <small>< 200m do parque</small>
                 </div>
-                <div class="opacity-legend-item">
+                <div class="d-flex align-items-center mb-2">
                     <div
-                        class="legend-color opacity-sample"
-                        style="background-color: #f1c40f; opacity: 0.4"
+                        class="me-2"
+                        style="
+                            width: 20px;
+                            height: 15px;
+                            background-color: #f1c40f;
+                        "
                     ></div>
-                    <span>Algumas crianças</span>
+                    <small>200-400m do parque</small>
                 </div>
-                <div class="opacity-legend-item">
+                <div class="d-flex align-items-center mb-2">
                     <div
-                        class="legend-color opacity-sample"
-                        style="background-color: #e74c3c; opacity: 0.7"
+                        class="me-2"
+                        style="
+                            width: 20px;
+                            height: 15px;
+                            background-color: #e74c3c;
+                        "
                     ></div>
-                    <span>Muitas crianças</span>
+                    <small>400-1000m do parque</small>
                 </div>
-                <p>
-                    <small
-                        >A intensidade da cor indica o número de crianças (&lt;
-                        14 anos) por hexágono.</small
-                    >
-                </p>
+                <div class="d-flex align-items-center mb-2">
+                    <div
+                        class="me-2"
+                        style="
+                            width: 20px;
+                            height: 15px;
+                            background-color: #9b59b6;
+                        "
+                    ></div>
+                    <small>> 1000m do parque</small>
+                </div>
             </div>
-        </section>
 
-        <section class="panel-section">
-            <h3>Filtros</h3>
-            <div class="filter-group">
-                <h4>Freguesias</h4>
-                <div class="filter-header">
-                    <label class="checkbox-container">
+            <div class="mb-3">
+                <h6 class="fs-6 fw-semibold mb-2">
+                    Gestão dos parques infantis
+                </h6>
+                <div class="d-flex align-items-center mb-2">
+                    <div
+                        class="me-2 rounded-circle"
+                        style="
+                            width: 15px;
+                            height: 15px;
+                            background-color: #e74c3c;
+                        "
+                    ></div>
+                    <small>Parques JF (Junta de Freguesia)</small>
+                </div>
+                <div class="d-flex align-items-center mb-2">
+                    <div
+                        class="me-2 rounded-circle"
+                        style="
+                            width: 15px;
+                            height: 15px;
+                            background-color: #3498db;
+                        "
+                    ></div>
+                    <small>Parques CML (Câmara Municipal)</small>
+                </div>
+                <div class="d-flex align-items-center mb-2">
+                    <div
+                        class="me-2 rounded-circle"
+                        style="
+                            width: 15px;
+                            height: 15px;
+                            background-color: #95a5a6;
+                        "
+                    ></div>
+                    <small>Parques outros</small>
+                </div>
+                <div class="d-flex align-items-center mb-2">
+                    <span class="me-2 fw-bold">*</span>
+                    <small>Quiosque próximo</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- Children Density Section -->
+        <div class="mb-4">
+            <h6 class="fw-bold mb-3">Densidade de Crianças</h6>
+            <div class="d-flex align-items-center mb-2">
+                <div
+                    class="me-2"
+                    style="
+                        width: 20px;
+                        height: 15px;
+                        background-color: #27ae60;
+                        opacity: 0.1;
+                    "
+                ></div>
+                <small>Poucas crianças</small>
+            </div>
+            <div class="d-flex align-items-center mb-2">
+                <div
+                    class="me-2"
+                    style="
+                        width: 20px;
+                        height: 15px;
+                        background-color: #f1c40f;
+                        opacity: 0.4;
+                    "
+                ></div>
+                <small>Algumas crianças</small>
+            </div>
+            <div class="d-flex align-items-center mb-2">
+                <div
+                    class="me-2"
+                    style="
+                        width: 20px;
+                        height: 15px;
+                        background-color: #e74c3c;
+                        opacity: 0.7;
+                    "
+                ></div>
+                <small>Muitas crianças</small>
+            </div>
+            <p class="small text-muted mt-2">
+                A intensidade da cor indica o número de crianças (&lt; 14 anos)
+                por hexágono.
+            </p>
+        </div>
+
+        <!-- Filters Section -->
+        <div class="mb-4">
+            <h6 class="fw-bold mb-3">Filtros</h6>
+
+            <div class="card">
+                <div class="card-header">
+                    <h6 class="card-title mb-0">Freguesias</h6>
+                </div>
+                <div class="card-body">
+                    <div class="form-check mb-3">
                         <input
+                            class="form-check-input"
                             type="checkbox"
                             id="select-all-freguesias"
                             checked
                         />
-                        <span class="checkmark"></span>
-                        Selecionar todas
-                    </label>
-                </div>
-                <div id="freguesias-filter" class="checkbox-group">
-                    <!-- Freguesia checkboxes will be populated dynamically -->
+                        <label
+                            class="form-check-label fw-semibold"
+                            for="select-all-freguesias"
+                        >
+                            Selecionar todas
+                        </label>
+                    </div>
+                    <div
+                        id="freguesias-filter"
+                        class="overflow-auto"
+                        style="max-height: 200px"
+                    >
+                        <!-- Freguesia checkboxes will be populated dynamically -->
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
     </div>
 </div>
 
@@ -200,46 +281,35 @@ title: "Parques Infantis"
             },
         });
 
-        // Color scheme for different 'gestao' values
-        const gestaoColors = {
-            JF: "#e74c3c", // Red for Junta de Freguesia
-            CML: "#3498db", // Blue for Câmara Municipal de Lisboa
-            default: "#95a5a6", // Gray for others
-        };
-
-        // Main playground markers (circles colored by gestao)
+        // Add playgrounds layer with color based on gestao
         map.addLayer({
-            id: "playground-circles",
+            id: "playgrounds",
             type: "circle",
             source: "playgrounds",
-            "source-layer": "parques_infantis", // "parques_infantis" layer in pmtiles file
+            "source-layer": "parques_infantis",
             paint: {
                 "circle-radius": [
-                    "interpolate",
-                    ["linear"],
-                    ["zoom"],
-                    10,
-                    4,
-                    18,
-                    12,
+                    "case",
+                    ["==", ["get", "quiosque_proximos"], 1],
+                    8, // Larger radius for playgrounds with nearby kiosks
+                    6, // Default radius
                 ],
                 "circle-color": [
                     "case",
                     ["==", ["get", "gestao"], "JF"],
-                    gestaoColors.JF,
+                    "#e74c3c", // Red for JF
                     ["==", ["get", "gestao"], "CML"],
-                    gestaoColors.CML,
-                    gestaoColors.default,
+                    "#3498db", // Blue for CML
+                    "#95a5a6", // Gray for others
                 ],
+                "circle-stroke-width": 1,
                 "circle-stroke-color": "#ffffff",
-                "circle-stroke-width": 2,
-                "circle-opacity": 0.8,
             },
         });
 
-        // Coffee indicator for playgrounds near quiosques (< 100m)
+        // Add symbol layer for playgrounds with nearby kiosks
         map.addLayer({
-            id: "playground-coffee",
+            id: "playgrounds-with-kiosks",
             type: "symbol",
             source: "playgrounds",
             "source-layer": "parques_infantis",
@@ -250,9 +320,9 @@ title: "Parques Infantis"
             ],
             layout: {
                 "text-field": "*",
-                "text-size": 14,
-                "text-offset": [0, 0.15],
-                "text-anchor": "center",
+                "text-font": ["Open Sans Bold", "Arial Unicode MS Bold"],
+                "text-size": 16,
+                "text-offset": [0, -0.5],
             },
             paint: {
                 "text-color": "#FFD700",
@@ -261,114 +331,76 @@ title: "Parques Infantis"
             },
         });
 
-        // Unified click handler to prioritize playground over h3
-        // Prevent popups on double-click by using a timeout
-        let clickTimeout;
-        map.on("click", (e) => {
-            // Clear any existing timeout
-            if (clickTimeout) {
-                clearTimeout(clickTimeout);
+        // Add click event for playgrounds
+        map.on("click", "playgrounds", (e) => {
+            const properties = e.features[0].properties;
+            const coordinates = e.features[0].geometry.coordinates.slice();
+
+            // Ensure that if the map is zoomed out such that multiple
+            // copies of the feature are visible, the popup appears
+            // over the copy being pointed to.
+            while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
             }
 
-            // Set a short timeout to distinguish single clicks from double clicks
-            clickTimeout = setTimeout(() => {
-                // Query all features at click point
-                const features = map.queryRenderedFeatures(e.point);
+            const gestaoLabel =
+                properties.gestao === "JF"
+                    ? "Junta de Freguesia"
+                    : properties.gestao === "CML"
+                      ? "Câmara Municipal"
+                      : "Outro";
 
-                // Check if we clicked on a playground first
-                const playgroundFeature = features.find(
-                    (f) => f.layer.id === "playground-circles",
-                );
-                if (playgroundFeature) {
-                    const properties = playgroundFeature.properties;
-                    const coordinates =
-                        playgroundFeature.geometry.coordinates.slice();
+            const quiosqueText =
+                properties.quiosque_proximos === 1 ? "Sim" : "Não";
 
-                    // Ensure popup appears over the feature clicked
-                    while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-                        coordinates[0] +=
-                            e.lngLat.lng > coordinates[0] ? 360 : -360;
-                    }
-
-                    const coffeeText =
-                        properties.distance_from_quiosque < 100
-                            ? "<p><strong>☕ Quiosque próximo!</strong> (a " +
-                              Math.round(properties.distance_from_quiosque) +
-                              "m)</p>"
-                            : "";
-
-                    const popupHTML = `
-                        <div class="playground-popup">
-                            <h3>${properties.designacao || "Parque Infantil"}</h3>
-                            <p><strong>Morada:</strong> ${properties.morada || "N/A"}</p>
-                            <p><strong>Gestão:</strong> ${properties.gestao || "N/A"}</p>
-                            <p><strong>Serviço CML:</strong> ${properties.servico_cml || "N/A"}</p>
-                            ${coffeeText}
-                        </div>
-                    `;
-
-                    new maplibregl.Popup()
-                        .setLngLat(coordinates)
-                        .setHTML(popupHTML)
-                        .addTo(map);
-                    return; // Exit early, don't check for h3
-                }
-
-                // If no playground clicked, check for h3 hexagon
-                const h3Feature = features.find(
-                    (f) => f.layer.id === "h3-hexagons",
-                );
-                if (h3Feature) {
-                    const properties = h3Feature.properties;
-                    const coordinates = e.lngLat;
-
-                    const distanceText = properties.nearest_playground_distance
-                        ? `${Math.round(properties.nearest_playground_distance)}m`
-                        : "N/A";
-
-                    const popupHTML = `
-                        <div class="h3-popup">
-                            <h3>Área Residencial</h3>
-                            <p><strong>Crianças (< 14 anos):</strong> ${properties.children_under_14 || 0}</p>
-                            <p><strong>Distância ao parque mais próximo:</strong> ${distanceText}</p>
-                        </div>
-                    `;
-
-                    new maplibregl.Popup()
-                        .setLngLat(coordinates)
-                        .setHTML(popupHTML)
-                        .addTo(map);
-                }
-            }, 200); // 200ms delay to detect double clicks
+            new maplibregl.Popup()
+                .setLngLat(coordinates)
+                .setHTML(
+                    `
+                    <div class="playground-popup">
+                        <h6 class="fw-bold mb-2">${properties.nome || "Parque Infantil"}</h6>
+                        <p class="mb-1 small"><strong>Gestão:</strong> ${gestaoLabel}</p>
+                        <p class="mb-1 small"><strong>Quiosque próximo:</strong> ${quiosqueText}</p>
+                        ${properties.freguesia ? `<p class="mb-0 small"><strong>Freguesia:</strong> ${properties.freguesia}</p>` : ""}
+                    </div>
+                `,
+                )
+                .addTo(map);
         });
 
-        // Clear timeout on double click to prevent popup
-        map.on("dblclick", () => {
-            if (clickTimeout) {
-                clearTimeout(clickTimeout);
-                clickTimeout = null;
-            }
-        });
-
-        // Change cursor on hover for hexagons
-        map.on("mouseenter", "h3-hexagons", () => {
+        // Change the cursor to a pointer when the mouse is over the playgrounds layer
+        map.on("mouseenter", "playgrounds", () => {
             map.getCanvas().style.cursor = "pointer";
         });
 
-        map.on("mouseleave", "h3-hexagons", () => {
+        // Change it back to a pointer when it leaves
+        map.on("mouseleave", "playgrounds", () => {
             map.getCanvas().style.cursor = "";
         });
 
-        // Change cursor on hover for playgrounds (higher priority)
-        map.on("mouseenter", "playground-circles", () => {
-            map.getCanvas().style.cursor = "pointer";
+        // Add click event for H3 hexagons
+        map.on("click", "h3-hexagons", (e) => {
+            const properties = e.features[0].properties;
+            const coordinates = e.lngLat;
+
+            const distance = Math.round(properties.nearest_playground_distance);
+            const children = properties.children_under_14 || 0;
+
+            new maplibregl.Popup()
+                .setLngLat(coordinates)
+                .setHTML(
+                    `
+                    <div class="h3-popup">
+                        <h6 class="fw-bold mb-2">Informação da Área</h6>
+                        <p class="mb-1 small"><strong>Distância ao parque mais próximo:</strong> ${distance}m</p>
+                        <p class="mb-0 small"><strong>Crianças (&lt;14 anos):</strong> ${children}</p>
+                    </div>
+                `,
+                )
+                .addTo(map);
         });
 
-        map.on("mouseleave", "playground-circles", () => {
-            map.getCanvas().style.cursor = "";
-        });
-
-        // Dynamic opacity scaling and bounds fitting (run only once)
+        // Populate freguesias filter after data loads
         let hasInitialized = false;
         map.on("sourcedata", (e) => {
             if (
@@ -376,779 +408,354 @@ title: "Parques Infantis"
                 e.isSourceLoaded &&
                 !hasInitialized
             ) {
-                hasInitialized = true; // Prevent multiple executions
+                hasInitialized = true;
+
                 setTimeout(() => {
-                    try {
-                        // Try to get H3 features to calculate dynamic opacity
-                        const h3Features = map.querySourceFeatures(
-                            "playgrounds",
-                            {
-                                sourceLayer: "h3",
-                            },
-                        );
+                    populateFreguesiasFilter();
 
-                        if (h3Features.length > 0) {
-                            // Find the maximum children_under_14 value
-                            const maxChildren = Math.max(
-                                ...h3Features.map(
-                                    (f) => f.properties.children_under_14 || 0,
-                                ),
-                            );
-
-                            console.log("Max children under 14:", maxChildren);
-
-                            // Update the layer paint property with the actual max value
-                            if (maxChildren > 0) {
-                                map.setPaintProperty(
-                                    "h3-hexagons",
-                                    "fill-opacity",
-                                    [
-                                        "case",
-                                        ["==", ["get", "children_under_14"], 0],
-                                        0, // Transparent when 0 children
-                                        [
-                                            "interpolate",
-                                            ["linear"],
-                                            ["get", "children_under_14"],
-                                            1,
-                                            0.1, // Minimum opacity for 1 child
-                                            maxChildren,
-                                            0.7, // Maximum opacity for highest value
-                                        ],
-                                    ],
-                                );
-
-                                // Update the dynamic legend
-                                updateChildrenLegend(maxChildren);
-                            }
-
-                            // Populate freguesias filter
-                            populateFreguesiasFilter(h3Features);
-                        } else {
-                            // Fallback: try to get all features from the source
-                            setTimeout(() => {
-                                try {
-                                    const allH3Features =
-                                        map.querySourceFeatures("playgrounds", {
-                                            sourceLayer: "h3",
-                                        });
-                                    if (allH3Features.length > 0) {
-                                        populateFreguesiasFilter(allH3Features);
-                                    }
-                                } catch (error) {
-                                    console.warn(
-                                        "Could not get H3 features for freguesias:",
-                                        error,
-                                    );
-                                }
-                            }, 2000);
-                        }
-
-                        // Also handle playground bounds fitting (only once)
-                        const playgroundFeatures = map.querySourceFeatures(
-                            "playgrounds",
-                            {
-                                sourceLayer: "parques_infantis",
-                            },
-                        );
-
-                        if (playgroundFeatures.length > 0) {
-                            const bounds = new maplibregl.LngLatBounds();
-                            playgroundFeatures.forEach((feature) => {
-                                bounds.extend(feature.geometry.coordinates);
-                            });
-                            // Add animation options to make it smoother
-                            map.fitBounds(bounds, {
-                                padding: 50,
-                                duration: 1000,
-                                essential: false,
-                            });
-                        } else {
-                            console.log("no playground features found");
-                        }
-                    } catch (error) {
-                        console.warn("Could not process features:", error);
+                    // Load freguesia filters from URL
+                    const selectedFreguesias = getSelectedFreguesiasFromURL();
+                    if (selectedFreguesias.length > 0) {
+                        // Apply URL filters after a delay to ensure DOM is ready
+                        setTimeout(() => {
+                            applyURLFreguesias(selectedFreguesias);
+                        }, 100);
+                    } else {
+                        // Show all hexagons by default
+                        window.map.setFilter("h3-hexagons", null);
                     }
-                }, 1000); // Increased delay to ensure all data is loaded
+                }, 500);
             }
         });
 
-        // Function to update children density legend with actual data
-        function updateChildrenLegend(maxChildren) {
-            if (maxChildren <= 0) return;
-
-            const lowValue = Math.ceil(maxChildren * 0.2);
-            const midValue = Math.ceil(maxChildren * 0.6);
-            const highValue = maxChildren;
-
-            // Update legend text
-            const legendItems = document.querySelectorAll(
-                ".opacity-legend-item span",
-            );
-            if (legendItems[0])
-                legendItems[0].textContent = `1-${lowValue} crianças`;
-            if (legendItems[1])
-                legendItems[1].textContent = `${lowValue + 1}-${midValue} crianças`;
-            if (legendItems[2])
-                legendItems[2].textContent = `${midValue + 1}-${highValue} crianças`;
-
-            // Update the description
-            const description = document.querySelector(
-                ".opacity-legend p small",
-            );
-            if (description) {
-                description.innerHTML = `A intensidade da cor indica o número de crianças (&lt; 14 anos) por hexágono. Máximo: <strong>${highValue}</strong> crianças.`;
-            }
-        }
-
-        // URL query string management
-        function getSelectedFreguesiasFromURL() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const freguesias = urlParams.get("freguesias");
-            return freguesias ? freguesias.split(",") : [];
-        }
-
-        function updateURLWithFreguesias(selectedFreguesias) {
-            const url = new URL(window.location);
-            if (selectedFreguesias.length === 0) {
-                url.searchParams.delete("freguesias");
-            } else {
-                url.searchParams.set(
-                    "freguesias",
-                    selectedFreguesias.join(","),
-                );
-            }
-            window.history.replaceState({}, "", url);
-        }
-
-        // Freguesias filter functionality
-        let allFreguesias = [];
-        let selectedFreguesias = new Set();
-
-        function populateFreguesiasFilter(h3Features) {
-            // Extract unique freguesias from H3 features, flattening arrays
-            const freguesiasSet = new Set();
-            h3Features.forEach((feature) => {
-                if (feature.properties.freguesias) {
-                    let freguesias = feature.properties.freguesias;
-
-                    // Parse JSON string if needed
-                    if (typeof freguesias === "string") {
-                        try {
-                            freguesias = JSON.parse(freguesias);
-                        } catch (e) {
-                            // If not valid JSON, treat as single string
-                            if (freguesias.trim()) {
-                                freguesiasSet.add(freguesias.trim());
-                            }
-                            return;
-                        }
-                    }
-
-                    if (Array.isArray(freguesias)) {
-                        // Flatten the array of freguesias for this hex
-                        freguesias.forEach((freguesia) => {
-                            if (freguesia && freguesia.trim()) {
-                                freguesiasSet.add(freguesia.trim());
-                            }
-                        });
-                    } else if (typeof freguesias === "string") {
-                        // Handle case where freguesias is a single string
-                        if (freguesias.trim()) {
-                            freguesiasSet.add(freguesias.trim());
-                        }
-                    }
-                }
-            });
-
-            allFreguesias = Array.from(freguesiasSet).sort();
-
-            if (allFreguesias.length === 0) {
-                console.warn("No freguesias found in H3 features");
-                const container = document.getElementById("freguesias-filter");
-                container.innerHTML =
-                    "<p><em>Nenhuma freguesia encontrada</em></p>";
-                return;
-            }
-
-            // Get selected freguesias from URL or select all by default
-            const urlFreguesias = getSelectedFreguesiasFromURL();
-            selectedFreguesias = new Set(
-                urlFreguesias.length > 0 ? urlFreguesias : allFreguesias,
-            );
-
-            const container = document.getElementById("freguesias-filter");
-            container.innerHTML = "";
-
-            allFreguesias.forEach((freguesia) => {
-                const label = document.createElement("label");
-                label.className = "checkbox-container";
-
-                const checkbox = document.createElement("input");
-                checkbox.type = "checkbox";
-                checkbox.value = freguesia;
-                checkbox.checked = selectedFreguesias.has(freguesia);
-                checkbox.addEventListener("change", onFreguesiasChange);
-
-                const checkmark = document.createElement("span");
-                checkmark.className = "checkmark";
-
-                const text = document.createTextNode(freguesia);
-
-                label.appendChild(checkbox);
-                label.appendChild(checkmark);
-                label.appendChild(text);
-                container.appendChild(label);
-            });
-
-            // Update select all checkbox
-            updateSelectAllCheckbox();
-
-            // Apply initial filter and zoom to selection
-            applyFreguesiasFilter();
-
-            // Zoom to selected freguesias on initial load
-            setTimeout(() => {
-                zoomToSelectedFreguesias();
-                updateOpacityForSelectedFreguesias();
-            }, 500);
-        }
-
-        function updateSelectAllCheckbox() {
-            const selectAllCheckbox = document.getElementById(
-                "select-all-freguesias",
-            );
-            const allSelected =
-                selectedFreguesias.size === allFreguesias.length;
-            const noneSelected = selectedFreguesias.size === 0;
-
-            selectAllCheckbox.checked = allSelected;
-            selectAllCheckbox.indeterminate = !allSelected && !noneSelected;
-        }
-
-        function onFreguesiasChange() {
-            // Update selected freguesias set
-            selectedFreguesias.clear();
-            const checkboxes = document.querySelectorAll(
-                '#freguesias-filter input[type="checkbox"]:checked',
-            );
-            checkboxes.forEach((cb) => selectedFreguesias.add(cb.value));
-
-            updateSelectAllCheckbox();
-            updateURLWithFreguesias(Array.from(selectedFreguesias));
-            applyFreguesiasFilter();
-        }
-
-        function onSelectAllChange() {
-            const selectAllCheckbox = document.getElementById(
-                "select-all-freguesias",
-            );
-            const checkboxes = document.querySelectorAll(
-                '#freguesias-filter input[type="checkbox"]',
-            );
-
-            if (selectAllCheckbox.checked) {
-                // Select all
-                selectedFreguesias = new Set(allFreguesias);
-                checkboxes.forEach((cb) => (cb.checked = true));
-            } else {
-                // Deselect all
-                selectedFreguesias.clear();
-                checkboxes.forEach((cb) => (cb.checked = false));
-            }
-
-            updateURLWithFreguesias(Array.from(selectedFreguesias));
-            applyFreguesiasFilter();
-        }
-
-        function applyFreguesiasFilter() {
-            if (selectedFreguesias.size === 0) {
-                // Hide all hexagons if none selected
-                map.setFilter("h3-hexagons", ["==", ["literal", true], false]);
-            } else if (selectedFreguesias.size === allFreguesias.length) {
-                // Show all hexagons if all selected
-                map.setFilter("h3-hexagons", null);
-            } else {
-                // Show only selected freguesias
-                const selectedArray = Array.from(selectedFreguesias);
-                const filter = [
-                    "any",
-                    ...selectedArray.map((freguesia) => [
-                        "in",
-                        freguesia,
-                        ["get", "freguesias"],
-                    ]),
-                ];
-                map.setFilter("h3-hexagons", filter);
-            }
-
-            // Zoom to selected freguesias
-            zoomToSelectedFreguesias();
-
-            // Update opacity based on selected freguesias
-            updateOpacityForSelectedFreguesias();
-        }
-
-        function zoomToSelectedFreguesias() {
-            if (selectedFreguesias.size === 0) return;
-
-            try {
-                // Get all H3 features that match selected freguesias
-                const visibleFeatures = map.querySourceFeatures("playgrounds", {
-                    sourceLayer: "h3",
-                });
-
-                const matchingFeatures = visibleFeatures.filter((feature) => {
-                    if (!feature.properties.freguesias) return false;
-
-                    let freguesias = feature.properties.freguesias;
-
-                    // Parse JSON string if needed
-                    if (typeof freguesias === "string") {
-                        try {
-                            freguesias = JSON.parse(freguesias);
-                        } catch (e) {
-                            freguesias = [freguesias];
-                        }
-                    }
-
-                    if (!Array.isArray(freguesias)) {
-                        freguesias = [freguesias];
-                    }
-
-                    // Check if any freguesia in this feature is selected
-                    return freguesias.some((f) => selectedFreguesias.has(f));
-                });
-
-                if (matchingFeatures.length > 0) {
-                    const bounds = new maplibregl.LngLatBounds();
-
-                    matchingFeatures.forEach((feature) => {
-                        if (feature.geometry.type === "Polygon") {
-                            feature.geometry.coordinates[0].forEach((coord) => {
-                                bounds.extend(coord);
-                            });
-                        } else if (feature.geometry.type === "MultiPolygon") {
-                            feature.geometry.coordinates.forEach((polygon) => {
-                                polygon[0].forEach((coord) => {
-                                    bounds.extend(coord);
-                                });
-                            });
-                        }
-                    });
-
-                    // Fit bounds with animation
-                    map.fitBounds(bounds, {
-                        padding: 50,
-                        duration: 1000,
-                        essential: false,
-                    });
-                }
-            } catch (error) {
-                console.warn("Could not zoom to selected freguesias:", error);
-            }
-        }
-
-        function updateOpacityForSelectedFreguesias() {
-            if (selectedFreguesias.size === 0) return;
-
-            try {
-                // Get all H3 features that match selected freguesias
-                const visibleFeatures = map.querySourceFeatures("playgrounds", {
-                    sourceLayer: "h3",
-                });
-
-                const matchingFeatures = visibleFeatures.filter((feature) => {
-                    if (!feature.properties.freguesias) return false;
-
-                    let freguesias = feature.properties.freguesias;
-
-                    // Parse JSON string if needed
-                    if (typeof freguesias === "string") {
-                        try {
-                            freguesias = JSON.parse(freguesias);
-                        } catch (e) {
-                            freguesias = [freguesias];
-                        }
-                    }
-
-                    if (!Array.isArray(freguesias)) {
-                        freguesias = [freguesias];
-                    }
-
-                    // Check if any freguesia in this feature is selected
-                    return freguesias.some((f) => selectedFreguesias.has(f));
-                });
-
-                if (matchingFeatures.length > 0) {
-                    // Find the maximum children_under_14 value in selected freguesias
-                    const maxChildren = Math.max(
-                        ...matchingFeatures.map(
-                            (f) => f.properties.children_under_14 || 0,
-                        ),
-                    );
-
-                    console.log(
-                        "Max children in selected freguesias:",
-                        maxChildren,
-                    );
-
-                    // Update the layer paint property with the new max value
-                    if (maxChildren > 0) {
-                        map.setPaintProperty("h3-hexagons", "fill-opacity", [
-                            "case",
-                            ["==", ["get", "children_under_14"], 0],
-                            0, // Transparent when 0 children
-                            [
-                                "interpolate",
-                                ["linear"],
-                                ["get", "children_under_14"],
-                                1,
-                                0.1, // Minimum opacity for 1 child
-                                maxChildren,
-                                0.7, // Maximum opacity for highest value
-                            ],
-                        ]);
-
-                        // Update the dynamic legend
-                        updateChildrenLegend(maxChildren);
-                    }
-                }
-            } catch (error) {
-                console.warn(
-                    "Could not update opacity for selected freguesias:",
-                    error,
-                );
-            }
-        }
-
-        // Menu functionality
-        const burgerIcon = document.getElementById("burger-icon");
-        const sidePanel = document.getElementById("side-panel");
-        const closePanel = document.getElementById("close-panel");
-
-        burgerIcon.addEventListener("click", () => {
-            sidePanel.classList.add("open");
-        });
-
-        closePanel.addEventListener("click", () => {
-            sidePanel.classList.remove("open");
-        });
-
-        // Close panel when clicking outside
-        document.addEventListener("click", (e) => {
-            if (
-                !sidePanel.contains(e.target) &&
-                !burgerIcon.contains(e.target)
-            ) {
-                sidePanel.classList.remove("open");
-            }
-        });
-
-        // Setup select all checkbox listener
+        // Add event listeners
         document
             .getElementById("select-all-freguesias")
             .addEventListener("change", onSelectAllChange);
     });
+
+    // Freguesias filter functions
+    function populateFreguesiasFilter() {
+        try {
+            // Query H3 features to get unique freguesias
+            const features = window.map.querySourceFeatures("playgrounds", {
+                sourceLayer: "h3",
+            });
+
+            console.log("Total H3 features found:", features.length);
+
+            // Extract freguesias from H3 features
+            const freguesiasSet = new Set();
+            features.forEach((feature) => {
+                const value = feature.properties.freguesias;
+                if (value) {
+                    if (Array.isArray(value)) {
+                        // If it's an array, add each freguesia
+                        value.forEach((f) => freguesiasSet.add(f));
+                    } else if (typeof value === "string") {
+                        try {
+                            // Try to parse as JSON array
+                            const parsed = JSON.parse(value);
+                            if (Array.isArray(parsed)) {
+                                parsed.forEach((f) => freguesiasSet.add(f));
+                            } else {
+                                freguesiasSet.add(value);
+                            }
+                        } catch (e) {
+                            // Not JSON, treat as single string
+                            freguesiasSet.add(value);
+                        }
+                    } else {
+                        freguesiasSet.add(value.toString());
+                    }
+                }
+            });
+
+            const freguesias = Array.from(freguesiasSet).sort();
+
+            console.log("Unique freguesias found:", freguesias);
+
+            if (freguesias.length === 0) {
+                console.warn("No freguesias found in features");
+                console.log(
+                    "Available properties in first feature:",
+                    features.length > 0
+                        ? Object.keys(features[0].properties)
+                        : "No features found",
+                );
+                const container = document.getElementById("freguesias-filter");
+                container.innerHTML =
+                    '<div class="alert alert-warning small" role="alert">Nenhuma freguesia encontrada nos dados. Verifique os logs do console para mais detalhes.</div>';
+                return;
+            }
+
+            const container = document.getElementById("freguesias-filter");
+            container.innerHTML = "";
+
+            freguesias.forEach((freguesia) => {
+                const div = document.createElement("div");
+                div.className = "form-check mb-2";
+
+                const checkbox = document.createElement("input");
+                checkbox.className = "form-check-input";
+                checkbox.type = "checkbox";
+                checkbox.id = `freguesia-${freguesia.replace(/\s+/g, "-").replace(/[^a-zA-Z0-9-]/g, "")}`;
+                checkbox.value = freguesia;
+                checkbox.checked = true;
+                checkbox.addEventListener("change", onFreguesiasChange);
+
+                const label = document.createElement("label");
+                label.className = "form-check-label small";
+                label.htmlFor = checkbox.id;
+                label.textContent = freguesia;
+
+                div.appendChild(checkbox);
+                div.appendChild(label);
+                container.appendChild(div);
+            });
+
+            updateSelectAllCheckbox();
+        } catch (error) {
+            console.error("Error populating freguesias filter:", error);
+            const container = document.getElementById("freguesias-filter");
+            container.innerHTML =
+                '<div class="alert alert-danger small" role="alert">Erro ao carregar freguesias: ' +
+                error.message +
+                "</div>";
+        }
+    }
+
+    function updateSelectAllCheckbox() {
+        const checkboxes = document.querySelectorAll(
+            '#freguesias-filter input[type="checkbox"]',
+        );
+        const selectAllCheckbox = document.getElementById(
+            "select-all-freguesias",
+        );
+
+        const checkedCount = Array.from(checkboxes).filter(
+            (cb) => cb.checked,
+        ).length;
+        const totalCount = checkboxes.length;
+
+        if (checkedCount === 0) {
+            selectAllCheckbox.checked = false;
+            selectAllCheckbox.indeterminate = false;
+        } else if (checkedCount === totalCount) {
+            selectAllCheckbox.checked = true;
+            selectAllCheckbox.indeterminate = false;
+        } else {
+            selectAllCheckbox.checked = false;
+            selectAllCheckbox.indeterminate = true;
+        }
+    }
+
+    function onFreguesiasChange() {
+        console.log("onFreguesiasChange called");
+        updateSelectAllCheckbox();
+
+        // Add a small delay to ensure DOM is updated
+        setTimeout(() => {
+            applyFreguesiasFilter();
+            updateURLWithFreguesias();
+        }, 10);
+    }
+
+    function onSelectAllChange() {
+        console.log("onSelectAllChange called");
+        const selectAllCheckbox = document.getElementById(
+            "select-all-freguesias",
+        );
+        const checkboxes = document.querySelectorAll(
+            '#freguesias-filter input[type="checkbox"]',
+        );
+
+        console.log("Select all checked:", selectAllCheckbox.checked);
+        console.log("Number of individual checkboxes:", checkboxes.length);
+
+        checkboxes.forEach((checkbox) => {
+            checkbox.checked = selectAllCheckbox.checked;
+        });
+
+        selectAllCheckbox.indeterminate = false;
+
+        // Add a small delay to ensure DOM is updated
+        setTimeout(() => {
+            applyFreguesiasFilter();
+            updateURLWithFreguesias();
+        }, 10);
+    }
+
+    function applyFreguesiasFilter() {
+        const selectedFreguesias = Array.from(
+            document.querySelectorAll(
+                '#freguesias-filter input[type="checkbox"]:checked',
+            ),
+        ).map((cb) => cb.value);
+
+        console.log("applyFreguesiasFilter called");
+        console.log("DOM query found selected freguesias:", selectedFreguesias);
+        console.log("Number of selected:", selectedFreguesias.length);
+        console.log(
+            "Total checkboxes:",
+            document.querySelectorAll(
+                '#freguesias-filter input[type="checkbox"]',
+            ).length,
+        );
+
+        if (selectedFreguesias.length === 0) {
+            // Hide all hexagons when no freguesias selected
+            window.map.setFilter("h3-hexagons", [
+                "==",
+                ["literal", true],
+                false,
+            ]);
+        } else if (selectedFreguesias.length === getAllFreguesias().length) {
+            // Show all hexagons when all freguesias selected
+            window.map.setFilter("h3-hexagons", null);
+        } else {
+            // Show only selected freguesias using string-based filtering
+            const filter = [
+                "any",
+                ...selectedFreguesias.map((freguesia) => [
+                    "in",
+                    freguesia,
+                    ["get", "freguesias"],
+                ]),
+            ];
+            console.log(
+                "Manual selection filter:",
+                JSON.stringify(filter, null, 2),
+            );
+            window.map.setFilter("h3-hexagons", filter);
+            console.log(
+                `Applied filter for freguesias: ${selectedFreguesias.join(", ")}`,
+            );
+        }
+
+        // Always keep playgrounds visible
+        window.map.setFilter("playgrounds", null);
+        window.map.setFilter("playgrounds-with-kiosks", [
+            "==",
+            ["get", "quiosque_proximos"],
+            1,
+        ]);
+
+        updateChildrenLegend();
+    }
+
+    function zoomToSelectedFreguesias() {
+        // Simplified version - we'll enhance this later if needed
+        console.log("Zoom to selected freguesias called");
+    }
+
+    function updateChildrenLegend() {
+        // This function can be expanded to update legend based on visible data
+        // For now, it's a placeholder for future enhancements
+    }
+
+    function getSelectedFreguesiasFromURL() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const freguesias = urlParams.get("freguesias");
+        return freguesias ? freguesias.split(",") : [];
+    }
+
+    function updateURLWithFreguesias() {
+        const selectedFreguesias = Array.from(
+            document.querySelectorAll(
+                '#freguesias-filter input[type="checkbox"]:checked',
+            ),
+        ).map((cb) => cb.value);
+
+        const url = new URL(window.location);
+        if (selectedFreguesias.length > 0) {
+            url.searchParams.set("freguesias", selectedFreguesias.join(","));
+        } else {
+            url.searchParams.delete("freguesias");
+        }
+
+        window.history.replaceState({}, "", url);
+    }
+
+    function getAllFreguesias() {
+        const checkboxes = document.querySelectorAll(
+            '#freguesias-filter input[type="checkbox"]',
+        );
+        return Array.from(checkboxes).map((cb) => cb.value);
+    }
+
+    function applyURLFreguesias(urlFreguesias) {
+        console.log("Applying URL freguesias:", urlFreguesias);
+
+        // First uncheck all
+        const checkboxes = document.querySelectorAll(
+            '#freguesias-filter input[type="checkbox"]',
+        );
+        checkboxes.forEach((cb) => (cb.checked = false));
+
+        // Then check only the ones from URL
+        urlFreguesias.forEach((freguesia) => {
+            const checkbox = Array.from(checkboxes).find(
+                (cb) => cb.value === freguesia,
+            );
+            if (checkbox) {
+                checkbox.checked = true;
+            }
+        });
+
+        updateSelectAllCheckbox();
+
+        // Don't call applyFreguesiasFilter() to avoid recursion
+        // Just apply the filter directly
+        const filter = [
+            "any",
+            ...urlFreguesias.map((freguesia) => [
+                "in",
+                freguesia,
+                ["get", "freguesias"],
+            ]),
+        ];
+        console.log("URL filter:", JSON.stringify(filter, null, 2));
+        window.map.setFilter("h3-hexagons", filter);
+        console.log(
+            `Applied URL filter for freguesias: ${urlFreguesias.join(", ")}`,
+        );
+
+        // Update the URL to reflect current selection
+        updateURLWithFreguesias();
+    }
 </script>
 
 <style>
-    /* Menu label and burger icon */
-    .menu-label {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        background: rgba(255, 255, 255, 0.95);
-        padding: 12px 16px;
-        border-radius: 8px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        z-index: 1000;
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        font-weight: 600;
-        color: #2c3e50;
-        cursor: pointer;
-        transition: all 0.3s ease;
-    }
-
-    .menu-label:hover {
-        background: rgba(255, 255, 255, 1);
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-    }
-
-    .burger-icon {
-        display: flex;
-        flex-direction: column;
-        cursor: pointer;
-        padding: 4px;
-    }
-
-    .burger-icon span {
-        width: 20px;
-        height: 2px;
-        background-color: #2c3e50;
-        margin: 2px 0;
-        transition: 0.3s;
-        border-radius: 1px;
-    }
-
-    .burger-icon:hover span {
-        background-color: #3498db;
-    }
-
-    /* Side panel */
-    .side-panel {
-        position: fixed;
-        top: 0;
-        right: -400px;
-        width: 400px;
-        height: 100vh;
-        background: white;
-        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
-        z-index: 1001;
-        transition: right 0.3s ease;
-        overflow-y: auto;
-    }
-
-    .side-panel.open {
-        right: 0;
-    }
-
-    .side-panel-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px;
-        border-bottom: 1px solid #eee;
-        background: #f8f9fa;
-    }
-
-    .side-panel-header h2 {
-        margin: 0;
-        color: #2c3e50;
-        font-size: 18px;
-    }
-
-    .close-panel {
-        background: none;
-        border: none;
-        font-size: 24px;
-        cursor: pointer;
-        color: #7f8c8d;
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: all 0.2s ease;
-    }
-
-    .close-panel:hover {
-        background: #e74c3c;
-        color: white;
-    }
-
-    .side-panel-content {
-        padding: 20px;
-    }
-
-    .panel-section {
-        margin-bottom: 30px;
-    }
-
-    .panel-section h3 {
-        margin: 0 0 15px 0;
-        color: #2c3e50;
-        font-size: 16px;
-        border-bottom: 2px solid #3498db;
-        padding-bottom: 5px;
-    }
-
-    .panel-section p {
-        margin: 0 0 10px 0;
-        line-height: 1.5;
-        color: #555;
-    }
-
-    .legend-item {
-        display: flex;
-        align-items: center;
-        margin-bottom: 8px;
-        gap: 10px;
-    }
-
-    .legend-color {
-        width: 20px;
-        height: 20px;
-        border-radius: 3px;
-        border: 1px solid #ddd;
-    }
-
-    .legend-symbol {
-        width: 20px;
-        text-align: center;
-        font-weight: bold;
-        color: #ffd700;
-    }
-
-    .opacity-legend {
-        margin-top: 10px;
-    }
-
-    .opacity-legend-item {
-        display: flex;
-        align-items: center;
-        margin-bottom: 8px;
-        gap: 10px;
-    }
-
-    .opacity-sample {
-        position: relative;
-    }
-
-    .opacity-sample::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: white;
-        border: 1px solid #ddd;
-        border-radius: 3px;
-        z-index: -1;
-    }
-
-    .opacity-legend p {
-        margin-top: 10px;
-        font-style: italic;
-    }
-
-    /* Filter styles */
-    .filter-group {
-        margin-bottom: 20px;
-    }
-
-    .filter-group h4 {
-        margin: 0 0 10px 0;
-        color: #2c3e50;
-        font-size: 14px;
-        font-weight: 600;
-    }
-
-    .filter-header {
-        margin-bottom: 10px;
-        padding-bottom: 8px;
-        border-bottom: 1px solid #eee;
-    }
-
-    .checkbox-group {
-        max-height: 200px;
-        overflow-y: auto;
-        border: 1px solid #eee;
-        border-radius: 4px;
-        padding: 8px;
-    }
-
-    .checkbox-container {
-        display: flex;
-        align-items: center;
-        margin-bottom: 6px;
-        cursor: pointer;
-        font-size: 14px;
-        line-height: 1.4;
-    }
-
-    .checkbox-container:last-child {
-        margin-bottom: 0;
-    }
-
-    .checkbox-container input[type="checkbox"] {
-        display: none;
-    }
-
-    .checkmark {
-        width: 16px;
-        height: 16px;
-        border: 2px solid #bdc3c7;
-        border-radius: 3px;
-        margin-right: 8px;
-        position: relative;
-        transition: all 0.2s ease;
-        flex-shrink: 0;
-    }
-
-    .checkbox-container:hover .checkmark {
-        border-color: #3498db;
-    }
-
-    .checkbox-container input[type="checkbox"]:checked + .checkmark {
-        background-color: #3498db;
-        border-color: #3498db;
-    }
-
-    .checkbox-container input[type="checkbox"]:indeterminate + .checkmark {
-        background-color: #95a5a6;
-        border-color: #95a5a6;
-    }
-
-    .checkmark:after {
-        content: "";
-        position: absolute;
-        display: none;
-        left: 4px;
-        top: 1px;
-        width: 4px;
-        height: 8px;
-        border: solid white;
-        border-width: 0 2px 2px 0;
-        transform: rotate(45deg);
-    }
-
-    .checkbox-container input[type="checkbox"]:checked + .checkmark:after {
-        display: block;
-    }
-
-    .checkbox-container
-        input[type="checkbox"]:indeterminate
-        + .checkmark:after {
-        display: block;
-        left: 3px;
-        top: 5px;
-        width: 6px;
-        height: 2px;
-        border: none;
-        background-color: white;
-        transform: none;
-    }
-
-    .playground-popup h3 {
-        margin: 0 0 10px 0;
-        color: #2c3e50;
+    /* Custom styles to override Bootstrap where needed */
+    .playground-popup h6 {
+        color: #333;
+        margin-bottom: 0.5rem;
     }
 
     .playground-popup p {
-        margin: 5px 0;
-        font-size: 14px;
+        margin-bottom: 0.25rem;
+        color: #666;
     }
 
-    .playground-popup {
-        min-width: 0px;
-    }
-
-    .h3-popup h3 {
-        margin: 0 0 10px 0;
-        color: #2c3e50;
+    .h3-popup h6 {
+        color: #333;
+        margin-bottom: 0.5rem;
     }
 
     .h3-popup p {
-        margin: 5px 0;
-        font-size: 14px;
+        margin-bottom: 0.25rem;
+        color: #666;
     }
 
-    .h3-popup {
-        min-width: 200px;
+    /* Ensure offcanvas appears above map */
+    .offcanvas {
+        z-index: 1050;
+    }
+
+    /* Custom trigger button positioning */
+    .btn[data-bs-toggle="offcanvas"] {
+        z-index: 1000;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 </style>

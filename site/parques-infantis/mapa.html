@@ -604,8 +604,14 @@ title: "Parques Infantis"
             // Update select all checkbox
             updateSelectAllCheckbox();
 
-            // Apply initial filter
+            // Apply initial filter and zoom to selection
             applyFreguesiasFilter();
+
+            // Zoom to selected freguesias on initial load
+            setTimeout(() => {
+                zoomToSelectedFreguesias();
+                updateOpacityForSelectedFreguesias();
+            }, 500);
         }
 
         function updateSelectAllCheckbox() {
@@ -678,6 +684,9 @@ title: "Parques Infantis"
 
             // Zoom to selected freguesias
             zoomToSelectedFreguesias();
+
+            // Update opacity based on selected freguesias
+            updateOpacityForSelectedFreguesias();
         }
 
         function zoomToSelectedFreguesias() {
@@ -737,6 +746,79 @@ title: "Parques Infantis"
                 }
             } catch (error) {
                 console.warn("Could not zoom to selected freguesias:", error);
+            }
+        }
+
+        function updateOpacityForSelectedFreguesias() {
+            if (selectedFreguesias.size === 0) return;
+
+            try {
+                // Get all H3 features that match selected freguesias
+                const visibleFeatures = map.querySourceFeatures("playgrounds", {
+                    sourceLayer: "h3",
+                });
+
+                const matchingFeatures = visibleFeatures.filter((feature) => {
+                    if (!feature.properties.freguesias) return false;
+
+                    let freguesias = feature.properties.freguesias;
+
+                    // Parse JSON string if needed
+                    if (typeof freguesias === "string") {
+                        try {
+                            freguesias = JSON.parse(freguesias);
+                        } catch (e) {
+                            freguesias = [freguesias];
+                        }
+                    }
+
+                    if (!Array.isArray(freguesias)) {
+                        freguesias = [freguesias];
+                    }
+
+                    // Check if any freguesia in this feature is selected
+                    return freguesias.some((f) => selectedFreguesias.has(f));
+                });
+
+                if (matchingFeatures.length > 0) {
+                    // Find the maximum children_under_14 value in selected freguesias
+                    const maxChildren = Math.max(
+                        ...matchingFeatures.map(
+                            (f) => f.properties.children_under_14 || 0,
+                        ),
+                    );
+
+                    console.log(
+                        "Max children in selected freguesias:",
+                        maxChildren,
+                    );
+
+                    // Update the layer paint property with the new max value
+                    if (maxChildren > 0) {
+                        map.setPaintProperty("h3-hexagons", "fill-opacity", [
+                            "case",
+                            ["==", ["get", "children_under_14"], 0],
+                            0, // Transparent when 0 children
+                            [
+                                "interpolate",
+                                ["linear"],
+                                ["get", "children_under_14"],
+                                1,
+                                0.1, // Minimum opacity for 1 child
+                                maxChildren,
+                                0.7, // Maximum opacity for highest value
+                            ],
+                        ]);
+
+                        // Update the dynamic legend
+                        updateChildrenLegend(maxChildren);
+                    }
+                }
+            } catch (error) {
+                console.warn(
+                    "Could not update opacity for selected freguesias:",
+                    error,
+                );
             }
         }
 

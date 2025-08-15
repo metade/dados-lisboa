@@ -348,6 +348,9 @@ title: "Parques Infantis"
 
         // Add click event for playgrounds
         map.on("click", "playgrounds", (e) => {
+            // Stop event propagation to prevent hexagon popup from also showing
+            e.preventDefault();
+
             const properties = e.features[0].properties;
             const coordinates = e.features[0].geometry.coordinates.slice();
 
@@ -373,8 +376,10 @@ title: "Parques Infantis"
                 .setHTML(
                     `
                     <div class="playground-popup">
-                        <h6 class="fw-bold mb-2">${properties.nome || "Parque Infantil"}</h6>
+                        <h6 class="fw-bold mb-2">${properties.designacao || properties.nome || "Parque Infantil"}</h6>
+                        ${properties.morada ? `<p class="mb-1 small"><strong>Morada:</strong> ${properties.morada}</p>` : ""}
                         <p class="mb-1 small"><strong>Gestão:</strong> ${gestaoLabel}</p>
+                        ${properties.servico_cml ? `<p class="mb-1 small"><strong>Serviço CML:</strong> ${properties.servico_cml}</p>` : ""}
                         <p class="mb-1 small"><strong>Quiosque próximo:</strong> ${quiosqueText}</p>
                         ${properties.freguesia ? `<p class="mb-0 small"><strong>Freguesia:</strong> ${properties.freguesia}</p>` : ""}
                     </div>
@@ -395,11 +400,22 @@ title: "Parques Infantis"
 
         // Add click event for H3 hexagons
         map.on("click", "h3-hexagons", (e) => {
+            // Check if we clicked on a playground feature at the same location
+            const playgroundFeatures = map.queryRenderedFeatures(e.point, {
+                layers: ["playgrounds"],
+            });
+
+            // If there's a playground at this location, don't show hexagon popup
+            if (playgroundFeatures.length > 0) {
+                return;
+            }
+
             const properties = e.features[0].properties;
             const coordinates = e.lngLat;
 
             const distance = Math.round(properties.nearest_playground_distance);
             const children = properties.children_under_14 || 0;
+            const playgroundCount = properties.playground_count || 0;
 
             new maplibregl.Popup()
                 .setLngLat(coordinates)
@@ -408,6 +424,7 @@ title: "Parques Infantis"
                     <div class="h3-popup">
                         <h6 class="fw-bold mb-2">Informação da Área</h6>
                         <p class="mb-1 small"><strong>Distância ao parque mais próximo:</strong> ${distance}m</p>
+                        <p class="mb-1 small"><strong>Número de parques:</strong> ${playgroundCount}</p>
                         <p class="mb-0 small"><strong>Crianças (&lt;14 anos):</strong> ${children}</p>
                     </div>
                 `,

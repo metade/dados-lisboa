@@ -1,18 +1,19 @@
-// Utilitários leves (vanilla)
-export const qs  = (sel, el=document) => el.querySelector(sel);
-export const qsa = (sel, el=document) => Array.from(el.querySelectorAll(sel));
+export function singleClickPerFeature(fn, getFeatureId) {
+  // Store processing states per feature
+  const processing = new Map();
 
-export const throttle = (fn, wait=100) => {
-  let inFlight = false; let lastArgs;
-  return (...args) => {
-    lastArgs = args;
-    if (inFlight) return;
-    inFlight = true;
-    setTimeout(() => { inFlight = false; fn(...lastArgs); }, wait);
+  return async function (e) {
+    const feature = e.features[0];
+    if (!feature) return;
+
+    const id = getFeatureId(feature);
+    if (processing.get(id)) return; // ignore if this feature is already processing
+
+    processing.set(id, true);
+    try {
+      await fn.apply(this, [e, feature]);
+    } finally {
+      processing.delete(id); // allow future clicks on this feature
+    }
   };
-};
-
-export const fmt = {
-  number: (n, locales='pt-PT') => new Intl.NumberFormat(locales).format(n),
-  meters: (m) => m < 1000 ? `${Math.round(m)} m` : `${(m/1000).toFixed(1)} km`
-};
+}

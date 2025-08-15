@@ -120,6 +120,3 @@ export function addThematicToMap(
     });
   }
 }
-
-export const initPMTilesMap = initMap; // compat
-// export const addThematicToMap = addThematicToMap; // compat

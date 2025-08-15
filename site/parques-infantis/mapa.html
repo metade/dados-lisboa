@@ -225,6 +225,8 @@ title: "Parques Infantis"
 </div>
 
 <script type="module">
+    import { singleClickPerFeature } from "/assets/js/core.js";
+
     window.addEventListener("mapReady", (event) => {
         const map = event.detail;
 
@@ -347,7 +349,7 @@ title: "Parques Infantis"
         });
 
         // Add click event for playgrounds
-        map.on("click", "playgrounds", (e) => {
+        async function handlePlaygroundClick(e, feature) {
             // Stop event propagation to prevent hexagon popup from also showing
             e.preventDefault();
 
@@ -386,7 +388,16 @@ title: "Parques Infantis"
                 `,
                 )
                 .addTo(map);
-        });
+        }
+
+        map.on(
+            "click",
+            "playgrounds",
+            singleClickPerFeature(
+                handlePlaygroundClick,
+                (feature) => feature.id,
+            ),
+        );
 
         // Change the cursor to a pointer when the mouse is over the playgrounds layer
         map.on("mouseenter", "playgrounds", () => {
@@ -399,7 +410,7 @@ title: "Parques Infantis"
         });
 
         // Add click event for H3 hexagons
-        map.on("click", "h3-hexagons", (e) => {
+        async function handleH3Click(e, feature) {
             // Check if we clicked on a playground feature at the same location
             const playgroundFeatures = map.queryRenderedFeatures(e.point, {
                 layers: ["playgrounds"],
@@ -430,7 +441,13 @@ title: "Parques Infantis"
                 `,
                 )
                 .addTo(map);
-        });
+        }
+
+        map.on(
+            "click",
+            "h3-hexagons",
+            singleClickPerFeature(handleH3Click, (feature) => feature.id),
+        );
 
         // Populate freguesias filter after data loads
         let hasInitialized = false;

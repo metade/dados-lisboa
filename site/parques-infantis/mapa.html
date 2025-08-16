@@ -338,13 +338,22 @@ title: "Parques Infantis"
             layout: {
                 "text-field": "*",
                 "text-font": ["Open Sans Bold", "Arial Unicode MS Bold"],
-                "text-size": 16,
-                "text-offset": [0, -0.5],
+                "text-size": 14,
+                "text-offset": [0, 0.1],
+                "text-anchor": "center",
             },
             paint: {
-                "text-color": "#FFD700",
-                "text-halo-color": "#ffffff",
+                "text-color": "#FFFFFF",
+                "text-halo-color": [
+                    "case",
+                    ["==", ["get", "gestao"], "JF"],
+                    "#e74c3c", // Red for JF
+                    ["==", ["get", "gestao"], "CML"],
+                    "#3498db", // Blue for CML
+                    "#95a5a6", // Gray for others
+                ],
                 "text-halo-width": 2,
+                "text-opacity": 1,
             },
         });
 

@@ -61,4 +61,13 @@ namespace :parques_infantis do
   task all: [
     "site/assets/data/processed/parques_infantis.pmtiles"
   ]
+
+  CLEAN.include(
+    "tmp/parques_infantis/extra_playgrounds.csv",
+    "tmp/parques_infantis/extra_quiosques.csv",
+    "site/assets/data/processed/parques_infantis.pmtiles",
+    "tmp/parques_infantis/BGRI2021_1106.geojson",
+    "tmp/parques_infantis/h3.geojson",
+    "tmp/parques_infantis/parques_infantis.geojson"
+  )
 end

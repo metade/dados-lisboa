@@ -1,4 +1,5 @@
 require "rake"
+require "rake/clean"
 require "fileutils"
 require "listen"
 require_relative "lib/dados_lisboa/rake_remote_file_task"

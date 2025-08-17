@@ -3,11 +3,12 @@ require "active_support/core_ext/enumerable"
 
 class DadosLisboa::MyGeoJsonFeature
   H3_RESOLUTION = 10
-  attr_reader :factory
+  attr_reader :factory, :capi_factory
 
   def initialize(data, factory: nil)
     @data = data
     @factory ||= RGeo::Geographic.spherical_factory(srid: 4326)
+    @capi_factory = RGeo::Geos::CAPIFactory.create
   end
 
   def bgri_2021_id
@@ -34,7 +35,11 @@ class DadosLisboa::MyGeoJsonFeature
   end
 
   def hexes(resolution: H3_RESOLUTION)
-    geojson_geometry = RGeo::GeoJSON.decode(geometry.to_json, json_parser: :json)
+    geojson_geometry = RGeo::GeoJSON.decode(
+      geometry.to_json,
+      json_parser: :json,
+      factory: capi_factory
+    )
     return [] if geojson_geometry.nil? || geojson_geometry.area.zero?
 
     total_area = geojson_geometry.area

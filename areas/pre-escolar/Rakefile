@@ -1,6 +1,8 @@
+require_relative "scripts/h3_visualisation"
+
 namespace :pre_escolar do
   directory "tmp/pre_escolar"
-  file "tmp/pre_escolar/escolas.geojson" => ["census_2021:geojson", "tmp/pre_escolar"] do |task|
+  file "tmp/pre_escolar/escolas.geojson" => ["tmp/pre_escolar"] do |task|
     features = []
     {
       "data/src/pre-escolar-privadas.geojson" => :private,
@@ -25,8 +27,17 @@ namespace :pre_escolar do
     File.write(task.name, JSON.pretty_generate(data))
   end
 
+  file "tmp/pre_escolar/h3.geojson": [
+    "tmp/pre_escolar/escolas.geojson",
+    "tmp/census_2021/BGRI2021_1106.geojson"
+  ] do |task|
+    escolas_path, bgri2021_path = task.sources
+    Areas::PreEscolar::Scripts::H3Visualisation.call(task.name, escolas_path, bgri2021_path)
+  end
+
   tippecanoe_file "site/assets/data/processed/pre_escolar.pmtiles": [
-    "tmp/pre_escolar/escolas.geojson"
+    "tmp/pre_escolar/escolas.geojson",
+    "tmp/pre_escolar/h3.geojson"
   ]
 
   task all: [
@@ -35,7 +46,8 @@ namespace :pre_escolar do
 
   CLEAN_PRE_ESCOLAR = [
     "site/assets/data/processed/pre_escolar.pmtiles",
-    "tmp/pre_escolar/escolas.geojson"
+    "tmp/pre_escolar/escolas.geojson",
+    "tmp/pre_escolar/h3.geojson"
   ]
   task :clean do
     CLEAN_PRE_ESCOLAR.each { |file| rm file if File.exist?(file) }

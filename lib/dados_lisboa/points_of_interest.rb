@@ -2,7 +2,7 @@ require "rgeo"
 require "rgeo/geo_json"
 require "haversine"
 
-class DadosLisboa::Playgrounds
+class DadosLisboa::PointsOfInterest
   def initialize(data_path)
     @data_path = data_path
     @factory = RGeo::Geos.factory(
@@ -12,13 +12,13 @@ class DadosLisboa::Playgrounds
 
   def count_in_area(geometry)
     polygon_geom = decode_geometry(geometry)
-    playgrounds.count { |pt| polygon_geom.contains?(pt) }
+    points.count { |pt| polygon_geom.contains?(pt) }
   end
 
   def closest_distance_from(geometry)
     polygon_geom = decode_geometry(geometry)
     centroid = polygon_geom.centroid
-    playgrounds.map { |p| distance(p, centroid) }.min.round(2)
+    points.map { |p| distance(p, centroid) }.min.round(2)
   end
 
   private
@@ -31,10 +31,10 @@ class DadosLisboa::Playgrounds
     RGeo::GeoJSON.decode(geometry.to_json, json_parser: :json, geo_factory: @factory)
   end
 
-  def playgrounds
-    @playgrounds ||= begin
-      playgrounds = JSON.parse(File.read(@data_path))
-      playground_points = playgrounds["features"].map do |f|
+  def points
+    @points ||= begin
+      data = JSON.parse(File.read(@data_path))
+      data["features"].map do |f|
         RGeo::GeoJSON.decode(f["geometry"].to_json, json_parser: :json, geo_factory: @factory)
       end
     end

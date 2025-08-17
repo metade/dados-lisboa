@@ -16,7 +16,7 @@ module Areas
 
         def call
           lisboa = DadosLisboa::Lisboa.new
-          playgrounds = DadosLisboa::Playgrounds.new(parques_path)
+          playgrounds = DadosLisboa::PointsOfInterest.new(parques_path)
           data = JSON.parse(File.read(bgri2021_path))
 
           h3_data = {}

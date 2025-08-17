@@ -2,6 +2,8 @@ title: Dados Lisboa
 description: Visualizações para freguesias de Lisboa
 url: "https://dados-lisboa.metade.org"
 
+permalink: pretty
+
 plugins: []
 
 include:

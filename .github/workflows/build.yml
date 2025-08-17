@@ -26,8 +26,8 @@ jobs:
           ruby-version: "3.3"
           bundler-cache: true
 
-      - name: Instalar tippecanoe e GDAL
-        run: sudo apt-get update && sudo apt-get install -y tippecanoe gdal-bin
+      - name: Instalar tippecanoe, GDAL e GEOS
+        run: sudo apt-get update && sudo apt-get install -y tippecanoe gdal-bin libgeos-dev
 
       - name: Construir dados (PMTiles)
         run: bundle exec rake data:all

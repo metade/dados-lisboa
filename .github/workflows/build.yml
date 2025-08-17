@@ -21,13 +21,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Instalar tippecanoe, GDAL e GEOS
+        run: sudo apt-get update && sudo apt-get install -y tippecanoe gdal-bin libproj-dev libgeos-dev
+
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: "3.3"
           bundler-cache: true
-
-      - name: Instalar tippecanoe, GDAL e GEOS
-        run: sudo apt-get update && sudo apt-get install -y tippecanoe gdal-bin libproj-dev libgeos-dev
 
       - name: Construir dados (PMTiles)
         run: bundle exec rake data:all

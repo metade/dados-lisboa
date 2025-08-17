@@ -226,9 +226,125 @@ title: "Parques Infantis"
 
 <script type="module">
     import { singleClickPerFeature } from "/assets/js/core.js";
+    import { createFreguesiasFilter } from "/assets/js/freguesia-filter.js";
+    import {
+        createPopupHTML,
+        formatters,
+        PopupManager,
+    } from "/assets/js/popup-utils.js";
 
     window.addEventListener("mapReady", (event) => {
         const map = event.detail;
+
+        // Playground-specific popup functions
+        function createPlaygroundPopup(properties, coordinates, options = {}) {
+            const gestaoLabel =
+                properties.gestao === "JF"
+                    ? "Junta de Freguesia"
+                    : properties.gestao === "CML"
+                      ? "Câmara Municipal"
+                      : "Outro";
+
+            const fields = [
+                {
+                    label: "Nome",
+                    value:
+                        properties.designacao ||
+                        properties.nome ||
+                        "Parque Infantil",
+                    format: formatters.capitalize,
+                },
+                {
+                    label: "Morada",
+                    value: properties.morada,
+                },
+                {
+                    label: "Gestão",
+                    value: gestaoLabel,
+                },
+                {
+                    label: "Serviço CML",
+                    value: properties.servico_cml,
+                },
+                {
+                    label: "Freguesia",
+                    value: properties.freguesia,
+                    format: formatters.capitalize,
+                },
+                {
+                    label: "Distância ao quiosque mais próximo",
+                    value: properties.distance_from_quiosque,
+                    format: formatters.distance,
+                },
+                {
+                    label: "Tem quiosque próximo",
+                    value: properties.distance_from_quiosque < 100,
+                    format: formatters.yesNo,
+                },
+            ];
+
+            const html = createPopupHTML({
+                title: "Parque Infantil",
+                fields,
+                cssClass: "playground-popup",
+            });
+
+            return new maplibregl.Popup().setLngLat(coordinates).setHTML(html);
+        }
+
+        function createH3Popup(properties, coordinates, options = {}) {
+            const fields = [
+                {
+                    label: "Distância ao parque mais próximo",
+                    value: properties.nearest_playground_distance,
+                    format: formatters.distance,
+                },
+                {
+                    label: "Crianças (<14 anos)",
+                    value:
+                        properties.children_under_14 ||
+                        properties.children_count,
+                    format: (count) =>
+                        formatters.count(count, "criança", "crianças"),
+                },
+                {
+                    label: "Parques na área",
+                    value: properties.playground_count,
+                    format: (count) =>
+                        formatters.count(count, "parque", "parques"),
+                },
+                {
+                    label: "Freguesias",
+                    value: properties.freguesias,
+                    format: (freguesias) => {
+                        if (Array.isArray(freguesias)) {
+                            return formatters.list(freguesias);
+                        } else if (typeof freguesias === "string") {
+                            try {
+                                const parsed = JSON.parse(freguesias);
+                                return Array.isArray(parsed)
+                                    ? formatters.list(parsed)
+                                    : freguesias;
+                            } catch (e) {
+                                return freguesias;
+                            }
+                        }
+                        return formatters.list([]);
+                    },
+                },
+            ];
+
+            const html = createPopupHTML({
+                title: "Informação da Área",
+                fields,
+                cssClass: "h3-popup",
+            });
+
+            return new maplibregl.Popup().setLngLat(coordinates).setHTML(html);
+        }
+
+        // Initialize popup manager
+        const popupManager = new PopupManager(map);
 
         // Register PMTiles protocol (needed when adding sources manually)
         if (!maplibregl.getProtocol || !maplibregl.getProtocol("pmtiles")) {
@@ -238,7 +354,7 @@ title: "Parques Infantis"
         }
 
         const pmtilesURL =
-            "{{ '/assets/data/processed/pre_escolar.pmtiles' | relative_url }}";
+            "{{ '/assets/data/processed/parques_infantis.pmtiles' | relative_url }}";
         const abs = new URL(pmtilesURL, window.location.origin);
         const thematicURL = "pmtiles://" + abs.pathname + abs.search;
 
@@ -248,8 +364,8 @@ title: "Parques Infantis"
             url: thematicURL,
         });
 
-        // Check if we have URL parameters to set initial filter
-        const urlFreguesias = getSelectedFreguesiasFromURL();
+        // Initialize freguesia filter with new module
+        let freguesiasFilter;
 
         // Add H3 hexagon layer with distance-based colors and children-based opacity
         map.addLayer({
@@ -286,19 +402,89 @@ title: "Parques Infantis"
             },
         });
 
-        // Apply initial filter after layer is created
-        if (urlFreguesias.length > 0) {
+        // Check for URL parameters and apply initial filter to prevent flash
+        const urlParams = new URLSearchParams(window.location.search);
+        const urlFreguesias = urlParams.get("freguesias");
+        let hasInitialUrlFilter = false;
+
+        if (urlFreguesias) {
+            const freguesiasList = urlFreguesias.split(",");
             const initialFilter = [
                 "any",
-                ...urlFreguesias.map((freguesia) => [
+                ...freguesiasList.map((freguesia) => [
                     "in",
                     freguesia,
                     ["get", "freguesias"],
                 ]),
             ];
             map.setFilter("h3-hexagons", initialFilter);
+            hasInitialUrlFilter = true;
+
+            // Zoom to selected freguesias immediately
+            setTimeout(() => {
+                try {
+                    const allFeatures = map.querySourceFeatures("playgrounds", {
+                        sourceLayer: "h3",
+                    });
+
+                    const matchingFeatures = allFeatures.filter((feature) => {
+                        const freguesias = feature.properties.freguesias;
+                        if (!freguesias) return false;
+
+                        if (Array.isArray(freguesias)) {
+                            return freguesias.some((f) =>
+                                freguesiasList.includes(f),
+                            );
+                        } else if (typeof freguesias === "string") {
+                            try {
+                                const parsed = JSON.parse(freguesias);
+                                if (Array.isArray(parsed)) {
+                                    return parsed.some((f) =>
+                                        freguesiasList.includes(f),
+                                    );
+                                } else {
+                                    return freguesiasList.includes(freguesias);
+                                }
+                            } catch (e) {
+                                return freguesiasList.includes(freguesias);
+                            }
+                        }
+                        return false;
+                    });
+
+                    if (matchingFeatures.length > 0) {
+                        const bounds = new maplibregl.LngLatBounds();
+                        matchingFeatures.forEach((feature) => {
+                            if (feature.geometry.type === "Polygon") {
+                                feature.geometry.coordinates[0].forEach(
+                                    (coord) => {
+                                        bounds.extend(coord);
+                                    },
+                                );
+                            } else if (
+                                feature.geometry.type === "MultiPolygon"
+                            ) {
+                                feature.geometry.coordinates.forEach(
+                                    (polygon) => {
+                                        polygon[0].forEach((coord) => {
+                                            bounds.extend(coord);
+                                        });
+                                    },
+                                );
+                            }
+                        });
+
+                        map.fitBounds(bounds, {
+                            padding: 50,
+                            duration: 1000,
+                            essential: false,
+                        });
+                    }
+                } catch (error) {
+                    // Silently handle zoom errors
+                }
+            }, 800);
         }
-        // If no URL params, layer will show all by default (no filter needed)
 
         // Add playgrounds layer with color based on gestao
         map.addLayer({
@@ -359,6 +545,8 @@ title: "Parques Infantis"
             },
         });
 
+        // Ensure playgrounds are always visible regardless of filter state
+
         // Add click event for playgrounds
         async function handlePlaygroundClick(e, feature) {
             // Stop event propagation to prevent hexagon popup from also showing
@@ -374,31 +562,11 @@ title: "Parques Infantis"
                 coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
             }
 
-            const gestaoLabel =
-                properties.gestao === "JF"
-                    ? "Junta de Freguesia"
-                    : properties.gestao === "CML"
-                      ? "Câmara Municipal"
-                      : "Outro";
-
-            const quiosqueText =
-                properties.quiosque_proximos === 1 ? "Sim" : "Não";
-
-            new maplibregl.Popup()
-                .setLngLat(coordinates)
-                .setHTML(
-                    `
-                    <div class="playground-popup">
-                        <h6 class="fw-bold mb-2">${properties.designacao || properties.nome || "Parque Infantil"}</h6>
-                        ${properties.morada ? `<p class="mb-1 small"><strong>Morada:</strong> ${properties.morada}</p>` : ""}
-                        <p class="mb-1 small"><strong>Gestão:</strong> ${gestaoLabel}</p>
-                        ${properties.servico_cml ? `<p class="mb-1 small"><strong>Serviço CML:</strong> ${properties.servico_cml}</p>` : ""}
-                        <p class="mb-1 small"><strong>Quiosque próximo:</strong> ${quiosqueText}</p>
-                        ${properties.freguesia ? `<p class="mb-0 small"><strong>Freguesia:</strong> ${properties.freguesia}</p>` : ""}
-                    </div>
-                `,
-                )
-                .addTo(map);
+            // Use the popup utility
+            const popup = createPlaygroundPopup(properties, coordinates);
+            popupManager.closeCurrentPopup();
+            popup.addTo(map);
+            popupManager.currentPopup = popup;
         }
 
         map.on(
@@ -435,23 +603,11 @@ title: "Parques Infantis"
             const properties = e.features[0].properties;
             const coordinates = e.lngLat;
 
-            const distance = Math.round(properties.nearest_playground_distance);
-            const children = properties.children_under_14 || 0;
-            const playgroundCount = properties.playground_count || 0;
-
-            new maplibregl.Popup()
-                .setLngLat(coordinates)
-                .setHTML(
-                    `
-                    <div class="h3-popup">
-                        <h6 class="fw-bold mb-2">Informação da Área</h6>
-                        <p class="mb-1 small"><strong>Distância ao parque mais próximo:</strong> ${distance}m</p>
-                        <p class="mb-1 small"><strong>Número de parques:</strong> ${playgroundCount}</p>
-                        <p class="mb-0 small"><strong>Crianças (&lt;14 anos):</strong> ${children}</p>
-                    </div>
-                `,
-                )
-                .addTo(map);
+            // Use the popup utility
+            const popup = createH3Popup(properties, coordinates);
+            popupManager.closeCurrentPopup();
+            popup.addTo(map);
+            popupManager.currentPopup = popup;
         }
 
         map.on(
@@ -462,419 +618,88 @@ title: "Parques Infantis"
 
         // Populate freguesias filter after data loads
         let hasInitialized = false;
-        map.on("sourcedata", (e) => {
-            if (
-                e.sourceId === "playgrounds" &&
-                e.isSourceLoaded &&
-                !hasInitialized
-            ) {
+
+        // Wait for map to be fully loaded before initializing
+        map.on("idle", () => {
+            if (!hasInitialized) {
                 hasInitialized = true;
 
-                setTimeout(() => {
-                    populateFreguesiasFilter();
+                // Initialize freguesias filter
+                setTimeout(async () => {
+                    try {
+                        // Verify data is available
+                        const h3Features = map.querySourceFeatures(
+                            "playgrounds",
+                            {
+                                sourceLayer: "h3",
+                            },
+                        );
+                        const playgroundFeatures = map.querySourceFeatures(
+                            "playgrounds",
+                            {
+                                sourceLayer: "parques_infantis",
+                            },
+                        );
 
-                    // Check for URL parameters
-                    const urlFreguesias = getSelectedFreguesiasFromURL();
-                    if (urlFreguesias.length > 0) {
-                        // Just zoom to the already-filtered areas and update UI
-                        setTimeout(() => {
-                            // Set checkbox states to match URL selection
-                            const checkboxes = document.querySelectorAll(
-                                '#freguesias-filter input[type="checkbox"]',
-                            );
-                            checkboxes.forEach((cb) => {
-                                cb.checked = urlFreguesias.includes(cb.value);
-                            });
-                            updateSelectAllCheckbox();
-                            zoomToSelectedFreguesias();
-                            updateURLWithFreguesias();
-                        }, 100);
+                        if (h3Features.length === 0) {
+                            // Show error message in filter container
+                            const container =
+                                document.getElementById("freguesias-filter");
+                            if (container) {
+                                container.innerHTML =
+                                    '<div class="alert alert-warning small">Nenhuma freguesia encontrada nos dados. Os parques infantis ainda são visíveis no mapa.</div>';
+                            }
+                            return;
+                        }
+
+                        freguesiasFilter = await createFreguesiasFilter({
+                            map: map,
+                            containerSelector: "#freguesias-filter",
+                            selectAllSelector: "#select-all-freguesias",
+                            sourceId: "playgrounds",
+                            sourceLayer: "h3",
+                            layerId: "h3-hexagons",
+                            freguesiasProperty: "freguesias",
+                            urlParam: "freguesias",
+                            onFilterChange: (selectedFreguesias) => {
+                                // Always keep playgrounds visible - they should never be filtered
+                                map.setFilter("playgrounds", null);
+                                if (map.getLayer("playgrounds-with-kiosks")) {
+                                    map.setFilter("playgrounds-with-kiosks", [
+                                        "all",
+                                        ["has", "distance_from_quiosque"],
+                                        [
+                                            "<",
+                                            ["get", "distance_from_quiosque"],
+                                            100,
+                                        ],
+                                    ]);
+                                }
+                                updateChildrenLegend();
+                            },
+                            enableZoom: true,
+                            skipInitialZoom: hasInitialUrlFilter, // Skip only the initial zoom if we already zoomed
+                            enableUrlSync: true,
+                        });
+                    } catch (error) {
+                        // Show error message in filter container
+                        const container =
+                            document.getElementById("freguesias-filter");
+                        if (container) {
+                            container.innerHTML = `<div class="alert alert-danger small">Erro ao inicializar filtro: ${error.message}. Os parques infantis ainda são visíveis no mapa.</div>`;
+                        }
                     }
-                    // If no URL params, hexagons will show all by default (no filter)
-                }, 500);
+                }, 1000); // Increased delay to let initial filter settle
             }
         });
 
-        // Add event listeners
-        document
-            .getElementById("select-all-freguesias")
-            .addEventListener("change", onSelectAllChange);
+        // Event listeners are now handled by the freguesias filter module
     });
 
     // Freguesias filter functions
-    function populateFreguesiasFilter() {
-        try {
-            // Query H3 features to get unique freguesias
-            const features = window.map.querySourceFeatures("playgrounds", {
-                sourceLayer: "h3",
-            });
-
-            console.log("Total H3 features found:", features.length);
-
-            // Extract freguesias from H3 features
-            const freguesiasSet = new Set();
-            features.forEach((feature) => {
-                const value = feature.properties.freguesias;
-                if (value) {
-                    if (Array.isArray(value)) {
-                        // If it's an array, add each freguesia
-                        value.forEach((f) => freguesiasSet.add(f));
-                    } else if (typeof value === "string") {
-                        try {
-                            // Try to parse as JSON array
-                            const parsed = JSON.parse(value);
-                            if (Array.isArray(parsed)) {
-                                parsed.forEach((f) => freguesiasSet.add(f));
-                            } else {
-                                freguesiasSet.add(value);
-                            }
-                        } catch (e) {
-                            // Not JSON, treat as single string
-                            freguesiasSet.add(value);
-                        }
-                    } else {
-                        freguesiasSet.add(value.toString());
-                    }
-                }
-            });
-
-            const freguesias = Array.from(freguesiasSet).sort();
-
-            console.log("Unique freguesias found:", freguesias);
-
-            if (freguesias.length === 0) {
-                console.warn("No freguesias found in features");
-                console.log(
-                    "Available properties in first feature:",
-                    features.length > 0
-                        ? Object.keys(features[0].properties)
-                        : "No features found",
-                );
-                const container = document.getElementById("freguesias-filter");
-                container.innerHTML =
-                    '<div class="alert alert-warning small" role="alert">Nenhuma freguesia encontrada nos dados. Verifique os logs do console para mais detalhes.</div>';
-                return;
-            }
-
-            const container = document.getElementById("freguesias-filter");
-            container.innerHTML = "";
-
-            // Check if we have URL parameters to determine default checked state
-            const urlFreguesias = getSelectedFreguesiasFromURL();
-            const defaultChecked = urlFreguesias.length === 0;
-
-            freguesias.forEach((freguesia) => {
-                const div = document.createElement("div");
-                div.className = "form-check mb-2";
-
-                const checkbox = document.createElement("input");
-                checkbox.className = "form-check-input";
-                checkbox.type = "checkbox";
-                checkbox.id = `freguesia-${freguesia.replace(/\s+/g, "-").replace(/[^a-zA-Z0-9-]/g, "")}`;
-                checkbox.value = freguesia;
-                checkbox.checked =
-                    defaultChecked || urlFreguesias.includes(freguesia);
-                checkbox.addEventListener("change", onFreguesiasChange);
-
-                const label = document.createElement("label");
-                label.className = "form-check-label small";
-                label.htmlFor = checkbox.id;
-                label.textContent = freguesia;
-
-                div.appendChild(checkbox);
-                div.appendChild(label);
-                container.appendChild(div);
-            });
-
-            updateSelectAllCheckbox();
-
-            // No need to set filter for "show all" case - layer shows all by default
-        } catch (error) {
-            console.error("Error populating freguesias filter:", error);
-            const container = document.getElementById("freguesias-filter");
-            container.innerHTML =
-                '<div class="alert alert-danger small" role="alert">Erro ao carregar freguesias: ' +
-                error.message +
-                "</div>";
-        }
-    }
-
-    function updateSelectAllCheckbox() {
-        const checkboxes = document.querySelectorAll(
-            '#freguesias-filter input[type="checkbox"]',
-        );
-        const selectAllCheckbox = document.getElementById(
-            "select-all-freguesias",
-        );
-
-        const checkedCount = Array.from(checkboxes).filter(
-            (cb) => cb.checked,
-        ).length;
-        const totalCount = checkboxes.length;
-
-        if (checkedCount === 0) {
-            selectAllCheckbox.checked = false;
-            selectAllCheckbox.indeterminate = false;
-        } else if (checkedCount === totalCount) {
-            selectAllCheckbox.checked = true;
-            selectAllCheckbox.indeterminate = false;
-        } else {
-            selectAllCheckbox.checked = false;
-            selectAllCheckbox.indeterminate = true;
-        }
-    }
-
-    function onFreguesiasChange() {
-        console.log("onFreguesiasChange called");
-        updateSelectAllCheckbox();
-
-        // Add a small delay to ensure DOM is updated
-        setTimeout(() => {
-            applyFreguesiasFilter();
-            updateURLWithFreguesias();
-        }, 10);
-    }
-
-    function onSelectAllChange() {
-        console.log("onSelectAllChange called");
-        const selectAllCheckbox = document.getElementById(
-            "select-all-freguesias",
-        );
-        const checkboxes = document.querySelectorAll(
-            '#freguesias-filter input[type="checkbox"]',
-        );
-
-        console.log("Select all checked:", selectAllCheckbox.checked);
-        console.log("Number of individual checkboxes:", checkboxes.length);
-
-        checkboxes.forEach((checkbox) => {
-            checkbox.checked = selectAllCheckbox.checked;
-        });
-
-        selectAllCheckbox.indeterminate = false;
-
-        // Add a small delay to ensure DOM is updated
-        setTimeout(() => {
-            applyFreguesiasFilter();
-            updateURLWithFreguesias();
-        }, 10);
-    }
-
-    function applyFreguesiasFilter() {
-        const selectedFreguesias = Array.from(
-            document.querySelectorAll(
-                '#freguesias-filter input[type="checkbox"]:checked',
-            ),
-        ).map((cb) => cb.value);
-
-        const totalFreguesias = getAllFreguesias().length;
-
-        console.log("applyFreguesiasFilter called");
-        console.log("DOM query found selected freguesias:", selectedFreguesias);
-        console.log("Number of selected:", selectedFreguesias.length);
-        console.log("Total freguesias:", totalFreguesias);
-
-        if (selectedFreguesias.length === 0) {
-            // Hide all hexagons when no freguesias selected
-            console.log("Hiding all hexagons - no freguesias selected");
-            if (window.map.getLayer("h3-hexagons")) {
-                window.map.setFilter("h3-hexagons", [
-                    "==",
-                    ["literal", true],
-                    false,
-                ]);
-            }
-        } else if (
-            selectedFreguesias.length === totalFreguesias &&
-            totalFreguesias > 0
-        ) {
-            // Show all hexagons when all freguesias selected
-            console.log("Showing all hexagons - all freguesias selected");
-            if (window.map.getLayer("h3-hexagons")) {
-                window.map.setFilter("h3-hexagons", null);
-            }
-        } else {
-            // Show selected freguesias using string-based filtering
-            console.log(
-                "Applying partial filter for",
-                selectedFreguesias.length,
-                "freguesias",
-            );
-            const filter = [
-                "any",
-                ...selectedFreguesias.map((freguesia) => [
-                    "in",
-                    freguesia,
-                    ["get", "freguesias"],
-                ]),
-            ];
-            if (window.map.getLayer("h3-hexagons")) {
-                window.map.setFilter("h3-hexagons", filter);
-            }
-            console.log(
-                `Applied filter for freguesias: ${selectedFreguesias.join(", ")}`,
-            );
-        }
-
-        // Always keep playgrounds visible
-        window.map.setFilter("playgrounds", null);
-        window.map.setFilter("playgrounds-with-kiosks", [
-            "all",
-            ["has", "distance_from_quiosque"],
-            ["<", ["get", "distance_from_quiosque"], 100],
-        ]);
-
-        updateChildrenLegend();
-        zoomToSelectedFreguesias();
-    }
-
-    function zoomToSelectedFreguesias() {
-        const selectedFreguesias = Array.from(
-            document.querySelectorAll(
-                '#freguesias-filter input[type="checkbox"]:checked',
-            ),
-        ).map((cb) => cb.value);
-
-        // Don't zoom if all freguesias are selected (show full map)
-        if (
-            selectedFreguesias.length === 0 ||
-            selectedFreguesias.length === getAllFreguesias().length
-        ) {
-            return;
-        }
-
-        try {
-            // Get all H3 features
-            const allFeatures = window.map.querySourceFeatures("playgrounds", {
-                sourceLayer: "h3",
-            });
-
-            // Filter features client-side to find matching hexagons
-            const matchingFeatures = allFeatures.filter((feature) => {
-                const freguesias = feature.properties.freguesias;
-                if (!freguesias) return false;
-
-                if (Array.isArray(freguesias)) {
-                    return freguesias.some((f) =>
-                        selectedFreguesias.includes(f),
-                    );
-                } else if (typeof freguesias === "string") {
-                    try {
-                        const parsed = JSON.parse(freguesias);
-                        if (Array.isArray(parsed)) {
-                            return parsed.some((f) =>
-                                selectedFreguesias.includes(f),
-                            );
-                        } else {
-                            return selectedFreguesias.includes(freguesias);
-                        }
-                    } catch (e) {
-                        return selectedFreguesias.includes(freguesias);
-                    }
-                }
-                return false;
-            });
-
-            if (matchingFeatures.length === 0) {
-                console.log("No matching features found for zoom");
-                return;
-            }
-
-            const bounds = new maplibregl.LngLatBounds();
-            matchingFeatures.forEach((feature) => {
-                if (feature.geometry.type === "Polygon") {
-                    feature.geometry.coordinates[0].forEach((coord) => {
-                        bounds.extend(coord);
-                    });
-                } else if (feature.geometry.type === "MultiPolygon") {
-                    feature.geometry.coordinates.forEach((polygon) => {
-                        polygon[0].forEach((coord) => {
-                            bounds.extend(coord);
-                        });
-                    });
-                }
-            });
-
-            window.map.fitBounds(bounds, {
-                padding: 50,
-                duration: 1000,
-                essential: false,
-            });
-
-            console.log(
-                `Zoomed to ${matchingFeatures.length} matching hexagons`,
-            );
-        } catch (error) {
-            console.warn("Could not zoom to selected freguesias:", error);
-        }
-    }
 
     function updateChildrenLegend() {
         // This function can be expanded to update legend based on visible data
         // For now, it's a placeholder for future enhancements
     }
-
-    function getSelectedFreguesiasFromURL() {
-        const urlParams = new URLSearchParams(window.location.search);
-        const freguesias = urlParams.get("freguesias");
-        return freguesias ? freguesias.split(",") : [];
-    }
-
-    function updateURLWithFreguesias() {
-        const selectedFreguesias = Array.from(
-            document.querySelectorAll(
-                '#freguesias-filter input[type="checkbox"]:checked',
-            ),
-        ).map((cb) => cb.value);
-
-        const url = new URL(window.location);
-        if (selectedFreguesias.length > 0) {
-            url.searchParams.set("freguesias", selectedFreguesias.join(","));
-        } else {
-            url.searchParams.delete("freguesias");
-        }
-
-        window.history.replaceState({}, "", url);
-    }
-
-    function getAllFreguesias() {
-        const checkboxes = document.querySelectorAll(
-            '#freguesias-filter input[type="checkbox"]',
-        );
-        return Array.from(checkboxes).map((cb) => cb.value);
-    }
 </script>
-
-<style>
-    /* Custom styles to override Bootstrap where needed */
-    .playground-popup h6 {
-        color: #333;
-        margin-bottom: 0.5rem;
-    }
-
-    .playground-popup p {
-        margin-bottom: 0.25rem;
-        color: #666;
-    }
-
-    .h3-popup h6 {
-        color: #333;
-        margin-bottom: 0.5rem;
-    }
-
-    .h3-popup p {
-        margin-bottom: 0.25rem;
-        color: #666;
-    }
-
-    /* Ensure offcanvas appears above map */
-    .offcanvas {
-        z-index: 1050;
-    }
-
-    /* Custom trigger button positioning */
-    .btn[data-bs-toggle="offcanvas"] {
-        z-index: 1000;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-</style>

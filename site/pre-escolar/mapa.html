@@ -1,6 +1,6 @@
 ---
 layout: map
-title: "Parques Infantis"
+title: "Escolas Pré-Escolares"
 ---
 
 <!-- Bootstrap Offcanvas Trigger Button -->
@@ -12,7 +12,7 @@ title: "Parques Infantis"
     data-bs-target="#sidePanel"
     aria-controls="sidePanel"
 >
-    <i class="bi bi-list me-2"></i>Parques Infantis
+    <i class="bi bi-list me-2"></i>Escolas Pré-Escolares
 </button>
 
 <!-- Bootstrap Offcanvas Side Panel -->
@@ -39,9 +39,9 @@ title: "Parques Infantis"
         <div class="mb-4">
             <h6 class="fw-bold mb-3">Sobre a Visualização</h6>
             <p class="small text-muted">
-                Este mapa mostra os parques infantis de Lisboa e a sua
-                proximidade a quiosques. As áreas residenciais estão coloridas
-                por distância ao parque mais próximo.
+                Este mapa mostra as escolas pré-escolares de Lisboa. As áreas
+                residenciais estão coloridas por distância à escola mais
+                próxima.
             </p>
         </div>
 
@@ -51,7 +51,7 @@ title: "Parques Infantis"
 
             <div class="mb-3">
                 <h6 class="fs-6 fw-semibold mb-2">
-                    Distancia de parques infantis
+                    Distância de escolas pré-escolares
                 </h6>
                 <div class="d-flex align-items-center mb-2">
                     <div
@@ -62,7 +62,7 @@ title: "Parques Infantis"
                             background-color: #27ae60;
                         "
                     ></div>
-                    <small>< 200m do parque</small>
+                    <small>< 200m da escola</small>
                 </div>
                 <div class="d-flex align-items-center mb-2">
                     <div
@@ -73,7 +73,7 @@ title: "Parques Infantis"
                             background-color: #f1c40f;
                         "
                     ></div>
-                    <small>200-400m do parque</small>
+                    <small>200-400m da escola</small>
                 </div>
                 <div class="d-flex align-items-center mb-2">
                     <div
@@ -84,7 +84,7 @@ title: "Parques Infantis"
                             background-color: #e74c3c;
                         "
                     ></div>
-                    <small>400-1000m do parque</small>
+                    <small>400-1000m da escola</small>
                 </div>
                 <div class="d-flex align-items-center mb-2">
                     <div
@@ -95,14 +95,12 @@ title: "Parques Infantis"
                             background-color: #9b59b6;
                         "
                     ></div>
-                    <small>> 1000m do parque</small>
+                    <small>> 1000m da escola</small>
                 </div>
             </div>
 
             <div class="mb-3">
-                <h6 class="fs-6 fw-semibold mb-2">
-                    Gestão dos parques infantis
-                </h6>
+                <h6 class="fs-6 fw-semibold mb-2">Tipo de escola</h6>
                 <div class="d-flex align-items-center mb-2">
                     <div
                         class="me-2 rounded-circle"
@@ -112,7 +110,7 @@ title: "Parques Infantis"
                             background-color: #e74c3c;
                         "
                     ></div>
-                    <small>Parques JF (Junta de Freguesia)</small>
+                    <small>Escola Privada</small>
                 </div>
                 <div class="d-flex align-items-center mb-2">
                     <div
@@ -123,7 +121,7 @@ title: "Parques Infantis"
                             background-color: #3498db;
                         "
                     ></div>
-                    <small>Parques CML (Câmara Municipal)</small>
+                    <small>Escola Pública</small>
                 </div>
                 <div class="d-flex align-items-center mb-2">
                     <div
@@ -134,11 +132,7 @@ title: "Parques Infantis"
                             background-color: #95a5a6;
                         "
                     ></div>
-                    <small>Parques outros</small>
-                </div>
-                <div class="d-flex align-items-center mb-2">
-                    <span class="me-2 fw-bold">*</span>
-                    <small>Quiosque próximo</small>
+                    <small>Escola Outro Tipo</small>
                 </div>
             </div>
         </div>
@@ -236,35 +230,21 @@ title: "Parques Infantis"
     window.addEventListener("mapReady", (event) => {
         const map = event.detail;
 
-        // Playground-specific popup functions
-        function createPlaygroundPopup(properties, coordinates, options = {}) {
-            const gestaoLabel =
-                properties.gestao === "JF"
-                    ? "Junta de Freguesia"
-                    : properties.gestao === "CML"
-                      ? "Câmara Municipal"
-                      : "Outro";
-
+        // School-specific popup functions
+        function createSchoolPopup(properties, coordinates, options = {}) {
             const fields = [
                 {
                     label: "Nome",
-                    value:
-                        properties.designacao ||
-                        properties.nome ||
-                        "Parque Infantil",
+                    value: properties.name || "Escola Pré-Escolar",
                     format: formatters.capitalize,
                 },
                 {
                     label: "Morada",
-                    value: properties.morada,
+                    value: properties.address,
                 },
                 {
-                    label: "Gestão",
-                    value: gestaoLabel,
-                },
-                {
-                    label: "Serviço CML",
-                    value: properties.servico_cml,
+                    label: "Tipo",
+                    value: properties.type,
                 },
                 {
                     label: "Freguesia",
@@ -272,21 +252,16 @@ title: "Parques Infantis"
                     format: formatters.capitalize,
                 },
                 {
-                    label: "Distância ao quiosque mais próximo",
-                    value: properties.distance_from_quiosque,
-                    format: formatters.distance,
-                },
-                {
-                    label: "Tem quiosque próximo",
-                    value: properties.distance_from_quiosque < 100,
+                    label: "Ativa",
+                    value: properties.active,
                     format: formatters.yesNo,
                 },
             ];
 
             const html = createPopupHTML({
-                title: "Parque Infantil",
+                title: "Escola Pré-Escolar",
                 fields,
-                cssClass: "playground-popup",
+                cssClass: "school-popup",
             });
 
             return new maplibregl.Popup().setLngLat(coordinates).setHTML(html);
@@ -295,8 +270,8 @@ title: "Parques Infantis"
         function createH3Popup(properties, coordinates, options = {}) {
             const fields = [
                 {
-                    label: "Distância ao parque mais próximo",
-                    value: properties.nearest_playground_distance,
+                    label: "Distância à escola mais próxima",
+                    value: properties.nearest_school_distance,
                     format: formatters.distance,
                 },
                 {
@@ -308,10 +283,10 @@ title: "Parques Infantis"
                         formatters.count(count, "criança", "crianças"),
                 },
                 {
-                    label: "Parques na área",
-                    value: properties.playground_count,
+                    label: "Escolas na área",
+                    value: properties.school_count,
                     format: (count) =>
-                        formatters.count(count, "parque", "parques"),
+                        formatters.count(count, "escola", "escolas"),
                 },
                 {
                     label: "Freguesias",
@@ -354,12 +329,12 @@ title: "Parques Infantis"
         }
 
         const pmtilesURL =
-            "{{ '/assets/data/processed/parques_infantis.pmtiles' | relative_url }}";
+            "{{ '/assets/data/processed/pre_escolar.pmtiles' | relative_url }}";
         const abs = new URL(pmtilesURL, window.location.origin);
         const thematicURL = "pmtiles://" + abs.pathname + abs.search;
 
-        // Add the PMTiles source (contains both playgrounds and H3 data)
-        map.addSource("playgrounds", {
+        // Add the PMTiles source (contains both schools and H3 data)
+        map.addSource("schools", {
             type: "vector",
             url: thematicURL,
         });
@@ -371,16 +346,16 @@ title: "Parques Infantis"
         map.addLayer({
             id: "h3-hexagons",
             type: "fill",
-            source: "playgrounds", // Using the same source
+            source: "schools", // Using the same source
             "source-layer": "h3", // H3 layer within the PMTiles file
             paint: {
                 "fill-color": [
                     "case",
-                    ["<", ["get", "nearest_playground_distance"], 200],
+                    ["<", ["get", "nearest_school_distance"], 200],
                     "#27ae60", // Green for < 200m
-                    ["<", ["get", "nearest_playground_distance"], 400],
+                    ["<", ["get", "nearest_school_distance"], 400],
                     "#f1c40f", // Yellow for 200-400m
-                    ["<", ["get", "nearest_playground_distance"], 1000],
+                    ["<", ["get", "nearest_school_distance"], 1000],
                     "#e74c3c", // Red for 400-1000m
                     "#9b59b6", // Purple for > 1000m
                 ],
@@ -423,7 +398,7 @@ title: "Parques Infantis"
             // Zoom to selected freguesias immediately
             setTimeout(() => {
                 try {
-                    const allFeatures = map.querySourceFeatures("playgrounds", {
+                    const allFeatures = map.querySourceFeatures("schools", {
                         sourceLayer: "h3",
                     });
 
@@ -486,25 +461,20 @@ title: "Parques Infantis"
             }, 800);
         }
 
-        // Add playgrounds layer with color based on gestao
+        // Add schools layer with color based on type
         map.addLayer({
-            id: "playgrounds",
+            id: "schools",
             type: "circle",
-            source: "playgrounds",
-            "source-layer": "parques_infantis",
+            source: "schools",
+            "source-layer": "escolas",
             paint: {
-                "circle-radius": [
-                    "case",
-                    ["==", ["get", "quiosque_proximos"], 1],
-                    8, // Larger radius for playgrounds with nearby kiosks
-                    6, // Default radius
-                ],
+                "circle-radius": 6,
                 "circle-color": [
                     "case",
-                    ["==", ["get", "gestao"], "JF"],
-                    "#e74c3c", // Red for JF
-                    ["==", ["get", "gestao"], "CML"],
-                    "#3498db", // Blue for CML
+                    ["==", ["get", "type"], "Privada"],
+                    "#e74c3c", // Red for Private
+                    ["==", ["get", "type"], "Pública"],
+                    "#3498db", // Blue for Public
                     "#95a5a6", // Gray for others
                 ],
                 "circle-stroke-width": 1,
@@ -512,43 +482,8 @@ title: "Parques Infantis"
             },
         });
 
-        // Add symbol layer for playgrounds with nearby kiosks
-        map.addLayer({
-            id: "playgrounds-with-kiosks",
-            type: "symbol",
-            source: "playgrounds",
-            "source-layer": "parques_infantis",
-            filter: [
-                "all",
-                ["has", "distance_from_quiosque"],
-                ["<", ["get", "distance_from_quiosque"], 100],
-            ],
-            layout: {
-                "text-field": "*",
-                "text-font": ["Open Sans Bold", "Arial Unicode MS Bold"],
-                "text-size": 14,
-                "text-offset": [0, 0.1],
-                "text-anchor": "center",
-            },
-            paint: {
-                "text-color": "#FFFFFF",
-                "text-halo-color": [
-                    "case",
-                    ["==", ["get", "gestao"], "JF"],
-                    "#e74c3c", // Red for JF
-                    ["==", ["get", "gestao"], "CML"],
-                    "#3498db", // Blue for CML
-                    "#95a5a6", // Gray for others
-                ],
-                "text-halo-width": 2,
-                "text-opacity": 1,
-            },
-        });
-
-        // Ensure playgrounds are always visible regardless of filter state
-
-        // Add click event for playgrounds
-        async function handlePlaygroundClick(e, feature) {
+        // Add click event for schools
+        async function handleSchoolClick(e, feature) {
             // Stop event propagation to prevent hexagon popup from also showing
             e.preventDefault();
 
@@ -563,7 +498,7 @@ title: "Parques Infantis"
             }
 
             // Use the popup utility
-            const popup = createPlaygroundPopup(properties, coordinates);
+            const popup = createSchoolPopup(properties, coordinates);
             popupManager.closeCurrentPopup();
             popup.addTo(map);
             popupManager.currentPopup = popup;
@@ -571,32 +506,29 @@ title: "Parques Infantis"
 
         map.on(
             "click",
-            "playgrounds",
-            singleClickPerFeature(
-                handlePlaygroundClick,
-                (feature) => feature.id,
-            ),
+            "schools",
+            singleClickPerFeature(handleSchoolClick, (feature) => feature.id),
         );
 
-        // Change the cursor to a pointer when the mouse is over the playgrounds layer
-        map.on("mouseenter", "playgrounds", () => {
+        // Change the cursor to a pointer when the mouse is over the schools layer
+        map.on("mouseenter", "schools", () => {
             map.getCanvas().style.cursor = "pointer";
         });
 
         // Change it back to a pointer when it leaves
-        map.on("mouseleave", "playgrounds", () => {
+        map.on("mouseleave", "schools", () => {
             map.getCanvas().style.cursor = "";
         });
 
         // Add click event for H3 hexagons
         async function handleH3Click(e, feature) {
-            // Check if we clicked on a playground feature at the same location
-            const playgroundFeatures = map.queryRenderedFeatures(e.point, {
-                layers: ["playgrounds"],
+            // Check if we clicked on a school feature at the same location
+            const schoolFeatures = map.queryRenderedFeatures(e.point, {
+                layers: ["schools"],
             });
 
-            // If there's a playground at this location, don't show hexagon popup
-            if (playgroundFeatures.length > 0) {
+            // If there's a school at this location, don't show hexagon popup
+            if (schoolFeatures.length > 0) {
                 return;
             }
 
@@ -628,16 +560,13 @@ title: "Parques Infantis"
                 setTimeout(async () => {
                     try {
                         // Verify data is available
-                        const h3Features = map.querySourceFeatures(
-                            "playgrounds",
+                        const h3Features = map.querySourceFeatures("schools", {
+                            sourceLayer: "h3",
+                        });
+                        const schoolFeatures = map.querySourceFeatures(
+                            "schools",
                             {
-                                sourceLayer: "h3",
-                            },
-                        );
-                        const playgroundFeatures = map.querySourceFeatures(
-                            "playgrounds",
-                            {
-                                sourceLayer: "parques_infantis",
+                                sourceLayer: "escolas",
                             },
                         );
 
@@ -647,7 +576,7 @@ title: "Parques Infantis"
                                 document.getElementById("freguesias-filter");
                             if (container) {
                                 container.innerHTML =
-                                    '<div class="alert alert-warning small">Nenhuma freguesia encontrada nos dados. Os parques infantis ainda são visíveis no mapa.</div>';
+                                    '<div class="alert alert-warning small">Nenhuma freguesia encontrada nos dados. As escolas ainda são visíveis no mapa.</div>';
                             }
                             return;
                         }
@@ -656,25 +585,14 @@ title: "Parques Infantis"
                             map: map,
                             containerSelector: "#freguesias-filter",
                             selectAllSelector: "#select-all-freguesias",
-                            sourceId: "playgrounds",
+                            sourceId: "schools",
                             sourceLayer: "h3",
                             layerId: "h3-hexagons",
                             freguesiasProperty: "freguesias",
                             urlParam: "freguesias",
                             onFilterChange: (selectedFreguesias) => {
-                                // Always keep playgrounds visible - they should never be filtered
-                                map.setFilter("playgrounds", null);
-                                if (map.getLayer("playgrounds-with-kiosks")) {
-                                    map.setFilter("playgrounds-with-kiosks", [
-                                        "all",
-                                        ["has", "distance_from_quiosque"],
-                                        [
-                                            "<",
-                                            ["get", "distance_from_quiosque"],
-                                            100,
-                                        ],
-                                    ]);
-                                }
+                                // Always keep schools visible - they should never be filtered
+                                map.setFilter("schools", null);
                                 updateChildrenLegend();
                             },
                             enableZoom: true,
@@ -686,7 +604,7 @@ title: "Parques Infantis"
                         const container =
                             document.getElementById("freguesias-filter");
                         if (container) {
-                            container.innerHTML = `<div class="alert alert-danger small">Erro ao inicializar filtro: ${error.message}. Os parques infantis ainda são visíveis no mapa.</div>`;
+                            container.innerHTML = `<div class="alert alert-danger small">Erro ao inicializar filtro: ${error.message}. As escolas ainda são visíveis no mapa.</div>`;
                         }
                     }
                 }, 1000); // Increased delay to let initial filter settle

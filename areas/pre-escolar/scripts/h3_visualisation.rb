@@ -55,8 +55,7 @@ module Areas
                   bgri_2021_id: data[:bgri_2021_id],
                   freguesias: data[:freguesias].sort.to_a,
                   children_under_14: data[:children_under_14]&.round(2),
-                  school_count: data[:school_count],
-                  children_per_school: data[:children_per_school]&.round(2),
+                  school_count: data[:schools_count],
                   nearest_school_distance: data[:nearest_school_distance]&.round(2)
                 },
                 geometry: {

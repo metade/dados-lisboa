@@ -25,11 +25,16 @@ namespace :pre_escolar do
     File.write(task.name, JSON.pretty_generate(data))
   end
 
-  task all: [
+  tippecanoe_file "site/assets/data/processed/pre_escolar.pmtiles": [
     "tmp/pre_escolar/escolas.geojson"
   ]
 
+  task all: [
+    "site/assets/data/processed/pre_escolar.pmtiles"
+  ]
+
   CLEAN_PRE_ESCOLAR = [
+    "site/assets/data/processed/pre_escolar.pmtiles",
     "tmp/pre_escolar/escolas.geojson"
   ]
   task :clean do

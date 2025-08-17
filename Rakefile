@@ -3,6 +3,7 @@ require "rake/clean"
 require "fileutils"
 require "listen"
 require_relative "lib/dados_lisboa/rake_remote_file_task"
+require_relative "lib/dados_lisboa/rake_tippecanoe_file_task"
 require_relative "lib/dados_lisboa"
 
 import "areas/census_2021/Rakefile"
@@ -20,7 +21,7 @@ task default: ["data:all"]
 
 namespace :data do
   desc "Construir todos os dados (todas as áreas)"
-  task all: ["parques_infantis:all"]
+  task all: ["parques_infantis:all", "pre_escolar:all"]
 
   desc "Vigiar alterações em dados/scripts e reconstruir"
   task :watch do

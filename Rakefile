@@ -17,7 +17,7 @@ task default: ["data:all"]
 
 namespace :data do
   desc "Construir todos os dados (todas as áreas)"
-  task all: ["parques:all"]
+  task all: ["parques_infantis:all"]
 
   desc "Vigiar alterações em dados/scripts e reconstruir"
   task :watch do

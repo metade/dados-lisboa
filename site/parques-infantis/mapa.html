@@ -250,17 +250,6 @@ title: "Parques Infantis"
 
         // Check if we have URL parameters to set initial filter
         const urlFreguesias = getSelectedFreguesiasFromURL();
-        const initialFilter =
-            urlFreguesias.length > 0
-                ? [
-                      "any",
-                      ...urlFreguesias.map((freguesia) => [
-                          "in",
-                          freguesia,
-                          ["get", "freguesias"],
-                      ]),
-                  ]
-                : null;
 
         // Add H3 hexagon layer with distance-based colors and children-based opacity
         map.addLayer({
@@ -268,7 +257,6 @@ title: "Parques Infantis"
             type: "fill",
             source: "playgrounds", // Using the same source
             "source-layer": "h3", // H3 layer within the PMTiles file
-            filter: initialFilter, // Apply initial filter if URL params exist
             paint: {
                 "fill-color": [
                     "case",
@@ -297,6 +285,20 @@ title: "Parques Infantis"
                 "fill-outline-color": "#ffffff",
             },
         });
+
+        // Apply initial filter after layer is created
+        if (urlFreguesias.length > 0) {
+            const initialFilter = [
+                "any",
+                ...urlFreguesias.map((freguesia) => [
+                    "in",
+                    freguesia,
+                    ["get", "freguesias"],
+                ]),
+            ];
+            map.setFilter("h3-hexagons", initialFilter);
+        }
+        // If no URL params, layer will show all by default (no filter needed)
 
         // Add playgrounds layer with color based on gestao
         map.addLayer({
@@ -585,6 +587,8 @@ title: "Parques Infantis"
             });
 
             updateSelectAllCheckbox();
+
+            // No need to set filter for "show all" case - layer shows all by default
         } catch (error) {
             console.error("Error populating freguesias filter:", error);
             const container = document.getElementById("freguesias-filter");
@@ -663,28 +667,39 @@ title: "Parques Infantis"
             ),
         ).map((cb) => cb.value);
 
+        const totalFreguesias = getAllFreguesias().length;
+
         console.log("applyFreguesiasFilter called");
         console.log("DOM query found selected freguesias:", selectedFreguesias);
         console.log("Number of selected:", selectedFreguesias.length);
-        console.log(
-            "Total checkboxes:",
-            document.querySelectorAll(
-                '#freguesias-filter input[type="checkbox"]',
-            ).length,
-        );
+        console.log("Total freguesias:", totalFreguesias);
 
         if (selectedFreguesias.length === 0) {
             // Hide all hexagons when no freguesias selected
-            window.map.setFilter("h3-hexagons", [
-                "==",
-                ["literal", true],
-                false,
-            ]);
-        } else if (selectedFreguesias.length === getAllFreguesias().length) {
+            console.log("Hiding all hexagons - no freguesias selected");
+            if (window.map.getLayer("h3-hexagons")) {
+                window.map.setFilter("h3-hexagons", [
+                    "==",
+                    ["literal", true],
+                    false,
+                ]);
+            }
+        } else if (
+            selectedFreguesias.length === totalFreguesias &&
+            totalFreguesias > 0
+        ) {
             // Show all hexagons when all freguesias selected
-            window.map.setFilter("h3-hexagons", null);
+            console.log("Showing all hexagons - all freguesias selected");
+            if (window.map.getLayer("h3-hexagons")) {
+                window.map.setFilter("h3-hexagons", null);
+            }
         } else {
-            // Show only selected freguesias using string-based filtering
+            // Show selected freguesias using string-based filtering
+            console.log(
+                "Applying partial filter for",
+                selectedFreguesias.length,
+                "freguesias",
+            );
             const filter = [
                 "any",
                 ...selectedFreguesias.map((freguesia) => [
@@ -693,11 +708,9 @@ title: "Parques Infantis"
                     ["get", "freguesias"],
                 ]),
             ];
-            console.log(
-                "Manual selection filter:",
-                JSON.stringify(filter, null, 2),
-            );
-            window.map.setFilter("h3-hexagons", filter);
+            if (window.map.getLayer("h3-hexagons")) {
+                window.map.setFilter("h3-hexagons", filter);
+            }
             console.log(
                 `Applied filter for freguesias: ${selectedFreguesias.join(", ")}`,
             );
@@ -706,9 +719,9 @@ title: "Parques Infantis"
         // Always keep playgrounds visible
         window.map.setFilter("playgrounds", null);
         window.map.setFilter("playgrounds-with-kiosks", [
-            "==",
-            ["get", "quiosque_proximos"],
-            1,
+            "all",
+            ["has", "distance_from_quiosque"],
+            ["<", ["get", "distance_from_quiosque"], 100],
         ]);
 
         updateChildrenLegend();

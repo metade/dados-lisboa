@@ -28,7 +28,7 @@ export function createPopupHTML({
         displayValue = field.format(field.value);
       }
 
-      return `<p><strong>${field.label}:</strong> ${displayValue}</p>`;
+      return `<p class="mb-0"><strong>${field.label}:</strong> ${displayValue}</p>`;
     })
     .join("");
 

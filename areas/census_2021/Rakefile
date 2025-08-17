@@ -1,0 +1,21 @@
+require "open3"
+
+namespace :census_2021 do
+  directory "tmp/census_2021"
+  file "tmp/census_2021/BGRI2021_1106.geojson" => ["tmp/census_2021"] do |task|
+    cmd = [
+      "ogr2ogr",
+      "-f", "GeoJSON",
+      "-t_srs", "EPSG:4326",
+      "-nlt", "MULTIPOLYGON",
+      "-makevalid",
+      task.name,
+      "data/src/BGRI2021_1106.gpkg"
+    ]
+    stdout, stderr, status = Open3.capture3(*cmd)
+    $stdout.print stdout
+    $stderr.print stderr
+  end
+
+  task geojson: ["tmp/census_2021/BGRI2021_1106.geojson"]
+end

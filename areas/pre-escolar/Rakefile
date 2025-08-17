@@ -1,0 +1,39 @@
+namespace :pre_escolar do
+  directory "tmp/pre_escolar"
+  file "tmp/pre_escolar/escolas.geojson" => ["census_2021:geojson", "tmp/pre_escolar"] do |task|
+    features = []
+    {
+      "data/src/pre-escolar-privadas.geojson" => :private,
+      "data/src/pre-escolar-publicas.geojson" => :public
+    }.each do |path, type|
+      JSON.parse(File.read(path))["features"].each do |feature|
+        features << {
+          "type" => "Feature",
+          "geometry" => feature["geometry"],
+          "properties" => {
+            "type" => (type == :private) ? "Privada" : "Pública",
+            "name" => feature.dig("properties", "INF_NOME"),
+            "address" => feature.dig("properties", "INF_MORADA"),
+            "freguesia" => feature.dig("properties", "FREGUESIA"),
+            "active" => feature.dig("properties", "INF_ACTIVO") == 1
+          }
+        }
+      end
+    end
+
+    data = {type: "FeatureCollection", features: features}
+    File.write(task.name, JSON.pretty_generate(data))
+  end
+
+  task all: [
+    "tmp/pre_escolar/escolas.geojson"
+  ]
+
+  CLEAN_PRE_ESCOLAR = [
+    "tmp/pre_escolar/escolas.geojson"
+  ]
+  task :clean do
+    CLEAN_PRE_ESCOLAR.each { |file| rm file if File.exist?(file) }
+  end
+  CLEAN.include(*CLEAN_PRE_ESCOLAR)
+end

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Uso do Filtro de Freguesias</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- MapLibre GL JS -->
+    <script src="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js"></script>
+    <link href="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css" rel="stylesheet" />
+    <!-- PMTiles -->
+    <script src="https://unpkg.com/pmtiles@2.11.0/dist/index.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3 bg-light p-3">
+                <h4>Filtro de Freguesias</h4>
+                <p class="text-muted small">
+                    Este é um exemplo de como usar o módulo de filtro de freguesias
+                    em diferentes visualizações.
+                </p>
+
+                <!-- Select All Checkbox -->
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" id="select-all-freguesias" checked>
+                    <label class="form-check-label fw-semibold" for="select-all-freguesias">
+                        Selecionar Todas
+                    </label>
+                </div>
+
+                <!-- Freguesias Filter Container -->
+                <div id="freguesias-filter" class="overflow-auto" style="max-height: 300px;">
+                    <!-- Checkboxes will be dynamically generated here -->
+                </div>
+
+                <!-- Status Display -->
+                <div class="mt-3">
+                    <h6>Status do Filtro</h6>
+                    <div class="small">
+                        <div></div>Selecionadas: <span id="selected-count">0</span></div>
+                        <div>Total: <span id="total-count">0</span></div>
+                        <div>URL Sync: <span id="url-status" class="badge bg-success">Ativo</span></div>
+                    </div>
+                </div>
+
+                <!-- Control Buttons -->
+                <div class="mt-3">
+                    <h6>Controles</h6>
+                    <button class="btn btn-sm btn-outline-primary me-2" onclick="selectSampleFreguesias()">
+                        Selecionar Exemplo
+                    </button>
+                    <button class="btn btn-sm btn-outline-secondary me-2" onclick="clearSelection()">
+                        Limpar
+                    </button>
+                    <button class="btn btn-sm btn-outline-info" onclick="showSelected()">
+                        Mostrar Selecionadas
+                    </button>
+                </div>
+
+                <!-- Log Display -->
+                <div class="mt-3">
+                    <h6>Log de Eventos</h6>
+                    <div id="event-log" class="border rounded p-2 bg-white small" style="height: 150px; overflow-y: auto;">
+                        <!-- Event log entries will appear here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map Container -->
+            <div class="col-md-9 p-0">
+                <div id="map" style="height: 100vh;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script type="module">
+        import { createFreguesiasFilter } from './site/assets/js/freguesia-filter.js';
+
+        // Global variables
+        let map;
+        let freguesiasFilter;
+
+        // Utility function to log events
+        function logEvent(message) {
+            const timestamp = new Date().toLocaleTimeString();
+            const logContainer = document.getElementById('event-log');
+            const logEntry = document.createElement('div');
+            logEntry.innerHTML = `<span class="text-muted">${timestamp}</span> ${message}`;
+            logContainer.appendChild(logEntry);
+            logContainer.scrollTop = logContainer.scrollHeight;
+        }
+
+        // Initialize map
+        async function initializeMap() {
+            try {
+                // Register PMTiles protocol
+                const protocol = new pmtiles.Protocol();
+                maplibregl.addProtocol("pmtiles", protocol.tile);
+
+                // Create map
+                map = new maplibregl.Map({
+                    container: 'map',
+                    style: {
+                        version: 8,
+                        sources: {},
+                        layers: []
+                    },
+                    center: [-9.1393, 38.7223], // Lisbon coordinates
+                    zoom: 11
+                });
+
+                map.addControl(new maplibregl.NavigationControl(), 'top-left');
+
+                map.on('load', async () => {
+                    logEvent('Mapa carregado com sucesso');
+
+                    // Add your data source here
+                    // This example assumes you have a PMTiles file with freguesia data
+                    const pmtilesURL = './site/assets/data/processed/parques_infantis.pmtiles';
+                    const abs = new URL(pmtilesURL, window.location.origin);
+                    const thematicURL = "pmtiles://" + abs.pathname + abs.search;
+
+                    map.addSource("example-data", {
+                        type: "vector",
+                        url: thematicURL,
+                    });
+
+                    // Add example layer
+                    map.addLayer({
+                        id: "example-layer",
+                        type: "fill",
+                        source: "example-data",
+                        "source-layer": "h3",
+                        paint: {
+                            "fill-color": [
+                                "case",
+                                ["<", ["get", "nearest_playground_distance"], 200],
+                                "#27ae60",
+                                ["<", ["get", "nearest_playground_distance"], 400],
+                                "#f1c40f",
+                                ["<", ["get", "nearest_playground_distance"], 1000],
+                                "#e74c3c",
+                                "#9b59b6"
+                            ],
+                            "fill-opacity": 0.7
+                        }
+                    });
+
+                    // Initialize freguesias filter
+                    await initializeFreguesiasFilter();
+                });
+
+            } catch (error) {
+                console.error('Erro ao inicializar mapa:', error);
+                logEvent(`<span class="text-danger">Erro: ${error.message}</span>`);
+            }
+        }
+
+        // Initialize freguesias filter
+        async function initializeFreguesiasFilter() {
+            try {
+                freguesiasFilter = await createFreguesiasFilter({
+                    map: map,
+                    containerSelector: "#freguesias-filter",
+                    selectAllSelector: "#select-all-freguesias",
+                    sourceId: "example-data",
+                    sourceLayer: "h3",
+                    layerId: "example-layer",
+                    freguesiasProperty: "freguesias",
+                    urlParam: "freguesias",
+                    onFilterChange: (selectedFreguesias) => {
+                        logEvent(`Filtro aplicado: ${selectedFreguesias.length} freguesias`);
+                        updateStatusDisplay();
+
+                        // Add your custom filter logic here
+                        // For example, you might want to filter other layers
+                        // or update other parts of your visualization
+                    },
+                    onSelectionChange: (selectedFreguesias) => {
+                        logEvent(`Seleção alterada: ${selectedFreguesias.join(', ') || 'nenhuma'}`);
+                        updateStatusDisplay();
+                    },
+                    enableZoom: true,
+                    enableUrlSync: true
+                });
+
+                logEvent('Filtro de freguesias inicializado com sucesso');
+                updateStatusDisplay();
+
+            } catch (error) {
+                console.error('Erro ao inicializar filtro:', error);
+                logEvent(`<span class="text-danger">Erro no filtro: ${error.message}</span>`);
+            }
+        }
+
+        // Update status display
+        function updateStatusDisplay() {
+            if (!freguesiasFilter) return;
+
+            const selected = freguesiasFilter.getSelectedFreguesias();
+            const total = freguesiasFilter.getAllFreguesias();
+
+            document.getElementById('selected-count').textContent = selected.length;
+            document.getElementById('total-count').textContent = total.length;
+        }
+
+        // Control functions (exposed globally for button clicks)
+        window.selectSampleFreguesias = function() {
+            if (!freguesiasFilter) {
+                logEvent('<span class="text-warning">Filtro não inicializado</span>');
+                return;
+            }
+
+            // Select a few example freguesias
+            const allFreguesias = freguesiasFilter.getAllFreguesias();
+            const sampleSize = Math.min(3, allFreguesias.length);
+            const sample = allFreguesias.slice(0, sampleSize);
+
+            freguesiasFilter.setSelectedFreguesias(sample);
+            logEvent(`Seleção de exemplo aplicada: ${sample.join(', ')}`);
+        };
+
+        window.clearSelection = function() {
+            if (!freguesiasFilter) {
+                logEvent('<span class="text-warning">Filtro não inicializado</span>');
+                return;
+            }
+
+            freguesiasFilter.setSelectedFreguesias([]);
+            logEvent('Seleção limpa');
+        };
+
+        window.showSelected = function() {
+            if (!freguesiasFilter) {
+                logEvent('<span class="text-warning">Filtro não inicializado</span>');
+                return;
+            }
+
+            const selected = freguesiasFilter.getSelectedFreguesias();
+            if (selected.length === 0) {
+                alert('Nenhuma freguesia selecionada');
+            } else {
+                alert(`Freguesias selecionadas:\n\n${selected.join('\n')}`);
+            }
+        };
+
+        // Initialize everything when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            logEvent('Página carregada, inicializando...');
+            initializeMap();
+        });
+
+        // Handle URL changes (for back/forward navigation)
+        window.addEventListener('popstate', () => {
+            if (freguesiasFilter) {
+                logEvent('Navegação detectada, atualizando filtro...');
+                // The filter will automatically sync with URL parameters
+                setTimeout(() => {
+                    updateStatusDisplay();
+                }, 100);
+            }
+        });
+    </script>
+
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        .form-check-input:checked {
+            background-color: #0d6efd;
+            border-color: #0d6efd;
+        }
+
+        .form-check-input:indeterminate {
+            background-color: #6c757d;
+            border-color: #6c757d;
+        }
+
+        #event-log {
+            font-family: 'Courier New', monospace;
+            font-size: 0.75rem;
+        }
+
+        .maplibregl-popup-content {
+            font-size: 0.9rem;
+        }
+
+        /* Ensure map takes full height */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</body>
+</html>

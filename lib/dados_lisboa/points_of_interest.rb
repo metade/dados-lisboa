@@ -35,8 +35,12 @@ class DadosLisboa::PointsOfInterest
     @points ||= begin
       data = JSON.parse(File.read(@data_path))
       data["features"].map do |f|
-        RGeo::GeoJSON.decode(f["geometry"].to_json, json_parser: :json, geo_factory: @factory)
-      end
+        RGeo::GeoJSON.decode(
+          f["geometry"].to_json, json_parser: :json, geo_factory: @factory
+        ).tap { |point|
+          puts "Point of interest missing geometry: #{f.inspect}" if point.nil?
+        }
+      end.compact
     end
   end
 end

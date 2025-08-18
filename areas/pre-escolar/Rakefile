@@ -9,15 +9,16 @@ namespace :pre_escolar do
       "data/src/pre-escolar-publicas.geojson" => :public
     }.each do |path, type|
       JSON.parse(File.read(path))["features"].each do |feature|
+        properties = feature["properties"]
         features << {
           "type" => "Feature",
           "geometry" => feature["geometry"],
           "properties" => {
             "type" => (type == :private) ? "Privada" : "Pública",
-            "name" => feature.dig("properties", "INF_NOME"),
-            "address" => feature.dig("properties", "INF_MORADA"),
-            "freguesia" => feature.dig("properties", "FREGUESIA"),
-            "active" => feature.dig("properties", "INF_ACTIVO") == 1
+            "name" => properties["INF_NOME"] || properties["NOME_ESCOLA"],
+            "address" => properties["INF_MORADA"] || properties["MORADA"],
+            "freguesia" => properties["FREGUESIA"] || properties["FREGUESIA12"],
+            "active" => properties.fetch("INF_ACTIVO", 1) == 1
           }
         }
       end

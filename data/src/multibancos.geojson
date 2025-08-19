@@ -1,0 +1,8881 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2025-08-19T21:38:36Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/259000819",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9935923,
+          38.9538328
+        ]
+      },
+      "id": "node/259000819"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/292778998",
+        "amenity": "atm",
+        "check_date": "2025-04-20"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.4188817,
+          39.007084
+        ]
+      },
+      "id": "node/292778998"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/308121340",
+        "amenity": "atm",
+        "created_by": "Potlatch 0.10e"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1503447,
+          38.7304245
+        ]
+      },
+      "id": "node/308121340"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/327356448",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.4167391,
+          38.9615744
+        ]
+      },
+      "id": "node/327356448"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/327360603",
+        "amenity": "atm",
+        "check_date": "2023-09-18"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.4170557,
+          38.9635126
+        ]
+      },
+      "id": "node/327360603"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/327360932",
+        "amenity": "atm",
+        "created_by": "Potlatch 0.10f"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.4171234,
+          38.96206
+        ]
+      },
+      "id": "node/327360932"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/327361528",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.4175572,
+          38.9823788
+        ]
+      },
+      "id": "node/327361528"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/494402658",
+        "amenity": "atm",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1391551,
+          38.7084048
+        ]
+      },
+      "id": "node/494402658"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/507117362",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.210986,
+          38.7921365
+        ]
+      },
+      "id": "node/507117362"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/507117625",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2097758,
+          38.7904841
+        ]
+      },
+      "id": "node/507117625"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/595839237",
+        "amenity": "atm",
+        "cash_in": "no",
+        "check_date": "2023-08-11",
+        "operator": "Multibanco"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2987457,
+          38.692302
+        ]
+      },
+      "id": "node/595839237"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/672948494",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.4105019,
+          38.7326632
+        ]
+      },
+      "id": "node/672948494"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/672951357",
+        "amenity": "atm",
+        "operator": "Caixa Geral de Depósitos"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.4099022,
+          38.7328525
+        ]
+      },
+      "id": "node/672951357"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/726754421",
+        "amenity": "atm",
+        "brand": "Millennium bcp",
+        "brand:wikidata": "Q118581",
+        "check_date": "2022-07-21",
+        "operator": "Millennium bcp",
+        "operator:wikidata": "Q118581"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1355395,
+          38.7126225
+        ]
+      },
+      "id": "node/726754421"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/878876698",
+        "amenity": "atm",
+        "brand": "Montepio",
+        "brand:wikidata": "Q1946091",
+        "cash_in": "no",
+        "check_date": "2023-09-25",
+        "operator": "Montepio",
+        "operator:wikidata": "Q1946091"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1695613,
+          38.7434165
+        ]
+      },
+      "id": "node/878876698"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/878876771",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1689756,
+          38.7432598
+        ]
+      },
+      "id": "node/878876771"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1128850010",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1896104,
+          38.746283
+        ]
+      },
+      "id": "node/1128850010"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1137561266",
+        "amenity": "atm",
+        "operator": "Euronet Worldwide"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1352734,
+          38.7214192
+        ]
+      },
+      "id": "node/1137561266"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1140935123",
+        "amenity": "atm",
+        "cash_in": "no",
+        "check_date": "2022-09-06",
+        "operator": "MB Multibanco"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1307582,
+          38.7108023
+        ]
+      },
+      "id": "node/1140935123"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1144882970",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1758486,
+          38.7002042
+        ]
+      },
+      "id": "node/1144882970"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1226030170",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1469794,
+          38.7345443
+        ]
+      },
+      "id": "node/1226030170"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1227815906",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2148688,
+          39.287925
+        ]
+      },
+      "id": "node/1227815906"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1261359648",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3343618,
+          39.2658628
+        ]
+      },
+      "id": "node/1261359648"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1282625924",
+        "amenity": "atm",
+        "brand": "Millennium BCP",
+        "operator": "Millennium BCP",
+        "source": "local_knowledge"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2222661,
+          38.7384399
+        ]
+      },
+      "id": "node/1282625924"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1301489346",
+        "addr:street": "Alameda das Linhas de Torres",
+        "amenity": "atm",
+        "brand": "Caixa Geral de Depósitos",
+        "brand:wikidata": "Q1026044",
+        "currency:EUR": "yes",
+        "opening_hours": "24/7",
+        "operator": "Caixa Geral de Depósitos",
+        "operator:wikidata": "Q1026044",
+        "short_name": "CGD",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1617525,
+          38.7732229
+        ]
+      },
+      "id": "node/1301489346"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1301579429",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1631707,
+          38.762551
+        ]
+      },
+      "id": "node/1301579429"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1301579515",
+        "amenity": "atm",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1657248,
+          38.7653841
+        ]
+      },
+      "id": "node/1301579515"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1301598452",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1256654,
+          38.7693102
+        ]
+      },
+      "id": "node/1301598452"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1301617639",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1707667,
+          38.767861
+        ]
+      },
+      "id": "node/1301617639"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1301636317",
+        "amenity": "atm",
+        "check_date": "2022-10-08"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1756296,
+          38.7645379
+        ]
+      },
+      "id": "node/1301636317"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1301636350",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1727703,
+          38.7680262
+        ]
+      },
+      "id": "node/1301636350"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1302844619",
+        "amenity": "atm",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1587556,
+          38.7643726
+        ]
+      },
+      "id": "node/1302844619"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1302851047",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1831983,
+          38.7525156
+        ]
+      },
+      "id": "node/1302851047"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1302863171",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1905915,
+          38.7484107
+        ]
+      },
+      "id": "node/1302863171"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1302881377",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2144675,
+          38.7113383
+        ]
+      },
+      "id": "node/1302881377"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1302888593",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2180536,
+          38.6938616
+        ]
+      },
+      "id": "node/1302888593"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1314962402",
+        "amenity": "atm",
+        "cash_in": "no",
+        "check_date": "2023-08-11",
+        "operator": "Caixa Geral de Depósitos"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2989882,
+          38.6920311
+        ]
+      },
+      "id": "node/1314962402"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1326510139",
+        "amenity": "atm",
+        "source": "personal_knowlodge"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8690788,
+          39.1963982
+        ]
+      },
+      "id": "node/1326510139"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1387399971",
+        "amenity": "atm",
+        "fee": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2439163,
+          38.7090094
+        ]
+      },
+      "id": "node/1387399971"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1388442027",
+        "amenity": "atm",
+        "operator": "SIBS"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3278734,
+          38.9381732
+        ]
+      },
+      "id": "node/1388442027"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1450583659",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3265555,
+          38.7016169
+        ]
+      },
+      "id": "node/1450583659"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1450583684",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3269961,
+          38.6999551
+        ]
+      },
+      "id": "node/1450583684"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1468348684",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.214494,
+          38.7147718
+        ]
+      },
+      "id": "node/1468348684"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1520028137",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9905064,
+          39.0788528
+        ]
+      },
+      "id": "node/1520028137"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1520167428",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9989527,
+          39.046666
+        ]
+      },
+      "id": "node/1520167428"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1526696522",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0910681,
+          38.8379079
+        ]
+      },
+      "id": "node/1526696522"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1526696615",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0923505,
+          38.8375058
+        ]
+      },
+      "id": "node/1526696615"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1534074490",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2493844,
+          38.7009138
+        ]
+      },
+      "id": "node/1534074490"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1538899419",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1213067,
+          38.7912158
+        ]
+      },
+      "id": "node/1538899419"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1539434032",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2393246,
+          38.7261367
+        ]
+      },
+      "id": "node/1539434032"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1541562250",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0892005,
+          38.8444534
+        ]
+      },
+      "id": "node/1541562250"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1544996001",
+        "amenity": "atm",
+        "check_date": "2022-10-15"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1461626,
+          38.7274782
+        ]
+      },
+      "id": "node/1544996001"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1545661263",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2368752,
+          38.7257178
+        ]
+      },
+      "id": "node/1545661263"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1553890381",
+        "amenity": "atm",
+        "brand": "Santander",
+        "brand:wikidata": "Q6496310",
+        "operator": "Santander",
+        "operator:wikidata": "Q6496310"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2797872,
+          38.7536996
+        ]
+      },
+      "id": "node/1553890381"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1584211816",
+        "amenity": "atm",
+        "brand": "Santander Totta",
+        "brand:wikidata": "Q4854116",
+        "operator": "Santander Totta",
+        "operator:wikidata": "Q4854116"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1570419,
+          38.815963
+        ]
+      },
+      "id": "node/1584211816"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1586355566",
+        "amenity": "atm",
+        "cash_in": "yes",
+        "currency:EUR": "yes",
+        "currency:USD": "yes",
+        "operator": "Santander",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1503778,
+          38.724378
+        ]
+      },
+      "id": "node/1586355566"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1587123180",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3423274,
+          38.682539
+        ]
+      },
+      "id": "node/1587123180"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1590042622",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3261924,
+          38.6949255
+        ]
+      },
+      "id": "node/1590042622"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1594149778",
+        "amenity": "atm",
+        "check_date": "2024-10-13",
+        "name": "Crédito Agrícola"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3863906,
+          38.7988417
+        ]
+      },
+      "id": "node/1594149778"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1594158378",
+        "amenity": "atm",
+        "check_date": "2022-06-16"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3855488,
+          38.7994057
+        ]
+      },
+      "id": "node/1594158378"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1594942929",
+        "amenity": "atm",
+        "cash_in": "no",
+        "check_date": "2025-05-04"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0765268,
+          38.8610388
+        ]
+      },
+      "id": "node/1594942929"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1594942932",
+        "amenity": "atm",
+        "check_date": "2025-05-05",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0750595,
+          38.8626193
+        ]
+      },
+      "id": "node/1594942932"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1594942944",
+        "amenity": "atm",
+        "check_date": "2025-05-05"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0751057,
+          38.8624966
+        ]
+      },
+      "id": "node/1594942944"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1640947423",
+        "amenity": "atm",
+        "operator": "CCAM"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2664927,
+          39.0421743
+        ]
+      },
+      "id": "node/1640947423"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1645025522",
+        "amenity": "atm",
+        "check_date": "2024-05-08",
+        "operator": "Santander"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3905922,
+          38.7966169
+        ]
+      },
+      "id": "node/1645025522"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1679658902",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.330919,
+          38.712387
+        ]
+      },
+      "id": "node/1679658902"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1679763905",
+        "amenity": "atm",
+        "branch": "Agência Automática de Benfica",
+        "brand": "Caixa Geral de Depósitos",
+        "operator": "Caixa Geral de Depósitos"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2013201,
+          38.7507867
+        ]
+      },
+      "id": "node/1679763905"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1710878846",
+        "amenity": "atm",
+        "brand": "Millennium bcp",
+        "brand:wikidata": "Q118581",
+        "official_name": "Banco Comercial Português",
+        "operator": "Millennium bcp",
+        "operator:wikidata": "Q118581",
+        "ref": "0033/7001/11"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1552484,
+          38.767159
+        ]
+      },
+      "id": "node/1710878846"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1719092636",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1846225,
+          38.8075626
+        ]
+      },
+      "id": "node/1719092636"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1737257386",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1534858,
+          38.766876
+        ]
+      },
+      "id": "node/1737257386"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1737257387",
+        "amenity": "atm",
+        "brand": "Deutsche Bank",
+        "brand:wikidata": "Q66048",
+        "operator": "Deutsche Bank",
+        "operator:wikidata": "Q66048"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.154133,
+          38.76539
+        ]
+      },
+      "id": "node/1737257387"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1737257389",
+        "amenity": "atm",
+        "operator": "Banco Popular"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1536139,
+          38.7650718
+        ]
+      },
+      "id": "node/1737257389"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1776522992",
+        "amenity": "atm",
+        "fee": "no",
+        "name": "MB Junta de Freguesia da Ramada",
+        "operator": "SIBS",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1904768,
+          38.8021988
+        ]
+      },
+      "id": "node/1776522992"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1781823352",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9675329,
+          39.0275017
+        ]
+      },
+      "id": "node/1781823352"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1781823377",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8688705,
+          39.1105491
+        ]
+      },
+      "id": "node/1781823377"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1781823417",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9582551,
+          39.2083785
+        ]
+      },
+      "id": "node/1781823417"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1781823451",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9654247,
+          39.0284227
+        ]
+      },
+      "id": "node/1781823451"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1791497802",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.090021,
+          38.8701112
+        ]
+      },
+      "id": "node/1791497802"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1806388169",
+        "amenity": "atm",
+        "check_date": "2024-10-07"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3102011,
+          39.239097
+        ]
+      },
+      "id": "node/1806388169"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1806388223",
+        "amenity": "atm",
+        "check_date": "2024-08-16"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.310818,
+          39.2380873
+        ]
+      },
+      "id": "node/1806388223"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1806389835",
+        "amenity": "atm",
+        "check_date": "2024-09-14"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3134304,
+          39.2431935
+        ]
+      },
+      "id": "node/1806389835"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1806389849",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3136557,
+          39.2433431
+        ]
+      },
+      "id": "node/1806389849"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1819617508",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3914296,
+          38.7963738
+        ]
+      },
+      "id": "node/1819617508"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1822105512",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3876949,
+          38.7881243
+        ]
+      },
+      "id": "node/1822105512"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1900374686",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1827492,
+          39.0380612
+        ]
+      },
+      "id": "node/1900374686"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1904370536",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0456283,
+          38.8894715
+        ]
+      },
+      "id": "node/1904370536"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1932443756",
+        "amenity": "atm",
+        "currency:EUR": "yes",
+        "operator": "Multibanco"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3871997,
+          38.7096473
+        ]
+      },
+      "id": "node/1932443756"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1932443774",
+        "amenity": "atm",
+        "currency:EUR": "yes",
+        "operator": "Multibanco"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3854187,
+          38.7058003
+        ]
+      },
+      "id": "node/1932443774"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1932443781",
+        "amenity": "atm",
+        "operator": "Multibanco"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3913464,
+          38.7034811
+        ]
+      },
+      "id": "node/1932443781"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1934971338",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.396038,
+          38.7079342
+        ]
+      },
+      "id": "node/1934971338"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1935021727",
+        "amenity": "atm",
+        "operator": "Multibanco"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3779757,
+          38.7048364
+        ]
+      },
+      "id": "node/1935021727"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1936938713",
+        "amenity": "atm",
+        "check_date": "2024-01-06",
+        "operator": "Santander"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.139873,
+          38.7459131
+        ]
+      },
+      "id": "node/1936938713"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1936950158",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1407172,
+          38.7465584
+        ]
+      },
+      "id": "node/1936950158"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1939875780",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3205455,
+          39.0223637
+        ]
+      },
+      "id": "node/1939875780"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1940782779",
+        "amenity": "atm",
+        "level": "-1",
+        "network": "Multibanco"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1679452,
+          38.738346
+        ]
+      },
+      "id": "node/1940782779"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1940782889",
+        "amenity": "atm",
+        "brand": "Bankinter",
+        "brand:wikidata": "Q806808",
+        "check_date": "2025-05-24",
+        "name": "Bankinter",
+        "operator": "Bankinter",
+        "operator:wikidata": "Q806808"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1611024,
+          38.7379169
+        ]
+      },
+      "id": "node/1940782889"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1953134714",
+        "amenity": "atm",
+        "operator": "Multibanco"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3232536,
+          38.6998458
+        ]
+      },
+      "id": "node/1953134714"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1955857587",
+        "amenity": "atm",
+        "operator": "Multibanco"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3367775,
+          38.6882441
+        ]
+      },
+      "id": "node/1955857587"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1956613553",
+        "amenity": "atm",
+        "operator": "Multibanco"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3383547,
+          38.6883742
+        ]
+      },
+      "id": "node/1956613553"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1962379597",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3414321,
+          38.7975255
+        ]
+      },
+      "id": "node/1962379597"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1988703950",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3421902,
+          38.7962644
+        ]
+      },
+      "id": "node/1988703950"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1996047143",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2347236,
+          38.7676727
+        ]
+      },
+      "id": "node/1996047143"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1996047145",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2319207,
+          38.7679174
+        ]
+      },
+      "id": "node/1996047145"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1996047146",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.230982,
+          38.7662946
+        ]
+      },
+      "id": "node/1996047146"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2011486059",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1937588,
+          38.7599073
+        ]
+      },
+      "id": "node/2011486059"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2027139067",
+        "amenity": "atm",
+        "cash_in": "yes",
+        "check_date": "2023-01-28",
+        "operator": "Millennium"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1006566,
+          38.8136792
+        ]
+      },
+      "id": "node/2027139067"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2029121985",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0879989,
+          38.822998
+        ]
+      },
+      "id": "node/2029121985"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2030582547",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0992917,
+          38.808796
+        ]
+      },
+      "id": "node/2030582547"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2050429858",
+        "amenity": "atm",
+        "brand": "Millennium BCP",
+        "cash_in": "no",
+        "check_date": "2024-02-20",
+        "operator": "Millennium BCP"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.4184273,
+          38.6998663
+        ]
+      },
+      "id": "node/2050429858"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2066948737",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1536064,
+          38.7334413
+        ]
+      },
+      "id": "node/2066948737"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2069566782",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1547705,
+          38.7343954
+        ]
+      },
+      "id": "node/2069566782"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2077437291",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3030755,
+          38.721774
+        ]
+      },
+      "id": "node/2077437291"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2129434724",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.4203817,
+          38.6978453
+        ]
+      },
+      "id": "node/2129434724"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2129434742",
+        "amenity": "atm",
+        "check_date": "2022-08-28"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.4211677,
+          38.7018595
+        ]
+      },
+      "id": "node/2129434742"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2137077750",
+        "amenity": "atm",
+        "brand": "Caixa Geral de Depósitos",
+        "brand:wikidata": "Q1026044",
+        "name": "Caixa Geral de Depósitos",
+        "operator": "Caixa Geral de Depósitos",
+        "operator:wikidata": "Q1026044",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.16175,
+          38.732929
+        ]
+      },
+      "id": "node/2137077750"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2159506580",
+        "amenity": "atm",
+        "brand": "Crédito Agrícola",
+        "brand:wikidata": "Q396117",
+        "operator": "Crédito Agrícola",
+        "operator:wikidata": "Q396117"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1030814,
+          38.9387278
+        ]
+      },
+      "id": "node/2159506580"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163450066",
+        "amenity": "atm",
+        "fee": "no",
+        "operator": "SIBS"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3476897,
+          38.7945123
+        ]
+      },
+      "id": "node/2163450066"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2232095655",
+        "amenity": "atm",
+        "brand": "Novo Banco",
+        "brand:wikidata": "Q17488861",
+        "brand:wikipedia": "en:Novobanco",
+        "name": "Novo Banco",
+        "operator": "Novo Banco",
+        "operator:wikidata": "Q17488861",
+        "operator:wikipedia": "en:Novobanco"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2213732,
+          38.7397369
+        ]
+      },
+      "id": "node/2232095655"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2264043109",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.180732,
+          38.8004704
+        ]
+      },
+      "id": "node/2264043109"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2300340573",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.250428,
+          38.9296627
+        ]
+      },
+      "id": "node/2300340573"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2300340601",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2505943,
+          38.9297127
+        ]
+      },
+      "id": "node/2300340601"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2313452804",
+        "amenity": "atm",
+        "brand": "Crédito Agrícola",
+        "brand:wikidata": "Q10262017",
+        "check_date": "2022-06-19",
+        "currency:EUR": "yes",
+        "drive_through": "no",
+        "name": "Crédito Agrícola",
+        "operator": "Crédito Agrícola",
+        "operator:wikidata": "Q10262017"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1519248,
+          39.0184554
+        ]
+      },
+      "id": "node/2313452804"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2380622703",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.4082725,
+          38.7050891
+        ]
+      },
+      "id": "node/2380622703"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2385160409",
+        "addr:city": "Estoril",
+        "addr:housenumber": "7228",
+        "addr:street": "Avenida Marginal",
+        "amenity": "atm",
+        "operator": "Santander",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3974819,
+          38.7036373
+        ]
+      },
+      "id": "node/2385160409"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2385160463",
+        "amenity": "atm",
+        "check_date": "2022-10-11"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3992672,
+          38.7046624
+        ]
+      },
+      "id": "node/2385160463"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2385160464",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.399047,
+          38.7049593
+        ]
+      },
+      "id": "node/2385160464"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2385160466",
+        "amenity": "atm",
+        "check_date": "2022-10-11",
+        "operator": "bankinter"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3989805,
+          38.7050896
+        ]
+      },
+      "id": "node/2385160466"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2385160494",
+        "amenity": "atm",
+        "check_date": "2021-10-07"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3987025,
+          38.7059326
+        ]
+      },
+      "id": "node/2385160494"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2385792745",
+        "amenity": "atm",
+        "check_date": "2024-05-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1640389,
+          38.7113588
+        ]
+      },
+      "id": "node/2385792745"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2385792746",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1524094,
+          38.7209486
+        ]
+      },
+      "id": "node/2385792746"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2385872621",
+        "amenity": "atm",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0934973,
+          38.7617712
+        ]
+      },
+      "id": "node/2385872621"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2411188407",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0495029,
+          39.3046653
+        ]
+      },
+      "id": "node/2411188407"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2430629741",
+        "amenity": "atm",
+        "operator": "Multibanco"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2183383,
+          38.7350694
+        ]
+      },
+      "id": "node/2430629741"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2430629742",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2173418,
+          38.7353205
+        ]
+      },
+      "id": "node/2430629742"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2473541745",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1221694,
+          38.7143568
+        ]
+      },
+      "id": "node/2473541745"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2475087917",
+        "amenity": "atm",
+        "covered": "yes",
+        "direction": "184",
+        "indoor": "yes",
+        "level": "1",
+        "network": "Multibanco",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0964568,
+          38.7678925
+        ]
+      },
+      "id": "node/2475087917"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2486793861",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2751189,
+          38.7064351
+        ]
+      },
+      "id": "node/2486793861"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2514865932",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.126872,
+          38.7276857
+        ]
+      },
+      "id": "node/2514865932"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2515648863",
+        "amenity": "atm",
+        "operator": "multibanco"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1530269,
+          38.7493361
+        ]
+      },
+      "id": "node/2515648863"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2517950664",
+        "amenity": "atm",
+        "operator": "multibanco"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1127153,
+          38.724528
+        ]
+      },
+      "id": "node/2517950664"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2612428284",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1678622,
+          38.7037641
+        ]
+      },
+      "id": "node/2612428284"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2699983852",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.330412,
+          39.2020628
+        ]
+      },
+      "id": "node/2699983852"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2829323898",
+        "amenity": "atm",
+        "operator": "BIC"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1465698,
+          38.7305375
+        ]
+      },
+      "id": "node/2829323898"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2838714270",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1459065,
+          38.7307747
+        ]
+      },
+      "id": "node/2838714270"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2848183200",
+        "amenity": "atm",
+        "source": "Local survey"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3195731,
+          39.0907985
+        ]
+      },
+      "id": "node/2848183200"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2851649955",
+        "amenity": "atm",
+        "check_date": "2024-02-22"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1453398,
+          38.710853
+        ]
+      },
+      "id": "node/2851649955"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2917628044",
+        "amenity": "atm",
+        "name": "BES"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3281781,
+          38.6944234
+        ]
+      },
+      "id": "node/2917628044"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2917629817",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3050426,
+          38.6918163
+        ]
+      },
+      "id": "node/2917629817"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2917633042",
+        "amenity": "atm",
+        "cash_in": "no",
+        "drive_through": "no",
+        "operator": "EuroBic"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3050697,
+          38.6933069
+        ]
+      },
+      "id": "node/2917633042"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2936706102",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.4281969,
+          38.6982127
+        ]
+      },
+      "id": "node/2936706102"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2936706501",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.4278242,
+          38.6985562
+        ]
+      },
+      "id": "node/2936706501"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2936706502",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.4239316,
+          38.6993431
+        ]
+      },
+      "id": "node/2936706502"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3010357579",
+        "amenity": "atm",
+        "operator": "Caixa Geral de Depósitos"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2743995,
+          38.6988936
+        ]
+      },
+      "id": "node/3010357579"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3024722372",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1998385,
+          38.7444949
+        ]
+      },
+      "id": "node/3024722372"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3034131412",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.442204,
+          38.6957415
+        ]
+      },
+      "id": "node/3034131412"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3154422568",
+        "amenity": "atm",
+        "check_date": "2022-01-16",
+        "operator": "Banco Montepio"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1291099,
+          38.7155307
+        ]
+      },
+      "id": "node/3154422568"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3182481899",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9873248,
+          38.9575815
+        ]
+      },
+      "id": "node/3182481899"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3182481901",
+        "amenity": "atm",
+        "check_date": "2022-12-14",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9908833,
+          38.9532997
+        ]
+      },
+      "id": "node/3182481901"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3232373263",
+        "amenity": "atm",
+        "check_date": "2025-05-25",
+        "operator": "Abanca"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1071987,
+          38.790571
+        ]
+      },
+      "id": "node/3232373263"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3232373264",
+        "addr:city": "Sacavém",
+        "addr:postcode": "2685",
+        "addr:street": "Rua Cooperativa A Sacavenense",
+        "addr:unit": "27E",
+        "amenity": "atm",
+        "operator": "Novo Banco"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1078344,
+          38.7901696
+        ]
+      },
+      "id": "node/3232373264"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3339548096",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0411125,
+          38.8947731
+        ]
+      },
+      "id": "node/3339548096"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3339548097",
+        "amenity": "atm",
+        "name": "Montepio"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0426963,
+          38.8919016
+        ]
+      },
+      "id": "node/3339548097"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3339548116",
+        "amenity": "atm",
+        "brand": "Millennium BCP",
+        "name": "Millennium bcp",
+        "operator": "Millennium BCP"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0463971,
+          38.8872744
+        ]
+      },
+      "id": "node/3339548116"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3389321793",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.4499945,
+          38.8062813
+        ]
+      },
+      "id": "node/3389321793"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3575234306",
+        "amenity": "atm",
+        "cash_in": "no",
+        "check_date": "2023-03-26"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1456939,
+          38.7073273
+        ]
+      },
+      "id": "node/3575234306"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3617253339",
+        "amenity": "atm",
+        "check_date": "2025-05-23",
+        "operator": "Banco Montepio"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1005125,
+          38.7794137
+        ]
+      },
+      "id": "node/3617253339"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3617263128",
+        "amenity": "atm",
+        "check_date": "2025-01-17"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1021133,
+          38.7780991
+        ]
+      },
+      "id": "node/3617263128"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3617265072",
+        "amenity": "atm",
+        "check_date": "2025-01-17"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1019635,
+          38.7777055
+        ]
+      },
+      "id": "node/3617265072"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3625376575",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1561115,
+          38.7546381
+        ]
+      },
+      "id": "node/3625376575"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3663652418",
+        "amenity": "atm",
+        "brand": "Montepio",
+        "brand:wikidata": "Q1946091",
+        "cash_in": "no",
+        "operator": "Montepio",
+        "operator:wikidata": "Q1946091"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1360845,
+          38.7306295
+        ]
+      },
+      "id": "node/3663652418"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3665378103",
+        "addr:city": "Lisboa",
+        "addr:street": "Rua Alexandre Ferreira",
+        "amenity": "atm",
+        "brand": "Montepio",
+        "check_date": "2021-07-15",
+        "currency:EUR": "yes",
+        "note": "Só multibanco | ATM only",
+        "opening_hours": "24/7",
+        "operator": "Caixa Económica Montepio Geral (CEMG)",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1629777,
+          38.7775292
+        ]
+      },
+      "id": "node/3665378103"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3679628272",
+        "amenity": "atm",
+        "check_date": "2020-12-25"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.4681356,
+          38.824849
+        ]
+      },
+      "id": "node/3679628272"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3681451872",
+        "amenity": "atm",
+        "check_date": "2020-12-27"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.4662909,
+          38.8184941
+        ]
+      },
+      "id": "node/3681451872"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3686258777",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0786759,
+          38.9827687
+        ]
+      },
+      "id": "node/3686258777"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3690340975",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0404938,
+          38.976905
+        ]
+      },
+      "id": "node/3690340975"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3690503437",
+        "amenity": "atm",
+        "brand": "Millennium BCP",
+        "operator": "Millennium BCP"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3819785,
+          39.1315813
+        ]
+      },
+      "id": "node/3690503437"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3705311017",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.4367065,
+          38.8269879
+        ]
+      },
+      "id": "node/3705311017"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3800186769",
+        "amenity": "atm",
+        "brand": "Millennium BCP",
+        "opening_hours": "24/7",
+        "operator": "Millennium BCP"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1724687,
+          38.7510904
+        ]
+      },
+      "id": "node/3800186769"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3904743571",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2061446,
+          38.7509138
+        ]
+      },
+      "id": "node/3904743571"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3904761956",
+        "amenity": "atm",
+        "brand": "Caixa Geral de Depósitos",
+        "brand:wikidata": "Q1026044",
+        "currency:EUR": "yes",
+        "drive_through": "no",
+        "network": "SIBS",
+        "operator": "Caixa Geral de Depósitos",
+        "operator:wikidata": "Q1026044",
+        "short_name": "CGD"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1769024,
+          38.7906931
+        ]
+      },
+      "id": "node/3904761956"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3990527214",
+        "amenity": "atm",
+        "opening_hours": "24/7"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1707368,
+          38.7511318
+        ]
+      },
+      "id": "node/3990527214"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3997124351",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1283131,
+          38.7342156
+        ]
+      },
+      "id": "node/3997124351"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4095051050",
+        "amenity": "atm",
+        "operator": "Multibanco"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3352313,
+          38.689942
+        ]
+      },
+      "id": "node/4095051050"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4095136268",
+        "amenity": "atm",
+        "operator": "Multibanco"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.334482,
+          38.6903181
+        ]
+      },
+      "id": "node/4095136268"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4095145633",
+        "amenity": "atm",
+        "operator": "Multibanco"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3371265,
+          38.688999
+        ]
+      },
+      "id": "node/4095145633"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4105449817",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.165162,
+          38.8264658
+        ]
+      },
+      "id": "node/4105449817"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4105450296",
+        "amenity": "atm",
+        "check_date": "2022-02-23"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1622587,
+          38.8265868
+        ]
+      },
+      "id": "node/4105450296"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4140465443",
+        "amenity": "atm",
+        "check_date": "2024-07-07",
+        "operator": "Caixa geral de depósitos"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3440741,
+          38.7963868
+        ]
+      },
+      "id": "node/4140465443"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4140465444",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3424012,
+          38.7964418
+        ]
+      },
+      "id": "node/4140465444"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4140465445",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3422813,
+          38.7965869
+        ]
+      },
+      "id": "node/4140465445"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4147258342",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.176015,
+          38.7879368
+        ]
+      },
+      "id": "node/4147258342"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4193085534",
+        "amenity": "atm",
+        "check_date": "2024-02-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1253694,
+          38.7142121
+        ]
+      },
+      "id": "node/4193085534"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4224983391",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1071606,
+          38.8569963
+        ]
+      },
+      "id": "node/4224983391"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4255953056",
+        "addr:city": "Lisboa",
+        "addr:housenumber": "2",
+        "addr:postcode": "1600-198",
+        "addr:street": "Rua Soeiro Pereira Gomes",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1598675,
+          38.7454463
+        ]
+      },
+      "id": "node/4255953056"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4266657522",
+        "amenity": "atm",
+        "check_date": "2022-04-19",
+        "network": "Euronet Worldwide"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1347783,
+          38.7257061
+        ]
+      },
+      "id": "node/4266657522"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4266720204",
+        "amenity": "atm",
+        "brand": "Caixa Geral de Depósitos",
+        "brand:wikidata": "Q1026044",
+        "name": "Caixa Geral de Depósitos",
+        "opening_hours": "24/7",
+        "operator": "Caixa Geral de Depósitos",
+        "operator:wikidata": "Q1026044"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1348007,
+          38.7290285
+        ]
+      },
+      "id": "node/4266720204"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4266720395",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1346207,
+          38.7277058
+        ]
+      },
+      "id": "node/4266720395"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4266720412",
+        "amenity": "atm",
+        "brand": "Santander Totta",
+        "brand:wikidata": "Q4854116",
+        "cash_in": "no",
+        "check_date": "2021-08-31",
+        "name": "Santander Totta",
+        "opening_hours": "24/7",
+        "operator": "Santander Totta",
+        "operator:wikidata": "Q4854116"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1342696,
+          38.7310098
+        ]
+      },
+      "id": "node/4266720412"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4266720414",
+        "amenity": "atm",
+        "brand": "Banco BPI",
+        "brand:wikidata": "Q537886",
+        "name": "BPI",
+        "official_name": "Banco Português de Investimento",
+        "opening_hours": "24/7",
+        "operator": "Banco BPI",
+        "operator:wikidata": "Q537886",
+        "short_name": "BPI"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1354534,
+          38.7311751
+        ]
+      },
+      "id": "node/4266720414"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4314754191",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1917806,
+          38.6980071
+        ]
+      },
+      "id": "node/4314754191"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4319184116",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1722169,
+          38.7058656
+        ]
+      },
+      "id": "node/4319184116"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4319212685",
+        "amenity": "atm",
+        "cash_in": "no",
+        "check_date": "2024-02-19",
+        "indoor": "no",
+        "operator": "MB Multibanco"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1785228,
+          38.7042143
+        ]
+      },
+      "id": "node/4319212685"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4319212687",
+        "amenity": "atm",
+        "cash_in": "no",
+        "check_date": "2025-05-05",
+        "operator": "Euronet"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1772756,
+          38.7046302
+        ]
+      },
+      "id": "node/4319212687"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4366629296",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.139452,
+          38.7276661
+        ]
+      },
+      "id": "node/4366629296"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4368947696",
+        "amenity": "atm",
+        "brand": "Caixa Geral de Depósitos",
+        "brand:wikidata": "Q1026044",
+        "operator": "Caixa Geral de Depósitos",
+        "operator:wikidata": "Q1026044",
+        "short_name": "CGD"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1406297,
+          38.7311787
+        ]
+      },
+      "id": "node/4368947696"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4368947719",
+        "amenity": "atm",
+        "brand": "Millennium bcp",
+        "brand:wikidata": "Q118581",
+        "check_date": "2022-06-18",
+        "name": "Millennium bcp",
+        "official_name": "Banco Comercial Português",
+        "operator": "Millennium bcp",
+        "operator:wikidata": "Q118581"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1405991,
+          38.7315203
+        ]
+      },
+      "id": "node/4368947719"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4368947725",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1405417,
+          38.7317985
+        ]
+      },
+      "id": "node/4368947725"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4401717893",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0241208,
+          38.9141664
+        ]
+      },
+      "id": "node/4401717893"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4405916598",
+        "amenity": "atm",
+        "operator": "ATM Express",
+        "shop": "lottery",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1590561,
+          38.7132386
+        ]
+      },
+      "id": "node/4405916598"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4416373789",
+        "amenity": "atm",
+        "operator": "Barclays"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2360267,
+          38.7233408
+        ]
+      },
+      "id": "node/4416373789"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4439830569",
+        "amenity": "atm",
+        "check_date": "2025-03-10",
+        "operator": "Banco Montepio"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2359699,
+          38.7619262
+        ]
+      },
+      "id": "node/4439830569"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4524307690",
+        "amenity": "atm",
+        "opening_hours": "24/7",
+        "operator": "Novo Banco"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1030222,
+          38.8249262
+        ]
+      },
+      "id": "node/4524307690"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4539594421",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0460269,
+          38.9051596
+        ]
+      },
+      "id": "node/4539594421"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4561909221",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.139785,
+          38.720109
+        ]
+      },
+      "id": "node/4561909221"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4586901226",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.143756,
+          38.7327361
+        ]
+      },
+      "id": "node/4586901226"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4594323990",
+        "amenity": "atm",
+        "brand": "Montepio",
+        "brand:wikidata": "Q1946091",
+        "check_date": "2022-11-15",
+        "operator": "Montepio",
+        "operator:wikidata": "Q1946091"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.331611,
+          38.724538
+        ]
+      },
+      "id": "node/4594323990"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4594992898",
+        "amenity": "atm",
+        "brand": "Caixa Geral de Depósitos",
+        "brand:wikidata": "Q1026044",
+        "cash_in": "yes",
+        "check_date": "2022-10-13",
+        "operator": "Caixa Geral de Depósitos",
+        "operator:wikidata": "Q1026044",
+        "short_name": "CGD"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1446113,
+          38.7343983
+        ]
+      },
+      "id": "node/4594992898"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4610559681",
+        "amenity": "atm",
+        "currency:EUR": "yes",
+        "name": "Banco Popular",
+        "operator": "Popular"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.430722,
+          38.7043664
+        ]
+      },
+      "id": "node/4610559681"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4624286121",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.136545,
+          38.7102099
+        ]
+      },
+      "id": "node/4624286121"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4692271466",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1527774,
+          38.7084771
+        ]
+      },
+      "id": "node/4692271466"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4692271808",
+        "amenity": "atm",
+        "check_date": "2022-09-03",
+        "operator": "Caixa Geral de Depósitos"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1527703,
+          38.7082815
+        ]
+      },
+      "id": "node/4692271808"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4692271847",
+        "amenity": "atm",
+        "cash_in": "no",
+        "check_date": "2024-11-06",
+        "operator": "Bankinter"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1509547,
+          38.7147348
+        ]
+      },
+      "id": "node/4692271847"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4692271858",
+        "amenity": "atm",
+        "check_date": "2025-07-12"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1528548,
+          38.7074632
+        ]
+      },
+      "id": "node/4692271858"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4693698452",
+        "amenity": "atm",
+        "brand": "Banco CTT",
+        "brand:wikidata": "Q65161642",
+        "check_date": "2024-05-04",
+        "name": "Banco CTT",
+        "operator": "Banco CTT",
+        "operator:wikidata": "Q65161642"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1438966,
+          38.710437
+        ]
+      },
+      "id": "node/4693698452"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4693698455",
+        "amenity": "atm",
+        "check_date": "2023-03-08"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1471225,
+          38.716042
+        ]
+      },
+      "id": "node/4693698455"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4693994861",
+        "amenity": "atm",
+        "cash_in": "no",
+        "check_date": "2024-10-22",
+        "indoor": "no",
+        "operator": "Santander Totta"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1569842,
+          38.7178871
+        ]
+      },
+      "id": "node/4693994861"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4705351526",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1587187,
+          38.7108256
+        ]
+      },
+      "id": "node/4705351526"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4707242924",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.443537,
+          38.7062304
+        ]
+      },
+      "id": "node/4707242924"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4707242925",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.4426626,
+          38.7058662
+        ]
+      },
+      "id": "node/4707242925"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4707242926",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.4361905,
+          38.7013611
+        ]
+      },
+      "id": "node/4707242926"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4710039200",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1395059,
+          38.7118889
+        ]
+      },
+      "id": "node/4710039200"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4755652346",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1478001,
+          38.7327515
+        ]
+      },
+      "id": "node/4755652346"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4781638134",
+        "amenity": "atm",
+        "brand": "Novo Banco"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.142979,
+          38.7164629
+        ]
+      },
+      "id": "node/4781638134"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4786573532",
+        "amenity": "atm",
+        "operator": "MB Multibanco"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.134413,
+          38.7330686
+        ]
+      },
+      "id": "node/4786573532"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4786573533",
+        "amenity": "atm",
+        "operator": "MB Multibanco"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1344144,
+          38.733054
+        ]
+      },
+      "id": "node/4786573533"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4787013923",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1608144,
+          38.783737
+        ]
+      },
+      "id": "node/4787013923"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4797485220",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1354513,
+          38.7336941
+        ]
+      },
+      "id": "node/4797485220"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4811378775",
+        "amenity": "atm",
+        "brand": "Montepio",
+        "brand:wikidata": "Q1946091",
+        "name": "Montepio",
+        "operator": "Montepio",
+        "operator:wikidata": "Q1946091"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.134283,
+          38.7313159
+        ]
+      },
+      "id": "node/4811378775"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4815335691",
+        "amenity": "atm",
+        "brand": "Novo Banco",
+        "brand:wikidata": "Q17488861",
+        "check_date": "2022-03-28",
+        "opening_hours": "24/7",
+        "operator": "Novo Banco",
+        "operator:wikidata": "Q17488861"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1368019,
+          38.7307679
+        ]
+      },
+      "id": "node/4815335691"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4957950731",
+        "amenity": "atm",
+        "brand": "Euronet",
+        "brand:wikidata": "Q5412010",
+        "cash_in": "no",
+        "check_date": "2021-02-22",
+        "covered": "yes",
+        "currency:EUR": "yes",
+        "drive_through": "no",
+        "indoor": "no",
+        "name": "Euronet",
+        "opening_hours": "24/7",
+        "operator": "Euronet",
+        "operator:wikidata": "Q5412010"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1603053,
+          38.7791886
+        ]
+      },
+      "id": "node/4957950731"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5127934432",
+        "amenity": "atm",
+        "name": "Caixa Geral de Depositos"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8653319,
+          39.0703817
+        ]
+      },
+      "id": "node/5127934432"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5127934433",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8651407,
+          39.0699948
+        ]
+      },
+      "id": "node/5127934433"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5127934434",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.869402,
+          39.0685074
+        ]
+      },
+      "id": "node/5127934434"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5127964523",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8671761,
+          39.0683129
+        ]
+      },
+      "id": "node/5127964523"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5127976924",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8634402,
+          39.0731504
+        ]
+      },
+      "id": "node/5127976924"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5162088908",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.283569,
+          39.2132091
+        ]
+      },
+      "id": "node/5162088908"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5167338624",
+        "amenity": "atm",
+        "check_date": "2022-07-17",
+        "network": "Multibanco"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1356273,
+          38.7154912
+        ]
+      },
+      "id": "node/5167338624"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5167345723",
+        "amenity": "atm",
+        "brand": "Millennium BCP",
+        "operator": "Millennium BCP"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1353187,
+          38.7163989
+        ]
+      },
+      "id": "node/5167345723"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5213222421",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.283515,
+          38.9353464
+        ]
+      },
+      "id": "node/5213222421"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5213222422",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2823826,
+          38.9360183
+        ]
+      },
+      "id": "node/5213222422"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5216558896",
+        "amenity": "atm",
+        "check_date": "2024-06-08",
+        "operator": "Banco Comercial Português S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1331537,
+          38.7417675
+        ]
+      },
+      "id": "node/5216558896"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5250127524",
+        "amenity": "atm",
+        "brand": "Montepio",
+        "brand:wikidata": "Q1946091",
+        "operator": "Montepio",
+        "operator:wikidata": "Q1946091"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1807769,
+          38.7869518
+        ]
+      },
+      "id": "node/5250127524"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5254197158",
+        "amenity": "atm",
+        "branch": "Agência Automática Hospital de Santa Maria - Lisboa",
+        "brand": "Caixa Geral de Depósitos",
+        "operator": "Caixa Geral de Depósitos"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1607228,
+          38.7499562
+        ]
+      },
+      "id": "node/5254197158"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5254267441",
+        "amenity": "atm",
+        "branch": "Agência Automática Campus da Justiça",
+        "brand": "Caixa Geral de Depósitos",
+        "operator": "Caixa Geral de Depósitos",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0955909,
+          38.7733978
+        ]
+      },
+      "id": "node/5254267441"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5254292990",
+        "amenity": "atm",
+        "branch": "Área Automática - Universidade Nova de Lisboa",
+        "brand": "Caixa Geral de Depósitos",
+        "opening_hours": "Mo-Fr 08:30-15:00;PH off",
+        "operator": "Caixa Geral de Depósitos"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1602239,
+          38.7337952
+        ]
+      },
+      "id": "node/5254292990"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5254384398",
+        "amenity": "atm",
+        "branch": "Agência Automática do Campo Pequeno",
+        "brand": "Caixa Geral de Depósitos",
+        "level": "-1",
+        "operator": "Caixa Geral de Depósitos"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.145056,
+          38.741986
+        ]
+      },
+      "id": "node/5254384398"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5254384399",
+        "amenity": "atm",
+        "branch": "Agência Automática do Cais do Sodré",
+        "brand": "Caixa Geral de Depósitos",
+        "operator": "Caixa Geral de Depósitos"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1420868,
+          38.7059749
+        ]
+      },
+      "id": "node/5254384399"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5269823744",
+        "amenity": "atm",
+        "level": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1518211,
+          38.7510556
+        ]
+      },
+      "id": "node/5269823744"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5287238035",
+        "amenity": "atm",
+        "currency:EUR": "yes",
+        "drive_through": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2287613,
+          38.7014369
+        ]
+      },
+      "id": "node/5287238035"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5290497629",
+        "amenity": "atm",
+        "level": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1444539,
+          38.7331078
+        ]
+      },
+      "id": "node/5290497629"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5322905002",
+        "amenity": "atm",
+        "cash_in": "no",
+        "check_date": "2023-01-16",
+        "currency:EUR": "yes",
+        "description": "Dentro do Continente Bom Dia",
+        "drive_through": "no",
+        "operator": "SIBS"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1487359,
+          38.7479132
+        ]
+      },
+      "id": "node/5322905002"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5323571921",
+        "amenity": "atm",
+        "opening_hours": "24/7",
+        "operator": "MB Multibanco"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1292267,
+          38.7156506
+        ]
+      },
+      "id": "node/5323571921"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5351689778",
+        "amenity": "atm",
+        "currency:EUR": "yes",
+        "operator": "Bankinter"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1736315,
+          38.7522511
+        ]
+      },
+      "id": "node/5351689778"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5420790052",
+        "amenity": "atm",
+        "check_date": "2022-10-15",
+        "operator": "Multibanco"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1454908,
+          38.7347901
+        ]
+      },
+      "id": "node/5420790052"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5420790058",
+        "amenity": "atm",
+        "brand": "Euronet",
+        "brand:wikidata": "Q5412010",
+        "name": "Euronet",
+        "operator": "Euronet",
+        "operator:wikidata": "Q5412010",
+        "ref": "EWPT2171"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1462027,
+          38.7334393
+        ]
+      },
+      "id": "node/5420790058"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5422265520",
+        "amenity": "atm",
+        "check_date": "2021-02-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1270229,
+          38.7121223
+        ]
+      },
+      "id": "node/5422265520"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5423651747",
+        "amenity": "atm",
+        "brand": "Banco BPI",
+        "brand:wikidata": "Q537886",
+        "official_name": "Banco Português de Investimento",
+        "operator": "Banco BPI",
+        "operator:wikidata": "Q537886",
+        "short_name": "BPI"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1423679,
+          38.7314595
+        ]
+      },
+      "id": "node/5423651747"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5476056736",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1330142,
+          38.7351426
+        ]
+      },
+      "id": "node/5476056736"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5506853288",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3175416,
+          38.6884682
+        ]
+      },
+      "id": "node/5506853288"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5509378610",
+        "amenity": "atm",
+        "cash_in": "no",
+        "check_date": "2022-07-21"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1309311,
+          38.7148431
+        ]
+      },
+      "id": "node/5509378610"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5609027372",
+        "amenity": "atm",
+        "currency:EUR": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3738924,
+          38.695373
+        ]
+      },
+      "id": "node/5609027372"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5615225975",
+        "amenity": "atm",
+        "check_date": "2021-01-04",
+        "operator": "BPI"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1300303,
+          38.7489747
+        ]
+      },
+      "id": "node/5615225975"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5652640194",
+        "amenity": "atm",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0958524,
+          38.7823629
+        ]
+      },
+      "id": "node/5652640194"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5761609154",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2919461,
+          38.7707029
+        ]
+      },
+      "id": "node/5761609154"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5761609155",
+        "amenity": "atm",
+        "check_date": "2025-06-13"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2924339,
+          38.7716351
+        ]
+      },
+      "id": "node/5761609155"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5761609156",
+        "amenity": "atm",
+        "check_date": "2021-08-08"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2878095,
+          38.7709188
+        ]
+      },
+      "id": "node/5761609156"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5761609157",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.28812,
+          38.7724898
+        ]
+      },
+      "id": "node/5761609157"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5769456953",
+        "addr:city": "Lisboa",
+        "amenity": "atm",
+        "brand": "Millennium bcp",
+        "brand:wikidata": "Q118581",
+        "level": "1",
+        "name": "Millennium bcp",
+        "official_name": "Banco Comercial Português",
+        "operator": "Millennium bcp",
+        "operator:wikidata": "Q118581"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1886544,
+          38.7542316
+        ]
+      },
+      "id": "node/5769456953"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5779262386",
+        "amenity": "atm",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1984806,
+          38.6950344
+        ]
+      },
+      "id": "node/5779262386"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5822613309",
+        "amenity": "atm",
+        "brand": "Novo Banco",
+        "brand:wikidata": "Q17488861",
+        "cash_in": "no",
+        "check_date": "2024-11-18",
+        "currency:EUR": "yes",
+        "drive_through": "no",
+        "network": "Multibanco - SIBS",
+        "operator": "Novo Banco",
+        "operator:wikidata": "Q17488861"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1568625,
+          38.7561328
+        ]
+      },
+      "id": "node/5822613309"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5909814386",
+        "amenity": "atm",
+        "cash_in": "no",
+        "currency:EUR": "yes",
+        "network": "Multibanco"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1922553,
+          38.7975005
+        ]
+      },
+      "id": "node/5909814386"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5978178685",
+        "amenity": "atm",
+        "check_date": "2025-05-02",
+        "operator": "Multibanco"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3666596,
+          38.9681951
+        ]
+      },
+      "id": "node/5978178685"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5991192212",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.4298295,
+          38.8678212
+        ]
+      },
+      "id": "node/5991192212"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6008664726",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1654997,
+          38.7379852
+        ]
+      },
+      "id": "node/6008664726"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6011025549",
+        "amenity": "atm",
+        "shop": "lighting"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1698033,
+          38.746508
+        ]
+      },
+      "id": "node/6011025549"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6013997898",
+        "amenity": "atm",
+        "cash_in": "no",
+        "check_date": "2025-05-24",
+        "operator": "Abanca"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1630274,
+          38.738267
+        ]
+      },
+      "id": "node/6013997898"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6013997899",
+        "amenity": "atm",
+        "cash_in": "no",
+        "check_date": "2025-05-24",
+        "operator": "CGD"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1626183,
+          38.7382173
+        ]
+      },
+      "id": "node/6013997899"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6013997900",
+        "amenity": "atm",
+        "cash_in": "yes",
+        "check_date": "2025-05-24",
+        "operator": "Santander"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.163576,
+          38.7383877
+        ]
+      },
+      "id": "node/6013997900"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6016540199",
+        "amenity": "atm",
+        "cash_in": "no",
+        "check_date": "2025-02-20",
+        "operator": "Euronet"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1460998,
+          38.7082645
+        ]
+      },
+      "id": "node/6016540199"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6016540205",
+        "amenity": "atm",
+        "check_date": "2023-03-08"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1434389,
+          38.7078191
+        ]
+      },
+      "id": "node/6016540205"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6020340302",
+        "amenity": "atm",
+        "check_date": "2024-01-08"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.4207806,
+          38.6982223
+        ]
+      },
+      "id": "node/6020340302"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6022965172",
+        "amenity": "atm",
+        "operator": "Euronet Worldwide"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1354562,
+          38.7195928
+        ]
+      },
+      "id": "node/6022965172"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6022984351",
+        "amenity": "atm",
+        "check_date": "2024-01-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1369669,
+          38.7126054
+        ]
+      },
+      "id": "node/6022984351"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6022984360",
+        "amenity": "atm",
+        "check_date": "2025-07-13",
+        "operator": "MB Multibanco"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1371349,
+          38.7150252
+        ]
+      },
+      "id": "node/6022984360"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6022984361",
+        "amenity": "atm",
+        "cash_in": "no",
+        "drive_through": "no",
+        "fee": "yes",
+        "operator": "MoneyGram"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.136869,
+          38.7150108
+        ]
+      },
+      "id": "node/6022984361"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6023083298",
+        "amenity": "atm",
+        "check_date": "2024-06-20",
+        "drive_through": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1285585,
+          38.7137362
+        ]
+      },
+      "id": "node/6023083298"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6024796644",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1323845,
+          38.7121974
+        ]
+      },
+      "id": "node/6024796644"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6056180152",
+        "amenity": "atm",
+        "check_date": "2025-08-16",
+        "operator": "Multibanco"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.4499747,
+          38.8051636
+        ]
+      },
+      "id": "node/6056180152"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6069469734",
+        "amenity": "atm",
+        "brand": "Crédito Agrícola",
+        "brand:wikidata": "Q10262017",
+        "name": "Crédito Agrícola",
+        "operator": "Crédito Agrícola",
+        "operator:wikidata": "Q10262017"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1415841,
+          38.7316551
+        ]
+      },
+      "id": "node/6069469734"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6088589385",
+        "amenity": "atm",
+        "operator": "Crédito Agrícola"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2986566,
+          38.8256041
+        ]
+      },
+      "id": "node/6088589385"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6093594232",
+        "amenity": "atm",
+        "operator": "Euronet Worldwide"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.135102,
+          38.7231321
+        ]
+      },
+      "id": "node/6093594232"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6187800693",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1451559,
+          38.7318386
+        ]
+      },
+      "id": "node/6187800693"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6204328868",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1651292,
+          38.7512813
+        ]
+      },
+      "id": "node/6204328868"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6206785235",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1613734,
+          38.7484761
+        ]
+      },
+      "id": "node/6206785235"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6217036182",
+        "amenity": "atm",
+        "check_date": "2024-10-06",
+        "level": "1",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1359881,
+          38.7640083
+        ]
+      },
+      "id": "node/6217036182"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6281753564",
+        "amenity": "atm",
+        "check_date": "2022-01-30",
+        "network": "Multibanco",
+        "operator": "BPI"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1229151,
+          38.714013
+        ]
+      },
+      "id": "node/6281753564"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6371987781",
+        "amenity": "atm",
+        "brand": "Euronet",
+        "brand:wikidata": "Q5412010",
+        "check_date": "2024-07-15",
+        "name": "Euronet",
+        "network": "Euronet Worldwide",
+        "operator": "Euronet",
+        "operator:wikidata": "Q5412010"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1297352,
+          38.717814
+        ]
+      },
+      "id": "node/6371987781"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6371987782",
+        "amenity": "atm",
+        "cash_in": "no",
+        "network": "Euronet Worldwide",
+        "operator": "Euronet Worldwide"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1294921,
+          38.7172559
+        ]
+      },
+      "id": "node/6371987782"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6371987938",
+        "amenity": "atm",
+        "brand": "Caixa Geral de Depósitos",
+        "brand:wikidata": "Q1026044",
+        "name": "Caixa Geral de Depósitos",
+        "network": "Multibanco",
+        "operator": "Caixa Geral de Depósitos",
+        "operator:wikidata": "Q1026044"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1300341,
+          38.7178585
+        ]
+      },
+      "id": "node/6371987938"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6371988052",
+        "addr:housenumber": "175",
+        "addr:street": "Rua da Palma",
+        "amenity": "atm",
+        "operator": "Novo Banco"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1358978,
+          38.718066
+        ]
+      },
+      "id": "node/6371988052"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6407615664",
+        "amenity": "atm",
+        "network": "ATMExpress"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1352616,
+          38.721538
+        ]
+      },
+      "id": "node/6407615664"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6427613962",
+        "amenity": "atm",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1424846,
+          38.7551161
+        ]
+      },
+      "id": "node/6427613962"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6530554288",
+        "amenity": "atm",
+        "indoor": "yes",
+        "layer": "-1",
+        "level": "-1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1419271,
+          38.715358
+        ]
+      },
+      "id": "node/6530554288"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6530557117",
+        "amenity": "atm",
+        "brand": "Montepio",
+        "brand:wikidata": "Q1946091",
+        "cash_in": "yes",
+        "check_date": "2025-07-12",
+        "currency:EUR": "yes",
+        "drive_through": "no",
+        "operator": "Montepio",
+        "operator:wikidata": "Q1946091"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3052554,
+          38.6971475
+        ]
+      },
+      "id": "node/6530557117"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6532527192",
+        "amenity": "atm",
+        "cash_in": "no",
+        "check_date": "2022-10-04",
+        "operator": "Euronet Worldwide"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1307664,
+          38.7125826
+        ]
+      },
+      "id": "node/6532527192"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6567706586",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.4357405,
+          38.8461195
+        ]
+      },
+      "id": "node/6567706586"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6593419358",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.359624,
+          38.9037965
+        ]
+      },
+      "id": "node/6593419358"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6697635825",
+        "amenity": "atm",
+        "network": "Multibanco"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1361829,
+          38.7250158
+        ]
+      },
+      "id": "node/6697635825"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6795990332",
+        "amenity": "atm",
+        "brand": "Euronet",
+        "brand:wikidata": "Q5412010",
+        "brand:wikipedia": "en:Euronet Worldwide",
+        "check_date": "2021-12-18",
+        "name": "Euronet",
+        "network": "Euronet Worldwide",
+        "operator": "Euronet",
+        "operator:wikidata": "Q5412010",
+        "operator:wikipedia": "en:Euronet Worldwide"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1320075,
+          38.7089274
+        ]
+      },
+      "id": "node/6795990332"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6928777831",
+        "amenity": "atm",
+        "check_date": "2022-03-28",
+        "operator": "Euronet Worldwide"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.133054,
+          38.7246163
+        ]
+      },
+      "id": "node/6928777831"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6990557885",
+        "amenity": "atm",
+        "check_date": "2023-11-11",
+        "operator": "Santander Totta"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1687394,
+          38.7142414
+        ]
+      },
+      "id": "node/6990557885"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7001723787",
+        "amenity": "atm",
+        "check_date": "2025-02-20",
+        "opening_hours": "24/7",
+        "operator": "Euronet"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.152786,
+          38.7112002
+        ]
+      },
+      "id": "node/7001723787"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7001723788",
+        "amenity": "atm",
+        "check_date": "2025-02-20",
+        "opening_hours": "24/7",
+        "operator": "Euronet"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1525471,
+          38.7110316
+        ]
+      },
+      "id": "node/7001723788"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7001783086",
+        "amenity": "atm",
+        "brand": "Euronet",
+        "brand:wikidata": "Q5412010",
+        "check_date": "2022-04-24",
+        "name": "Euronet",
+        "opening_hours": "24/7",
+        "operator": "Euronet",
+        "operator:wikidata": "Q5412010"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1507504,
+          38.7103166
+        ]
+      },
+      "id": "node/7001783086"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7066418256",
+        "amenity": "atm",
+        "cash_in": "no",
+        "check_date": "2024-11-18",
+        "currency:EUR": "yes",
+        "drive_through": "no",
+        "level": "1",
+        "network": "Multibanco",
+        "operator": "Novo Banco"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1572344,
+          38.7570469
+        ]
+      },
+      "id": "node/7066418256"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7141397785",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1184059,
+          38.7771424
+        ]
+      },
+      "id": "node/7141397785"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7199958729",
+        "amenity": "atm",
+        "operator": "Multibanco"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1436551,
+          38.7277637
+        ]
+      },
+      "id": "node/7199958729"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7245119146",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.208351,
+          38.7856713
+        ]
+      },
+      "id": "node/7245119146"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7251979473",
+        "amenity": "atm",
+        "currency:EUR": "yes",
+        "description": "Subway ATM machine",
+        "drive_through": "no",
+        "layer": "-1",
+        "level": "-1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1662948,
+          38.7601114
+        ]
+      },
+      "id": "node/7251979473"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7280571819",
+        "amenity": "atm",
+        "brand": "Euronet",
+        "brand:wikidata": "Q5412010",
+        "operator": "Euronet",
+        "operator:wikidata": "Q5412010"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1459913,
+          38.7083542
+        ]
+      },
+      "id": "node/7280571819"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7280588104",
+        "amenity": "atm",
+        "operator": "ATMExpress"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1456991,
+          38.7082607
+        ]
+      },
+      "id": "node/7280588104"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7280589993",
+        "amenity": "atm",
+        "check_date": "2023-07-22"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1460411,
+          38.7100339
+        ]
+      },
+      "id": "node/7280589993"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7280589994",
+        "amenity": "atm",
+        "check_date": "2025-02-20"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1465019,
+          38.7085254
+        ]
+      },
+      "id": "node/7280589994"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7281217230",
+        "amenity": "atm",
+        "check_date": "2022-09-03"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1521522,
+          38.7086199
+        ]
+      },
+      "id": "node/7281217230"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7281231660",
+        "amenity": "atm",
+        "check_date": "2022-09-03"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1516745,
+          38.7085561
+        ]
+      },
+      "id": "node/7281231660"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7281243862",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1528227,
+          38.7086664
+        ]
+      },
+      "id": "node/7281243862"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7283428807",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1306568,
+          38.7118411
+        ]
+      },
+      "id": "node/7283428807"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7283446099",
+        "amenity": "atm",
+        "check_date": "2025-07-15"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1419112,
+          38.7128412
+        ]
+      },
+      "id": "node/7283446099"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7285979344",
+        "amenity": "atm",
+        "check_date": "2022-09-06"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1349075,
+          38.7096729
+        ]
+      },
+      "id": "node/7285979344"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7734906066",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1570391,
+          38.7677751
+        ]
+      },
+      "id": "node/7734906066"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7734906067",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1571878,
+          38.7684837
+        ]
+      },
+      "id": "node/7734906067"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7734906068",
+        "amenity": "atm",
+        "indoor": "yes",
+        "level": "-1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1554645,
+          38.7673122
+        ]
+      },
+      "id": "node/7734906068"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7797114159",
+        "amenity": "atm",
+        "cash_in": "no",
+        "network": "multibanco",
+        "operator": "Montepio"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2653883,
+          39.0924133
+        ]
+      },
+      "id": "node/7797114159"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7817017135",
+        "amenity": "atm",
+        "name": "Multibanco"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.4441173,
+          38.8072637
+        ]
+      },
+      "id": "node/7817017135"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7817554236",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2355068,
+          38.8925702
+        ]
+      },
+      "id": "node/7817554236"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7829627788",
+        "amenity": "atm",
+        "check_date": "2024-06-14",
+        "operator": "Banco Montepio"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.418705,
+          38.9695889
+        ]
+      },
+      "id": "node/7829627788"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7881455765",
+        "amenity": "atm",
+        "operator": "Crédito Agrícola Mútuo"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1756616,
+          39.1373276
+        ]
+      },
+      "id": "node/7881455765"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7977192302",
+        "amenity": "atm",
+        "brand": "Crédito Agrícola",
+        "brand:wikidata": "Q10262017",
+        "cash_in": "no",
+        "check_date": "2025-02-13",
+        "operator": "Crédito Agrícola",
+        "operator:wikidata": "Q10262017"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.206791,
+          38.8894136
+        ]
+      },
+      "id": "node/7977192302"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8024752894",
+        "amenity": "atm",
+        "check_date": "2024-04-24",
+        "operator": "Euronet Worldwide"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0924774,
+          38.7699877
+        ]
+      },
+      "id": "node/8024752894"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8068686370",
+        "amenity": "atm",
+        "cash_in": "no",
+        "check_date": "2023-03-19",
+        "name": "Multibanco"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.4185483,
+          38.7006077
+        ]
+      },
+      "id": "node/8068686370"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8068781557",
+        "amenity": "atm",
+        "name": "Euronet"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3435979,
+          38.6850287
+        ]
+      },
+      "id": "node/8068781557"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8068798821",
+        "amenity": "atm",
+        "cash_in": "yes",
+        "check_date": "2023-03-19",
+        "name": "Euronet"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.4185475,
+          38.7006001
+        ]
+      },
+      "id": "node/8068798821"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8068805906",
+        "amenity": "atm",
+        "name": "Euronet"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.4185107,
+          38.7009521
+        ]
+      },
+      "id": "node/8068805906"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8143604121",
+        "amenity": "atm",
+        "check_date": "2024-12-25"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2221384,
+          38.7672029
+        ]
+      },
+      "id": "node/8143604121"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8143604122",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.213044,
+          38.7665313
+        ]
+      },
+      "id": "node/8143604122"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8143604123",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2115992,
+          38.7644034
+        ]
+      },
+      "id": "node/8143604123"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8143636838",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2068513,
+          38.7641541
+        ]
+      },
+      "id": "node/8143636838"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8254459550",
+        "amenity": "atm",
+        "currency:EUR": "yes",
+        "drive_through": "no",
+        "operator": "SIBS"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3510251,
+          38.7070657
+        ]
+      },
+      "id": "node/8254459550"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8260332922",
+        "amenity": "atm",
+        "check_date": "2023-09-13"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.4170787,
+          38.9635655
+        ]
+      },
+      "id": "node/8260332922"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8300559917",
+        "amenity": "atm",
+        "operator": "Caixa Geral de Depósitos"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1214649,
+          38.7388527
+        ]
+      },
+      "id": "node/8300559917"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8414013027",
+        "addr:city": "Lisboa",
+        "addr:country": "PT",
+        "addr:housenumber": "48",
+        "addr:street": "Rua da Vitória",
+        "amenity": "atm",
+        "level": "0",
+        "location": "wall",
+        "note": "The ATM is placed at the center of this level 0 shop window.",
+        "opening_hours": "24/7",
+        "operator": "Euronet",
+        "window": "shop"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1373504,
+          38.7111324
+        ]
+      },
+      "id": "node/8414013027"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8453977310",
+        "amenity": "atm",
+        "brand": "Montepio",
+        "brand:wikidata": "Q1946091",
+        "brand:wikipedia": "pt:Banco Montepio"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.4185965,
+          38.9693504
+        ]
+      },
+      "id": "node/8453977310"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8460518503",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2120332,
+          38.7489383
+        ]
+      },
+      "id": "node/8460518503"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8540826706",
+        "addr:street": "Rua Cidade de Viseu",
+        "amenity": "atm",
+        "name": "Multibanco"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1449197,
+          38.7985293
+        ]
+      },
+      "id": "node/8540826706"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8578604771",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3669444,
+          38.6975098
+        ]
+      },
+      "id": "node/8578604771"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8611017032",
+        "amenity": "atm",
+        "name": "Multibanco"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2665835,
+          38.7585212
+        ]
+      },
+      "id": "node/8611017032"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8648981217",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3967813,
+          38.9413558
+        ]
+      },
+      "id": "node/8648981217"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8664327881",
+        "amenity": "atm",
+        "check_date": "2024-10-09"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2250571,
+          38.8130025
+        ]
+      },
+      "id": "node/8664327881"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8684619638",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.4168793,
+          38.9636065
+        ]
+      },
+      "id": "node/8684619638"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8687942336",
+        "amenity": "atm",
+        "check_date": "2024-10-09",
+        "operator": "ATM"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.4220861,
+          38.698172
+        ]
+      },
+      "id": "node/8687942336"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8694939827",
+        "amenity": "atm",
+        "brand": "Caixa Geral de Depósitos",
+        "brand:wikidata": "Q1026044",
+        "brand:wikipedia": "pt:Caixa Geral de Depósitos",
+        "name": "Caixa Geral de Depósitos",
+        "operator": "Caixa Geral de Depósitos",
+        "operator:wikidata": "Q1026044",
+        "operator:wikipedia": "pt:Caixa Geral de Depósitos",
+        "short_name": "CGD"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2296353,
+          38.7002569
+        ]
+      },
+      "id": "node/8694939827"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8703248536",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2772665,
+          38.7567847
+        ]
+      },
+      "id": "node/8703248536"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8947011924",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1732059,
+          38.7687176
+        ]
+      },
+      "id": "node/8947011924"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8947015482",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1731802,
+          38.7677298
+        ]
+      },
+      "id": "node/8947015482"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9024616994",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3324215,
+          38.9978896
+        ]
+      },
+      "id": "node/9024616994"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9045717330",
+        "access": "customers",
+        "amenity": "atm",
+        "operator": "Caixa de Crédito Agrícola"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2013095,
+          38.9352203
+        ]
+      },
+      "id": "node/9045717330"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9221971859",
+        "amenity": "atm",
+        "check_date": "2024-04-29",
+        "operator": "Euronet"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1344786,
+          38.7293613
+        ]
+      },
+      "id": "node/9221971859"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9277804669",
+        "amenity": "atm",
+        "opening_hours": "24/7",
+        "operator": "Multibanco",
+        "wheelchair": "designated"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1015778,
+          39.2394746
+        ]
+      },
+      "id": "node/9277804669"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9279025476",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1183723,
+          38.8145119
+        ]
+      },
+      "id": "node/9279025476"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9279943993",
+        "amenity": "atm",
+        "opening_hours": "24/7",
+        "operator": "Multibanco"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0990753,
+          39.2372817
+        ]
+      },
+      "id": "node/9279943993"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9281767569",
+        "amenity": "atm",
+        "cash_in": "no",
+        "cheque_in": "no",
+        "opening_hours": "24/7",
+        "operator": "Multibanco"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1051662,
+          39.2693889
+        ]
+      },
+      "id": "node/9281767569"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9405497480",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1278546,
+          38.7131411
+        ]
+      },
+      "id": "node/9405497480"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9405508608",
+        "amenity": "atm",
+        "operator": "Euronet",
+        "outdoor_seating": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1365155,
+          38.7135858
+        ]
+      },
+      "id": "node/9405508608"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9405508938",
+        "amenity": "atm",
+        "check_date": "2024-02-18"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1522081,
+          38.7146094
+        ]
+      },
+      "id": "node/9405508938"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9405511414",
+        "amenity": "atm",
+        "check_date": "2024-02-22",
+        "operator": "ATM Express"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1442603,
+          38.7102958
+        ]
+      },
+      "id": "node/9405511414"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9405520446",
+        "amenity": "atm",
+        "cash_in": "no",
+        "check_date": "2024-02-18",
+        "indoor": "no",
+        "name": "ATM Express"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1532249,
+          38.7140323
+        ]
+      },
+      "id": "node/9405520446"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9443077500",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1312632,
+          38.7146617
+        ]
+      },
+      "id": "node/9443077500"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9443175999",
+        "amenity": "atm",
+        "operator": "ATMExpress"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1318863,
+          38.7153516
+        ]
+      },
+      "id": "node/9443175999"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9443178802",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1298271,
+          38.7125956
+        ]
+      },
+      "id": "node/9443178802"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9458810529",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.4219096,
+          38.6980269
+        ]
+      },
+      "id": "node/9458810529"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9720295644",
+        "amenity": "atm",
+        "brand": "Caixa Geral de Depósitos",
+        "brand:wikidata": "Q1026044",
+        "check_date": "2024-09-16",
+        "currency:EUR": "yes",
+        "currency:USD": "yes",
+        "name": "Caixa Geral de Depósitos",
+        "operator": "Caixa Geral de Depósitos",
+        "operator:wikidata": "Q1026044"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1515864,
+          38.7231685
+        ]
+      },
+      "id": "node/9720295644"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9721974355",
+        "amenity": "atm",
+        "operator": "Euronet"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1312079,
+          38.775111
+        ]
+      },
+      "id": "node/9721974355"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9724680386",
+        "amenity": "atm",
+        "brand": "ActivoBank",
+        "brand:wikidata": "Q9581725",
+        "covered": "yes",
+        "direction": "300",
+        "indoor": "yes",
+        "level": "0",
+        "network": "Multibanco",
+        "operator": "ActivoBank",
+        "operator:wikidata": "Q9581725"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0980123,
+          38.7677605
+        ]
+      },
+      "id": "node/9724680386"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9724680387",
+        "amenity": "atm",
+        "covered": "yes",
+        "direction": "184",
+        "indoor": "yes",
+        "level": "0",
+        "network": "Multibanco",
+        "operator": "BPI"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0971567,
+          38.7675125
+        ]
+      },
+      "id": "node/9724680387"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9724680388",
+        "amenity": "atm",
+        "covered": "yes",
+        "direction": "274",
+        "indoor": "yes",
+        "level": "1",
+        "network": "Multibanco",
+        "operator": "Millenium bcp"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0963529,
+          38.7672943
+        ]
+      },
+      "id": "node/9724680388"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9724680389",
+        "amenity": "atm",
+        "brand": "Branco BPI",
+        "brand:wikidata": "Q537886",
+        "covered": "yes",
+        "direction": "274",
+        "indoor": "yes",
+        "level": "0",
+        "network": "Multibanco",
+        "official_name": "Banco Português de Investimento",
+        "operator": "Branco BPI",
+        "operator:wikidata": "Q537886",
+        "short_name": "BPI"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0971961,
+          38.7675209
+        ]
+      },
+      "id": "node/9724680389"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9724680390",
+        "amenity": "atm",
+        "covered": "yes",
+        "direction": "184",
+        "indoor": "yes",
+        "level": "2",
+        "network": "Multibanco"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0972476,
+          38.7675347
+        ]
+      },
+      "id": "node/9724680390"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9724680391",
+        "amenity": "atm",
+        "brand": "ActivoBank",
+        "brand:wikidata": "Q9581725",
+        "covered": "yes",
+        "direction": "4",
+        "indoor": "yes",
+        "level": "0",
+        "network": "Multibanco",
+        "operator": "ActivoBank",
+        "operator:wikidata": "Q9581725"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0980634,
+          38.767774
+        ]
+      },
+      "id": "node/9724680391"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9724680392",
+        "amenity": "atm",
+        "check_date": "2025-05-29",
+        "covered": "yes",
+        "direction": "94",
+        "indoor": "yes",
+        "level": "0",
+        "network": "Multibanco",
+        "note": "by the column"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0963873,
+          38.7674703
+        ]
+      },
+      "id": "node/9724680392"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9724680393",
+        "amenity": "atm",
+        "brand": "Millennium bcp",
+        "brand:wikidata": "Q118581",
+        "covered": "yes",
+        "direction": "4",
+        "indoor": "yes",
+        "level": "2",
+        "network": "Multibanco",
+        "official_name": "Banco Comercial Português",
+        "operator": "Millennium bcp",
+        "operator:wikidata": "Q118581"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0964696,
+          38.7675022
+        ]
+      },
+      "id": "node/9724680393"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9724680395",
+        "amenity": "atm",
+        "brand": "Santander Totta",
+        "brand:wikidata": "Q4854116",
+        "covered": "yes",
+        "direction": "274",
+        "indoor": "yes",
+        "level": "0",
+        "network": "Multibanco",
+        "note": "under the escalator",
+        "operator": "Santander Totta",
+        "operator:wikidata": "Q4854116"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0973119,
+          38.7675299
+        ]
+      },
+      "id": "node/9724680395"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9724680396",
+        "amenity": "atm",
+        "covered": "yes",
+        "direction": "94",
+        "indoor": "yes",
+        "level": "1",
+        "network": "Multibanco",
+        "operator": "Millenium bcp"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0963398,
+          38.7672935
+        ]
+      },
+      "id": "node/9724680396"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9724680397",
+        "amenity": "atm",
+        "brand": "Millennium bcp",
+        "brand:wikidata": "Q118581",
+        "covered": "yes",
+        "direction": "184",
+        "indoor": "yes",
+        "level": "2",
+        "network": "Multibanco",
+        "official_name": "Banco Comercial Português",
+        "operator": "Millennium bcp",
+        "operator:wikidata": "Q118581"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.09647,
+          38.7674926
+        ]
+      },
+      "id": "node/9724680397"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9724680398",
+        "amenity": "atm",
+        "covered": "yes",
+        "direction": "4",
+        "indoor": "yes",
+        "level": "2",
+        "network": "Multibanco"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0972472,
+          38.7675448
+        ]
+      },
+      "id": "node/9724680398"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9724680399",
+        "amenity": "atm",
+        "check_date": "2025-05-20",
+        "covered": "yes",
+        "direction": "75",
+        "indoor": "yes",
+        "level": "0",
+        "network": "Multibanco",
+        "operator": "Millenium bcp"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0980494,
+          38.7677617
+        ]
+      },
+      "id": "node/9724680399"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9729832025",
+        "amenity": "atm",
+        "check_date": "2024-05-12"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.147475,
+          38.72412
+        ]
+      },
+      "id": "node/9729832025"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9729832039",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1479737,
+          38.725765
+        ]
+      },
+      "id": "node/9729832039"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9729970832",
+        "amenity": "atm",
+        "brand": "Branco BPI",
+        "brand:wikidata": "Q537886",
+        "name": "Banco BPI",
+        "official_name": "Banco Português de Investimento",
+        "operator": "Branco BPI",
+        "operator:wikidata": "Q537886",
+        "short_name": "BPI"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1610699,
+          38.7225564
+        ]
+      },
+      "id": "node/9729970832"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9821680016",
+        "amenity": "atm",
+        "brand": "Euronet",
+        "brand:wikidata": "Q5412010",
+        "cash_in": "no",
+        "drive_through": "no",
+        "name": "Euronet",
+        "operator": "Euronet",
+        "operator:wikidata": "Q5412010"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1365725,
+          38.7167551
+        ]
+      },
+      "id": "node/9821680016"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9821709592",
+        "amenity": "atm",
+        "brand": "Euronet",
+        "brand:wikidata": "Q5412010",
+        "name": "Euronet",
+        "operator": "Euronet",
+        "operator:wikidata": "Q5412010"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1390065,
+          38.7146396
+        ]
+      },
+      "id": "node/9821709592"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9822179909",
+        "amenity": "atm",
+        "brand": "Euronet",
+        "brand:wikidata": "Q5412010",
+        "cash_in": "no",
+        "drive_through": "no",
+        "name": "Euronet",
+        "operator": "Euronet",
+        "operator:wikidata": "Q5412010"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1394023,
+          38.7125862
+        ]
+      },
+      "id": "node/9822179909"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9822179910",
+        "amenity": "atm",
+        "brand": "Euronet",
+        "brand:wikidata": "Q5412010",
+        "cash_in": "no",
+        "drive_through": "no",
+        "name": "Euronet",
+        "operator": "Euronet",
+        "operator:wikidata": "Q5412010"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1383269,
+          38.7149348
+        ]
+      },
+      "id": "node/9822179910"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9822179911",
+        "amenity": "atm",
+        "brand": "Euronet",
+        "brand:wikidata": "Q5412010",
+        "cash_in": "no",
+        "drive_through": "no",
+        "name": "Euronet",
+        "operator": "Euronet",
+        "operator:wikidata": "Q5412010"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1386985,
+          38.7149344
+        ]
+      },
+      "id": "node/9822179911"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9822179914",
+        "amenity": "atm",
+        "brand": "Euronet",
+        "brand:wikidata": "Q5412010",
+        "cash_in": "no",
+        "drive_through": "no",
+        "name": "Euronet",
+        "operator": "Euronet",
+        "operator:wikidata": "Q5412010"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1380019,
+          38.7149726
+        ]
+      },
+      "id": "node/9822179914"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9822486839",
+        "amenity": "atm",
+        "cash_in": "no",
+        "drive_through": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1310549,
+          38.711682
+        ]
+      },
+      "id": "node/9822486839"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9895422220",
+        "amenity": "atm",
+        "brand": "Euronet",
+        "brand:wikidata": "Q5412010",
+        "name": "Euronet",
+        "operator": "Euronet",
+        "operator:wikidata": "Q5412010"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1385737,
+          38.7104915
+        ]
+      },
+      "id": "node/9895422220"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9895422222",
+        "amenity": "atm",
+        "brand": "Novo Banco",
+        "brand:wikidata": "Q17488861",
+        "name": "Novo Banco",
+        "operator": "Novo Banco",
+        "operator:wikidata": "Q17488861"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1341871,
+          38.7352611
+        ]
+      },
+      "id": "node/9895422222"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9895422223",
+        "amenity": "atm",
+        "brand": "Euronet",
+        "brand:wikidata": "Q5412010",
+        "name": "Euronet",
+        "operator": "Euronet",
+        "operator:wikidata": "Q5412010"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1356539,
+          38.7098375
+        ]
+      },
+      "id": "node/9895422223"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9895422224",
+        "amenity": "atm",
+        "brand": "Euronet",
+        "brand:wikidata": "Q5412010",
+        "check_date": "2024-05-01",
+        "name": "Euronet",
+        "operator": "Euronet",
+        "operator:wikidata": "Q5412010"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1408185,
+          38.7143557
+        ]
+      },
+      "id": "node/9895422224"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9895422225",
+        "amenity": "atm",
+        "brand": "Euronet",
+        "brand:wikidata": "Q5412010",
+        "cash_in": "no",
+        "name": "Euronet",
+        "operator": "Euronet",
+        "operator:wikidata": "Q5412010"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1396925,
+          38.7117902
+        ]
+      },
+      "id": "node/9895422225"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9932746315",
+        "amenity": "atm",
+        "cash_in": "no",
+        "operator": "Millennium"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.245163,
+          38.9303716
+        ]
+      },
+      "id": "node/9932746315"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9932746316",
+        "amenity": "atm",
+        "brand": "Millenium",
+        "cash_in": "no",
+        "operator": "Millennium"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2453345,
+          38.9302993
+        ]
+      },
+      "id": "node/9932746316"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9942437800",
+        "amenity": "atm",
+        "check_date": "2022-08-09",
+        "indoor": "no",
+        "opening_hours": "24/7"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1523558,
+          38.7089723
+        ]
+      },
+      "id": "node/9942437800"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9942437801",
+        "amenity": "atm",
+        "check_date": "2022-08-09",
+        "indoor": "no",
+        "opening_hours": "24/7"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1523666,
+          38.708997
+        ]
+      },
+      "id": "node/9942437801"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9952444589",
+        "amenity": "atm",
+        "brand": "Crédito Agrícola",
+        "brand:wikidata": "Q396117",
+        "operator": "Crédito Agrícola",
+        "operator:wikidata": "Q396117"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1677485,
+          38.8819637
+        ]
+      },
+      "id": "node/9952444589"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9960215774",
+        "amenity": "atm",
+        "brand": "Millennium bcp",
+        "brand:wikidata": "Q118581",
+        "official_name": "Banco Comercial Português",
+        "operator": "Millennium bcp",
+        "operator:wikidata": "Q118581"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2330798,
+          38.9248155
+        ]
+      },
+      "id": "node/9960215774"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9985522448",
+        "amenity": "atm",
+        "brand": "Euronet"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.4180971,
+          38.9687621
+        ]
+      },
+      "id": "node/9985522448"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9997872365",
+        "amenity": "atm",
+        "brand": "Bankinter",
+        "brand:wikidata": "Q806808",
+        "name": "Bankinter",
+        "operator": "Bankinter",
+        "operator:wikidata": "Q806808"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0450572,
+          38.8908124
+        ]
+      },
+      "id": "node/9997872365"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10007244608",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1604816,
+          38.7720232
+        ]
+      },
+      "id": "node/10007244608"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10008466384",
+        "amenity": "atm",
+        "check_date": "2022-09-08"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1430497,
+          38.7108994
+        ]
+      },
+      "id": "node/10008466384"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10067388917",
+        "amenity": "atm",
+        "name": "ATM"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1350249,
+          38.7121502
+        ]
+      },
+      "id": "node/10067388917"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10138019313",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1355483,
+          38.7216831
+        ]
+      },
+      "id": "node/10138019313"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10145016453",
+        "amenity": "atm",
+        "cash_in": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1957973,
+          38.7538744
+        ]
+      },
+      "id": "node/10145016453"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10145016454",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.198164,
+          38.7540834
+        ]
+      },
+      "id": "node/10145016454"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10168731621",
+        "amenity": "atm",
+        "check_date": "2022-11-08"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1884819,
+          38.7488159
+        ]
+      },
+      "id": "node/10168731621"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10172707811",
+        "amenity": "atm",
+        "cash_in": "no",
+        "level": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1450287,
+          38.7059989
+        ]
+      },
+      "id": "node/10172707811"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10219951030",
+        "amenity": "atm",
+        "indoor": "yes",
+        "level": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1719355,
+          38.7857842
+        ]
+      },
+      "id": "node/10219951030"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10231272108",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1539913,
+          38.7401622
+        ]
+      },
+      "id": "node/10231272108"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10247700908",
+        "amenity": "atm",
+        "brand": "Euronet",
+        "brand:wikidata": "Q5412010",
+        "operator": "Euronet",
+        "operator:wikidata": "Q5412010"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1444614,
+          38.7207702
+        ]
+      },
+      "id": "node/10247700908"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10274132997",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1240795,
+          38.7366167
+        ]
+      },
+      "id": "node/10274132997"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10570309102",
+        "amenity": "atm",
+        "operator": "Multibanco"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1868884,
+          38.7604634
+        ]
+      },
+      "id": "node/10570309102"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10602150828",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1778043,
+          38.7983591
+        ]
+      },
+      "id": "node/10602150828"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10616401974",
+        "addr:housenumber": "74",
+        "addr:street": "Rua Damasceno Monteiro",
+        "amenity": "atm",
+        "cash_in": "no",
+        "check_date": "2025-07-25",
+        "covered": "no",
+        "currency:EUR": "yes",
+        "drive_through": "no",
+        "indoor": "no",
+        "opening_hours": "24/7",
+        "operator": "SIBS"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1329359,
+          38.7199088
+        ]
+      },
+      "id": "node/10616401974"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10686926196",
+        "amenity": "atm",
+        "brand": "Crédito Agrícola",
+        "brand:wikidata": "Q10262017",
+        "cash_in": "no",
+        "currency:EUR": "yes",
+        "drive_through": "no",
+        "network": "Credito Agricula",
+        "operator": "Crédito Agrícola",
+        "operator:wikidata": "Q10262017"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1590442,
+          38.7689535
+        ]
+      },
+      "id": "node/10686926196"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10707762652",
+        "amenity": "atm",
+        "name": "ATM",
+        "operator": "Euronet Worldwide",
+        "ref": "ATM ID ENPT1398"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.4187146,
+          38.962352
+        ]
+      },
+      "id": "node/10707762652"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10723934784",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1988674,
+          38.989184
+        ]
+      },
+      "id": "node/10723934784"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10799594889",
+        "amenity": "atm",
+        "brand": "Banco BPI",
+        "brand:wikidata": "Q537886",
+        "name": "Banco BPI",
+        "official_name": "Banco Português de Investimento",
+        "opening_hours": "Mo-Fr 08:30-12:00, 13:00-15:00",
+        "operator": "Banco BPI",
+        "operator:wikidata": "Q537886",
+        "short_name": "BPI",
+        "website": "https://www.bancobpi.pt/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1409297,
+          38.7542787
+        ]
+      },
+      "id": "node/10799594889"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10871033715",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1419209,
+          38.7154258
+        ]
+      },
+      "id": "node/10871033715"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10893744595",
+        "amenity": "atm",
+        "operator": "Crédito Agrícola"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9349058,
+          39.0368992
+        ]
+      },
+      "id": "node/10893744595"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11007668940",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1303559,
+          38.7412073
+        ]
+      },
+      "id": "node/11007668940"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11011268582",
+        "addr:housenumber": "14",
+        "addr:street": "Rua de Belém",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.202095,
+          38.6973894
+        ]
+      },
+      "id": "node/11011268582"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11011268584",
+        "addr:housenumber": "504",
+        "addr:street": "Rua da Junqueira",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1988423,
+          38.6974968
+        ]
+      },
+      "id": "node/11011268584"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11077609062",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0678239,
+          38.9251946
+        ]
+      },
+      "id": "node/11077609062"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11116328805",
+        "amenity": "atm",
+        "opening_hours": "24/7",
+        "operator": "Euronet"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1480736,
+          38.7097457
+        ]
+      },
+      "id": "node/11116328805"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11145632654",
+        "amenity": "atm",
+        "brand": "Millennium bcp",
+        "brand:wikidata": "Q118581",
+        "official_name": "Banco Comercial Português",
+        "operator": "Millennium bcp",
+        "operator:wikidata": "Q118581"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.4304052,
+          38.8675267
+        ]
+      },
+      "id": "node/11145632654"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11169352507",
+        "amenity": "atm",
+        "brand": "Euronet",
+        "brand:wikidata": "Q5412010",
+        "check_date": "2023-09-04",
+        "operator": "Euronet",
+        "operator:wikidata": "Q5412010"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.136329,
+          38.7104624
+        ]
+      },
+      "id": "node/11169352507"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11214310089",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1207804,
+          38.7170317
+        ]
+      },
+      "id": "node/11214310089"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11360298814",
+        "amenity": "atm",
+        "drive_through": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3537691,
+          38.9597933
+        ]
+      },
+      "id": "node/11360298814"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11379677046",
+        "amenity": "atm",
+        "operator": "Euronet Worldwide"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1695944,
+          38.7142877
+        ]
+      },
+      "id": "node/11379677046"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11476860485",
+        "amenity": "atm",
+        "cash_in": "no",
+        "check_date": "2024-01-01",
+        "operator": "Euronet"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1460476,
+          38.7150143
+        ]
+      },
+      "id": "node/11476860485"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11486092728",
+        "amenity": "atm",
+        "atm": "yes",
+        "operator": "Santander, Multibanco"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.128754,
+          38.7704095
+        ]
+      },
+      "id": "node/11486092728"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11546992190",
+        "amenity": "atm",
+        "atm": "yes",
+        "brand": "Banco Santander",
+        "brand:wikidata": "Q6496310",
+        "name": "Santander ATM",
+        "official_name": "Santander Group",
+        "operator": "Banco Santander",
+        "operator:wikidata": "Q6496310"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1297196,
+          38.769569
+        ]
+      },
+      "id": "node/11546992190"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11577366768",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1718062,
+          38.702787
+        ]
+      },
+      "id": "node/11577366768"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11617072831",
+        "amenity": "atm",
+        "cash_in": "no",
+        "check_date": "2024-09-11",
+        "covered": "yes",
+        "drive_through": "no",
+        "indoor": "yes",
+        "level": "0",
+        "lit": "yes",
+        "opening_hours": "24/7",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1044961,
+          38.7654094
+        ]
+      },
+      "id": "node/11617072831"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11626480289",
+        "amenity": "atm",
+        "indoor": "no",
+        "level": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1045436,
+          38.7659558
+        ]
+      },
+      "id": "node/11626480289"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11682320679",
+        "amenity": "atm",
+        "name": "ATM"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1253452,
+          38.7155685
+        ]
+      },
+      "id": "node/11682320679"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11708806007",
+        "amenity": "atm",
+        "cash_in:coins": "no",
+        "name": "ATM Express"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.18452,
+          38.8049571
+        ]
+      },
+      "id": "node/11708806007"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11835327674",
+        "amenity": "atm",
+        "currency:EUR": "yes",
+        "operator": "Euronet Worldwide"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.141454,
+          38.7119433
+        ]
+      },
+      "id": "node/11835327674"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11872152525",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1452859,
+          38.7051591
+        ]
+      },
+      "id": "node/11872152525"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11872573989",
+        "amenity": "atm",
+        "check_date": "2024-05-01",
+        "operator": "Euronet"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1285581,
+          38.7690774
+        ]
+      },
+      "id": "node/11872573989"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11882047189",
+        "amenity": "atm",
+        "operator": "Multibanco"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2044968,
+          38.7106676
+        ]
+      },
+      "id": "node/11882047189"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11883146756",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.4143155,
+          38.7010693
+        ]
+      },
+      "id": "node/11883146756"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11883461141",
+        "amenity": "atm",
+        "atm": "yes",
+        "currency:EUR": "yes",
+        "drive_through": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.4503165,
+          38.7269826
+        ]
+      },
+      "id": "node/11883461141"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11884008274",
+        "amenity": "atm",
+        "currency:EUR": "yes",
+        "operator": "ATM"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1972089,
+          38.7512727
+        ]
+      },
+      "id": "node/11884008274"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11887681401",
+        "amenity": "atm",
+        "currency:EUR": "yes",
+        "drive_through": "no",
+        "network": "Multibanco BPI"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.175863,
+          38.7558854
+        ]
+      },
+      "id": "node/11887681401"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11893383436",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1582304,
+          38.7066919
+        ]
+      },
+      "id": "node/11893383436"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11893671290",
+        "amenity": "atm",
+        "operator": "Banco Montepio"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.125499,
+          38.7276779
+        ]
+      },
+      "id": "node/11893671290"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11895371680",
+        "amenity": "atm",
+        "brand": "Banco BPI",
+        "brand:wikidata": "Q537886",
+        "name": "BPI",
+        "official_name": "Banco Português de Investimento",
+        "operator": "Banco BPI",
+        "operator:wikidata": "Q537886",
+        "short_name": "BPI"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1433376,
+          38.7068653
+        ]
+      },
+      "id": "node/11895371680"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11895371686",
+        "amenity": "atm",
+        "operator": "Euronet"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1427966,
+          38.7069728
+        ]
+      },
+      "id": "node/11895371686"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11895371704",
+        "amenity": "atm",
+        "brand": "Millennium bcp",
+        "brand:wikidata": "Q118581",
+        "name": "Millennium",
+        "official_name": "Banco Comercial Português",
+        "operator": "Millennium bcp",
+        "operator:wikidata": "Q118581"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1439266,
+          38.7067658
+        ]
+      },
+      "id": "node/11895371704"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11897583969",
+        "amenity": "atm",
+        "location": "wall",
+        "opening_hours": "24/7",
+        "operator": "Euronet"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1374836,
+          38.7113849
+        ]
+      },
+      "id": "node/11897583969"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11925995004",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1243199,
+          38.8264009
+        ]
+      },
+      "id": "node/11925995004"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11967131365",
+        "amenity": "atm",
+        "cash_in": "no",
+        "operator": "Multibanco"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3821085,
+          38.7673507
+        ]
+      },
+      "id": "node/11967131365"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11983625390",
+        "amenity": "atm",
+        "cash_in": "yes",
+        "operator": "Multibanco"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1441779,
+          38.7350805
+        ]
+      },
+      "id": "node/11983625390"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11993321586",
+        "amenity": "atm",
+        "check_date": "2024-06-20",
+        "drive_through": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1288449,
+          38.7132586
+        ]
+      },
+      "id": "node/11993321586"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12023358022",
+        "amenity": "atm",
+        "cash_in": "no",
+        "operator": "Euronet Worldwide"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1349158,
+          38.727878
+        ]
+      },
+      "id": "node/12023358022"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12034930394",
+        "amenity": "atm",
+        "brand": "Caixa Geral de Depósitos",
+        "brand:wikidata": "Q1026044",
+        "operator": "Caixa Geral de Depósitos",
+        "operator:wikidata": "Q1026044",
+        "short_name": "CGD"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1437763,
+          38.7360997
+        ]
+      },
+      "id": "node/12034930394"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12144327566",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3336577,
+          39.2637191
+        ]
+      },
+      "id": "node/12144327566"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12176275438",
+        "amenity": "atm",
+        "survey:date": "2024-09-14"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3024961,
+          38.7738497
+        ]
+      },
+      "id": "node/12176275438"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12178003800",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.229646,
+          38.750663
+        ]
+      },
+      "id": "node/12178003800"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12244991782",
+        "amenity": "atm",
+        "indoor": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1446546,
+          38.7139032
+        ]
+      },
+      "id": "node/12244991782"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12251126163",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3316396,
+          38.678653
+        ]
+      },
+      "id": "node/12251126163"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12314510245",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.123512,
+          38.7139592
+        ]
+      },
+      "id": "node/12314510245"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12358051501",
+        "amenity": "atm",
+        "operator": "Euronet"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1531232,
+          38.7083717
+        ]
+      },
+      "id": "node/12358051501"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12362063501",
+        "amenity": "atm",
+        "operator": "ATMExpress"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2034855,
+          38.6950287
+        ]
+      },
+      "id": "node/12362063501"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12398162821",
+        "amenity": "atm",
+        "brand": "Crédito Agrícola"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1436535,
+          38.8260128
+        ]
+      },
+      "id": "node/12398162821"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12456392056",
+        "amenity": "atm",
+        "brand": "ATMExpress",
+        "opening_hours": "24/7",
+        "operator": "SIBS"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3887238,
+          38.7971529
+        ]
+      },
+      "id": "node/12456392056"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12460899661",
+        "amenity": "atm",
+        "cash_in": "no",
+        "operator": "Novobanco"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1129627,
+          38.7725944
+        ]
+      },
+      "id": "node/12460899661"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12463496008",
+        "amenity": "atm",
+        "operator": "novobanco"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.4172997,
+          38.9640996
+        ]
+      },
+      "id": "node/12463496008"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12526710701",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.4102166,
+          38.7201904
+        ]
+      },
+      "id": "node/12526710701"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12526710702",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.4094368,
+          38.7188667
+        ]
+      },
+      "id": "node/12526710702"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12526742401",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.4251977,
+          38.723962
+        ]
+      },
+      "id": "node/12526742401"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12543639300",
+        "amenity": "atm",
+        "network": "Multibanco"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2152011,
+          38.7473462
+        ]
+      },
+      "id": "node/12543639300"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12552123601",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.4423408,
+          38.7248708
+        ]
+      },
+      "id": "node/12552123601"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12558538701",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.4055079,
+          38.7147061
+        ]
+      },
+      "id": "node/12558538701"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12630111721",
+        "amenity": "atm",
+        "cash_in": "no",
+        "operator": "Banco BPI"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1326235,
+          38.8577779
+        ]
+      },
+      "id": "node/12630111721"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12709460914",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1428701,
+          38.7561042
+        ]
+      },
+      "id": "node/12709460914"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12730479157",
+        "amenity": "atm",
+        "check_date": "2025-04-05"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3526957,
+          38.7979766
+        ]
+      },
+      "id": "node/12730479157"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12861484651",
+        "amenity": "atm",
+        "operator": "Euronet Worldwide"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.164671,
+          38.7386071
+        ]
+      },
+      "id": "node/12861484651"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12875706603",
+        "amenity": "atm",
+        "brand": "Novo Banco",
+        "level": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1761448,
+          38.8191299
+        ]
+      },
+      "id": "node/12875706603"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12917778801",
+        "amenity": "atm",
+        "brand": "Montepio"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.092599,
+          38.7682534
+        ]
+      },
+      "id": "node/12917778801"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12922811924",
+        "addr:city": "Alverca",
+        "addr:country": "PT",
+        "addr:postcode": "2615-391",
+        "addr:street": "Praça da Sociedade Filarmónica Recreio Alverquense",
+        "amenity": "atm",
+        "brand": "General Bytes",
+        "cash_in": "yes",
+        "currency:EUR": "yes",
+        "currency:LTC": "yes",
+        "currency:XBT": "yes",
+        "image": "https://mindthecoin.com/assets/images/atms/alverca/alverca.jpg",
+        "indoor": "yes",
+        "level": "0",
+        "manufacturer": "General Bytes",
+        "name": "Bitcoin ATM Alverca - Mind the Coin",
+        "network": "Bitcoin",
+        "opening_hours": "Mo-Sa 10:00-19:00",
+        "operator": "Mind the Coin",
+        "payment:lightning": "no",
+        "payment:lightning_contactless": "no",
+        "payment:onchain": "yes",
+        "survey:date": "2025-06-18",
+        "url": "https://mindthecoin.com/en/location/alverca",
+        "website": "https://mindthecoin.com"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0399952,
+          38.8907365
+        ]
+      },
+      "id": "node/12922811924"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12923044897",
+        "addr:city": "Lisboa",
+        "addr:country": "PT",
+        "addr:housenumber": "15A",
+        "addr:postcode": "1170-014",
+        "addr:street": "Rua Andrade",
+        "amenity": "atm",
+        "cash_in": "yes",
+        "cash_out": "no",
+        "contact:email": "suporte@mindthecoin.com",
+        "contact:facebook": "https://www.facebook.com/mindthecoin",
+        "contact:instagram": "https://www.instagram.com/mindthecoin/",
+        "contact:twitter": "https://x.com/mindthecoin",
+        "contact:website": "https://mindthecoin.com",
+        "currency:EUR": "yes",
+        "currency:LTC": "yes",
+        "currency:XBT": "yes",
+        "description": "Located right in the heart of Lisbon, this ATM is a great alternative for those looking to buy Bitcoin while doing their laundry or enjoying a coffee. It is located inside the Cotton Club Laundry and Café, on the left hand side as you enter.",
+        "image": "https://mindthecoin.com/assets/images/atms/lisboa/lisboa.jpg",
+        "indoor": "yes",
+        "level": "0",
+        "manufacturer": "General Bytes",
+        "name": "Bitcoin ATM Lisboa - Mind the Coin",
+        "network": "Bitcoin",
+        "opening_hours": "Mo-Su 08:00-21:00",
+        "operator": "Mind the Coin",
+        "payment:cash": "yes",
+        "payment:contactless": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:lightning": "no",
+        "payment:lightning_contactless": "no",
+        "survey:date": "2025-06-18",
+        "url": "https://mindthecoin.com/en/location/lisboa",
+        "website": "https://mindthecoin.com"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1335116,
+          38.7224349
+        ]
+      },
+      "id": "node/12923044897"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12992770370",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3257174,
+          38.6795731
+        ]
+      },
+      "id": "node/12992770370"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13002796176",
+        "amenity": "atm",
+        "operator": "Euronet"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1376855,
+          38.7119024
+        ]
+      },
+      "id": "node/13002796176"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13004244531",
+        "amenity": "atm",
+        "location": "wall",
+        "opening_hours": "24/7",
+        "operator": "Euronet"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1371579,
+          38.7113473
+        ]
+      },
+      "id": "node/13004244531"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13004827110",
+        "addr:street": "Rua da Prata",
+        "amenity": "atm",
+        "operator": "Cashzone"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1368775,
+          38.7106293
+        ]
+      },
+      "id": "node/13004827110"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13004827111",
+        "addr:street": "Rua dos Correeiros",
+        "amenity": "atm",
+        "brand": "Euronet",
+        "brand:wikidata": "Q5412010",
+        "operator": "Euronet",
+        "operator:wikidata": "Q5412010"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1371482,
+          38.7105253
+        ]
+      },
+      "id": "node/13004827111"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13042800252",
+        "amenity": "atm",
+        "drive_through": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.145157,
+          38.7128731
+        ]
+      },
+      "id": "node/13042800252"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13057008627",
+        "amenity": "atm",
+        "level": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1585771,
+          38.7354707
+        ]
+      },
+      "id": "node/13057008627"
+    }
+  ]
+}

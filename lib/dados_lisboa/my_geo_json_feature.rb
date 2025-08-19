@@ -19,6 +19,10 @@ class DadosLisboa::MyGeoJsonFeature
     @data.dig("properties", "N_INDIVIDUOS_0_14").to_i
   end
 
+  def population_over_65
+    @data.dig("properties", "N_INDIVIDUOS_65_OU_MAIS").to_i
+  end
+
   def geometry
     @data["geometry"]
   end

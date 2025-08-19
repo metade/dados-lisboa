@@ -1,0 +1,692 @@
+---
+layout: map
+title: "Multibancos"
+---
+
+<!-- Bootstrap Offcanvas Trigger Button -->
+<button
+    class="btn btn-primary position-fixed"
+    style="top: 20px; right: 20px; z-index: 1000"
+    type="button"
+    data-bs-toggle="offcanvas"
+    data-bs-target="#sidePanel"
+    aria-controls="sidePanel"
+>
+    <i class="bi bi-list me-2"></i>Multibancos
+</button>
+
+<!-- Bootstrap Offcanvas Side Panel -->
+<div
+    class="offcanvas offcanvas-end"
+    tabindex="-1"
+    id="sidePanel"
+    aria-labelledby="sidePanelLabel"
+    style="width: 400px"
+>
+    <div class="offcanvas-header bg-light">
+        <h5 class="offcanvas-title" id="sidePanelLabel">
+            Informação e Filtros
+        </h5>
+        <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+        ></button>
+    </div>
+    <div class="offcanvas-body">
+        <!-- About Section -->
+        <div class="mb-4">
+            <h6 class="fw-bold mb-3">Sobre a Visualização</h6>
+            <p class="small text-muted">
+                Este mapa mostra os multibancos de Lisboa. As áreas residenciais
+                estão coloridas por distância ao multibanco mais próximo, com
+                foco na população com 65+ anos.
+            </p>
+
+            <strong class="small">Fontes</strong>
+            <ul class="list-unstyled small">
+                <li>
+                    <a href="https://dados.cm-lisboa.pt/dataset/multibanco">
+                        Multibancos
+                    </a>
+                    <em class="text-secondary">CM de Lisboa</em>
+                </li>
+                <li>
+                    <a href="https://mapas.ine.pt/download/index2021.phtml">
+                        Censos 2021
+                    </a>
+                    <em class="text-secondary">INE</em>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Legend Section -->
+        <div class="mb-4">
+            <h6 class="fw-bold mb-3">Legenda</h6>
+
+            <div class="mb-3">
+                <h6 class="fs-6 fw-semibold mb-2">Distância de multibancos</h6>
+                <div class="d-flex align-items-center mb-2">
+                    <div
+                        class="me-2"
+                        style="
+                            width: 20px;
+                            height: 15px;
+                            background-color: #27ae60;
+                        "
+                    ></div>
+                    <small>< 200m do multibanco</small>
+                </div>
+                <div class="d-flex align-items-center mb-2">
+                    <div
+                        class="me-2"
+                        style="
+                            width: 20px;
+                            height: 15px;
+                            background-color: #f1c40f;
+                        "
+                    ></div>
+                    <small>200-400m do multibanco</small>
+                </div>
+                <div class="d-flex align-items-center mb-2">
+                    <div
+                        class="me-2"
+                        style="
+                            width: 20px;
+                            height: 15px;
+                            background-color: #e74c3c;
+                        "
+                    ></div>
+                    <small>400-1000m do multibanco</small>
+                </div>
+                <div class="d-flex align-items-center mb-2">
+                    <div
+                        class="me-2"
+                        style="
+                            width: 20px;
+                            height: 15px;
+                            background-color: #9b59b6;
+                        "
+                    ></div>
+                    <small>> 1000m do multibanco</small>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <h6 class="fs-6 fw-semibold mb-2">Multibancos por Marca</h6>
+                <div id="brand-legend">
+                    <!-- Brand legend items will be populated dynamically -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Elderly Density Section -->
+        <div class="mb-4">
+            <h6 class="fw-bold mb-3">Densidade de Idosos</h6>
+            <div class="d-flex align-items-center mb-2">
+                <div
+                    class="me-2"
+                    style="
+                        width: 20px;
+                        height: 15px;
+                        background-color: #27ae60;
+                        opacity: 0.1;
+                    "
+                ></div>
+                <small>Poucos idosos</small>
+            </div>
+            <div class="d-flex align-items-center mb-2">
+                <div
+                    class="me-2"
+                    style="
+                        width: 20px;
+                        height: 15px;
+                        background-color: #f1c40f;
+                        opacity: 0.4;
+                    "
+                ></div>
+                <small>Alguns idosos</small>
+            </div>
+            <div class="d-flex align-items-center mb-2">
+                <div
+                    class="me-2"
+                    style="
+                        width: 20px;
+                        height: 15px;
+                        background-color: #e74c3c;
+                        opacity: 0.7;
+                    "
+                ></div>
+                <small>Muitos idosos</small>
+            </div>
+            <p class="small text-muted mt-2">
+                A intensidade da cor indica o número de pessoas com 65+ anos por
+                hexágono.
+            </p>
+        </div>
+
+        <!-- Filters Section -->
+        <div class="mb-4">
+            <h6 class="fw-bold mb-3">Filtros</h6>
+
+            <div class="card">
+                <div class="card-header">
+                    <h6 class="card-title mb-0">Freguesias</h6>
+                </div>
+                <div class="card-body">
+                    <div class="form-check mb-3">
+                        <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="select-all-freguesias"
+                            checked
+                        />
+                        <label
+                            class="form-check-label fw-semibold"
+                            for="select-all-freguesias"
+                        >
+                            Selecionar todas
+                        </label>
+                    </div>
+                    <div
+                        id="freguesias-filter"
+                        class="overflow-auto"
+                        style="max-height: 200px"
+                    >
+                        <!-- Freguesia checkboxes will be populated dynamically -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="module">
+    import { singleClickPerFeature } from "/assets/js/core.js";
+    import { createFreguesiasFilter } from "/assets/js/freguesia-filter.js";
+    import {
+        createPopupHTML,
+        formatters,
+        PopupManager,
+    } from "/assets/js/popup-utils.js";
+
+    window.addEventListener("mapReady", (event) => {
+        const map = event.detail;
+
+        // School-specific popup functions
+        function createMultibancoPopup(properties, coordinates, options = {}) {
+            const fields = [
+                {
+                    label: "Nome",
+                    value: properties.name || "Multibanco",
+                    format: formatters.capitalize,
+                },
+                {
+                    label: "Morada",
+                    value: properties.address,
+                },
+                {
+                    label: "Marca",
+                    value: properties.brand,
+                },
+                {
+                    label: "Freguesia",
+                    value: properties.freguesia,
+                    format: formatters.capitalize,
+                },
+                {
+                    label: "Ativo",
+                    value: properties.active,
+                    format: formatters.yesNo,
+                },
+            ];
+
+            const html = createPopupHTML({
+                title: "Multibanco",
+                fields,
+                cssClass: "multibanco-popup",
+            });
+
+            return new maplibregl.Popup().setLngLat(coordinates).setHTML(html);
+        }
+
+        function createH3Popup(properties, coordinates, options = {}) {
+            const fields = [
+                {
+                    label: "Distância ao multibanco mais próximo",
+                    value: properties.nearest_point_distance,
+                    format: formatters.distance,
+                },
+                {
+                    label: "População 65+ anos",
+                    value: properties.population,
+                    format: (count) =>
+                        formatters.count(count, "pessoa", "pessoas"),
+                },
+                {
+                    label: "Multibancos na área",
+                    value: properties.points,
+                    format: (count) =>
+                        formatters.count(count, "multibanco", "multibancos"),
+                },
+                {
+                    label: "Freguesias",
+                    value: properties.freguesias,
+                    format: (freguesias) => {
+                        if (Array.isArray(freguesias)) {
+                            return formatters.list(freguesias);
+                        } else if (typeof freguesias === "string") {
+                            try {
+                                const parsed = JSON.parse(freguesias);
+                                return Array.isArray(parsed)
+                                    ? formatters.list(parsed)
+                                    : freguesias;
+                            } catch (e) {
+                                return freguesias;
+                            }
+                        }
+                        return formatters.list([]);
+                    },
+                },
+            ];
+
+            const html = createPopupHTML({
+                title: "Informação da Área",
+                fields,
+                cssClass: "h3-popup",
+            });
+
+            return new maplibregl.Popup().setLngLat(coordinates).setHTML(html);
+        }
+
+        // Initialize popup manager
+        const popupManager = new PopupManager(map);
+
+        // Define brand colors with actual brands from data
+        const brandColors = {
+            "Banco BPI": "#e74c3c", // Red
+            "Banco CTT": "#3498db", // Blue
+            Bankinter: "#f39c12", // Orange
+            "Branco BPI": "#27ae60", // Green
+            "Caixa Geral de Depósitos": "#8e44ad", // Purple
+            "Crédito Agrícola": "#e67e22", // Dark Orange
+            Euronet: "#34495e", // Dark Gray
+            "Millennium BCP": "#1abc9c", // Turquoise
+            "Millennium bcp": "#2ecc71", // Light Green
+            Montepio: "#f1c40f", // Yellow
+            "Novo Banco": "#16a085", // Dark Turquoise
+            "Santander Totta": "#d35400", // Dark Red
+            Default: "#9c27b0", // Default Purple
+        };
+
+        function getBrandColor(brand) {
+            return brandColors[brand] || brandColors["Default"];
+        }
+
+        function updateBrandLegend(brands) {
+            const legendContainer = document.getElementById("brand-legend");
+            if (!legendContainer) return;
+
+            legendContainer.innerHTML = "";
+
+            brands.forEach((brand) => {
+                const color = getBrandColor(brand);
+                const legendItem = document.createElement("div");
+                legendItem.className = "d-flex align-items-center mb-2";
+                legendItem.innerHTML = `
+                    <div
+                        class="me-2 rounded-circle"
+                        style="
+                            width: 15px;
+                            height: 15px;
+                            background-color: ${color};
+                        "
+                    ></div>
+                    <small>${brand}</small>
+                `;
+                legendContainer.appendChild(legendItem);
+            });
+        }
+
+        // Register PMTiles protocol (needed when adding sources manually)
+        if (!maplibregl.getProtocol || !maplibregl.getProtocol("pmtiles")) {
+            console.log("registering PMTiles protocol");
+            const protocol = new pmtiles.Protocol();
+            maplibregl.addProtocol("pmtiles", protocol.tile);
+        }
+
+        const pmtilesURL =
+            "{{ '/assets/data/processed/multibancos.pmtiles' | relative_url }}";
+        const abs = new URL(pmtilesURL, window.location.origin);
+        const thematicURL = "pmtiles://" + abs.pathname + abs.search;
+
+        // Add the PMTiles source (contains both multibancos and H3 data)
+        map.addSource("multibancos", {
+            type: "vector",
+            url: thematicURL,
+        });
+
+        // Initialize freguesia filter with new module
+        let freguesiasFilter;
+
+        // Add H3 hexagon layer with distance-based colors and elderly-based opacity
+        map.addLayer({
+            id: "h3-hexagons",
+            type: "fill",
+            source: "multibancos", // Using the same source
+            "source-layer": "h3", // H3 layer within the PMTiles file
+            paint: {
+                "fill-color": [
+                    "case",
+                    ["<", ["get", "nearest_point_distance"], 200],
+                    "#27ae60", // Green for < 200m
+                    ["<", ["get", "nearest_point_distance"], 400],
+                    "#f1c40f", // Yellow for 200-400m
+                    ["<", ["get", "nearest_point_distance"], 1000],
+                    "#e74c3c", // Red for 400-1000m
+                    "#9b59b6", // Purple for > 1000m
+                ],
+                "fill-opacity": [
+                    "case",
+                    ["==", ["get", "population"], 0],
+                    0, // Transparent when 0 elderly
+                    [
+                        "interpolate",
+                        ["linear"],
+                        ["get", "population"],
+                        1,
+                        0.1, // Minimum opacity for 1 person
+                        100,
+                        0.7, // Adjust this max value based on your actual data
+                    ],
+                ],
+                "fill-outline-color": "#ffffff",
+            },
+        });
+
+        // Check for URL parameters and apply initial filter to prevent flash
+        const urlParams = new URLSearchParams(window.location.search);
+        const urlFreguesias = urlParams.get("freguesias");
+        let hasInitialUrlFilter = false;
+
+        if (urlFreguesias) {
+            const freguesiasList = urlFreguesias.split(",");
+            const initialFilter = [
+                "any",
+                ...freguesiasList.map((freguesia) => [
+                    "in",
+                    freguesia,
+                    ["get", "freguesias"],
+                ]),
+            ];
+            map.setFilter("h3-hexagons", initialFilter);
+            hasInitialUrlFilter = true;
+
+            // Zoom to selected freguesias immediately
+            setTimeout(() => {
+                try {
+                    const allFeatures = map.querySourceFeatures("multibancos", {
+                        sourceLayer: "h3",
+                    });
+
+                    const matchingFeatures = allFeatures.filter((feature) => {
+                        const freguesias = feature.properties.freguesias;
+                        if (!freguesias) return false;
+
+                        if (Array.isArray(freguesias)) {
+                            return freguesias.some((f) =>
+                                freguesiasList.includes(f),
+                            );
+                        } else if (typeof freguesias === "string") {
+                            try {
+                                const parsed = JSON.parse(freguesias);
+                                if (Array.isArray(parsed)) {
+                                    return parsed.some((f) =>
+                                        freguesiasList.includes(f),
+                                    );
+                                } else {
+                                    return freguesiasList.includes(freguesias);
+                                }
+                            } catch (e) {
+                                return freguesiasList.includes(freguesias);
+                            }
+                        }
+                        return false;
+                    });
+
+                    if (matchingFeatures.length > 0) {
+                        const bounds = new maplibregl.LngLatBounds();
+                        matchingFeatures.forEach((feature) => {
+                            if (feature.geometry.type === "Polygon") {
+                                feature.geometry.coordinates[0].forEach(
+                                    (coord) => {
+                                        bounds.extend(coord);
+                                    },
+                                );
+                            } else if (
+                                feature.geometry.type === "MultiPolygon"
+                            ) {
+                                feature.geometry.coordinates.forEach(
+                                    (polygon) => {
+                                        polygon[0].forEach((coord) => {
+                                            bounds.extend(coord);
+                                        });
+                                    },
+                                );
+                            }
+                        });
+
+                        map.fitBounds(bounds, {
+                            padding: 50,
+                            duration: 1000,
+                            essential: false,
+                        });
+                    }
+                } catch (error) {
+                    // Silently handle zoom errors
+                }
+            }, 800);
+        }
+
+        // Add multibancos layer
+        map.addLayer({
+            id: "multibancos",
+            type: "circle",
+            source: "multibancos",
+            "source-layer": "multibancos",
+            paint: {
+                "circle-radius": 6,
+                "circle-color": [
+                    "case",
+                    ["==", ["get", "brand"], "Banco BPI"],
+                    brandColors["Banco BPI"],
+                    ["==", ["get", "brand"], "Banco CTT"],
+                    brandColors["Banco CTT"],
+                    ["==", ["get", "brand"], "Bankinter"],
+                    brandColors["Bankinter"],
+                    ["==", ["get", "brand"], "Branco BPI"],
+                    brandColors["Branco BPI"],
+                    ["==", ["get", "brand"], "Caixa Geral de Depósitos"],
+                    brandColors["Caixa Geral de Depósitos"],
+                    ["==", ["get", "brand"], "Crédito Agrícola"],
+                    brandColors["Crédito Agrícola"],
+                    ["==", ["get", "brand"], "Euronet"],
+                    brandColors["Euronet"],
+                    ["==", ["get", "brand"], "Millennium BCP"],
+                    brandColors["Millennium BCP"],
+                    ["==", ["get", "brand"], "Millennium bcp"],
+                    brandColors["Millennium bcp"],
+                    ["==", ["get", "brand"], "Montepio"],
+                    brandColors["Montepio"],
+                    ["==", ["get", "brand"], "Novo Banco"],
+                    brandColors["Novo Banco"],
+                    ["==", ["get", "brand"], "Santander Totta"],
+                    brandColors["Santander Totta"],
+                    brandColors["Default"], // Default color for others
+                ],
+                "circle-stroke-width": 1,
+                "circle-stroke-color": "#ffffff",
+            },
+        });
+
+        // Add click event for multibancos
+        async function handleMultibancoClick(e, feature) {
+            // Stop event propagation to prevent hexagon popup from also showing
+            e.preventDefault();
+
+            const properties = e.features[0].properties;
+            const coordinates = e.features[0].geometry.coordinates.slice();
+
+            // Ensure that if the map is zoomed out such that multiple
+            // copies of the feature are visible, the popup appears
+            // over the copy being pointed to.
+            while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+            }
+
+            // Use the popup utility
+            const popup = createMultibancoPopup(properties, coordinates);
+            popupManager.closeCurrentPopup();
+            popup.addTo(map);
+            popupManager.currentPopup = popup;
+        }
+
+        map.on(
+            "click",
+            "multibancos",
+            singleClickPerFeature(
+                handleMultibancoClick,
+                (feature) => feature.id,
+            ),
+        );
+
+        // Change the cursor to a pointer when the mouse is over the multibancos layer
+        map.on("mouseenter", "multibancos", () => {
+            map.getCanvas().style.cursor = "pointer";
+        });
+
+        // Change it back to a pointer when it leaves
+        map.on("mouseleave", "multibancos", () => {
+            map.getCanvas().style.cursor = "";
+        });
+
+        // Add click event for H3 hexagons
+        async function handleH3Click(e, feature) {
+            // Check if we clicked on a multibanco feature at the same location
+            const multibancoFeatures = map.queryRenderedFeatures(e.point, {
+                layers: ["multibancos"],
+            });
+
+            // If there's a multibanco at this location, don't show hexagon popup
+            if (multibancoFeatures.length > 0) {
+                return;
+            }
+
+            const properties = e.features[0].properties;
+            const coordinates = e.lngLat;
+
+            // Use the popup utility
+            const popup = createH3Popup(properties, coordinates);
+            popupManager.closeCurrentPopup();
+            popup.addTo(map);
+            popupManager.currentPopup = popup;
+        }
+
+        map.on(
+            "click",
+            "h3-hexagons",
+            singleClickPerFeature(handleH3Click, (feature) => feature.id),
+        );
+
+        // Populate freguesias filter after data loads
+        let hasInitialized = false;
+
+        // Wait for map to be fully loaded before initializing
+        map.on("idle", () => {
+            if (!hasInitialized) {
+                hasInitialized = true;
+
+                // Initialize freguesias filter
+                setTimeout(async () => {
+                    try {
+                        // Verify data is available
+                        const h3Features = map.querySourceFeatures(
+                            "multibancos",
+                            {
+                                sourceLayer: "h3",
+                            },
+                        );
+                        const multibancoFeatures = map.querySourceFeatures(
+                            "multibancos",
+                            {
+                                sourceLayer: "multibancos",
+                            },
+                        );
+
+                        // Extract unique brands and update legend
+                        if (multibancoFeatures.length > 0) {
+                            const brands = new Set();
+                            multibancoFeatures.forEach((feature) => {
+                                const brand = feature.properties.brand;
+                                if (brand) {
+                                    brands.add(brand);
+                                }
+                            });
+
+                            const sortedBrands = Array.from(brands).sort();
+                            updateBrandLegend(sortedBrands);
+                            updateBrandLegend(sortedBrands);
+                        }
+
+                        if (h3Features.length === 0) {
+                            // Show error message in filter container
+                            const container =
+                                document.getElementById("freguesias-filter");
+                            if (container) {
+                                container.innerHTML =
+                                    '<div class="alert alert-warning small">Nenhuma freguesia encontrada nos dados. Os multibancos ainda são visíveis no mapa.</div>';
+                            }
+                            return;
+                        }
+
+                        freguesiasFilter = await createFreguesiasFilter({
+                            map: map,
+                            containerSelector: "#freguesias-filter",
+                            selectAllSelector: "#select-all-freguesias",
+                            sourceId: "multibancos",
+                            sourceLayer: "h3",
+                            layerId: "h3-hexagons",
+                            freguesiasProperty: "freguesias",
+                            urlParam: "freguesias",
+                            onFilterChange: (selectedFreguesias) => {
+                                // Always keep multibancos visible - they should never be filtered
+                                map.setFilter("multibancos", null);
+                                updateElderlyLegend();
+                            },
+                            enableZoom: true,
+                            skipInitialZoom: hasInitialUrlFilter, // Skip only the initial zoom if we already zoomed
+                            enableUrlSync: true,
+                        });
+                    } catch (error) {
+                        // Show error message in filter container
+                        const container =
+                            document.getElementById("freguesias-filter");
+                        if (container) {
+                            container.innerHTML = `<div class="alert alert-danger small">Erro ao inicializar filtro: ${error.message}. Os multibancos ainda são visíveis no mapa.</div>`;
+                        }
+                    }
+                }, 1000); // Increased delay to let initial filter settle
+            }
+        });
+
+        // Event listeners are now handled by the freguesias filter module
+    });
+
+    // Freguesias filter functions
+
+    function updateElderlyLegend() {
+        // This function can be expanded to update legend based on visible data
+        // For now, it's a placeholder for future enhancements
+    }
+</script>

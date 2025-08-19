@@ -7,6 +7,7 @@ require_relative "lib/dados_lisboa/rake_tippecanoe_file_task"
 require_relative "lib/dados_lisboa"
 
 import "areas/census_2021/Rakefile"
+import "areas/multibancos/Rakefile"
 import "areas/pre-escolar/Rakefile"
 import "areas/parques-infantis/Rakefile"
 

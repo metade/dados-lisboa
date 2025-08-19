@@ -1,0 +1,30 @@
+namespace :multibancos do
+  directory "tmp/multibancos"
+
+  file "tmp/multibancos/h3.geojson": [
+    "tmp/multibancos",
+    "tmp/census_2021/BGRI2021_1106.geojson"
+  ] do |task|
+    multibancos_path = "data/src/multibancos.geojson"
+    bgri2021_path = task.sources.last
+    DadosLisboa::H3Visualisation.call(task.name, bgri2021_path, multibancos_path, :population_over_65)
+  end
+
+  tippecanoe_file "site/assets/data/processed/multibancos.pmtiles": [
+    "data/src/multibancos.geojson",
+    "tmp/multibancos/h3.geojson"
+  ]
+
+  task all: [
+    "site/assets/data/processed/multibancos.pmtiles"
+  ]
+
+  CLEAN_MULTIBANCOS = [
+    "site/assets/data/processed/multibancos.pmtiles",
+    "tmp/multibancos/h3.geojson"
+  ]
+  task :clean do
+    CLEAN_MULTIBANCOS.each { |file| rm file if File.exist?(file) }
+  end
+  CLEAN.include(*CLEAN_MULTIBANCOS)
+end

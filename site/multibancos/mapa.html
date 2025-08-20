@@ -115,7 +115,7 @@ title: "Multibancos"
 
             <div class="mb-3">
                 <h6 class="fs-6 fw-semibold mb-2">Multibancos por Marca</h6>
-                <div id="brand-legend">
+                <div id="type-legend">
                     <!-- Brand legend items will be populated dynamically -->
                 </div>
             </div>
@@ -218,8 +218,8 @@ title: "Multibancos"
         function createMultibancoPopup(properties, coordinates, options = {}) {
             const fields = [
                 {
-                    label: "Nome",
-                    value: properties.name || "Multibanco",
+                    label: "Tipo",
+                    value: determineMultibancoType(properties),
                     format: formatters.capitalize,
                 },
                 {
@@ -227,18 +227,9 @@ title: "Multibancos"
                     value: properties.address,
                 },
                 {
-                    label: "Marca",
-                    value: properties.brand,
-                },
-                {
                     label: "Freguesia",
                     value: properties.freguesia,
                     format: formatters.capitalize,
-                },
-                {
-                    label: "Ativo",
-                    value: properties.active,
-                    format: formatters.yesNo,
                 },
             ];
 
@@ -303,8 +294,8 @@ title: "Multibancos"
         // Initialize popup manager
         const popupManager = new PopupManager(map);
 
-        // Define brand colors with actual brands from data
-        const brandColors = {
+        // Define type colors with actual types from data
+        const typeColors = {
             "Banco BPI": "#e74c3c", // Red
             "Banco CTT": "#3498db", // Blue
             Bankinter: "#f39c12", // Orange
@@ -320,18 +311,43 @@ title: "Multibancos"
             Default: "#9c27b0", // Default Purple
         };
 
-        function getBrandColor(brand) {
-            return brandColors[brand] || brandColors["Default"];
+        function getTypeColor(type) {
+            return typeColors[type] || typeColors["Default"];
         }
 
-        function updateBrandLegend(brands) {
-            const legendContainer = document.getElementById("brand-legend");
+        function determineMultibancoType(properties) {
+            const type =
+                properties.brand ||
+                properties.operator ||
+                properties.name ||
+                "Desconhecido";
+            return (
+                {
+                    ATMExpress: "ATM Express",
+                    BPI: "Banco BPI",
+                    "Branco BPI": "Banco BPI",
+                    CGD: "Caixa Geral de Depósitos",
+                    "Euronet Worldwide": "Euronet",
+                    "MB Multibanco": "Multibanco",
+                    multibanco: "Multibanco",
+                    "Millenium bcp": "Millennium bcp",
+                    Millennium: "Millennium bcp",
+                    "Millennium BCP": "Millennium bcp",
+                    "Novo Banco": "Novobanco",
+                    "Santander Totta": "Santander",
+                    "Santander, Multibanco": "Santander",
+                }[type] || type
+            );
+        }
+
+        function updateTypeLegend(types) {
+            const legendContainer = document.getElementById("type-legend");
             if (!legendContainer) return;
 
             legendContainer.innerHTML = "";
 
-            brands.forEach((brand) => {
-                const color = getBrandColor(brand);
+            types.forEach((type) => {
+                const color = getTypeColor(type);
                 const legendItem = document.createElement("div");
                 legendItem.className = "d-flex align-items-center mb-2";
                 legendItem.innerHTML = `
@@ -343,7 +359,7 @@ title: "Multibancos"
                             background-color: ${color};
                         "
                     ></div>
-                    <small>${brand}</small>
+                    <small>${type}</small>
                 `;
                 legendContainer.appendChild(legendItem);
             });
@@ -500,30 +516,30 @@ title: "Multibancos"
                 "circle-color": [
                     "case",
                     ["==", ["get", "brand"], "Banco BPI"],
-                    brandColors["Banco BPI"],
+                    typeColors["Banco BPI"],
                     ["==", ["get", "brand"], "Banco CTT"],
-                    brandColors["Banco CTT"],
+                    typeColors["Banco CTT"],
                     ["==", ["get", "brand"], "Bankinter"],
-                    brandColors["Bankinter"],
+                    typeColors["Bankinter"],
                     ["==", ["get", "brand"], "Branco BPI"],
-                    brandColors["Branco BPI"],
+                    typeColors["Branco BPI"],
                     ["==", ["get", "brand"], "Caixa Geral de Depósitos"],
-                    brandColors["Caixa Geral de Depósitos"],
+                    typeColors["Caixa Geral de Depósitos"],
                     ["==", ["get", "brand"], "Crédito Agrícola"],
-                    brandColors["Crédito Agrícola"],
+                    typeColors["Crédito Agrícola"],
                     ["==", ["get", "brand"], "Euronet"],
-                    brandColors["Euronet"],
+                    typeColors["Euronet"],
                     ["==", ["get", "brand"], "Millennium BCP"],
-                    brandColors["Millennium BCP"],
+                    typeColors["Millennium BCP"],
                     ["==", ["get", "brand"], "Millennium bcp"],
-                    brandColors["Millennium bcp"],
+                    typeColors["Millennium bcp"],
                     ["==", ["get", "brand"], "Montepio"],
-                    brandColors["Montepio"],
+                    typeColors["Montepio"],
                     ["==", ["get", "brand"], "Novo Banco"],
-                    brandColors["Novo Banco"],
+                    typeColors["Novo Banco"],
                     ["==", ["get", "brand"], "Santander Totta"],
-                    brandColors["Santander Totta"],
-                    brandColors["Default"], // Default color for others
+                    typeColors["Santander Totta"],
+                    typeColors["Default"], // Default color for others
                 ],
                 "circle-stroke-width": 1,
                 "circle-stroke-color": "#ffffff",
@@ -626,17 +642,17 @@ title: "Multibancos"
 
                         // Extract unique brands and update legend
                         if (multibancoFeatures.length > 0) {
-                            const brands = new Set();
+                            const types = new Set();
                             multibancoFeatures.forEach((feature) => {
-                                const brand = feature.properties.brand;
-                                if (brand) {
-                                    brands.add(brand);
-                                }
+                                types.add(
+                                    determineMultibancoType(feature.properties),
+                                );
                             });
 
-                            const sortedBrands = Array.from(brands).sort();
-                            updateBrandLegend(sortedBrands);
-                            updateBrandLegend(sortedBrands);
+                            const sortedTypes = Array.from(types).sort();
+                            console.log(sortedTypes);
+                            updateTypeLegend(sortedTypes);
+                            updateTypeLegend(sortedTypes);
                         }
 
                         if (h3Features.length === 0) {

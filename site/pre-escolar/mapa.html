@@ -75,54 +75,380 @@ title: "Escolas Pré-Escolares"
         <div class="mb-4">
             <h6 class="fw-bold mb-3">Legenda</h6>
 
+            <!-- Combined Matrix Legend -->
             <div class="mb-3">
-                <h6 class="fs-6 fw-semibold mb-2">
-                    Distância de escolas pré-escolares
-                </h6>
-                <div class="d-flex align-items-center mb-2">
+                <h6 class="fs-6 fw-semibold mb-2">Distância & Densidade</h6>
+                <div style="font-size: 0.85rem">
+                    <!-- Header row -->
                     <div
-                        class="me-2"
                         style="
-                            width: 20px;
-                            height: 15px;
-                            background-color: #27ae60;
+                            display: flex;
+                            margin-bottom: 5px;
+                            height: 90px;
+                            overflow: visible;
                         "
-                    ></div>
-                    <small>< 200m da escola</small>
-                </div>
-                <div class="d-flex align-items-center mb-2">
+                    >
+                        <div
+                            style="
+                                flex-shrink: 1;
+                                flex-grow: 0;
+                                text-align: center;
+                                font-size: 0.75rem;
+                                writing-mode: sideways-lr;
+                                text-orientation: mixed;
+                                white-space: nowrap;
+                                height: 100%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: flex-start;
+                                padding: 2px;
+                            "
+                        >
+                            Poucas crianças
+                        </div>
+                        <div
+                            style="
+                                flex-shrink: 1;
+                                flex-grow: 0;
+                                text-align: center;
+                                font-size: 0.75rem;
+                                writing-mode: sideways-lr;
+                                text-orientation: mixed;
+                                white-space: nowrap;
+                                height: 100%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: flex-start;
+                                padding: 2px;
+                            "
+                        >
+                            Algumas crianças
+                        </div>
+                        <div
+                            style="
+                                flex-shrink: 1;
+                                flex-grow: 0;
+                                text-align: center;
+                                font-size: 0.75rem;
+                                writing-mode: sideways-lr;
+                                text-orientation: mixed;
+                                white-space: nowrap;
+                                height: 100%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: flex-start;
+                                padding: 2px;
+                            "
+                        >
+                            Muitas crianças
+                        </div>
+                        <div style="flex-grow: 1"></div>
+                    </div>
+
+                    <!-- Row 1: < 200m -->
                     <div
-                        class="me-2"
                         style="
-                            width: 20px;
-                            height: 15px;
-                            background-color: #f1c40f;
+                            display: flex;
+                            align-items: center;
+                            margin-bottom: 3px;
+                            border-bottom: 1px solid #dee2e6;
                         "
-                    ></div>
-                    <small>200-400m da escola</small>
-                </div>
-                <div class="d-flex align-items-center mb-2">
+                    >
+                        <div
+                            style="
+                                flex-shrink: 1;
+                                flex-grow: 0;
+                                text-align: center;
+                                padding: 2px;
+                            "
+                        >
+                            <div
+                                style="
+                                    width: 18px;
+                                    height: 12px;
+                                    background-color: #27ae60;
+                                    opacity: 0.1;
+                                    margin: 0 auto;
+                                "
+                            ></div>
+                        </div>
+                        <div
+                            style="
+                                flex-shrink: 1;
+                                flex-grow: 0;
+                                text-align: center;
+                                padding: 2px;
+                            "
+                        >
+                            <div
+                                style="
+                                    width: 18px;
+                                    height: 12px;
+                                    background-color: #27ae60;
+                                    opacity: 0.4;
+                                    margin: 0 auto;
+                                "
+                            ></div>
+                        </div>
+                        <div
+                            style="
+                                flex-shrink: 1;
+                                flex-grow: 0;
+                                text-align: center;
+                                padding: 2px;
+                            "
+                        >
+                            <div
+                                style="
+                                    width: 18px;
+                                    height: 12px;
+                                    background-color: #27ae60;
+                                    opacity: 0.7;
+                                    margin: 0 auto;
+                                "
+                            ></div>
+                        </div>
+                        <div
+                            style="
+                                flex-grow: 1;
+                                font-weight: 600;
+                                padding-left: 8px;
+                                font-size: 0.8rem;
+                            "
+                        >
+                            < 200m da escola
+                        </div>
+                    </div>
+
+                    <!-- Row 2: 200-400m -->
                     <div
-                        class="me-2"
                         style="
-                            width: 20px;
-                            height: 15px;
-                            background-color: #e74c3c;
+                            display: flex;
+                            align-items: center;
+                            margin-bottom: 3px;
+                            border-bottom: 1px solid #dee2e6;
                         "
-                    ></div>
-                    <small>400-1000m da escola</small>
-                </div>
-                <div class="d-flex align-items-center mb-2">
+                    >
+                        <div
+                            style="
+                                flex-shrink: 1;
+                                flex-grow: 0;
+                                text-align: center;
+                                padding: 2px;
+                            "
+                        >
+                            <div
+                                style="
+                                    width: 18px;
+                                    height: 12px;
+                                    background-color: #f1c40f;
+                                    opacity: 0.1;
+                                    margin: 0 auto;
+                                "
+                            ></div>
+                        </div>
+                        <div
+                            style="
+                                flex-shrink: 1;
+                                flex-grow: 0;
+                                text-align: center;
+                                padding: 2px;
+                            "
+                        >
+                            <div
+                                style="
+                                    width: 18px;
+                                    height: 12px;
+                                    background-color: #f1c40f;
+                                    opacity: 0.4;
+                                    margin: 0 auto;
+                                "
+                            ></div>
+                        </div>
+                        <div
+                            style="
+                                flex-shrink: 1;
+                                flex-grow: 0;
+                                text-align: center;
+                                padding: 2px;
+                            "
+                        >
+                            <div
+                                style="
+                                    width: 18px;
+                                    height: 12px;
+                                    background-color: #f1c40f;
+                                    opacity: 0.7;
+                                    margin: 0 auto;
+                                "
+                            ></div>
+                        </div>
+                        <div
+                            style="
+                                flex-grow: 1;
+                                font-weight: 600;
+                                padding-left: 8px;
+                                font-size: 0.8rem;
+                            "
+                        >
+                            200-400m da escola
+                        </div>
+                    </div>
+
+                    <!-- Row 3: 400-1000m -->
                     <div
-                        class="me-2"
                         style="
-                            width: 20px;
-                            height: 15px;
-                            background-color: #9b59b6;
+                            display: flex;
+                            align-items: center;
+                            margin-bottom: 3px;
+                            border-bottom: 1px solid #dee2e6;
                         "
-                    ></div>
-                    <small>> 1000m da escola</small>
+                    >
+                        <div
+                            style="
+                                flex-shrink: 1;
+                                flex-grow: 0;
+                                text-align: center;
+                                padding: 2px;
+                            "
+                        >
+                            <div
+                                style="
+                                    width: 18px;
+                                    height: 12px;
+                                    background-color: #e74c3c;
+                                    opacity: 0.1;
+                                    margin: 0 auto;
+                                "
+                            ></div>
+                        </div>
+                        <div
+                            style="
+                                flex-shrink: 1;
+                                flex-grow: 0;
+                                text-align: center;
+                                padding: 2px;
+                            "
+                        >
+                            <div
+                                style="
+                                    width: 18px;
+                                    height: 12px;
+                                    background-color: #e74c3c;
+                                    opacity: 0.4;
+                                    margin: 0 auto;
+                                "
+                            ></div>
+                        </div>
+                        <div
+                            style="
+                                flex-shrink: 1;
+                                flex-grow: 0;
+                                text-align: center;
+                                padding: 2px;
+                            "
+                        >
+                            <div
+                                style="
+                                    width: 18px;
+                                    height: 12px;
+                                    background-color: #e74c3c;
+                                    opacity: 0.7;
+                                    margin: 0 auto;
+                                "
+                            ></div>
+                        </div>
+                        <div
+                            style="
+                                flex-grow: 1;
+                                font-weight: 600;
+                                padding-left: 8px;
+                                font-size: 0.8rem;
+                            "
+                        >
+                            400-1000m da escola
+                        </div>
+                    </div>
+
+                    <!-- Row 4: > 1000m -->
+                    <div
+                        style="
+                            display: flex;
+                            align-items: center;
+                            margin-bottom: 3px;
+                        "
+                    >
+                        <div
+                            style="
+                                flex-shrink: 1;
+                                flex-grow: 0;
+                                text-align: center;
+                                padding: 2px;
+                            "
+                        >
+                            <div
+                                style="
+                                    width: 18px;
+                                    height: 12px;
+                                    background-color: #9b59b6;
+                                    opacity: 0.1;
+                                    margin: 0 auto;
+                                "
+                            ></div>
+                        </div>
+                        <div
+                            style="
+                                flex-shrink: 1;
+                                flex-grow: 0;
+                                text-align: center;
+                                padding: 2px;
+                            "
+                        >
+                            <div
+                                style="
+                                    width: 18px;
+                                    height: 12px;
+                                    background-color: #9b59b6;
+                                    opacity: 0.4;
+                                    margin: 0 auto;
+                                "
+                            ></div>
+                        </div>
+                        <div
+                            style="
+                                flex-shrink: 1;
+                                flex-grow: 0;
+                                text-align: center;
+                                padding: 2px;
+                            "
+                        >
+                            <div
+                                style="
+                                    width: 18px;
+                                    height: 12px;
+                                    background-color: #9b59b6;
+                                    opacity: 0.7;
+                                    margin: 0 auto;
+                                "
+                            ></div>
+                        </div>
+                        <div
+                            style="
+                                flex-grow: 1;
+                                font-weight: 600;
+                                padding-left: 8px;
+                                font-size: 0.8rem;
+                            "
+                        >
+                            > 1000m da escola
+                        </div>
+                    </div>
                 </div>
+                <p class="small text-muted mt-2">
+                    A cor indica a distância à escola mais próxima. A
+                    intensidade da cor indica o número de crianças (&lt; 14
+                    anos) por hexágono.
+                </p>
             </div>
 
             <div class="mb-3">
@@ -161,51 +487,6 @@ title: "Escolas Pré-Escolares"
                     <small>Escola Outro Tipo</small>
                 </div>
             </div>
-        </div>
-
-        <!-- Children Density Section -->
-        <div class="mb-4">
-            <h6 class="fw-bold mb-3">Densidade de Crianças</h6>
-            <div class="d-flex align-items-center mb-2">
-                <div
-                    class="me-2"
-                    style="
-                        width: 20px;
-                        height: 15px;
-                        background-color: #27ae60;
-                        opacity: 0.1;
-                    "
-                ></div>
-                <small>Poucas crianças</small>
-            </div>
-            <div class="d-flex align-items-center mb-2">
-                <div
-                    class="me-2"
-                    style="
-                        width: 20px;
-                        height: 15px;
-                        background-color: #f1c40f;
-                        opacity: 0.4;
-                    "
-                ></div>
-                <small>Algumas crianças</small>
-            </div>
-            <div class="d-flex align-items-center mb-2">
-                <div
-                    class="me-2"
-                    style="
-                        width: 20px;
-                        height: 15px;
-                        background-color: #e74c3c;
-                        opacity: 0.7;
-                    "
-                ></div>
-                <small>Muitas crianças</small>
-            </div>
-            <p class="small text-muted mt-2">
-                A intensidade da cor indica o número de crianças (&lt; 14 anos)
-                por hexágono.
-            </p>
         </div>
 
         <!-- Filters Section -->

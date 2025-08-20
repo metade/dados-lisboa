@@ -1,17 +1,46 @@
 namespace :multibancos do
   directory "tmp/multibancos"
 
+  file "tmp/multibancos/multibancos.geojson" => ["tmp/multibancos"] do |task|
+    mapping = {
+      "ATMExpress" => "ATM Express",
+      "BPI" => "Banco BPI",
+      "Branco BPI" => "Banco BPI",
+      "CGD" => "Caixa Geral de Depósitos",
+      "Euronet Worldwide" => "Euronet",
+      "MB Multibanco" => "Multibanco",
+      "Millenium bcp" => "Millennium bcp",
+      "Millennium BCP" => "Millennium bcp",
+      "Millennium" => "Millennium bcp",
+      "Novo Banco" => "Novobanco",
+      "Santander Totta" => "Santander",
+      "Santander, Multibanco" => "Santander",
+      "multibanco" => "Multibanco"
+    }
+    data = JSON.parse(File.read("data/src/multibancos.geojson"))
+    data["features"].each do |feature|
+      properties = feature.fetch("properties", {})
+      type = properties["brand"] ||
+        properties["operator"] ||
+        properties["name"] ||
+        "Desconhecido"
+
+      feature["properties"]["type"] = mapping[type] || type
+    end
+
+    File.write(task.name, JSON.pretty_generate(data))
+  end
+
   file "tmp/multibancos/h3.geojson": [
-    "tmp/multibancos",
+    "tmp/multibancos/multibancos.geojson",
     "tmp/census_2021/BGRI2021_1106.geojson"
   ] do |task|
-    multibancos_path = "data/src/multibancos.geojson"
-    bgri2021_path = task.sources.last
+    multibancos_path, bgri2021_path = task.sources
     DadosLisboa::H3Visualisation.call(task.name, bgri2021_path, multibancos_path, :population_over_65)
   end
 
   tippecanoe_file "site/assets/data/processed/multibancos.pmtiles": [
-    "data/src/multibancos.geojson",
+    "tmp/multibancos/multibancos.geojson",
     "tmp/multibancos/h3.geojson"
   ]
 
@@ -20,8 +49,9 @@ namespace :multibancos do
   ]
 
   CLEAN_MULTIBANCOS = [
-    "site/assets/data/processed/multibancos.pmtiles",
-    "tmp/multibancos/h3.geojson"
+    "tmp/multibancos/h3.geojson",
+    "tmp/multibancos/multibancos.geojson",
+    "site/assets/data/processed/multibancos.pmtiles"
   ]
   task :clean do
     CLEAN_MULTIBANCOS.each { |file| rm file if File.exist?(file) }

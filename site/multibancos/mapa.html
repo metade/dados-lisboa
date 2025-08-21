@@ -47,14 +47,10 @@ title: "Multibancos"
             <strong class="small">Fontes</strong>
             <ul class="list-unstyled small">
                 <li>
-                    <a href="https://overpass-turbo.eu/s/2afI"> Multibancos </a>
-                    <em class="text-secondary"
-                        >OpenStreetmap via
-                        <a
-                            href="https://wiki.openstreetmap.org/wiki/Overpass_turbo"
-                            >Overpass turbo</a
-                        ></em
-                    >
+                    <a href="https://www.mbway.pt/encontre-um-multibanco/">
+                        Multibancos
+                    </a>
+                    <em class="text-secondary">Site MBWay</em>
                 </li>
                 <li>
                     <a href="https://mapas.ine.pt/download/index2021.phtml">
@@ -505,6 +501,14 @@ title: "Multibancos"
         function createMultibancoPopup(properties, coordinates, options = {}) {
             const fields = [
                 {
+                    label: "Nome",
+                    value: properties.title,
+                },
+                {
+                    label: "Morada",
+                    value: properties.address,
+                },
+                {
                     label: "Tipo",
                     value: properties.type,
                 },
@@ -817,7 +821,6 @@ title: "Multibancos"
                     // Process features to discover types (now using normalized type field)
                     multibancoFeatures.forEach((feature) => {
                         const type = feature.properties.type;
-                        console.log(type);
                         if (type) {
                             types.add(type);
                         }

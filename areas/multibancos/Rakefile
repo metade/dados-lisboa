@@ -1,33 +1,57 @@
 namespace :multibancos do
   directory "tmp/multibancos"
 
+  # file "tmp/multibancos/multibancos.geojson" => ["tmp/multibancos"] do |task|
+  #   mapping = {
+  #     "ATMExpress" => "ATM Express",
+  #     "BPI" => "Banco BPI",
+  #     "Branco BPI" => "Banco BPI",
+  #     "CGD" => "Caixa Geral de Depósitos",
+  #     "Euronet Worldwide" => "Euronet",
+  #     "MB Multibanco" => "Multibanco",
+  #     "Millenium bcp" => "Millennium bcp",
+  #     "Millennium BCP" => "Millennium bcp",
+  #     "Millennium" => "Millennium bcp",
+  #     "Novo Banco" => "Novobanco",
+  #     "Santander Totta" => "Santander",
+  #     "Santander, Multibanco" => "Santander",
+  #     "multibanco" => "Multibanco"
+  #   }
+  #   data = JSON.parse(File.read("data/src/multibancos.geojson"))
+  #   data["features"].each do |feature|
+  #     properties = feature.fetch("properties", {})
+  #     type = properties["brand"] ||
+  #       properties["operator"] ||
+  #       properties["name"] ||
+  #       "Desconhecido"
+
+  #     feature["properties"]["type"] = mapping[type] || type
+  #   end
+
+  #   File.write(task.name, JSON.pretty_generate(data))
+  # end
+
   file "tmp/multibancos/multibancos.geojson" => ["tmp/multibancos"] do |task|
-    mapping = {
-      "ATMExpress" => "ATM Express",
-      "BPI" => "Banco BPI",
-      "Branco BPI" => "Banco BPI",
-      "CGD" => "Caixa Geral de Depósitos",
-      "Euronet Worldwide" => "Euronet",
-      "MB Multibanco" => "Multibanco",
-      "Millenium bcp" => "Millennium bcp",
-      "Millennium BCP" => "Millennium bcp",
-      "Millennium" => "Millennium bcp",
-      "Novo Banco" => "Novobanco",
-      "Santander Totta" => "Santander",
-      "Santander, Multibanco" => "Santander",
-      "multibanco" => "Multibanco"
+    features = JSON.parse(File.read("data/src/multibancos-mbway.json")).map do |data|
+      next unless /lisboa|amadora|telheiras|moscavide|carnaxide|alges|loures|odivelas|mafra|pontinha|moscavide/.match?(data["postal_code"].downcase)
+      {
+        "type" => "Feature",
+        "geometry" => {
+          "type" => "Point",
+          "coordinates" => [data["lng"].to_f, data["lat"].to_f]
+        },
+        "properties" => {
+          "type" => "Multibanco",
+          "title" => data["title"],
+          "address" => [data["street"], data["postal_code"]].join(", ")
+        }
+      }
+    end.compact
+
+    data = {
+      type: "FeatureCollection",
+      features: features
     }
-    data = JSON.parse(File.read("data/src/multibancos.geojson"))
-    data["features"].each do |feature|
-      properties = feature.fetch("properties", {})
-      type = properties["brand"] ||
-        properties["operator"] ||
-        properties["name"] ||
-        "Desconhecido"
-
-      feature["properties"]["type"] = mapping[type] || type
-    end
-
     File.write(task.name, JSON.pretty_generate(data))
   end
 

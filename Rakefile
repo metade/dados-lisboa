@@ -10,6 +10,7 @@ import "areas/census_2021/Rakefile"
 import "areas/multibancos/Rakefile"
 import "areas/pre-escolar/Rakefile"
 import "areas/parques-infantis/Rakefile"
+import "areas/alojamentos_locais/Rakefile"
 
 # MiniTest
 require "rake/testtask"

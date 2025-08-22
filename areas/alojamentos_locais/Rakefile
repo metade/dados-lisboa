@@ -1,0 +1,60 @@
+namespace :alojamentos_locais do
+  directory "tmp/alojamentos_locais"
+  file "tmp/alojamentos_locais/licensed_als.json" => ["tmp/alojamentos_locais"] do |task|
+    data = {}
+    Zlib::GzipReader.open("data/src/sigtur_alojamentos_local.csv.gz") do |gz|
+      CSV.new(gz, headers: true).each do |row|
+        license = row["NrRNAL"]
+        lat, lng = row["LatLong"].tr(",", ".").split(";")
+        data[license] = [lat.to_f, lng.to_f]
+      end
+    end
+    File.write(task.name, JSON.pretty_generate(data))
+  end
+
+  file "tmp/alojamento_locais/alojamento_locais.geojson" => ["tmp/alojamentos_locais/licensed_als.json"] do
+    features = []
+    Zlib::GzipReader.open("data/src/airbnb_listings_lisbon_august_2025.csv.gz") do |gz|
+      CSV.new(gz, headers: true).each do |row|
+        listing = DadosLisboa::AirbnbListing.new(row)
+
+        features << {
+          "type" => "Feature",
+          "geometry" => {
+            "type" => "Point",
+            "coordinates" => listing.coordinates
+          },
+          "properties" => {
+            "type" => "AirBnb",
+            "license" => listing.license,
+            "name" => listing.name,
+            "status" => listing.status,
+            "irregularity" => listing.irregularity
+          }
+        }
+
+        pp features
+        raise row.inspect
+      end
+    end
+
+    data = {
+      type: "FeatureCollection",
+      features: features
+    }
+    File.write(task.name, JSON.pretty_generate(data))
+  end
+
+  task all: [
+    "tmp/alojamento_locais/alojamento_locais.geojson"
+  ]
+
+  CLEAN_ALOJAMENTO_LOCAIS = [
+    "tmp/alojamentos_locais/licensed_als.json",
+    "tmp/alojamento_locais/alojamento_locais.geojson"
+  ]
+  task :clean do
+    CLEAN_ALOJAMENTO_LOCAIS.each { |file| rm file if File.exist?(file) }
+  end
+  CLEAN.include(*CLEAN_ALOJAMENTO_LOCAIS)
+end

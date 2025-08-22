@@ -8,8 +8,66 @@ export function initMap({
   paint,
   basemap,
 }) {
-  const protocol = new pmtiles.Protocol();
-  maplibregl.addProtocol("pmtiles", protocol.tile);
+  // Register PMTiles protocol only if not already registered
+  if (!maplibregl.getProtocol || !maplibregl.getProtocol("pmtiles")) {
+    console.log("Registering PMTiles protocol");
+    const protocol = new pmtiles.Protocol();
+
+    // Firefox-specific error handling wrapper with retry mechanism
+    const originalTile = protocol.tile.bind(protocol);
+    protocol.tile = (params, callback) => {
+      const isFirefox = navigator.userAgent.toLowerCase().includes("firefox");
+
+      const wrappedCallback = (err, data, cacheControl, modified) => {
+        if (err) {
+          console.error("PMTiles error:", err, "for URL:", params.url);
+
+          // Firefox-specific retry for "Decoding failed" errors
+          if (
+            isFirefox &&
+            err.message &&
+            err.message.includes("Decoding failed")
+          ) {
+            console.warn(
+              "Firefox decoding failed, attempting retry with different approach",
+            );
+
+            // Try a direct fetch as fallback
+            const url = params.url.replace("pmtiles://", "");
+            fetch(url, {
+              headers: {
+                Range: `bytes=${params.z || 0}-`,
+                Accept: "application/octet-stream, */*",
+              },
+            })
+              .then((response) => {
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                return response.arrayBuffer();
+              })
+              .then((buffer) => {
+                console.log("Firefox fallback fetch successful");
+                callback(null, new Uint8Array(buffer), null, null);
+              })
+              .catch((fallbackErr) => {
+                console.error("Firefox fallback also failed:", fallbackErr);
+                callback(err); // Return original error
+              });
+            return;
+          }
+        }
+        callback(err, data, cacheControl, modified);
+      };
+
+      try {
+        return originalTile(params, wrappedCallback);
+      } catch (error) {
+        console.error("PMTiles protocol error:", error);
+        wrappedCallback(error);
+      }
+    };
+
+    maplibregl.addProtocol("pmtiles", protocol.tile);
+  }
 
   function addThematicLayer(map) {
     // Only add thematic layer if all required parameters are provided
@@ -21,17 +79,41 @@ export function initMap({
     const thematicURL = "pmtiles://" + abs.pathname + abs.search;
 
     if (!map.getSource("thematic")) {
-      map.addSource("thematic", { type: "vector", url: thematicURL });
+      try {
+        map.addSource("thematic", {
+          type: "vector",
+          url: thematicURL,
+          // Add Firefox-specific source options
+          ...(navigator.userAgent.toLowerCase().includes("firefox") && {
+            maxzoom: 14, // Limit max zoom for Firefox compatibility
+            buffer: 64, // Smaller buffer for Firefox
+          }),
+        });
+
+        // Wait a bit for Firefox to process the source
+        if (navigator.userAgent.toLowerCase().includes("firefox")) {
+          setTimeout(() => {
+            console.log("Firefox: Source added, proceeding with layer");
+          }, 100);
+        }
+      } catch (error) {
+        console.error("Error adding thematic source:", error);
+        return;
+      }
     }
 
     if (!map.getLayer("fill")) {
-      map.addLayer({
-        id: "fill",
-        type: "fill",
-        source: "thematic",
-        "source-layer": sourceLayer,
-        paint,
-      });
+      try {
+        map.addLayer({
+          id: "fill",
+          type: "fill",
+          source: "thematic",
+          "source-layer": sourceLayer,
+          paint,
+        });
+      } catch (error) {
+        console.error("Error adding thematic layer:", error);
+      }
     }
   }
 

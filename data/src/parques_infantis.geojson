@@ -1,13 +1,13 @@
 {
   "type": "FeatureCollection",
+  "name": "POIArLivre",
+  "crs": {
+    "type": "name",
+    "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" }
+  },
   "features": [
     {
       "type": "Feature",
-      "id": 1,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.14106393929911, 38.7553385891792]
-      },
       "properties": {
         "OBJECTID": 1,
         "COD_SIG": "39",
@@ -15,16 +15,15 @@
         "DESIGNACAO": "Parque Infantil da Rua José Duro",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "8a4514a7-e75a-4d8e-82ab-b02733f0e0a7"
+        "GlobalID": "80291a04-0401-4c89-b500-9fbd823ed228"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.14106393929911, 38.755338589179203]
       }
     },
     {
       "type": "Feature",
-      "id": 2,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.17725000231842, 38.7337575528078]
-      },
       "properties": {
         "OBJECTID": 2,
         "COD_SIG": "16",
@@ -32,16 +31,15 @@
         "DESIGNACAO": "Parque Infantil do Parque Urbano da Serafina",
         "GESTAO": "CML",
         "SERVICO_CML": "DPCEV",
-        "GlobalID": "0cc8dd6a-5e08-48c1-8ae0-a4fbc9d23434"
+        "GlobalID": "d9319dc8-11f9-4095-82df-debf0d1aad9a"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.17725000231842, 38.733757552807802]
       }
     },
     {
       "type": "Feature",
-      "id": 3,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.1280881243706, 38.7274409725539]
-      },
       "properties": {
         "OBJECTID": 3,
         "COD_SIG": "96",
@@ -49,16 +47,15 @@
         "DESIGNACAO": "Parque Infantil da Avenida General Roçadas",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "7ff77215-f25c-4873-ab4a-3bc6ff0abced"
+        "GlobalID": "94fcf7db-ce0a-4f44-8db2-80b3f5b1de91"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.128088124370599, 38.7274409725539]
       }
     },
     {
       "type": "Feature",
-      "id": 4,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.17598029844249, 38.7693034756051]
-      },
       "properties": {
         "OBJECTID": 4,
         "COD_SIG": "91",
@@ -66,16 +63,15 @@
         "DESIGNACAO": "Parque Infantil da Alameda Mahatma Gandhi 1",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "5f611341-684c-450d-b217-4f919d8f1e4e"
+        "GlobalID": "707c2179-4b32-4435-bd91-633fd2caecd3"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.175980298442489, 38.769303475605099]
       }
     },
     {
       "type": "Feature",
-      "id": 5,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.19758440162649, 38.75635361566]
-      },
       "properties": {
         "OBJECTID": 5,
         "COD_SIG": "73",
@@ -83,16 +79,15 @@
         "DESIGNACAO": "Parque Infantil do Bairro da Quinta do Charquinho",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "00694161-8166-443d-9707-5009637f4018"
+        "GlobalID": "a696507d-dfb4-4305-9f67-e701906631ae"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.197584401626489, 38.756353615659997]
       }
     },
     {
       "type": "Feature",
-      "id": 6,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.12950337822926, 38.7200042026104]
-      },
       "properties": {
         "OBJECTID": 6,
         "COD_SIG": "90",
@@ -100,16 +95,15 @@
         "DESIGNACAO": "Parque Infantil da Rua Natália Correia",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "79bd0ed6-c4ac-4000-8924-9fd4f4c85631"
+        "GlobalID": "7296a8bf-d166-49c1-9919-1bb91e27d92c"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.129503378229259, 38.720004202610397]
       }
     },
     {
       "type": "Feature",
-      "id": 7,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.10085630390185, 38.7713113668878]
-      },
       "properties": {
         "OBJECTID": 7,
         "COD_SIG": "52",
@@ -117,16 +111,15 @@
         "DESIGNACAO": "Parque Infantil do Largo Ramada Curto, Bairro Quinta das Laranjeiras",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "c52b53c5-d1f3-4124-9102-9c4e2c35e33e"
+        "GlobalID": "e47a522d-9d1e-45ae-9217-fab48fb578d9"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.10085630390185, 38.771311366887801]
       }
     },
     {
       "type": "Feature",
-      "id": 8,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.19652604248471, 38.696730658416]
-      },
       "properties": {
         "OBJECTID": 8,
         "COD_SIG": "105",
@@ -134,16 +127,15 @@
         "DESIGNACAO": "Parque Infantil do Largo do Marquês de Angeja",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "3c4147fe-1c17-431b-8981-d26e2bd6f1e9"
+        "GlobalID": "f66e2667-200c-45a3-a0d4-b68593f07cf5"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.19652604248471, 38.696730658416001]
       }
     },
     {
       "type": "Feature",
-      "id": 9,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.10700767883502, 38.7585472131099]
-      },
       "properties": {
         "OBJECTID": 9,
         "COD_SIG": "10",
@@ -151,16 +143,15 @@
         "DESIGNACAO": "Parque Infantil da Rua de Manhiça",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "c877c244-cff7-411e-8171-fb648b86d17f"
+        "GlobalID": "4595c756-a930-4809-8785-ac59c152653a"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.10700767883502, 38.7585472131099]
       }
     },
     {
       "type": "Feature",
-      "id": 10,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.12689102617998, 38.7125578872511]
-      },
       "properties": {
         "OBJECTID": 10,
         "COD_SIG": "87",
@@ -168,16 +159,15 @@
         "DESIGNACAO": "Parque Infantil da Rua do Vigário",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "237d595b-e98a-45c0-b6d1-596b08dd9bd4"
+        "GlobalID": "355a4b73-0473-45cc-99eb-e2f1346bd515"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.12689102617998, 38.712557887251101]
       }
     },
     {
       "type": "Feature",
-      "id": 11,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.10832590553514, 38.7483579458244]
-      },
       "properties": {
         "OBJECTID": 11,
         "COD_SIG": "135",
@@ -185,16 +175,15 @@
         "DESIGNACAO": "Parque Infantil da Rua Xavier de Magalhães",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "b0d66334-d7e6-4d0c-bd3a-a39301609b8f"
+        "GlobalID": "38562e28-d413-4e9d-a44f-f4cdb333b418"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.108325905535141, 38.748357945824402]
       }
     },
     {
       "type": "Feature",
-      "id": 12,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.21915942374437, 38.6974582788126]
-      },
       "properties": {
         "OBJECTID": 12,
         "COD_SIG": "30",
@@ -202,16 +191,15 @@
         "DESIGNACAO": "Parque Infantil da Rua Duarte Pacheco Pereira",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "1f1bbc8b-6ec8-4e1e-956f-bfa41b01333f"
+        "GlobalID": "c89067ab-e156-4879-aa3a-675f092f3d7a"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.219159423744371, 38.697458278812597]
       }
     },
     {
       "type": "Feature",
-      "id": 13,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.12031331107561, 38.7671731376043]
-      },
       "properties": {
         "OBJECTID": 13,
         "COD_SIG": "115",
@@ -219,16 +207,15 @@
         "DESIGNACAO": "Parque Infantil da Rua Cidade Vila Cabral",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "f93fd52b-3497-4a6c-bc08-62fb664c484c"
+        "GlobalID": "6713604f-7e58-4a5d-bc72-b25509af2e2a"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.120313311075609, 38.767173137604303]
       }
     },
     {
       "type": "Feature",
-      "id": 14,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.19391083474278, 38.706349252846]
-      },
       "properties": {
         "OBJECTID": 14,
         "COD_SIG": "1",
@@ -236,16 +223,15 @@
         "DESIGNACAO": "Parque Infantil do Rio Seco 1",
         "GESTAO": "CML",
         "SERVICO_CML": "DPCEV",
-        "GlobalID": "08c2873d-71a7-4528-beb9-9ce0f0ae74cb"
+        "GlobalID": "c2f9bad8-f6f6-41cb-8a7b-032b11d3c329"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.19391083474278, 38.706349252846003]
       }
     },
     {
       "type": "Feature",
-      "id": 15,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.1295883072978, 38.7258688618904]
-      },
       "properties": {
         "OBJECTID": 15,
         "COD_SIG": "95",
@@ -253,16 +239,15 @@
         "DESIGNACAO": "Parque Infantil da Praça António Sardinha",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "1258fbe7-b18d-416d-bf8a-b8757a1ccde4"
+        "GlobalID": "28d2f3fd-2ac5-4487-87c7-93ea009aeddd"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.1295883072978, 38.725868861890397]
       }
     },
     {
       "type": "Feature",
-      "id": 16,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.19399417986987, 38.703688882902]
-      },
       "properties": {
         "OBJECTID": 16,
         "COD_SIG": "45",
@@ -270,16 +255,15 @@
         "DESIGNACAO": "Parque Infantil do Largo da Boa-Hora",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "a659fd5f-9ff9-45ee-a073-34e4ce38d91b"
+        "GlobalID": "0c785779-8024-4140-a42f-ab60705c28d7"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.19399417986987, 38.703688882902]
       }
     },
     {
       "type": "Feature",
-      "id": 17,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.11634014926282, 38.7251383898458]
-      },
       "properties": {
         "OBJECTID": 17,
         "COD_SIG": "101",
@@ -287,16 +271,15 @@
         "DESIGNACAO": "Parque Infantil da  Rua do Cruzado Osberno",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "88d7d710-df7e-488e-94a2-c0324d9a90df"
+        "GlobalID": "0182874d-1caa-41e1-9a05-a981903f8781"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.11634014926282, 38.725138389845803]
       }
     },
     {
       "type": "Feature",
-      "id": 18,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.15189859909964, 38.7150621369659]
-      },
       "properties": {
         "OBJECTID": 18,
         "COD_SIG": "92",
@@ -304,16 +287,15 @@
         "DESIGNACAO": "Parque Infantil da Praça Flores",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "096f8afd-6ce4-4cff-be09-f29c29bed4c5"
+        "GlobalID": "170b5e04-ede3-48e0-a07d-ff13abc4bfae"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.15189859909964, 38.715062136965898]
       }
     },
     {
       "type": "Feature",
-      "id": 19,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.17460285714332, 38.7101963850466]
-      },
       "properties": {
         "OBJECTID": 19,
         "COD_SIG": "60",
@@ -321,16 +303,15 @@
         "DESIGNACAO": "Parque Infantil da Quinta do Cabrinha",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "dedf52f9-a46a-47fb-9507-bdf14e36eb1e"
+        "GlobalID": "f5b75ba9-d2e2-4e57-ab08-d4b3e991d906"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.17460285714332, 38.710196385046601]
       }
     },
     {
       "type": "Feature",
-      "id": 20,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.120296315292, 38.7551124786126]
-      },
       "properties": {
         "OBJECTID": 20,
         "COD_SIG": "31",
@@ -338,16 +319,15 @@
         "DESIGNACAO": "Parque Infantil do Bairro dos Lóios",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "a41ed040-2ca1-4be3-a944-d0bacc106061"
+        "GlobalID": "1ce01c8b-3bfe-4825-8c24-9c716f10a101"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.120296315292, 38.755112478612602]
       }
     },
     {
       "type": "Feature",
-      "id": 21,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.14401749883432, 38.7479175643962]
-      },
       "properties": {
         "OBJECTID": 21,
         "COD_SIG": "63",
@@ -355,16 +335,15 @@
         "DESIGNACAO": "Parque Infantil da Praça Andrade de Caminha",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "cce1ce4a-d664-4ec3-aafa-4fba6e1c5944"
+        "GlobalID": "0a037db8-574c-4516-bb70-5c76f06bf67d"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.144017498834319, 38.747917564396197]
       }
     },
     {
       "type": "Feature",
-      "id": 22,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.13262061902172, 38.7261723475135]
-      },
       "properties": {
         "OBJECTID": 22,
         "COD_SIG": "68",
@@ -372,16 +351,15 @@
         "DESIGNACAO": "Parque Infantil da  Praça das Novas Nações",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "c59e1ef5-bad8-48e1-803d-c394c7c3ed23"
+        "GlobalID": "a2f05e56-76a0-4902-8acd-69f8879064ec"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.13262061902172, 38.726172347513497]
       }
     },
     {
       "type": "Feature",
-      "id": 23,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.11451962399455, 38.7645973249667]
-      },
       "properties": {
         "OBJECTID": 23,
         "COD_SIG": "24",
@@ -389,16 +367,15 @@
         "DESIGNACAO": "Parque Infantil da Praça Cidade de São Salvador 1",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "c0fa05c2-9149-4a65-a693-8a1700eb65de"
+        "GlobalID": "d2b7fc94-f471-435c-9833-33ae68a94145"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.11451962399455, 38.764597324966701]
       }
     },
     {
       "type": "Feature",
-      "id": 24,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.12351808311191, 38.7160406167907]
-      },
       "properties": {
         "OBJECTID": 24,
         "COD_SIG": "85",
@@ -406,16 +383,15 @@
         "DESIGNACAO": "Parque Infantil do Jardim Botto Machado",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "a8d01a6c-01df-4a3a-9222-13f4295350a3"
+        "GlobalID": "0fd0da95-17fe-436f-abae-fe4b6282ef19"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.123518083111909, 38.7160406167907]
       }
     },
     {
       "type": "Feature",
-      "id": 25,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.20944729150103, 38.712149469193]
-      },
       "properties": {
         "OBJECTID": 25,
         "COD_SIG": "142",
@@ -423,16 +399,15 @@
         "DESIGNACAO": "Parque Infantil do Largo Ocidental",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "d703c27e-f9b1-4f88-aec7-aa68fdc74f3a"
+        "GlobalID": "a556dd9d-0541-412f-a122-37cb04f49277"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.20944729150103, 38.712149469193001]
       }
     },
     {
       "type": "Feature",
-      "id": 26,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.17095066709595, 38.7051573039708]
-      },
       "properties": {
         "OBJECTID": 26,
         "COD_SIG": "98",
@@ -440,16 +415,15 @@
         "DESIGNACAO": "Parque Infantil da Praça da Armada",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "f66a275a-62c8-4302-922e-1c3d13a0d393"
+        "GlobalID": "b0f25b6f-ad78-4de8-8c86-8434fbb6d2cf"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.17095066709595, 38.7051573039708]
       }
     },
     {
       "type": "Feature",
-      "id": 27,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.20017343306209, 38.755129008946]
-      },
       "properties": {
         "OBJECTID": 27,
         "COD_SIG": "33",
@@ -457,16 +431,15 @@
         "DESIGNACAO": "Parque Infantil do Eucaliptal de Benfica",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "bfc21399-d453-4370-90f9-f7a1c09068b7"
+        "GlobalID": "e5be47e3-3302-4c1c-9736-1de1ac6e6ccf"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.200173433062091, 38.755129008946]
       }
     },
     {
       "type": "Feature",
-      "id": 28,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.13439424279663, 38.7492707348544]
-      },
       "properties": {
         "OBJECTID": 28,
         "COD_SIG": "119",
@@ -474,16 +447,15 @@
         "DESIGNACAO": "Parque Infantil Av Estados Unidos da América",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "e4581ce0-5c5c-48dc-9695-3502453b9493"
+        "GlobalID": "561ec047-44ef-42f8-b79a-3a2eae970534"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.134394242796629, 38.749270734854399]
       }
     },
     {
       "type": "Feature",
-      "id": 29,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.10773381253913, 38.7649090160015]
-      },
       "properties": {
         "OBJECTID": 29,
         "COD_SIG": "116",
@@ -491,16 +463,15 @@
         "DESIGNACAO": "Parque Infantil da Rua Cândido de Oliveira",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "ee22b91f-fd71-4ab6-8942-3be1498b2043"
+        "GlobalID": "4710ba0f-59d2-47f6-bf35-16e77eb51f2a"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.107733812539131, 38.764909016001504]
       }
     },
     {
       "type": "Feature",
-      "id": 30,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.18654796250643, 38.7197009812192]
-      },
       "properties": {
         "OBJECTID": 30,
         "COD_SIG": "140",
@@ -508,16 +479,15 @@
         "DESIGNACAO": "Parque Aventura do Parque Recreativo do Alvito",
         "GESTAO": "CML",
         "SERVICO_CML": "DPCEV",
-        "GlobalID": "ac8cb1f3-27db-4023-8cab-d461e0d0b622"
+        "GlobalID": "abd498ea-411e-47d2-94ec-c155c50cae73"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.186547962506429, 38.719700981219198]
       }
     },
     {
       "type": "Feature",
-      "id": 31,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.17927471942446, 38.7049044561506]
-      },
       "properties": {
         "OBJECTID": 31,
         "COD_SIG": "59",
@@ -525,16 +495,15 @@
         "DESIGNACAO": "Parque Infantil do Mercado Rosa Agulhas",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "cfa192ca-0608-4f85-89f5-98b9247112a7"
+        "GlobalID": "877f5554-f81a-4911-b623-93737a1fd43f"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.179274719424461, 38.704904456150601]
       }
     },
     {
       "type": "Feature",
-      "id": 32,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.13700318451016, 38.7462159279732]
-      },
       "properties": {
         "OBJECTID": 32,
         "COD_SIG": "62",
@@ -542,16 +511,15 @@
         "DESIGNACAO": "Parque Infantil da Rua Teixeira de Pascoais",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "be36cf09-d5ee-49ca-b0fb-c3d7334b6e8e"
+        "GlobalID": "e4a5ecb6-3d0e-4699-b0e6-60fe38978adf"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.13700318451016, 38.746215927973203]
       }
     },
     {
       "type": "Feature",
-      "id": 33,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.11740075636688, 38.7615817529445]
-      },
       "properties": {
         "OBJECTID": 33,
         "COD_SIG": "11",
@@ -559,16 +527,15 @@
         "DESIGNACAO": "Parque Infantil da Rua Vila de Bissorã",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "edf9eba0-1d89-4240-8903-6656acba12b4"
+        "GlobalID": "89f4fd18-9bb3-4cda-8dfd-4a3844319297"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.11740075636688, 38.761581752944501]
       }
     },
     {
       "type": "Feature",
-      "id": 34,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.14918617043273, 38.7161099756415]
-      },
       "properties": {
         "OBJECTID": 34,
         "COD_SIG": "93",
@@ -576,16 +543,15 @@
         "DESIGNACAO": "Parque Infantil França Borges / Praça do Príncipe Real",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "51976364-1d27-4dab-a369-127a4b9daaef"
+        "GlobalID": "70237039-f4b4-49b4-9629-708de8a847f7"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.14918617043273, 38.716109975641501]
       }
     },
     {
       "type": "Feature",
-      "id": 35,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.20545276481075, 38.7141167492657]
-      },
       "properties": {
         "OBJECTID": 35,
         "COD_SIG": "46",
@@ -593,16 +559,15 @@
         "DESIGNACAO": "Parque Intergeracional do Largo Oriental",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "f55b3eb0-1bcf-45ca-99fb-298735b9f8bd"
+        "GlobalID": "7aa962a5-b6b8-419d-bb06-6a957b9ff286"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.205452764810749, 38.714116749265699]
       }
     },
     {
       "type": "Feature",
-      "id": 36,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.11134707942277, 38.7288924220433]
-      },
       "properties": {
         "OBJECTID": 36,
         "COD_SIG": "72",
@@ -610,16 +575,15 @@
         "DESIGNACAO": "Parque Infantil da Vila Dias",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "5d0c5426-a1b7-4734-84e4-4f5fdcab66c1"
+        "GlobalID": "70daac1a-00d2-4505-bdaf-094b3e2241d3"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.111347079422769, 38.728892422043302]
       }
     },
     {
       "type": "Feature",
-      "id": 37,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.12394001674078, 38.7381606499895]
-      },
       "properties": {
         "OBJECTID": 37,
         "COD_SIG": "69",
@@ -627,16 +591,15 @@
         "DESIGNACAO": "Parque Infantil da Rua Aquiles Machado",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "4e0b4f04-3848-4dea-8434-edc0048af8c8"
+        "GlobalID": "1714b7d2-496c-4a35-9845-d92325996def"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.12394001674078, 38.738160649989503]
       }
     },
     {
       "type": "Feature",
-      "id": 38,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.18049765812462, 38.7441504794289]
-      },
       "properties": {
         "OBJECTID": 38,
         "COD_SIG": "35",
@@ -644,16 +607,15 @@
         "DESIGNACAO": "Parque Infantil da Praça General Vicente de Freitas",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "3d9fb932-d2d6-4bbc-b6fb-7cf5cd499485"
+        "GlobalID": "df245ad7-28bb-4b17-a382-80b08545faa6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.18049765812462, 38.744150479428903]
       }
     },
     {
       "type": "Feature",
-      "id": 39,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.14485391170485, 38.7433368198827]
-      },
       "properties": {
         "OBJECTID": 39,
         "COD_SIG": "25",
@@ -661,16 +623,15 @@
         "DESIGNACAO": "Parque Infantil do Jardim Marquês de Marialva",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "7a9f7a0f-f67f-40c0-ba80-ca7b95f95a3a"
+        "GlobalID": "598cfa27-940f-4991-9f70-8bb9deacbac6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.14485391170485, 38.7433368198827]
       }
     },
     {
       "type": "Feature",
-      "id": 40,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.16426226228527, 38.7867209463324]
-      },
       "properties": {
         "OBJECTID": 40,
         "COD_SIG": "66",
@@ -678,16 +639,15 @@
         "DESIGNACAO": "Parque Infantil da Rua do Alto do Chapeleiro",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "2512de70-962c-4d48-a9ad-32b434a03f62"
+        "GlobalID": "e851a6eb-0e4d-4f56-bfc2-119a7595c938"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.16426226228527, 38.786720946332402]
       }
     },
     {
       "type": "Feature",
-      "id": 41,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.16554925944836, 38.7793313779297]
-      },
       "properties": {
         "OBJECTID": 41,
         "COD_SIG": "6",
@@ -695,16 +655,15 @@
         "DESIGNACAO": "Parque Infantil da Rua André Gouveia",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "aeb910d2-d980-4165-815c-d090a49511c8"
+        "GlobalID": "b2b86b2e-cf8d-40f6-9bf3-88fbad6f7e45"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.16554925944836, 38.779331377929701]
       }
     },
     {
       "type": "Feature",
-      "id": 42,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.14152723603361, 38.7196009405892]
-      },
       "properties": {
         "OBJECTID": 42,
         "COD_SIG": "27",
@@ -712,16 +671,15 @@
         "DESIGNACAO": "Parque Infantil do Jardim do Torel",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "9e303832-618e-4a18-9348-98e1032ce9ec"
+        "GlobalID": "90d0df48-900e-4ee8-84eb-422f63766069"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.14152723603361, 38.719600940589203]
       }
     },
     {
       "type": "Feature",
-      "id": 43,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.13727760462267, 38.7310585199744]
-      },
       "properties": {
         "OBJECTID": 43,
         "COD_SIG": "99",
@@ -729,16 +687,15 @@
         "DESIGNACAO": "Parque Infantil do Jardim Constantino",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "d87b3c31-d020-4b2d-83f8-e9a3b0edd2ac"
+        "GlobalID": "f3c7f4dc-257a-4822-861e-6a1649eaea66"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.137277604622669, 38.731058519974397]
       }
     },
     {
       "type": "Feature",
-      "id": 44,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.15550578784598, 38.7140382095468]
-      },
       "properties": {
         "OBJECTID": 44,
         "COD_SIG": "41",
@@ -746,16 +703,15 @@
         "DESIGNACAO": "Parque Infantil do Jardim Elisa Baptista de Sousa Pedroso",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "c7da2bf7-9558-41dd-b944-ab64dcc19312"
+        "GlobalID": "a626d698-a55e-44f3-a844-976c682f37bd"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.15550578784598, 38.7140382095468]
       }
     },
     {
       "type": "Feature",
-      "id": 45,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.1106224917207, 38.7603766661425]
-      },
       "properties": {
         "OBJECTID": 45,
         "COD_SIG": "12",
@@ -763,16 +719,15 @@
         "DESIGNACAO": "Parque Infantil da Rua do Dondo 2",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "06feaf3f-b025-492a-862f-d0689062debb"
+        "GlobalID": "e2b3d606-23da-47f4-91cb-92494d8619c1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.110622491720701, 38.760376666142498]
       }
     },
     {
       "type": "Feature",
-      "id": 46,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.19338117813676, 38.7059293118899]
-      },
       "properties": {
         "OBJECTID": 46,
         "COD_SIG": "152",
@@ -780,16 +735,15 @@
         "DESIGNACAO": "Parque Infantil do Rio Seco 2",
         "GESTAO": "CML",
         "SERVICO_CML": "DPCEV",
-        "GlobalID": "bd42eb57-b8a3-49b5-b5b3-e0f42489a16c"
+        "GlobalID": "109eabea-0232-44a9-a698-2150ec41948e"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.193381178136759, 38.705929311889903]
       }
     },
     {
       "type": "Feature",
-      "id": 47,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.10917055189018, 38.7760602427144]
-      },
       "properties": {
         "OBJECTID": 47,
         "COD_SIG": "111",
@@ -797,16 +751,15 @@
         "DESIGNACAO": "Parque Infantil da Rua Alfredo Franco",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "7aeb7bb6-1ac7-4f90-9f47-986b9b5eb3a8"
+        "GlobalID": "55e94265-509a-431e-84cc-0f8b31b6f3d3"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.10917055189018, 38.776060242714401]
       }
     },
     {
       "type": "Feature",
-      "id": 48,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.17862824017303, 38.7618086404394]
-      },
       "properties": {
         "OBJECTID": 48,
         "COD_SIG": "147",
@@ -814,16 +767,15 @@
         "DESIGNACAO": "Parque Infantil Al Roentgen",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "e5d67c6c-9caa-4157-a4b4-feab315c4ea8"
+        "GlobalID": "2719694a-3410-41ba-b976-f81cfe839e9f"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.17862824017303, 38.761808640439398]
       }
     },
     {
       "type": "Feature",
-      "id": 49,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.12743610762572, 38.73487880352]
-      },
       "properties": {
         "OBJECTID": 49,
         "COD_SIG": "100",
@@ -831,16 +783,15 @@
         "DESIGNACAO": "Parque Infantil do Jardim Bulhão Pato",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "46591273-4d24-42c8-9379-64725440d75e"
+        "GlobalID": "00e3e901-55b0-4886-9787-2ede3ef7fbfd"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.127436107625719, 38.734878803519997]
       }
     },
     {
       "type": "Feature",
-      "id": 50,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.1845707875719, 38.7042356562847]
-      },
       "properties": {
         "OBJECTID": 50,
         "COD_SIG": "154",
@@ -848,16 +799,15 @@
         "DESIGNACAO": "Parque Infantil do Jardim Avelar Brotero",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "1628feee-dcdc-4631-a454-bd2a446ece6b"
+        "GlobalID": "2ef872b1-b302-47d6-8999-76baeec3145e"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.1845707875719, 38.704235656284702]
       }
     },
     {
       "type": "Feature",
-      "id": 51,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.15036418284161, 38.7946095545302]
-      },
       "properties": {
         "OBJECTID": 51,
         "COD_SIG": "124",
@@ -865,16 +815,15 @@
         "DESIGNACAO": "Parque Infantil da Urbanização das Galinheiras",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "fabe3633-3e7c-4314-86ed-8bbe1da8f973"
+        "GlobalID": "41d2bef9-afed-4469-bb60-66c8efb8a479"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.15036418284161, 38.794609554530197]
       }
     },
     {
       "type": "Feature",
-      "id": 52,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.1539386321676, 38.7631915239509]
-      },
       "properties": {
         "OBJECTID": 52,
         "COD_SIG": "20",
@@ -882,16 +831,15 @@
         "DESIGNACAO": "Parque Infantil Salgueiro Maia",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "2c81bf86-19ce-44a6-bb43-29572572fa1e"
+        "GlobalID": "843f94e6-9769-4091-a601-b1d17f65e7b5"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.1539386321676, 38.763191523950901]
       }
     },
     {
       "type": "Feature",
-      "id": 53,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.20544612152066, 38.7082817227577]
-      },
       "properties": {
         "OBJECTID": 53,
         "COD_SIG": "15",
@@ -899,16 +847,15 @@
         "DESIGNACAO": "Parque Infantil do Parque Recreativo Moínhos de Santana",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "3dc6ebfa-11f2-4259-b95f-9cf91eb63551"
+        "GlobalID": "5c3c3c80-6180-40c1-96d2-9acdf607d27d"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.20544612152066, 38.708281722757697]
       }
     },
     {
       "type": "Feature",
-      "id": 54,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.13120000656105, 38.7597809885279]
-      },
       "properties": {
         "OBJECTID": 54,
         "COD_SIG": "17",
@@ -916,16 +863,15 @@
         "DESIGNACAO": "Parque Infantil do Parque José Gomes Ferreira",
         "GESTAO": "CML",
         "SERVICO_CML": "DPCEV",
-        "GlobalID": "0c10249c-9be9-4350-b3c8-e54a7f3186aa"
+        "GlobalID": "26157b97-d5ce-462f-a32b-9a7680d11da9"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.13120000656105, 38.759780988527901]
       }
     },
     {
       "type": "Feature",
-      "id": 55,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.17619521748107, 38.7691969294057]
-      },
       "properties": {
         "OBJECTID": 55,
         "COD_SIG": "110",
@@ -933,16 +879,15 @@
         "DESIGNACAO": "Parque Infantil da Alameda Mahatma Gandhi 2",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "c9fd9604-d4cc-4531-a871-2eec5b5e8acd"
+        "GlobalID": "ce00926f-ba6f-44e6-9f40-88a317bd48e9"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.176195217481069, 38.769196929405702]
       }
     },
     {
       "type": "Feature",
-      "id": 56,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.18162795880106, 38.7459587427985]
-      },
       "properties": {
         "OBJECTID": 56,
         "COD_SIG": "54",
@@ -950,16 +895,15 @@
         "DESIGNACAO": "Parque Infantil do Largo do Conde de Bonfim",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "76f6bea6-a23a-42a1-a2d6-21b1f5f7b26c"
+        "GlobalID": "a858d8dc-082a-40cb-8db2-82643b8d13ff"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.181627958801061, 38.7459587427985]
       }
     },
     {
       "type": "Feature",
-      "id": 57,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.1154471446555, 38.7345997461974]
-      },
       "properties": {
         "OBJECTID": 57,
         "COD_SIG": "70",
@@ -967,16 +911,15 @@
         "DESIGNACAO": "Parque Infantil do Bairro da Quinta do Ourives",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "2808ccde-ea59-4261-82c4-6b712ce436c9"
+        "GlobalID": "dc6dc01f-7427-4dd7-9255-52731d3661a0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.1154471446555, 38.734599746197397]
       }
     },
     {
       "type": "Feature",
-      "id": 58,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.17465765407668, 38.7550629380706]
-      },
       "properties": {
         "OBJECTID": 58,
         "COD_SIG": "32",
@@ -984,16 +927,15 @@
         "DESIGNACAO": "Parque Infantil do Bairro de São João",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "361feda8-e9ff-4a3d-8949-4b6dfd955f62"
+        "GlobalID": "1d6543d6-a150-47c4-a0ff-aab697e9ce1b"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.174657654076681, 38.755062938070601]
       }
     },
     {
       "type": "Feature",
-      "id": 59,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.20465605694815, 38.7482875357734]
-      },
       "properties": {
         "OBJECTID": 59,
         "COD_SIG": "18",
@@ -1001,16 +943,15 @@
         "DESIGNACAO": "Parque Infantil do Parque Silva Porto",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "0278bad5-e78a-41ee-a194-94b5e62442e7"
+        "GlobalID": "60a21e35-5734-4932-a734-5405e2510219"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.204656056948149, 38.7482875357734]
       }
     },
     {
       "type": "Feature",
-      "id": 60,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.15390148366974, 38.7449470540328]
-      },
       "properties": {
         "OBJECTID": 60,
         "COD_SIG": "131",
@@ -1018,16 +959,15 @@
         "DESIGNACAO": "Parque Infantil da Rua Julieta Ferrão",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "4589c2dc-d298-4b8c-b136-410bcd620b75"
+        "GlobalID": "c062a3f0-e575-4d63-acff-d4f295c8da84"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.15390148366974, 38.744947054032799]
       }
     },
     {
       "type": "Feature",
-      "id": 61,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.15104504683005, 38.7741916612453]
-      },
       "properties": {
         "OBJECTID": 61,
         "COD_SIG": "22",
@@ -1035,16 +975,15 @@
         "DESIGNACAO": "Parque Infantil do PER 10-Malha 25",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "31a20a83-1960-42a3-a241-d55b9fae38a3"
+        "GlobalID": "1f87a1be-d2a8-4a77-9a9a-89dd04b215f2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.151045046830051, 38.774191661245297]
       }
     },
     {
       "type": "Feature",
-      "id": 62,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.13853394653956, 38.7409778456438]
-      },
       "properties": {
         "OBJECTID": 62,
         "COD_SIG": "103",
@@ -1052,16 +991,15 @@
         "DESIGNACAO": "Parque Infantil da Praça de Londres",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "fa10e3a7-470b-40f8-8b35-e54e05cc4f57"
+        "GlobalID": "0949e84e-78d7-4e2a-80de-bec0a6104dd2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.13853394653956, 38.740977845643798]
       }
     },
     {
       "type": "Feature",
-      "id": 63,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.1542724236525, 38.7280050467927]
-      },
       "properties": {
         "OBJECTID": 63,
         "COD_SIG": "108",
@@ -1069,16 +1007,15 @@
         "DESIGNACAO": "Parque Infantil do Parque Eduardo VII de Inglaterra",
         "GESTAO": "CML",
         "SERVICO_CML": "DPCEV",
-        "GlobalID": "ce479bc0-72ed-4ec4-bee9-93af0e380096"
+        "GlobalID": "a5cb2318-f4f4-4202-aff1-f6692b1f13e8"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.1542724236525, 38.728005046792703]
       }
     },
     {
       "type": "Feature",
-      "id": 64,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.17441046127594, 38.7164202668928]
-      },
       "properties": {
         "OBJECTID": 64,
         "COD_SIG": "44",
@@ -1086,16 +1023,15 @@
         "DESIGNACAO": "Parque Infantil da Avenida de Ceuta",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "292f061e-3d22-4169-b095-cce20ba205df"
+        "GlobalID": "fcdffb48-b4cb-4f55-99ef-eb531eaaee17"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.17441046127594, 38.716420266892797]
       }
     },
     {
       "type": "Feature",
-      "id": 65,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.11256730717488, 38.7398627933256]
-      },
       "properties": {
         "OBJECTID": 65,
         "COD_SIG": "138",
@@ -1103,16 +1039,15 @@
         "DESIGNACAO": "Parque Infantil do Bairro da Quinta da Salgada",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "e1ae1bba-db32-4993-b96f-e727bf6093fb"
+        "GlobalID": "63d72868-6a57-4939-bb5d-891d8311b128"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.11256730717488, 38.739862793325599]
       }
     },
     {
       "type": "Feature",
-      "id": 66,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.1779442807227, 38.7393027399765]
-      },
       "properties": {
         "OBJECTID": 66,
         "COD_SIG": "19",
@@ -1120,16 +1055,15 @@
         "DESIGNACAO": "Parque Infantil do Bairro do Calhau",
         "GESTAO": "CML",
         "SERVICO_CML": "DPCEV",
-        "GlobalID": "25b84946-4ba6-4b9e-87cd-483c2efa1046"
+        "GlobalID": "063bedc3-6781-4178-9e9c-52fa07298fd8"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.1779442807227, 38.739302739976502]
       }
     },
     {
       "type": "Feature",
-      "id": 67,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.12216709812223, 38.7441552577468]
-      },
       "properties": {
         "OBJECTID": 67,
         "COD_SIG": "132",
@@ -1137,16 +1071,15 @@
         "DESIGNACAO": "Parque Infantil da Bela Vista Zona Sul (Área recreativa e desportiva)",
         "GESTAO": "CML",
         "SERVICO_CML": "DPCEV",
-        "GlobalID": "9f566a3d-91f1-4e66-8753-35f6ee0fc9ef"
+        "GlobalID": "be7f6ec9-8758-4186-a8d4-43012c50f10f"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.12216709812223, 38.744155257746797]
       }
     },
     {
       "type": "Feature",
-      "id": 68,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.20678761963531, 38.7501622463305]
-      },
       "properties": {
         "OBJECTID": 68,
         "COD_SIG": "74",
@@ -1154,16 +1087,15 @@
         "DESIGNACAO": "Parque Infantil da Rua João Frederico Ludovice",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "d86ec751-252c-49a9-8a68-4cf433988861"
+        "GlobalID": "7b70f3c1-908c-4bcd-8d88-b5cd1119fde8"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.20678761963531, 38.750162246330497]
       }
     },
     {
       "type": "Feature",
-      "id": 69,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.13981493509345, 38.7496164845089]
-      },
       "properties": {
         "OBJECTID": 69,
         "COD_SIG": "120",
@@ -1171,16 +1103,15 @@
         "DESIGNACAO": "Parque Infantil da Avenida Estados Unidos da América- Lado Nascente",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "b7ebc8e0-6155-4b59-9c87-adfcbbf31234"
+        "GlobalID": "ba817bb4-c1e4-49b6-bc96-595127eabdd9"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.139814935093449, 38.749616484508898]
       }
     },
     {
       "type": "Feature",
-      "id": 70,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.11461439267156, 38.7644035670164]
-      },
       "properties": {
         "OBJECTID": 70,
         "COD_SIG": "149",
@@ -1188,16 +1119,15 @@
         "DESIGNACAO": "Parque Infantil da Praça Cidade de São Salvador 2",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "47a7f57a-73a3-4a1f-9bd6-7dd132f35d0c"
+        "GlobalID": "2f5ca96e-1d03-4225-935f-5766acb90a51"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.114614392671561, 38.764403567016402]
       }
     },
     {
       "type": "Feature",
-      "id": 71,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.16926838418068, 38.75646364459]
-      },
       "properties": {
         "OBJECTID": 71,
         "COD_SIG": "80",
@@ -1205,16 +1135,15 @@
         "DESIGNACAO": "Parque Infantil da Quinta das Fonsecas",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "58303b50-9d4d-4c92-9d0e-4d1628f7c841"
+        "GlobalID": "0e56d0cc-ad65-4c77-b5dc-654ec808be9c"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.169268384180681, 38.756463644589999]
       }
     },
     {
       "type": "Feature",
-      "id": 72,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.17078305088726, 38.7709985440386]
-      },
       "properties": {
         "OBJECTID": 72,
         "COD_SIG": "21",
@@ -1222,16 +1151,15 @@
         "DESIGNACAO": "Parque Infantil da Rua Prof. Alfredo de Sousa",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "025c69db-b3ab-4592-9137-3784cc8f1248"
+        "GlobalID": "0fa3a08e-ec3a-48f3-8926-e75c76e26a59"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.170783050887261, 38.770998544038598]
       }
     },
     {
       "type": "Feature",
-      "id": 73,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.13976349101961, 38.7229094182418]
-      },
       "properties": {
         "OBJECTID": 73,
         "COD_SIG": "94",
@@ -1239,16 +1167,15 @@
         "DESIGNACAO": "Parque Infantil do Jardim Braamcamp Freire",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "88f4ac38-6297-4ade-9c7a-10826cb271a2"
+        "GlobalID": "962da2c3-5450-43a5-8787-c96dc6065cb4"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.139763491019609, 38.722909418241798]
       }
     },
     {
       "type": "Feature",
-      "id": 74,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.17494287249003, 38.741310305073]
-      },
       "properties": {
         "OBJECTID": 74,
         "COD_SIG": "36",
@@ -1256,16 +1183,15 @@
         "DESIGNACAO": "Parque Infantil do Bairro das Furnas",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "5e79ba77-0329-4d25-8176-87406aa586d8"
+        "GlobalID": "27b0be93-e2e3-40ef-a54c-f58bc4238249"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.17494287249003, 38.741310305073]
       }
     },
     {
       "type": "Feature",
-      "id": 75,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.11124234464483, 38.7548603003628]
-      },
       "properties": {
         "OBJECTID": 75,
         "COD_SIG": "112",
@@ -1273,16 +1199,15 @@
         "DESIGNACAO": "Parque Infantil do Bairro das Amendoeiras",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "c517ad93-da32-4cdb-9dc4-54eee16a2094"
+        "GlobalID": "556a4a8c-7f72-415b-986a-f92254e427c5"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.111242344644831, 38.7548603003628]
       }
     },
     {
       "type": "Feature",
-      "id": 76,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.13425524536787, 38.7397458457055]
-      },
       "properties": {
         "OBJECTID": 76,
         "COD_SIG": "141",
@@ -1290,16 +1215,15 @@
         "DESIGNACAO": "Parque Infantil da Praça João do Rio 1",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "9319e468-787c-49fa-b99f-e8170f7aa8de"
+        "GlobalID": "abc32c84-9346-49ab-8172-d332fc3c3bca"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.13425524536787, 38.7397458457055]
       }
     },
     {
       "type": "Feature",
-      "id": 77,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.17589514928359, 38.7620082240944]
-      },
       "properties": {
         "OBJECTID": 77,
         "COD_SIG": "43",
@@ -1307,16 +1231,15 @@
         "DESIGNACAO": "Parque Infantil da Rua Professor Mário de Albuquerque",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "ee065492-d1cb-49e3-8e3f-905c32afc6de"
+        "GlobalID": "7b7f2539-f1fc-4d5b-9fdd-7728253b76ee"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.175895149283591, 38.762008224094401]
       }
     },
     {
       "type": "Feature",
-      "id": 78,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.2145798887114, 38.7161824273824]
-      },
       "properties": {
         "OBJECTID": 78,
         "COD_SIG": "49",
@@ -1324,16 +1247,15 @@
         "DESIGNACAO": "Parque Infantil do Bairro de Caselas",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "8edc9aba-7ff3-4fcf-beb1-5c7417533fd9"
+        "GlobalID": "547c106c-1204-4ed4-beb9-e80ec645dce2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.2145798887114, 38.7161824273824]
       }
     },
     {
       "type": "Feature",
-      "id": 79,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.10885389284706, 38.7454681594077]
-      },
       "properties": {
         "OBJECTID": 79,
         "COD_SIG": "136",
@@ -1341,16 +1263,15 @@
         "DESIGNACAO": "Parque Infantil da Rua  Pedro de Azevedo",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "8bebb36e-0df9-4129-877f-32e03fe10e85"
+        "GlobalID": "00beb89e-39cb-4c70-965c-6ec930b17521"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.10885389284706, 38.7454681594077]
       }
     },
     {
       "type": "Feature",
-      "id": 80,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.17669469434771, 38.7526137016582]
-      },
       "properties": {
         "OBJECTID": 80,
         "COD_SIG": "145",
@@ -1358,16 +1279,15 @@
         "DESIGNACAO": "Parque Infantil do Parque Bensaúde",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "0f85ae5b-f516-45b1-a5b7-f0c3e4bf83fb"
+        "GlobalID": "4a1d86ed-63aa-4e12-92c8-235918cbe4c3"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.176694694347709, 38.752613701658198]
       }
     },
     {
       "type": "Feature",
-      "id": 81,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.12962952840616, 38.726021169717]
-      },
       "properties": {
         "OBJECTID": 81,
         "COD_SIG": "150",
@@ -1375,16 +1295,15 @@
         "DESIGNACAO": "Parque Infantil Inclusivo da Praça António Sardinha",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "d750bb7f-eae4-44a2-8b15-9a3e47e540f7"
+        "GlobalID": "8d51b80e-3bdc-41f6-aa0a-f8598787de7f"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.129629528406159, 38.726021169717001]
       }
     },
     {
       "type": "Feature",
-      "id": 82,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.13428228760425, 38.7394630773476]
-      },
       "properties": {
         "OBJECTID": 82,
         "COD_SIG": "79",
@@ -1392,16 +1311,15 @@
         "DESIGNACAO": "Parque Infantil da Praça João do Rio 2",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "0e0187c2-50b1-49d4-99e0-58120d89d0b9"
+        "GlobalID": "5578d8c9-59f9-4754-b6f0-58d475c78804"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.13428228760425, 38.739463077347601]
       }
     },
     {
       "type": "Feature",
-      "id": 83,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.14398114247029, 38.7500302132237]
-      },
       "properties": {
         "OBJECTID": 83,
         "COD_SIG": "57",
@@ -1409,16 +1327,15 @@
         "DESIGNACAO": "Parque Infantil da Rua António Patrício",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "cfdea67d-0ff9-4a25-91fa-f49242c06c4e"
+        "GlobalID": "de056bf8-e86c-4c78-8d34-d587ee76d288"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.14398114247029, 38.750030213223702]
       }
     },
     {
       "type": "Feature",
-      "id": 84,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.16777390104647, 38.7542572329411]
-      },
       "properties": {
         "OBJECTID": 84,
         "COD_SIG": "127",
@@ -1426,16 +1343,15 @@
         "DESIGNACAO": "Parque Infantil da Azinhaga dos Barros",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "dec20901-141e-4625-968e-81608b8b2d3f"
+        "GlobalID": "5b9939fa-8065-4e3f-a6f1-1aec50a569a1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.16777390104647, 38.7542572329411]
       }
     },
     {
       "type": "Feature",
-      "id": 85,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.16222184259402, 38.7722920757963]
-      },
       "properties": {
         "OBJECTID": 85,
         "COD_SIG": "5",
@@ -1443,16 +1359,15 @@
         "DESIGNACAO": "Parque Infantil da Rua Dr. Henrique Martins Gomes",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "6ef5ced8-e6b9-4178-8bb3-dfdad83a85a0"
+        "GlobalID": "2c862d6d-1963-4e56-9292-7d77bf20cc5c"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.16222184259402, 38.772292075796301]
       }
     },
     {
       "type": "Feature",
-      "id": 86,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.20511952659667, 38.7530759760036]
-      },
       "properties": {
         "OBJECTID": 86,
         "COD_SIG": "53",
@@ -1460,16 +1375,15 @@
         "DESIGNACAO": "Parque Infantil da Rua Lucilia Simões",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "70129c52-c412-4363-8119-57cfbe1fd4d7"
+        "GlobalID": "7c72cedc-cc9d-4830-84d6-7dbaf9297721"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.20511952659667, 38.753075976003601]
       }
     },
     {
       "type": "Feature",
-      "id": 87,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.1916409600141, 38.7509196720466]
-      },
       "properties": {
         "OBJECTID": 87,
         "COD_SIG": "155",
@@ -1477,16 +1391,15 @@
         "DESIGNACAO": "Parque Infantil da Quinta da Granja",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "0f9f23b3-27f7-40e4-8de4-a3601b5d3c8f"
+        "GlobalID": "21c436ec-3434-470f-8253-d1674ee2a83f"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.1916409600141, 38.750919672046599]
       }
     },
     {
       "type": "Feature",
-      "id": 88,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.11069272655824, 38.7600904464807]
-      },
       "properties": {
         "OBJECTID": 88,
         "COD_SIG": "126",
@@ -1494,16 +1407,15 @@
         "DESIGNACAO": "Parque Infantil da Rua de Dondo ",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "00957ea1-5523-44da-b11e-21d4420692bd"
+        "GlobalID": "971cf892-af1b-41b8-b0f4-239a2695cbf1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.11069272655824, 38.760090446480703]
       }
     },
     {
       "type": "Feature",
-      "id": 89,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.19052250066316, 38.7496457994769]
-      },
       "properties": {
         "OBJECTID": 89,
         "COD_SIG": "144",
@@ -1511,16 +1423,15 @@
         "DESIGNACAO": "Parque Infantil da Rua Dr. João do Couto",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "107519fa-03c2-467c-a3e2-73cc8d10ed5c"
+        "GlobalID": "88ed1c01-8983-44d9-9262-e0e4cd91e244"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.19052250066316, 38.749645799476902]
       }
     },
     {
       "type": "Feature",
-      "id": 90,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.18662129457106, 38.7499488662415]
-      },
       "properties": {
         "OBJECTID": 90,
         "COD_SIG": "34",
@@ -1528,16 +1439,15 @@
         "DESIGNACAO": "Parque Infantil do Largo Pedro Correia Marques",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "03e60797-d933-42a4-b14f-374f6e7d9906"
+        "GlobalID": "1bf239a5-1986-467e-8c8b-f09a6a7cda0d"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.18662129457106, 38.749948866241503]
       }
     },
     {
       "type": "Feature",
-      "id": 91,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.14994810009702, 38.7513547951243]
-      },
       "properties": {
         "OBJECTID": 91,
         "COD_SIG": "139",
@@ -1545,16 +1455,15 @@
         "DESIGNACAO": "Parque Infantil do Campo Grande",
         "GESTAO": "CML",
         "SERVICO_CML": "DPCEV",
-        "GlobalID": "e2f4193c-3068-4a2b-b250-67ec8e59decc"
+        "GlobalID": "4fd29698-6257-4840-819b-1418a83d78d5"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.149948100097021, 38.7513547951243]
       }
     },
     {
       "type": "Feature",
-      "id": 92,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.16436521152368, 38.7609537271618]
-      },
       "properties": {
         "OBJECTID": 92,
         "COD_SIG": "3",
@@ -1562,16 +1471,15 @@
         "DESIGNACAO": "Parque Infantil da Rua Professor Francisco Gentil",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "a12dda94-0876-49fb-a252-adf6b6c0fa75"
+        "GlobalID": "b79f248c-cc29-4ba3-b3be-c321387d9938"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.16436521152368, 38.760953727161798]
       }
     },
     {
       "type": "Feature",
-      "id": 93,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.15715137986302, 38.771587820382]
-      },
       "properties": {
         "OBJECTID": 93,
         "COD_SIG": "64",
@@ -1579,16 +1487,15 @@
         "DESIGNACAO": "Parque Infantil do Parque de Quinta das Conchas",
         "GESTAO": "CML",
         "SERVICO_CML": "DPCEV",
-        "GlobalID": "0453b5e1-324b-499e-96aa-a58c5a1eaba8"
+        "GlobalID": "c0f5d105-3263-4a1c-acb7-4432bbabce14"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.15715137986302, 38.771587820382003]
       }
     },
     {
       "type": "Feature",
-      "id": 94,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.15668872863005, 38.7222185534359]
-      },
       "properties": {
         "OBJECTID": 94,
         "COD_SIG": "104",
@@ -1596,16 +1503,15 @@
         "DESIGNACAO": "Parque Infantil do Jardim Marcelino Mesquita",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "492432c2-4da6-4dfc-9fcb-9a413efcb348"
+        "GlobalID": "3aed0cd0-22f5-49b1-86c2-b6471604910b"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.15668872863005, 38.722218553435901]
       }
     },
     {
       "type": "Feature",
-      "id": 95,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.19126333190322, 38.7023904193476]
-      },
       "properties": {
         "OBJECTID": 95,
         "COD_SIG": "42",
@@ -1613,16 +1519,15 @@
         "DESIGNACAO": "Parque Infantil da Rua de Diogo Cão",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "ba8e738b-b95a-4c3a-905b-a63fa93d466b"
+        "GlobalID": "be46d70a-cbc2-41ec-aa4d-557daba3ac43"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.191263331903221, 38.702390419347601]
       }
     },
     {
       "type": "Feature",
-      "id": 96,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.14524680612801, 38.7490470600616]
-      },
       "properties": {
         "OBJECTID": 96,
         "COD_SIG": "81",
@@ -1630,16 +1535,15 @@
         "DESIGNACAO": "Parque Infantil da Avenida Estados Unidos da América",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "c5f8a41d-6765-45e6-886d-a001f729086f"
+        "GlobalID": "798774fe-0c28-4eae-bf8e-1bb081364f97"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.145246806128011, 38.749047060061599]
       }
     },
     {
       "type": "Feature",
-      "id": 97,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.13277503307554, 38.7373006914802]
-      },
       "properties": {
         "OBJECTID": 97,
         "COD_SIG": "61",
@@ -1647,16 +1551,15 @@
         "DESIGNACAO": "Parque Infantil da Alameda Dom Afonso Henriques",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "bffd4729-8f2f-431d-8e79-da3d5ce08570"
+        "GlobalID": "f693aa56-18af-4ae6-bff4-e5bd1cd4cf48"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.132775033075539, 38.7373006914802]
       }
     },
     {
       "type": "Feature",
-      "id": 98,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.21017885546761, 38.7494898900772]
-      },
       "properties": {
         "OBJECTID": 98,
         "COD_SIG": "158",
@@ -1664,16 +1567,15 @@
         "DESIGNACAO": "Parque Infantil da Rua Dr. Cunha Seixas",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "b72e5240-ef5b-4fe2-ac30-473f015c2bf0"
+        "GlobalID": "19c5884b-b878-41f5-b0e8-eb6e25be43d4"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.210178855467611, 38.7494898900772]
       }
     },
     {
       "type": "Feature",
-      "id": 99,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.19049604636185, 38.7210549032427]
-      },
       "properties": {
         "OBJECTID": 99,
         "COD_SIG": "159",
@@ -1681,16 +1583,15 @@
         "DESIGNACAO": "Parque Infantil da Alameda Keil do Amaral",
         "GESTAO": "CML",
         "SERVICO_CML": "DPCEV",
-        "GlobalID": "b2eaa47d-5496-431a-933a-9d1c6cfe18e1"
+        "GlobalID": "094367bf-64de-4e53-93b3-8f46419592b7"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.190496046361851, 38.721054903242702]
       }
     },
     {
       "type": "Feature",
-      "id": 100,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.19424592588695, 38.7270357100465]
-      },
       "properties": {
         "OBJECTID": 100,
         "COD_SIG": "160",
@@ -1698,16 +1599,15 @@
         "DESIGNACAO": "Parque Infantil do Monte Verde",
         "GESTAO": "CML",
         "SERVICO_CML": "DPCEV",
-        "GlobalID": "54dd1d9a-f94b-4c91-9ada-a0819003bbbd"
+        "GlobalID": "2d10c7bb-77aa-4ae5-8a3d-e97bf33bf3fd"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.19424592588695, 38.727035710046501]
       }
     },
     {
       "type": "Feature",
-      "id": 101,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.2065554443106, 38.7447647035033]
-      },
       "properties": {
         "OBJECTID": 101,
         "COD_SIG": "162",
@@ -1715,16 +1615,15 @@
         "DESIGNACAO": "Parque Infantil da Rua Maria Violante Vieira",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "1fe97d4c-3558-4b67-88a7-56470bad1f05"
+        "GlobalID": "d1160854-d8bf-4b14-b73e-43adc33ecf76"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.206555444310601, 38.7447647035033]
       }
     },
     {
       "type": "Feature",
-      "id": 102,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.19680936836982, 38.703113889601]
-      },
       "properties": {
         "OBJECTID": 102,
         "COD_SIG": "163",
@@ -1732,16 +1631,15 @@
         "DESIGNACAO": "Parque Infantil Lisboa Ocidental",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "feb993fb-3b54-4a20-8fc0-9aeeccff9464"
+        "GlobalID": "15492ff6-1954-4e69-9043-335269062429"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.19680936836982, 38.703113889600999]
       }
     },
     {
       "type": "Feature",
-      "id": 103,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.11346896743728, 38.7454669137056]
-      },
       "properties": {
         "OBJECTID": 103,
         "COD_SIG": "168",
@@ -1749,16 +1647,15 @@
         "DESIGNACAO": "Parque Infantil da Avenida João Paulo II",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "5b7d0b7f-0b3a-47e6-85e2-d2d2aec645b3"
+        "GlobalID": "fd8e92cc-e329-4d65-b9ab-127c5ed60897"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.11346896743728, 38.745466913705599]
       }
     },
     {
       "type": "Feature",
-      "id": 104,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.16493366537295, 38.7365865790358]
-      },
       "properties": {
         "OBJECTID": 104,
         "COD_SIG": "169",
@@ -1766,16 +1663,15 @@
         "DESIGNACAO": "Parque Infantil dos Jardins de Campolide",
         "GESTAO": "CML",
         "SERVICO_CML": "DPCEV",
-        "GlobalID": "60f2f024-6244-4a3e-951e-27e4739e8d85"
+        "GlobalID": "1b02295e-1bd8-4619-b8a0-773069611f4a"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.164933665372949, 38.736586579035801]
       }
     },
     {
       "type": "Feature",
-      "id": 105,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.12017596940459, 38.7355822114821]
-      },
       "properties": {
         "OBJECTID": 105,
         "COD_SIG": "175",
@@ -1783,16 +1679,15 @@
         "DESIGNACAO": "Parque Infantil da Rua Carlos Botelho",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "791d2a39-fbac-4f98-8cdf-a737e14caa93"
+        "GlobalID": "bbaeb9ce-e998-4d58-9af1-412a2a57b0e3"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.12017596940459, 38.735582211482097]
       }
     },
     {
       "type": "Feature",
-      "id": 106,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.15246886521984, 38.7730364711953]
-      },
       "properties": {
         "OBJECTID": 106,
         "COD_SIG": "177",
@@ -1800,16 +1695,15 @@
         "DESIGNACAO": "Parque Infantil da Ria Adriana Vecchi 2",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "452835bb-0662-4e22-8e9d-c6245533a0d4"
+        "GlobalID": "bd92736d-c805-4690-8502-0ee1d7adfbb0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.15246886521984, 38.773036471195297]
       }
     },
     {
       "type": "Feature",
-      "id": 107,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.13263639090274, 38.7176246681265]
-      },
       "properties": {
         "OBJECTID": 107,
         "COD_SIG": "178",
@@ -1817,16 +1711,15 @@
         "DESIGNACAO": "Parque Infantil do Jardim da Cerca da Graça 2",
         "GESTAO": "CML",
         "SERVICO_CML": "DPCEV",
-        "GlobalID": "94ef0e18-56b0-4cf7-8ac2-52705c3b75c8"
+        "GlobalID": "6f8c074a-5659-4e4a-9b3a-4923e2ec1653"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.132636390902739, 38.717624668126497]
       }
     },
     {
       "type": "Feature",
-      "id": 108,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.13240365697865, 38.7178130227319]
-      },
       "properties": {
         "OBJECTID": 108,
         "COD_SIG": "179",
@@ -1834,16 +1727,15 @@
         "DESIGNACAO": "Parque Infantil do Jardim da Cerca de Graça 1",
         "GESTAO": "CML",
         "SERVICO_CML": "DPCEV",
-        "GlobalID": "de9a194e-ffff-4972-a344-e40792d2f785"
+        "GlobalID": "7281defb-d7a3-4ce1-bbf4-4e7e75fa881c"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.132403656978649, 38.717813022731903]
       }
     },
     {
       "type": "Feature",
-      "id": 109,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.09258945653561, 38.7816624951013]
-      },
       "properties": {
         "OBJECTID": 109,
         "COD_SIG": "180",
@@ -1851,16 +1743,15 @@
         "DESIGNACAO": "Parque Juvenil  do Parque Tejo",
         "GESTAO": "CML",
         "SERVICO_CML": "DPCEV",
-        "GlobalID": "d437d142-05bc-42ab-803c-5464113ac912"
+        "GlobalID": "2d563b7e-cfdd-42e8-99e3-1fc34e8df96d"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.09258945653561, 38.781662495101301]
       }
     },
     {
       "type": "Feature",
-      "id": 110,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.12142941687316, 38.7696075290726]
-      },
       "properties": {
         "OBJECTID": 110,
         "COD_SIG": "181",
@@ -1868,16 +1759,15 @@
         "DESIGNACAO": "Parque Infantil do Parque Urbano dos Olivais",
         "GESTAO": "CML",
         "SERVICO_CML": "DPCEV",
-        "GlobalID": "b2eca321-273c-4c8b-a401-a987e7e2e8d8"
+        "GlobalID": "05639511-53f1-4e4e-8768-21c8a1b8de1b"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.121429416873159, 38.769607529072601]
       }
     },
     {
       "type": "Feature",
-      "id": 111,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.15841470356425, 38.7710867680989]
-      },
       "properties": {
         "OBJECTID": 111,
         "COD_SIG": "196",
@@ -1885,16 +1775,15 @@
         "DESIGNACAO": "Parque Infantil Quinta dos Lilazes",
         "GESTAO": "CML",
         "SERVICO_CML": "DPCEV",
-        "GlobalID": "8eb19f71-21a3-4f3a-9bc6-fffe2869542e"
+        "GlobalID": "f9af16cc-6def-4279-ae09-7abf7505d872"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.158414703564249, 38.771086768098897]
       }
     },
     {
       "type": "Feature",
-      "id": 112,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.10874800838595, 38.7723799144548]
-      },
       "properties": {
         "OBJECTID": 112,
         "COD_SIG": "197",
@@ -1902,16 +1791,15 @@
         "DESIGNACAO": "Parque Infantil da Quinta Conde d'Arcos",
         "GESTAO": "CML",
         "SERVICO_CML": "DPCEV",
-        "GlobalID": "2654268e-8904-46ed-b182-62bb9eec9b12"
+        "GlobalID": "7c3ee9db-8fe6-4fab-96af-4f644a8fd69a"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.10874800838595, 38.772379914454802]
       }
     },
     {
       "type": "Feature",
-      "id": 113,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.14969724973644, 38.75093586217]
-      },
       "properties": {
         "OBJECTID": 113,
         "COD_SIG": "202",
@@ -1919,16 +1807,15 @@
         "DESIGNACAO": "Parque Juvenil do Campo Grande",
         "GESTAO": "CML",
         "SERVICO_CML": "DPCEV",
-        "GlobalID": "caf0ec1e-5e4b-4dda-a9cc-c9fcf08748e2"
+        "GlobalID": "c21c779e-88a4-492e-8614-03cb76dbda49"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.149697249736439, 38.750935862170003]
       }
     },
     {
       "type": "Feature",
-      "id": 114,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.12311234235464, 38.7486850224904]
-      },
       "properties": {
         "OBJECTID": 114,
         "COD_SIG": "203",
@@ -1936,16 +1823,15 @@
         "DESIGNACAO": "Parque Infantil da Bela Vista Zona Centro",
         "GESTAO": "CML",
         "SERVICO_CML": "DPCEV",
-        "GlobalID": "f9976826-9811-4458-9647-965560f57c7c"
+        "GlobalID": "76048e83-303b-4f04-939f-bbb89e1d68f5"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.12311234235464, 38.748685022490399]
       }
     },
     {
       "type": "Feature",
-      "id": 115,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.15325412786108, 38.7661640142763]
-      },
       "properties": {
         "OBJECTID": 115,
         "COD_SIG": "8",
@@ -1953,16 +1839,15 @@
         "DESIGNACAO": "Parque Infantil do Parque Europa",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "9ae0bf3f-6c85-4f6d-bddf-ce8612cf5f7b"
+        "GlobalID": "8c563dca-3a68-4f10-9b54-6b710d2e3093"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.15325412786108, 38.766164014276299]
       }
     },
     {
       "type": "Feature",
-      "id": 116,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.15074511556897, 38.7390200634566]
-      },
       "properties": {
         "OBJECTID": 116,
         "COD_SIG": "128",
@@ -1970,16 +1855,15 @@
         "DESIGNACAO": "Parque Infantil da Avenida Marquês de Tomar",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "b5a8ec2a-6da1-463f-9bd7-5042fe8f0198"
+        "GlobalID": "1bdeb71f-0f51-460a-92b1-b92e29e744b8"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.15074511556897, 38.7390200634566]
       }
     },
     {
       "type": "Feature",
-      "id": 117,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.17027289055789, 38.7348979518264]
-      },
       "properties": {
         "OBJECTID": 117,
         "COD_SIG": "76",
@@ -1987,16 +1871,15 @@
         "DESIGNACAO": "Parque Infantil do Bairro da Liberdade",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "41eb9e90-06b9-43ae-ada2-7997f608d14e"
+        "GlobalID": "814c9537-dd6e-449a-a32e-f7021bec8d53"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.170272890557889, 38.734897951826397]
       }
     },
     {
       "type": "Feature",
-      "id": 118,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.13483974812717, 38.7162917338569]
-      },
       "properties": {
         "OBJECTID": 118,
         "COD_SIG": "174",
@@ -2004,16 +1887,15 @@
         "DESIGNACAO": "Parque Infantil da Rua do Capelão",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "20396b3c-9063-406f-8870-656030df33d3"
+        "GlobalID": "d55f7988-5d7b-4533-847b-c938719dbd33"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.13483974812717, 38.716291733856899]
       }
     },
     {
       "type": "Feature",
-      "id": 119,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.1609072234254, 38.7853962520992]
-      },
       "properties": {
         "OBJECTID": 119,
         "COD_SIG": "204",
@@ -2021,16 +1903,15 @@
         "DESIGNACAO": "Parque Infantil do Vale da Ameixoeira",
         "GESTAO": "CML",
         "SERVICO_CML": "DPCEV",
-        "GlobalID": "60b4bea1-1312-40e4-8d5f-8eaa62121c82"
+        "GlobalID": "956fc623-aa49-4025-858a-89754f162ad2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.160907223425401, 38.785396252099197]
       }
     },
     {
       "type": "Feature",
-      "id": 120,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.19904700995964, 38.7121896453234]
-      },
       "properties": {
         "OBJECTID": 120,
         "COD_SIG": "205",
@@ -2038,16 +1919,15 @@
         "DESIGNACAO": "Parque Infantil do Bairro 2 de Maio",
         "GESTAO": "CML",
         "SERVICO_CML": "DPCEV",
-        "GlobalID": "d169ba88-bdbb-4643-9f7c-879af391de79"
+        "GlobalID": "52883df3-b973-436d-a458-52108979ab1d"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.19904700995964, 38.712189645323399]
       }
     },
     {
       "type": "Feature",
-      "id": 121,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.12935090689538, 38.747766277968]
-      },
       "properties": {
         "OBJECTID": 121,
         "COD_SIG": "206",
@@ -2055,16 +1935,15 @@
         "DESIGNACAO": "Parque Infantil da Quinta da Montanha",
         "GESTAO": "CML",
         "SERVICO_CML": "DPCEV",
-        "GlobalID": "69c2666e-f4a0-43f5-b0b5-1bc442666d55"
+        "GlobalID": "58db4282-fbe5-4e42-810e-46e35ef563cd"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.129350906895381, 38.747766277967997]
       }
     },
     {
       "type": "Feature",
-      "id": 122,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.21673245672668, 38.7114897258273]
-      },
       "properties": {
         "OBJECTID": 122,
         "COD_SIG": "207",
@@ -2072,16 +1951,15 @@
         "DESIGNACAO": "Parque Infantil da Encosta do Gravato (Aquaparque)",
         "GESTAO": "CML",
         "SERVICO_CML": "DPCEV",
-        "GlobalID": "622ccac5-f0c1-4859-ba0d-11cc17f59654"
+        "GlobalID": "b8119832-add0-4717-b931-864afafa5c0d"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.21673245672668, 38.711489725827299]
       }
     },
     {
       "type": "Feature",
-      "id": 123,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.1317270810578, 38.7126423006056]
-      },
       "properties": {
         "OBJECTID": 123,
         "COD_SIG": "200",
@@ -2089,16 +1967,15 @@
         "DESIGNACAO": "Parque Infantil e de Lazer do Recolhimento",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "aea04672-0c24-4da4-b2bc-587d27158157"
+        "GlobalID": "7f9d5fe8-1501-4e89-8ee2-2e1d1bfc57ec"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.1317270810578, 38.712642300605602]
       }
     },
     {
       "type": "Feature",
-      "id": 124,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.14871056195086, 38.7804651933508]
-      },
       "properties": {
         "OBJECTID": 124,
         "COD_SIG": "201",
@@ -2106,16 +1983,15 @@
         "DESIGNACAO": "Parque Infantil Rua Reis Pinto",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "3bb333b4-3c87-4577-8fc9-9451c0c1c963"
+        "GlobalID": "1c11c7a4-0870-4fe3-b195-299f857c05d6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.14871056195086, 38.7804651933508]
       }
     },
     {
       "type": "Feature",
-      "id": 125,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.10281453579019, 38.7481722921139]
-      },
       "properties": {
         "OBJECTID": 125,
         "COD_SIG": "183",
@@ -2123,16 +1999,15 @@
         "DESIGNACAO": "Parque Infantil da Rua Fernando Mauricio",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "022ffb06-f29c-41c7-b58c-6e7dcfcee317"
+        "GlobalID": "1b2fc2c0-628e-43f7-9787-5d6cb0044829"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.10281453579019, 38.7481722921139]
       }
     },
     {
       "type": "Feature",
-      "id": 126,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.15135118597675, 38.7747875519945]
-      },
       "properties": {
         "OBJECTID": 126,
         "COD_SIG": "187",
@@ -2140,16 +2015,15 @@
         "DESIGNACAO": "Parque Infantil da Alameda da Música 1 ",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "dbcbe32e-df81-4739-a384-9d1ec2e0208d"
+        "GlobalID": "e41a99ad-ebb5-4bda-a325-b3f91969c600"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.15135118597675, 38.7747875519945]
       }
     },
     {
       "type": "Feature",
-      "id": 127,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.15119953360319, 38.7757670562705]
-      },
       "properties": {
         "OBJECTID": 127,
         "COD_SIG": "188",
@@ -2157,16 +2031,15 @@
         "DESIGNACAO": "Parque Infantil da Alameda da Música 2 ",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "4ff0cd9b-78e6-45f1-8c82-d730a1082bac"
+        "GlobalID": "7b725ceb-265f-4995-9892-426eaf8deb5e"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.15119953360319, 38.775767056270503]
       }
     },
     {
       "type": "Feature",
-      "id": 128,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.17710360180322, 38.7554565959065]
-      },
       "properties": {
         "OBJECTID": 128,
         "COD_SIG": "189",
@@ -2174,16 +2047,15 @@
         "DESIGNACAO": "Parque Infantil da Rua Cidade de Cádiz",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "fccccfaa-9fe2-4dc7-b489-5e557e53bc0c"
+        "GlobalID": "b937235b-f8b2-444e-b62f-f94aa8b72176"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.177103601803219, 38.755456595906502]
       }
     },
     {
       "type": "Feature",
-      "id": 129,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.12810865524676, 38.7128511089963]
-      },
       "properties": {
         "OBJECTID": 129,
         "COD_SIG": "190",
@@ -2191,16 +2063,15 @@
         "DESIGNACAO": "Parque Infantil da Rua das Escolas Gerais",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "83f17dae-ec4e-4f61-826a-fa112e217ad6"
+        "GlobalID": "eda7ebd5-c4eb-4175-9448-ac4168fcee3a"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.128108655246759, 38.712851108996297]
       }
     },
     {
       "type": "Feature",
-      "id": 130,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.17138242431871, 38.7239131103878]
-      },
       "properties": {
         "OBJECTID": 130,
         "COD_SIG": "191",
@@ -2208,16 +2079,15 @@
         "DESIGNACAO": "Parque Infantil da Quinta da Bela-Flor",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "7eb37b9d-8213-4bad-9ed5-cc7a4a3b69e2"
+        "GlobalID": "081f7974-2546-4862-8cf8-000013a13199"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.171382424318709, 38.723913110387798]
       }
     },
     {
       "type": "Feature",
-      "id": 131,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.12339686784175, 38.7588558353034]
-      },
       "properties": {
         "OBJECTID": 131,
         "COD_SIG": "199",
@@ -2225,16 +2095,15 @@
         "DESIGNACAO": "Parque Infantil do Vale de Chelas (Zona Norte)",
         "GESTAO": "CML",
         "SERVICO_CML": "DPCEV",
-        "GlobalID": "0e8d1f8d-bee1-411f-a7a0-734909b07811"
+        "GlobalID": "2e980a14-4d57-40ba-b979-068f069a7626"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.12339686784175, 38.7588558353034]
       }
     },
     {
       "type": "Feature",
-      "id": 132,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.21026285824618, 38.7496991001877]
-      },
       "properties": {
         "OBJECTID": 132,
         "COD_SIG": "161",
@@ -2242,16 +2111,15 @@
         "DESIGNACAO": "Parque Infantil da Rua Dr. Cunha Seixas 2",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "5a9af288-828a-4e82-b70d-e62a10e26a98"
+        "GlobalID": "117e8643-d7fe-451e-a487-d53ebca2bcfc"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.21026285824618, 38.749699100187698]
       }
     },
     {
       "type": "Feature",
-      "id": 133,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.16770010061247, 38.7366433649831]
-      },
       "properties": {
         "OBJECTID": 133,
         "COD_SIG": "173",
@@ -2259,16 +2127,15 @@
         "DESIGNACAO": "Parque Infantil da Quinta José Pinto",
         "GESTAO": "CML",
         "SERVICO_CML": "DPCEV",
-        "GlobalID": "095912a2-afd4-44e4-945d-1eaa71adfb72"
+        "GlobalID": "f5f40cf3-e563-4e11-87a2-76fc612408fc"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.167700100612469, 38.736643364983102]
       }
     },
     {
       "type": "Feature",
-      "id": 134,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.12330261907266, 38.7485625190855]
-      },
       "properties": {
         "OBJECTID": 134,
         "COD_SIG": "164",
@@ -2276,16 +2143,15 @@
         "DESIGNACAO": "Parque Juvenil da Bela Vista Zona Centro",
         "GESTAO": "CML",
         "SERVICO_CML": "DPCEV",
-        "GlobalID": "8a09ae81-5e83-473c-972f-b9c1194103e5"
+        "GlobalID": "71008677-c24a-4f32-8015-f12574f0dcb0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.12330261907266, 38.748562519085503]
       }
     },
     {
       "type": "Feature",
-      "id": 135,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.15904776127717, 38.7408263271499]
-      },
       "properties": {
         "OBJECTID": 135,
         "COD_SIG": "146",
@@ -2293,16 +2159,15 @@
         "DESIGNACAO": "Parque Infantil Filipe da Mata",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "2664a78a-cb2d-4485-8fe6-097ccfb2e814"
+        "GlobalID": "e7ce10d0-539f-49ea-9e5b-5d1be8d6e9f7"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.15904776127717, 38.740826327149897]
       }
     },
     {
       "type": "Feature",
-      "id": 136,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.19092287052684, 38.7587791393237]
-      },
       "properties": {
         "OBJECTID": 136,
         "COD_SIG": "77",
@@ -2310,16 +2175,15 @@
         "DESIGNACAO": "Parque Infantil da Rua Guiomar Torresão",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "0326de9d-7be5-4e2d-9a59-d3333cebde93"
+        "GlobalID": "35fbf7f4-6e01-46bc-8c93-09ac2ff0b64a"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.19092287052684, 38.7587791393237]
       }
     },
     {
       "type": "Feature",
-      "id": 137,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.14347500812835, 38.7377645034634]
-      },
       "properties": {
         "OBJECTID": 137,
         "COD_SIG": "129",
@@ -2327,16 +2191,15 @@
         "DESIGNACAO": "Parque Infantil do Jardim Gomes Amorim",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "9892115c-c1b9-4490-bb5a-86de4e501554"
+        "GlobalID": "c0539a7e-7e59-43ca-a941-0f39a8889fec"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.14347500812835, 38.737764503463403]
       }
     },
     {
       "type": "Feature",
-      "id": 138,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.18713377553509, 38.7571652014086]
-      },
       "properties": {
         "OBJECTID": 138,
         "COD_SIG": "78",
@@ -2344,16 +2207,15 @@
         "DESIGNACAO": "Parque Infantil do Jardim Bento Martins",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "46317b80-cf87-48d9-b143-cce741dbe265"
+        "GlobalID": "d0f8db68-bc9c-4d70-9def-a0686f891dc4"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.18713377553509, 38.757165201408597]
       }
     },
     {
       "type": "Feature",
-      "id": 139,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.15785622404981, 38.7151017306206]
-      },
       "properties": {
         "OBJECTID": 139,
         "COD_SIG": "40",
@@ -2361,16 +2223,15 @@
         "DESIGNACAO": "Parque Juvenil do Jardim Guerra Junqueiro",
         "GESTAO": "CML",
         "SERVICO_CML": "DPCEV",
-        "GlobalID": "98eea8d1-0aab-4b3b-a983-c9fad381486f"
+        "GlobalID": "7ddbb82f-0cab-45bd-9b29-20120a6b7a74"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.15785622404981, 38.715101730620603]
       }
     },
     {
       "type": "Feature",
-      "id": 140,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.13655620403266, 38.7429455251641]
-      },
       "properties": {
         "OBJECTID": 140,
         "COD_SIG": "117",
@@ -2378,33 +2239,31 @@
         "DESIGNACAO": "Parque Infantil do Jardim Fernando Peça",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "1939a54f-4a2f-4b91-8b2e-77f0676fb6b7"
+        "GlobalID": "76d2b83b-18ce-48f1-899a-e7cbefbbad1f"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.13655620403266, 38.742945525164103]
       }
     },
     {
       "type": "Feature",
-      "id": 141,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.11702681535509, 38.7214987014993]
-      },
       "properties": {
         "OBJECTID": 141,
         "COD_SIG": "102",
         "MORADA": "Largo de Santos o Novo",
         "DESIGNACAO": "Parque Infantil do Largo de  Santos o Novo",
-        "GESTAO": null,
-        "SERVICO_CML": null,
-        "GlobalID": "69a0ce02-77b4-4d1f-9c93-f22006c2b805"
+        "GESTAO": "JF",
+        "SERVICO_CML": "Não Aplicável",
+        "GlobalID": "8eb56f52-5c84-4299-8376-60a6920c8bb7"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.117026815355089, 38.7214987014993]
       }
     },
     {
       "type": "Feature",
-      "id": 142,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.18637772073849, 38.7399235234298]
-      },
       "properties": {
         "OBJECTID": 142,
         "COD_SIG": "14",
@@ -2412,16 +2271,15 @@
         "DESIGNACAO": "Parque Infantil do Centro de Interpretação de Monsanto",
         "GESTAO": "CML",
         "SERVICO_CML": "DPCEV",
-        "GlobalID": "e99af778-61c7-4988-be0e-11db847402fc"
+        "GlobalID": "3d73ecf4-36da-4368-8bb5-b3ecd8fd06a2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.18637772073849, 38.739923523429802]
       }
     },
     {
       "type": "Feature",
-      "id": 143,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.16957572921592, 38.7678931463423]
-      },
       "properties": {
         "OBJECTID": 143,
         "COD_SIG": "7",
@@ -2429,16 +2287,15 @@
         "DESIGNACAO": "Parque Infantil do Alto da Faia",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "5d0c0d57-84c8-4149-ae8f-cc603b6c54c2"
+        "GlobalID": "4becff4f-57b2-4eec-a7f2-00932257fa04"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.16957572921592, 38.767893146342303]
       }
     },
     {
       "type": "Feature",
-      "id": 144,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.15010427743705, 38.792566378214]
-      },
       "properties": {
         "OBJECTID": 144,
         "COD_SIG": "82",
@@ -2446,16 +2303,15 @@
         "DESIGNACAO": "Parque Infantil das Galinheiras",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "1be9da93-8e4b-4d49-8c87-5e191223948b"
+        "GlobalID": "08d4c8b4-ba35-4a34-8bed-5bc985f10d64"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.15010427743705, 38.792566378213998]
       }
     },
     {
       "type": "Feature",
-      "id": 145,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.12156057342018, 38.7626245282623]
-      },
       "properties": {
         "OBJECTID": 145,
         "COD_SIG": "9",
@@ -2463,16 +2319,15 @@
         "DESIGNACAO": "Parque Infantil da Praça de Bilene",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "ae3c2352-c109-40bf-991f-afe320e20a27"
+        "GlobalID": "10631561-ef60-4625-9fe1-91f43c7a652b"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.121560573420179, 38.7626245282623]
       }
     },
     {
       "type": "Feature",
-      "id": 146,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.17184058318686, 38.7626474244497]
-      },
       "properties": {
         "OBJECTID": 146,
         "COD_SIG": "2",
@@ -2480,16 +2335,15 @@
         "DESIGNACAO": "Parque Infantil da Rua Professor Mark Athias",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "5c1add0a-7004-4f7a-94e1-945a38eaba4e"
+        "GlobalID": "a3578248-f3fc-422e-b0fc-6c1e1a2d5f98"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.17184058318686, 38.762647424449703]
       }
     },
     {
       "type": "Feature",
-      "id": 147,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.16526964300553, 38.7176570528873]
-      },
       "properties": {
         "OBJECTID": 147,
         "COD_SIG": "125",
@@ -2497,16 +2351,15 @@
         "DESIGNACAO": "Parque Infantil do Jardim Teófilo Braga",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "a386261f-cf95-4e0d-ad1e-79186cc8601c"
+        "GlobalID": "ce31f670-3e76-47f7-8e33-d8e384563304"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.16526964300553, 38.717657052887297]
       }
     },
     {
       "type": "Feature",
-      "id": 148,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.14936723384955, 38.7935971666233]
-      },
       "properties": {
         "OBJECTID": 148,
         "COD_SIG": "223",
@@ -2514,16 +2367,15 @@
         "DESIGNACAO": "Parque Intergeracional das Galinheiras",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "adea2161-637b-42a6-91b7-86d636fc7448"
+        "GlobalID": "0eb1894e-dff3-42b3-9ef1-f8106e825bbb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.149367233849549, 38.7935971666233]
       }
     },
     {
       "type": "Feature",
-      "id": 149,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.18005781483864, 38.7564740329699]
-      },
       "properties": {
         "OBJECTID": 149,
         "COD_SIG": "224",
@@ -2531,16 +2383,15 @@
         "DESIGNACAO": "Parque Infantil do Bairro D. Leonor",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "0a15ffd9-2e18-41a3-8792-1e3cbf499f74"
+        "GlobalID": "269a1c38-e8f7-4be8-9cb7-37867a00ff71"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.180057814838641, 38.756474032969898]
       }
     },
     {
       "type": "Feature",
-      "id": 150,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.19026472030794, 38.7455607738347]
-      },
       "properties": {
         "OBJECTID": 150,
         "COD_SIG": "229",
@@ -2548,16 +2399,15 @@
         "DESIGNACAO": "Parque Infantil da Rua Tenente-Coronel Ribeiro dos Reis",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "7a67f77e-8d62-4456-b150-8816c1de1a84"
+        "GlobalID": "1a763a90-22de-46f5-b2f3-2b87f1e4a900"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.19026472030794, 38.745560773834697]
       }
     },
     {
       "type": "Feature",
-      "id": 151,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.13730913035598, 38.7450709792864]
-      },
       "properties": {
         "OBJECTID": 151,
         "COD_SIG": "226",
@@ -2565,16 +2415,15 @@
         "DESIGNACAO": "Parque Infantil do Logradouro da Avenida de Madrid",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "0be1d9ca-ba98-4e90-ae71-e17215ac0800"
+        "GlobalID": "c5e43446-5f03-460a-bfc0-3810dbe6cb90"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.13730913035598, 38.745070979286403]
       }
     },
     {
       "type": "Feature",
-      "id": 152,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.20606711955833, 38.7316533049311]
-      },
       "properties": {
         "OBJECTID": 152,
         "COD_SIG": "228",
@@ -2582,16 +2431,15 @@
         "DESIGNACAO": "Parque Infantil do Bairro da Boavista",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "ee0a4375-3d99-4602-a031-e582e76baefa"
+        "GlobalID": "e1b7762f-f069-4784-a7e8-c486ce24363e"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.20606711955833, 38.7316533049311]
       }
     },
     {
       "type": "Feature",
-      "id": 153,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.15493860559949, 38.7425514381677]
-      },
       "properties": {
         "OBJECTID": 153,
         "COD_SIG": "225",
@@ -2599,16 +2447,15 @@
         "DESIGNACAO": "Parque Infantil do Bairro Santos ao Rego",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "4d77c73c-a990-41b0-ad93-cd0cea50278a"
+        "GlobalID": "874f93c8-5d3a-407d-8311-ca9f1ada8bb1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.15493860559949, 38.742551438167702]
       }
     },
     {
       "type": "Feature",
-      "id": 154,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.14618001824842, 38.7925210541641]
-      },
       "properties": {
         "OBJECTID": 154,
         "COD_SIG": "194",
@@ -2616,16 +2463,15 @@
         "DESIGNACAO": "Parque Infantil do Parque Urbano do Reguengo",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "2b957f41-90d2-4603-96de-9a75ffd492c7"
+        "GlobalID": "45c9bc5a-e683-479b-885a-a4e56f2d89d3"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.146180018248421, 38.792521054164098]
       }
     },
     {
       "type": "Feature",
-      "id": 155,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.14375331146654, 38.7815303776117]
-      },
       "properties": {
         "OBJECTID": 155,
         "COD_SIG": "227",
@@ -2633,16 +2479,15 @@
         "DESIGNACAO": "Parque Infantil da Rua Carlos Aboim Inglez",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "e62b5783-835e-49d4-bdd2-9a1dbed884e8"
+        "GlobalID": "1dc15b51-78b0-4223-acd3-ab00b8895da9"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.14375331146654, 38.781530377611702]
       }
     },
     {
       "type": "Feature",
-      "id": 156,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.11554683395095, 38.7328521861691]
-      },
       "properties": {
         "OBJECTID": 156,
         "COD_SIG": "153",
@@ -2650,16 +2495,15 @@
         "DESIGNACAO": "Parque Infantil da Mata da Madre Deus",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "1cff92c9-3887-4cd1-b869-98c95dcae9c3"
+        "GlobalID": "a37c9119-2e74-492b-888b-abb5768f16f3"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.115546833950949, 38.732852186169097]
       }
     },
     {
       "type": "Feature",
-      "id": 157,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.18707655439252, 38.7439404355797]
-      },
       "properties": {
         "OBJECTID": 157,
         "COD_SIG": "13",
@@ -2667,16 +2511,15 @@
         "DESIGNACAO": "Parque Infantil da Mata de São Domingos de Benfica",
         "GESTAO": "CML",
         "SERVICO_CML": "DPCEV",
-        "GlobalID": "ee54e931-0f12-48f7-856b-94a97c811444"
+        "GlobalID": "72bbf709-a415-4666-b58a-71a30f229503"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.187076554392521, 38.743940435579702]
       }
     },
     {
       "type": "Feature",
-      "id": 158,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.16187575380453, 38.7671202662427]
-      },
       "properties": {
         "OBJECTID": 158,
         "COD_SIG": "4",
@@ -2684,16 +2527,15 @@
         "DESIGNACAO": "Parque Infantil da Praça Rainha Santa",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "a7aa9c8a-1f8a-4e3c-8762-04856273e4e5"
+        "GlobalID": "1330683a-fa47-4fc1-bc73-490b4fa30e6d"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.16187575380453, 38.767120266242699]
       }
     },
     {
       "type": "Feature",
-      "id": 159,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.12316729235878, 38.7219231810742]
-      },
       "properties": {
         "OBJECTID": 159,
         "COD_SIG": "88",
@@ -2701,16 +2543,15 @@
         "DESIGNACAO": "Parque Infantil da Rua General Justiniano Padrel",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "03b476eb-1fbe-4ce2-8046-129a837b2aa6"
+        "GlobalID": "e256d83a-6abf-487e-be2e-2521c297cde3"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.123167292358779, 38.721923181074203]
       }
     },
     {
       "type": "Feature",
-      "id": 160,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.11878692398706, 38.7657093950341]
-      },
       "properties": {
         "OBJECTID": 160,
         "COD_SIG": "166",
@@ -2718,16 +2559,15 @@
         "DESIGNACAO": "Parque Infantil do Vale do Silêncio",
         "GESTAO": "CML",
         "SERVICO_CML": "DPCEV",
-        "GlobalID": "2c0ef9f4-e357-4b4b-b269-3e190d207a31"
+        "GlobalID": "ff869064-996c-49bc-b2e9-aeea5958e274"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.118786923987059, 38.765709395034101]
       }
     },
     {
       "type": "Feature",
-      "id": 161,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.17308213299156, 38.7603372815048]
-      },
       "properties": {
         "OBJECTID": 161,
         "COD_SIG": "167",
@@ -2735,16 +2575,15 @@
         "DESIGNACAO": "Parque Infantil da Rua Rúben Cunha",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "8d7b26b0-2a98-4b30-9875-ebb8a573a121"
+        "GlobalID": "a86343c0-4ecf-4025-8589-2686393cfb7d"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.17308213299156, 38.760337281504803]
       }
     },
     {
       "type": "Feature",
-      "id": 162,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.15021668971143, 38.7796984088428]
-      },
       "properties": {
         "OBJECTID": 162,
         "COD_SIG": "176",
@@ -2752,16 +2591,15 @@
         "DESIGNACAO": "Parque Infantil do Jardim Maria da Luz Ponces de Carvalho",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "be6fec34-aaa3-4e42-b1dd-b91b9391fb1a"
+        "GlobalID": "202ffe58-04c1-48c0-bc63-37d19e6546a1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.15021668971143, 38.779698408842798]
       }
     },
     {
       "type": "Feature",
-      "id": 163,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.15084358353903, 38.7766741551016]
-      },
       "properties": {
         "OBJECTID": 163,
         "COD_SIG": "192",
@@ -2769,16 +2607,15 @@
         "DESIGNACAO": "Parque Infantil  da Alameda da Música 3",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "70447931-d818-4578-b31b-5aaa10d88f78"
+        "GlobalID": "5c515e6c-b6d9-4ed2-bb4c-6b00bde488e9"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.15084358353903, 38.776674155101603]
       }
     },
     {
       "type": "Feature",
-      "id": 164,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.11788202126799, 38.7730457707511]
-      },
       "properties": {
         "OBJECTID": 164,
         "COD_SIG": "193",
@@ -2786,16 +2623,15 @@
         "DESIGNACAO": "Parque Infantil do Jardim de Sto Eugénio",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "f6bb0959-2658-4dde-8a4b-5ce63f5338ec"
+        "GlobalID": "3bd9ef8e-2bb0-410c-9b31-2f81015b204f"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.11788202126799, 38.773045770751096]
       }
     },
     {
       "type": "Feature",
-      "id": 165,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.20341321978706, 38.6963753392992]
-      },
       "properties": {
         "OBJECTID": 165,
         "COD_SIG": "48",
@@ -2803,16 +2639,15 @@
         "DESIGNACAO": "Parque Infantil do Jardim Vasco da Gama",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "417a6faa-09ce-44ac-8035-8e7104f7079b"
+        "GlobalID": "6abe0bd6-b0c1-4bfc-8279-aad52b6e7119"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.203413219787061, 38.696375339299202]
       }
     },
     {
       "type": "Feature",
-      "id": 166,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.20137131169758, 38.7496522275186]
-      },
       "properties": {
         "OBJECTID": 166,
         "COD_SIG": "75",
@@ -2820,16 +2655,15 @@
         "DESIGNACAO": "Parque Infantil da Rua da República Peruana",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "24d0ac13-483f-44df-bd12-ad4d98575de7"
+        "GlobalID": "02644d71-1104-4299-93e1-e541fdb31323"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.20137131169758, 38.749652227518602]
       }
     },
     {
       "type": "Feature",
-      "id": 167,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.21321830625788, 38.7114014062695]
-      },
       "properties": {
         "OBJECTID": 167,
         "COD_SIG": "121",
@@ -2837,16 +2671,15 @@
         "DESIGNACAO": "Parque Infantil das Torres do Restelo",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "230642e9-717c-487b-aa63-ad712b47446a"
+        "GlobalID": "eed949ae-882a-4840-8a16-58ba817646c9"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.213218306257881, 38.711401406269502]
       }
     },
     {
       "type": "Feature",
-      "id": 168,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.16225680572128, 38.7822762963354]
-      },
       "properties": {
         "OBJECTID": 168,
         "COD_SIG": "67",
@@ -2854,16 +2687,15 @@
         "DESIGNACAO": "Parque Infantil da Rua Engº Quartin Graça",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "49118f97-5ba2-40ee-b870-cd8eed71666f"
+        "GlobalID": "3a3a5435-875e-4712-913d-d0197e235486"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.162256805721279, 38.782276296335397]
       }
     },
     {
       "type": "Feature",
-      "id": 169,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.17363744258003, 38.7449365559832]
-      },
       "properties": {
         "OBJECTID": 169,
         "COD_SIG": "37",
@@ -2871,16 +2703,15 @@
         "DESIGNACAO": "Parque Infantil do Jardim Alice Cruz",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "05278b67-0f22-4bb7-bd9d-e18805374cbb"
+        "GlobalID": "3e165a76-27df-43d5-875c-4c419f6f7831"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.173637442580031, 38.744936555983202]
       }
     },
     {
       "type": "Feature",
-      "id": 170,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.14672877778248, 38.7073029683492]
-      },
       "properties": {
         "OBJECTID": 170,
         "COD_SIG": "107",
@@ -2888,16 +2719,15 @@
         "DESIGNACAO": "Parque Infantil do Jardim Sá da Bandeira",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "b221c327-e648-4582-a128-f8c29fa83464"
+        "GlobalID": "0506a3ee-7f47-43e5-a1bf-555c7d111050"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.14672877778248, 38.707302968349197]
       }
     },
     {
       "type": "Feature",
-      "id": 171,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.18045573123954, 38.7670387270346]
-      },
       "properties": {
         "OBJECTID": 171,
         "COD_SIG": "58",
@@ -2905,16 +2735,15 @@
         "DESIGNACAO": "Parque Infantil do Bairro da Horta Nova",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "5156435a-4f0b-4ffb-8b19-14df25e35a55"
+        "GlobalID": "23ae3f69-10ce-4809-b240-69ff8e938002"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.18045573123954, 38.767038727034603]
       }
     },
     {
       "type": "Feature",
-      "id": 172,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.13750608336086, 38.7603324537898]
-      },
       "properties": {
         "OBJECTID": 172,
         "COD_SIG": "118",
@@ -2922,16 +2751,15 @@
         "DESIGNACAO": "Parque Infantil do Bairro da Boa Esperança",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "7de17a0b-1fa9-4c72-b5dd-cd20cee07f0a"
+        "GlobalID": "1e313c3b-d1b6-4977-b71f-bb87b28f3213"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.13750608336086, 38.7603324537898]
       }
     },
     {
       "type": "Feature",
-      "id": 173,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.11331199679057, 38.7747933095193]
-      },
       "properties": {
         "OBJECTID": 173,
         "COD_SIG": "195",
@@ -2939,16 +2767,15 @@
         "DESIGNACAO": "Parque Infantil do Parque Recreativo dos Olivais Norte",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "a9d2b2eb-201d-4557-9697-504737983eb3"
+        "GlobalID": "4098f544-ec26-4f97-ba09-6b3f8957f40a"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.11331199679057, 38.774793309519303]
       }
     },
     {
       "type": "Feature",
-      "id": 174,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.10538012392562, 38.7466528893179]
-      },
       "properties": {
         "OBJECTID": 174,
         "COD_SIG": "182",
@@ -2956,16 +2783,15 @@
         "DESIGNACAO": "Parque Infantil da Quinta das Flores",
         "GESTAO": "CML",
         "SERVICO_CML": "DPCEV",
-        "GlobalID": "3bdb2cb3-f6bf-4877-ac4b-d36c07ba648f"
+        "GlobalID": "5bfa87c6-5de0-4b60-a652-2955a41b313e"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.10538012392562, 38.7466528893179]
       }
     },
     {
       "type": "Feature",
-      "id": 175,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.1519486937081, 38.7729098512128]
-      },
       "properties": {
         "OBJECTID": 175,
         "COD_SIG": "184",
@@ -2973,16 +2799,15 @@
         "DESIGNACAO": "Parque Infantil da Rua Adriana de Vecchi 1",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "5ec2805a-9df2-475c-9a22-ff157d54467f"
+        "GlobalID": "4d64145b-75a6-46a5-b924-e9a7c332fd50"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.1519486937081, 38.772909851212802]
       }
     },
     {
       "type": "Feature",
-      "id": 176,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.09214640983607, 38.7817907668833]
-      },
       "properties": {
         "OBJECTID": 176,
         "COD_SIG": "185",
@@ -2990,16 +2815,15 @@
         "DESIGNACAO": "Parque Infantil  do Parque Tejo",
         "GESTAO": "CML",
         "SERVICO_CML": "DPCEV",
-        "GlobalID": "98da78a1-243c-4cd2-821a-2d42be727156"
+        "GlobalID": "817997f3-f19c-4066-9188-7a26e2504175"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.09214640983607, 38.781790766883297]
       }
     },
     {
       "type": "Feature",
-      "id": 177,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.09477713470671, 38.7543952023568]
-      },
       "properties": {
         "OBJECTID": 177,
         "COD_SIG": "186",
@@ -3007,16 +2831,15 @@
         "DESIGNACAO": "Parque Infantil do Passeio de Neptuno",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "87b06887-cf82-436d-9b96-53437bd2470e"
+        "GlobalID": "d0fefb5d-5890-44c0-85d4-a71dbbd13973"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.09477713470671, 38.754395202356797]
       }
     },
     {
       "type": "Feature",
-      "id": 178,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.12276159301887, 38.755916075169]
-      },
       "properties": {
         "OBJECTID": 178,
         "COD_SIG": "198",
@@ -3024,16 +2847,15 @@
         "DESIGNACAO": "Parque Infantil do Vale de Chelas (Zona Sul)",
         "GESTAO": "CML",
         "SERVICO_CML": "DPCEV",
-        "GlobalID": "2cf9fda6-46d2-4a4d-8a5b-72b82ba11d39"
+        "GlobalID": "e89bdb7b-a5c0-4a73-ac85-acfade481640"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.12276159301887, 38.755916075168997]
       }
     },
     {
       "type": "Feature",
-      "id": 179,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.11906397729695, 38.7456042132452]
-      },
       "properties": {
         "OBJECTID": 179,
         "COD_SIG": "170",
@@ -3041,16 +2863,15 @@
         "DESIGNACAO": "Parque Infantil do Bairro do Armador",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "da18dfe1-c006-4c02-94a9-9dd8ea568295"
+        "GlobalID": "d86343e3-276a-44f6-a62f-bd7d2f31c29f"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.11906397729695, 38.745604213245201]
       }
     },
     {
       "type": "Feature",
-      "id": 180,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.16143563239311, 38.779484150402]
-      },
       "properties": {
         "OBJECTID": 180,
         "COD_SIG": "171",
@@ -3058,16 +2879,15 @@
         "DESIGNACAO": "Parque Infantil da Quinta de Santa Clara",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "393a6af0-83ab-4a02-818c-dde3630077d1"
+        "GlobalID": "e0a2ae1a-e784-4a1d-b1f2-fcf06461d79c"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.161435632393109, 38.779484150401998]
       }
     },
     {
       "type": "Feature",
-      "id": 181,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.15815308391151, 38.7147201218598]
-      },
       "properties": {
         "OBJECTID": 181,
         "COD_SIG": "89",
@@ -3075,33 +2895,31 @@
         "DESIGNACAO": "Parque Infantil do Jardim Guerra Junqueiro",
         "GESTAO": "CML",
         "SERVICO_CML": "DPCEV",
-        "GlobalID": "a6ebf17b-d9b3-42a6-a59c-13bd2f015cba"
+        "GlobalID": "ea08d2df-3a55-430c-bb5b-1fb6800bd344"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.158153083911509, 38.714720121859798]
       }
     },
     {
       "type": "Feature",
-      "id": 182,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.11013566548293, 38.7616451758416]
-      },
       "properties": {
         "OBJECTID": 182,
         "COD_SIG": "220",
         "MORADA": "Avenida Cidade de Luanda",
         "DESIGNACAO": "Parque Infantil da Avenida Cidade de Luanda",
-        "GESTAO": "JF",
-        "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "3fbd159b-a7d4-43e8-a7bc-efa68d03ed28"
+        "GESTAO": null,
+        "SERVICO_CML": null,
+        "GlobalID": "18d4b176-076f-4e92-914a-02e1da1ad424"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.110135665482931, 38.761645175841601]
       }
     },
     {
       "type": "Feature",
-      "id": 183,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.19133120927486, 38.7517666691146]
-      },
       "properties": {
         "OBJECTID": 183,
         "COD_SIG": "165",
@@ -3109,16 +2927,15 @@
         "DESIGNACAO": "Parque Infantil da Quinta da Granja",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "f6cd1615-5157-4483-b821-9f03be9142b8"
+        "GlobalID": "07ae5049-7b0e-43a2-b7a1-d695235a2960"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.19133120927486, 38.751766669114602]
       }
     },
     {
       "type": "Feature",
-      "id": 184,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.18847643254216, 38.7382736897529]
-      },
       "properties": {
         "OBJECTID": 184,
         "COD_SIG": "211",
@@ -3126,16 +2943,15 @@
         "DESIGNACAO": "Parque Infantil Monte das Perdizes",
         "GESTAO": "CML",
         "SERVICO_CML": "DPCEV",
-        "GlobalID": "19d24869-9025-429d-b5fa-9092c57e9a94"
+        "GlobalID": "287f828b-5dec-4065-a287-bf09c8400068"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.18847643254216, 38.738273689752901]
       }
     },
     {
       "type": "Feature",
-      "id": 185,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.11236815089844, 38.745354035309]
-      },
       "properties": {
         "OBJECTID": 185,
         "COD_SIG": "212",
@@ -3143,16 +2959,15 @@
         "DESIGNACAO": "Parque Infantil Bairro do Condado",
         "GESTAO": "CML",
         "SERVICO_CML": "DPCEV",
-        "GlobalID": "36c37a47-e8f5-4d2d-8035-190adcc2b5cb"
+        "GlobalID": "937ca313-ff75-4693-a4e7-012b29f59e8b"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.11236815089844, 38.745354035308999]
       }
     },
     {
       "type": "Feature",
-      "id": 186,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.16158670559123, 38.7741397245479]
-      },
       "properties": {
         "OBJECTID": 186,
         "COD_SIG": "214",
@@ -3160,16 +2975,15 @@
         "DESIGNACAO": "Parque Infantil Rua Prof. Manuel Valadares",
         "GESTAO": "CML",
         "SERVICO_CML": "DPCEV",
-        "GlobalID": "441f8077-8ddc-4b60-8285-c02497763415"
+        "GlobalID": "2c208f1c-e89b-43be-ab2e-ba880befe64c"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.16158670559123, 38.774139724547901]
       }
     },
     {
       "type": "Feature",
-      "id": 187,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.16232163266472, 38.7261136946693]
-      },
       "properties": {
         "OBJECTID": 187,
         "COD_SIG": "215",
@@ -3177,33 +2991,31 @@
         "DESIGNACAO": "Parque Infantil Rua de Campolide",
         "GESTAO": "CML",
         "SERVICO_CML": "DPCEV",
-        "GlobalID": "92e30f39-f946-418f-99e0-e3a7c1081529"
+        "GlobalID": "d5803de4-7fa7-404c-887f-03293be33420"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.162321632664719, 38.726113694669301]
       }
     },
     {
       "type": "Feature",
-      "id": 188,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.13298602465877, 38.7085206990269]
-      },
       "properties": {
         "OBJECTID": 188,
         "COD_SIG": "216",
         "MORADA": "Largo José Saramago",
-        "DESIGNACAO": "Espaço Lúdico II do Campo das Cebolas",
+        "DESIGNACAO": "Campo das Cebolas - Espaço Lúdico II",
         "GESTAO": "CML",
         "SERVICO_CML": "DPCEV",
-        "GlobalID": "fc0cd3ec-c722-4115-937e-967b06e33706"
+        "GlobalID": "c9fd354b-b1d7-4893-9573-5e198ff75d05"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.13298602465877, 38.708520699026899]
       }
     },
     {
       "type": "Feature",
-      "id": 189,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.10704030774187, 38.7429195774389]
-      },
       "properties": {
         "OBJECTID": 189,
         "COD_SIG": "137",
@@ -3211,33 +3023,31 @@
         "DESIGNACAO": "Parque Infantil da Rua de José do Patrocínio",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "504117ac-da9a-4fd2-854d-53205fa0c869"
+        "GlobalID": "b408be02-b628-464c-a244-7a52a863ba46"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.107040307741871, 38.742919577438897]
       }
     },
     {
       "type": "Feature",
-      "id": 190,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.10810686304434, 38.7408118189157]
-      },
       "properties": {
         "OBJECTID": 190,
         "COD_SIG": "217",
         "MORADA": "Rua Alberto José Pessoa(antigo Imp. F e Troço da Rua F da Zona L de Chelas)",
         "DESIGNACAO": "Parque Infantil da Rua Alberto José Pessoa",
-        "GESTAO": "JF",
-        "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "d751b1ca-a42c-44a0-994c-f0639b2e94fe"
+        "GESTAO": null,
+        "SERVICO_CML": null,
+        "GlobalID": "4a219d0c-87ef-4362-8a46-f2fa38ae0402"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.108106863044339, 38.740811818915702]
       }
     },
     {
       "type": "Feature",
-      "id": 191,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.14823749997495, 38.7788080357637]
-      },
       "properties": {
         "OBJECTID": 191,
         "COD_SIG": "221",
@@ -3245,33 +3055,31 @@
         "DESIGNACAO": "Parque Infantil Rua Luís Sá",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "75f56aa4-97dc-43b0-b4f9-2f6e71f1d0d4"
+        "GlobalID": "99ddf555-6bc1-4c90-acdc-9ba124a7a54b"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.14823749997495, 38.778808035763703]
       }
     },
     {
       "type": "Feature",
-      "id": 192,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.10647470901371, 38.7614606277134]
-      },
       "properties": {
         "OBJECTID": 192,
         "COD_SIG": "218",
         "MORADA": "Rua Almada Negreiros",
         "DESIGNACAO": "Parque Infantil da Rua Almada Negreiros",
-        "GESTAO": "JF",
-        "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "551e18a1-48d5-4e7d-9d51-e54eeac2ad2c"
+        "GESTAO": null,
+        "SERVICO_CML": null,
+        "GlobalID": "c9c1a120-43ac-4a4f-b38f-4ae71e4aab6f"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.10647470901371, 38.761460627713397]
       }
     },
     {
       "type": "Feature",
-      "id": 193,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.20133045063582, 38.703196792175]
-      },
       "properties": {
         "OBJECTID": 193,
         "COD_SIG": "222",
@@ -3279,16 +3087,15 @@
         "DESIGNACAO": "Parque Infantil da Memória",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "9cf7ba88-6212-4cf6-8e06-c535f5b2566d"
+        "GlobalID": "18028762-a9e3-4526-8430-5079f6874a8b"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.201330450635821, 38.703196792175]
       }
     },
     {
       "type": "Feature",
-      "id": 194,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.19670841997051, 38.7591387043305]
-      },
       "properties": {
         "OBJECTID": 194,
         "COD_SIG": "172",
@@ -3296,16 +3103,15 @@
         "DESIGNACAO": "Parque Infantil Bairro Bom Nome",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "561fa428-b969-4286-aa71-b2ca17b2a533"
+        "GlobalID": "36a6b98d-d6aa-455a-93d8-6a0f7e05971e"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.196708419970509, 38.759138704330503]
       }
     },
     {
       "type": "Feature",
-      "id": 195,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.13291058485185, 38.7294476472255]
-      },
       "properties": {
         "OBJECTID": 195,
         "COD_SIG": "230",
@@ -3313,33 +3119,31 @@
         "DESIGNACAO": "Parque Infantil Jardim do Caracol da Penha",
         "GESTAO": "CML",
         "SERVICO_CML": "DPCEV",
-        "GlobalID": "62992741-8740-48fb-8ae5-4941e333818a"
+        "GlobalID": "70398f9e-6a1f-4798-b454-82bffdc6ce99"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.132910584851849, 38.729447647225498]
       }
     },
     {
       "type": "Feature",
-      "id": 196,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.16284677978943, 38.7377649876384]
-      },
       "properties": {
         "OBJECTID": 196,
         "COD_SIG": "232",
         "MORADA": "Avenida Columbano Bordalo Pinheiro",
-        "DESIGNACAO": "Espaço Lúdico do Parque Gonçalo Ribeiro Telles",
+        "DESIGNACAO": "Espaço Lúdico Parque Gonçalo Ribeiro Telles",
         "GESTAO": "SRU",
         "SERVICO_CML": "SRU",
-        "GlobalID": "bc60b5db-1a3d-46d0-a14f-a673e5b03e29"
+        "GlobalID": "8786fcaf-983b-4a15-b429-d593ecbc419c"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.16284677978943, 38.7377649876384]
       }
     },
     {
       "type": "Feature",
-      "id": 197,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.21652532890805, 38.7119742766756]
-      },
       "properties": {
         "OBJECTID": 197,
         "COD_SIG": "233",
@@ -3347,67 +3151,63 @@
         "DESIGNACAO": "Parque Infantil da Qtª. de Stº. António",
         "GESTAO": "CML",
         "SERVICO_CML": "DPCEV",
-        "GlobalID": "0a8a9c24-0ead-45c5-b8c3-1209c8c498d4"
+        "GlobalID": "fbe03358-eca7-4766-bcd2-2e767a5b8ca6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.21652532890805, 38.711974276675598]
       }
     },
     {
       "type": "Feature",
-      "id": 198,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.16104257709082, 38.7859035220956]
-      },
       "properties": {
         "OBJECTID": 198,
         "COD_SIG": "234",
         "MORADA": "Estrada do Desvio",
-        "DESIGNACAO": "Espaço Lúdico do Vale da Ameixoeira Poente",
+        "DESIGNACAO": "Área Lúdica do Vale da Ameixoeira Poente",
         "GESTAO": "CML",
         "SERVICO_CML": "DPCEV",
-        "GlobalID": "12937b59-5d53-450e-ae29-851852507b99"
+        "GlobalID": "9f28a68a-869a-4d7d-9146-be89d5e30d69"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.16104257709082, 38.785903522095602]
       }
     },
     {
       "type": "Feature",
-      "id": 199,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.13257402739804, 38.7084317663295]
-      },
       "properties": {
         "OBJECTID": 199,
         "COD_SIG": "236",
         "MORADA": "Largo José Saramago",
-        "DESIGNACAO": "Espaço Lúdico III do Campo das Cebolas",
+        "DESIGNACAO": "Campo das Cebolas - Espaço Lúdico III",
         "GESTAO": "CML",
         "SERVICO_CML": "DPCEV",
-        "GlobalID": "0411055e-2fbf-4639-b7c8-1a955e332c52"
+        "GlobalID": "5ab3c785-20b5-4978-b28f-bbbd4c53d66a"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.132574027398039, 38.708431766329497]
       }
     },
     {
       "type": "Feature",
-      "id": 200,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.1333213886963, 38.7089110912002]
-      },
       "properties": {
         "OBJECTID": 200,
         "COD_SIG": "235",
         "MORADA": "Largo José Saramago",
-        "DESIGNACAO": "Espaço Lúdico I do Campo das Cebolas ",
+        "DESIGNACAO": "Campo das Cebolas - Espaço Lúdico I",
         "GESTAO": "CML",
         "SERVICO_CML": "DPCEV",
-        "GlobalID": "364d122d-0d77-4559-9432-0565136bd5fd"
+        "GlobalID": "720892d9-8ff6-49d9-9efa-e45fe3c38338"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.133321388696301, 38.7089110912002]
       }
     },
     {
       "type": "Feature",
-      "id": 201,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.09744712490799, 38.7442866294083]
-      },
       "properties": {
         "OBJECTID": 201,
         "COD_SIG": "209",
@@ -3415,33 +3215,31 @@
         "DESIGNACAO": "Parque Infantil Oriente",
         "GESTAO": "CML",
         "SERVICO_CML": "DPCEV",
-        "GlobalID": "c7327e1e-eda1-44ae-8294-ab2bff02e3e6"
+        "GlobalID": "b799bb25-ea2f-4cef-baef-9a05fb3e4266"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.09744712490799, 38.7442866294083]
       }
     },
     {
       "type": "Feature",
-      "id": 202,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.11132126557913, 38.7521481410552]
-      },
       "properties": {
         "OBJECTID": 202,
         "COD_SIG": "238",
         "MORADA": "Rua Luiz Pacheco",
         "DESIGNACAO": "Parque Infantil da Rua Luiz Pacheco",
-        "GESTAO": "JF",
-        "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "0fdbae78-ceeb-404b-a7cf-4527a08daee9"
+        "GESTAO": null,
+        "SERVICO_CML": null,
+        "GlobalID": "469a1517-b82a-454a-8cc3-ebf3a4ccc123"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.11132126557913, 38.752148141055201]
       }
     },
     {
       "type": "Feature",
-      "id": 203,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.16239978752902, 38.7843868522429]
-      },
       "properties": {
         "OBJECTID": 203,
         "COD_SIG": "213",
@@ -3449,16 +3247,15 @@
         "DESIGNACAO": "Parque Infantil Vale da Ameixoeira Poente",
         "GESTAO": "CML",
         "SERVICO_CML": "DPCEV",
-        "GlobalID": "28f01916-6edd-41b9-a4fa-dd7f62b903f7"
+        "GlobalID": "fe6e3da3-8403-4bc1-8681-8a577a55e6b6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.16239978752902, 38.784386852242903]
       }
     },
     {
       "type": "Feature",
-      "id": 204,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.09877009987153, 38.7430913166569]
-      },
       "properties": {
         "OBJECTID": 204,
         "COD_SIG": "210",
@@ -3466,16 +3263,15 @@
         "DESIGNACAO": "Parque Infantil Braço de Prata",
         "GESTAO": "CML",
         "SERVICO_CML": "DPCEV",
-        "GlobalID": "ceb91850-d448-4d5a-b02b-ebddfe1693b8"
+        "GlobalID": "7199906d-8eb1-476c-9e44-7bb9a349b358"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.09877009987153, 38.743091316656901]
       }
     },
     {
       "type": "Feature",
-      "id": 205,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.1591074566687, 38.7380089690187]
-      },
       "properties": {
         "OBJECTID": 205,
         "COD_SIG": "231",
@@ -3483,16 +3279,15 @@
         "DESIGNACAO": "Parque Infantil e Juvenil Parque Gonçalo Ribeiro Telles",
         "GESTAO": "SRU",
         "SERVICO_CML": "SRU",
-        "GlobalID": "e7b37674-91ce-44b1-94c2-b4cd4b8299c4"
+        "GlobalID": "4916b539-d80b-4326-8507-817527a763bf"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.1591074566687, 38.738008969018701]
       }
     },
     {
       "type": "Feature",
-      "id": 206,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.2018263713976, 38.7519942414598]
-      },
       "properties": {
         "OBJECTID": 206,
         "COD_SIG": "237",
@@ -3500,16 +3295,15 @@
         "DESIGNACAO": "Parque Infantil Jardim Carlos Consiglieri",
         "GESTAO": "CML",
         "SERVICO_CML": "DPCEV",
-        "GlobalID": "d24780ad-638d-4a63-900f-adaebb535fef"
+        "GlobalID": "2cf66eca-b098-40c8-86f2-9a5fd22e7396"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.201826371397599, 38.751994241459798]
       }
     },
     {
       "type": "Feature",
-      "id": 207,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.18434641381417, 38.7687036643022]
-      },
       "properties": {
         "OBJECTID": 207,
         "COD_SIG": "208",
@@ -3517,126 +3311,11 @@
         "DESIGNACAO": "Parque Infantil e Lúdico da Quinta das Camareiras",
         "GESTAO": "JF",
         "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "d80741c2-265f-464a-8849-807dc3429559"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 208,
+        "GlobalID": "d9eeadd6-f3c5-4ad8-85df-e60a79b7b68f"
+      },
       "geometry": {
         "type": "Point",
-        "coordinates": [-9.14924260886626, 38.7822808526181]
-      },
-      "properties": {
-        "OBJECTID": 208,
-        "COD_SIG": "239",
-        "MORADA": "Rua Bernardo Marques(antigo Impasse à Rua 8 do Alto do Lumiar)",
-        "DESIGNACAO": "Parque Infantil da Rua Bernardo Marques",
-        "GESTAO": "JF",
-        "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "05d09944-5c2e-405b-a095-1edbef7e255b"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 209,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.09345570175379, 38.7776249626711]
-      },
-      "properties": {
-        "OBJECTID": 209,
-        "COD_SIG": "240",
-        "MORADA": "Rua da Ilha dos Amores",
-        "DESIGNACAO": "Parque Infantil da Escola EB Vasco da Gama",
-        "GESTAO": "CML",
-        "SERVICO_CML": "DPCEV",
-        "GlobalID": "d4a26485-1093-4248-adad-5e0996a61e61"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 210,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.12560113964803, 38.7655550395126]
-      },
-      "properties": {
-        "OBJECTID": 210,
-        "COD_SIG": "241",
-        "MORADA": "Rua Cidade da Beira(antigas Ruas B1 e B6 de Olivais Sul)",
-        "DESIGNACAO": "Parque Infantil na Rua Cidade da Beira",
-        "GESTAO": "CML",
-        "SERVICO_CML": "DPCEV",
-        "GlobalID": "d99b7a9a-1e60-4fb8-9338-89b2cfae6252"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 211,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.14428479686235, 38.7773339657924]
-      },
-      "properties": {
-        "OBJECTID": 211,
-        "COD_SIG": "242",
-        "MORADA": "Rua Vasco da Gama Fernandes(antiga Rua C do Alto do Lumiar)",
-        "DESIGNACAO": "Parque Infantil da Escola Básica 2+3 Pintor Almeida Negreiros",
-        "GESTAO": "CML",
-        "SERVICO_CML": "DPCEV",
-        "GlobalID": "43d53222-59e7-4579-a971-190e2128b6aa"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 212,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.17311265132208, 38.7592251960987]
-      },
-      "properties": {
-        "OBJECTID": 212,
-        "COD_SIG": "243",
-        "MORADA": "Rua Fernando Namora(antiga Rua A da Quinta de St. António a Telheiras)",
-        "DESIGNACAO": "Parque Infantil da Escola Básica 2+3 São Vicente",
-        "GESTAO": "CML",
-        "SERVICO_CML": "DPCEV",
-        "GlobalID": "a8be5d3e-c8f8-4828-88a8-3610bb17fd83"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 213,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.19539041675446, 38.7638849949433]
-      },
-      "properties": {
-        "OBJECTID": 213,
-        "COD_SIG": "244",
-        "MORADA": "Estrada da Pontinha",
-        "DESIGNACAO": "Espaço Lúdico do Parque Verde de Carnide ",
-        "GESTAO": "CML",
-        "SERVICO_CML": "DPCEV",
-        "GlobalID": "c76ad3a3-9f93-42f0-bb6c-df633fd16fa5"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 214,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.12726735911663, 38.7308955289852]
-      },
-      "properties": {
-        "OBJECTID": 214,
-        "COD_SIG": "245",
-        "MORADA": "Praça Paiva Couceiro",
-        "DESIGNACAO": "Parque Infantil da Praça Paiva Couceiro",
-        "GESTAO": "JF",
-        "SERVICO_CML": "Não Aplicável",
-        "GlobalID": "51ab226e-4ed3-41ca-83be-8e5b9e978e47"
+        "coordinates": [-9.18434641381417, 38.768703664302201]
       }
     }
   ]

@@ -8,15 +8,20 @@ namespace :parques_infantis do
     "tmp/parques_infantis/extra_playgrounds.csv"
   )
   fetch_remote_url(
+    ENV.fetch("PLAYGROUNDS_TO_REMOVE_URL", "https://docs.google.com/spreadsheets/d/e/2PACX-1vRvEr455sf7o24TvGXp3wvOuYEHUvePC6Bi6yT5yTXARtazHvZlynhxnAELa3s0CbWAYVO2SLzhy_Fy/pub?gid=1892321148&single=true&output=csv"),
+    "tmp/parques_infantis/playgrounds_to_remove.csv"
+  )
+  fetch_remote_url(
     ENV.fetch("EXTRA_QUIOSQUES_URL", "https://docs.google.com/spreadsheets/d/e/2PACX-1vRvEr455sf7o24TvGXp3wvOuYEHUvePC6Bi6yT5yTXARtazHvZlynhxnAELa3s0CbWAYVO2SLzhy_Fy/pub?gid=2084733430&single=true&output=csv"),
     "tmp/parques_infantis/extra_quiosques.csv"
   )
   file "tmp/parques_infantis/parques_infantis.geojson": [
     "tmp/parques_infantis/extra_quiosques.csv",
-    "tmp/parques_infantis/extra_playgrounds.csv"
+    "tmp/parques_infantis/extra_playgrounds.csv",
+    "tmp/parques_infantis/playgrounds_to_remove.csv"
   ] do |task|
-    extra_quiosques_path, extra_playgrounds_path = task.sources
-    Areas::ParquesInfantis::Scripts::Playgrounds.call(task.name, extra_quiosques_path, extra_playgrounds_path)
+    extra_quiosques_path, extra_playgrounds_path, playgrounds_to_remove_path = task.sources
+    Areas::ParquesInfantis::Scripts::Playgrounds.call(task.name, extra_quiosques_path, extra_playgrounds_path, playgrounds_to_remove_path)
   end
 
   file "tmp/parques_infantis/h3.geojson": [

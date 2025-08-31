@@ -5,21 +5,27 @@ module Areas
   module ParquesInfantis
     module Scripts
       class Playgrounds
-        def self.call(destination_path, extra_quiosques_path, extra_playgrounds_path)
-          new(destination_path, extra_quiosques_path, extra_playgrounds_path).call
+        def self.call(destination_path, extra_quiosques_path, extra_playgrounds_path, playgrounds_to_remove_path)
+          new(destination_path, extra_quiosques_path, extra_playgrounds_path, playgrounds_to_remove_path).call
         end
 
-        attr_reader :destination_path, :extra_quiosques_path, :extra_playgrounds_path
+        attr_reader :destination_path, :extra_quiosques_path, :extra_playgrounds_path, :playgrounds_to_remove_path
 
-        def initialize(destination_path, extra_quiosques_path, extra_playgrounds_path)
+        def initialize(destination_path, extra_quiosques_path, extra_playgrounds_path, playgrounds_to_remove_path)
           @destination_path = destination_path
           @extra_quiosques_path = extra_quiosques_path
           @extra_playgrounds_path = extra_playgrounds_path
+          @playgrounds_to_remove_path = playgrounds_to_remove_path
         end
 
         def call
           data = JSON.parse(File.read("data/src/parques_infantis.geojson"))
           data["features"].map! do |feature|
+            next if should_remove_playground?(
+              feature["properties"]["DESIGNACAO"],
+              feature["properties"]["MORADA"]
+            )
+
             feature["properties"] = {
               morada: feature["properties"]["MORADA"],
               designacao: feature["properties"]["DESIGNACAO"],
@@ -28,6 +34,7 @@ module Areas
             }
             feature
           end
+          data["features"].compact!
           data["features"] += extra_playgrounds
 
           data["features"].each do |feature|
@@ -40,6 +47,12 @@ module Areas
         end
 
         private
+
+        def should_remove_playground?(designacao, morada)
+          playgrounds_to_remove.any? { |playground|
+            playground["Designação"] == designacao && playground["Morada"] == morada
+          }
+        end
 
         def quiosques
           @quiosques ||= begin
@@ -67,6 +80,10 @@ module Areas
               }
             }
           end
+        end
+
+        def playgrounds_to_remove
+          @playgrounds_to_remove ||= CSV.parse(open(playgrounds_to_remove_path).read, headers: true).map(&:to_h)
         end
       end
     end

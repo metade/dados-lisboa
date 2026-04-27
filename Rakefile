@@ -11,6 +11,7 @@ import "areas/multibancos/Rakefile"
 import "areas/pre-escolar/Rakefile"
 import "areas/parques-infantis/Rakefile"
 import "areas/alojamentos_locais/Rakefile"
+import "areas/supermercados/Rakefile"
 
 # MiniTest
 require "rake/testtask"
@@ -23,7 +24,7 @@ task default: ["data:all"]
 
 namespace :data do
   desc "Construir todos os dados (todas as áreas)"
-  task all: ["parques_infantis:all", "pre_escolar:all", "multibancos:all"]
+  task all: ["parques_infantis:all", "pre_escolar:all", "multibancos:all", "supermercados:all"]
 
   desc "Vigiar alterações em dados/scripts e reconstruir"
   task :watch do

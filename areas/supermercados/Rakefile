@@ -1,0 +1,35 @@
+namespace :supermercados do
+  directory "tmp/supermercados"
+
+  file "tmp/supermercados/supermercados.geojson" => ["tmp/supermercados"] do |task|
+    require_relative "scripts/fetch"
+    Areas::Supermercados::Scripts::Fetch.call(task.name)
+  end
+
+  file "tmp/supermercados/h3.geojson": [
+    "tmp/supermercados/supermercados.geojson",
+    "tmp/census_2021/BGRI2021_1106.geojson"
+  ] do |task|
+    points_path, bgri2021_path = task.sources
+    DadosLisboa::H3Visualisation.call(task.name, bgri2021_path, points_path, :total_population)
+  end
+
+  tippecanoe_file "site/assets/data/processed/supermercados.pmtiles": [
+    "tmp/supermercados/supermercados.geojson",
+    "tmp/supermercados/h3.geojson"
+  ]
+
+  task all: [
+    "site/assets/data/processed/supermercados.pmtiles"
+  ]
+
+  CLEAN_SUPERMERCADOS = [
+    "tmp/supermercados/h3.geojson",
+    "tmp/supermercados/supermercados.geojson",
+    "site/assets/data/processed/supermercados.pmtiles"
+  ]
+  task :clean do
+    CLEAN_SUPERMERCADOS.each { |file| rm file if File.exist?(file) }
+  end
+  CLEAN.include(*CLEAN_SUPERMERCADOS)
+end

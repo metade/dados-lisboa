@@ -15,6 +15,10 @@ class DadosLisboa::MyGeoJsonFeature
     @data.dig("properties", "BGRI2021")
   end
 
+  def total_population
+    @data.dig("properties", "N_INDIVIDUOS").to_i
+  end
+
   def children_under_14
     @data.dig("properties", "N_INDIVIDUOS_0_14").to_i
   end

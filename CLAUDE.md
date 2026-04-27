@@ -17,6 +17,7 @@ Data visualisation app for Lisbon parish data, deployed to GitHub Pages at https
 - `pre-escolar` — pre-school facilities
 - `census_2021` — census data
 - `alojamentos_locais` — local accommodation (Airbnb WIP)
+- `supermercados` — supermarket chains (data fetched live from OSM Overpass API)
 
 ### Pipeline
 

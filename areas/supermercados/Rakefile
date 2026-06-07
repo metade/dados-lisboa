@@ -14,22 +14,31 @@ namespace :supermercados do
     DadosLisboa::H3Visualisation.call(task.name, bgri2021_path, points_path, :total_population)
   end
 
+  file "site/assets/data/processed/supermercados.csv" => [
+    "tmp/supermercados/supermercados.geojson"
+  ] do |task|
+    require_relative "scripts/export_csv"
+    Areas::Supermercados::Scripts::ExportCsv.call(task.sources.first, task.name)
+  end
+
   tippecanoe_file "site/assets/data/processed/supermercados.pmtiles": [
     "tmp/supermercados/supermercados.geojson",
     "tmp/supermercados/h3.geojson"
   ]
 
   task all: [
+    "site/assets/data/processed/supermercados.csv",
     "site/assets/data/processed/supermercados.pmtiles"
   ]
 
-  CLEAN_SUPERMERCADOS = [
+  clean_supermercados = [
     "tmp/supermercados/h3.geojson",
     "tmp/supermercados/supermercados.geojson",
+    "site/assets/data/processed/supermercados.csv",
     "site/assets/data/processed/supermercados.pmtiles"
   ]
   task :clean do
-    CLEAN_SUPERMERCADOS.each { |file| rm file if File.exist?(file) }
+    clean_supermercados.each { |file| rm file if File.exist?(file) }
   end
-  CLEAN.include(*CLEAN_SUPERMERCADOS)
+  CLEAN.include(*clean_supermercados)
 end

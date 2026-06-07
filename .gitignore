@@ -18,6 +18,7 @@ node_modules/
 data/raw/
 site/assets/data/processed/*.mbtiles
 site/assets/data/processed/*.pmtiles
+site/assets/data/processed/*.csv
 data/.pipeline.stamp
 
 # SO
